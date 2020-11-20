@@ -5,6 +5,7 @@ const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+const magicImporter = require('node-sass-magic-importer');
 
 // Styles
 
@@ -12,7 +13,7 @@ const styles = () => {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
-    .pipe(sass())
+    .pipe(sass({ importer: magicImporter() }).on('error', sass.logError))
     .pipe(postcss([
       autoprefixer()
     ]))
