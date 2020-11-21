@@ -1,24 +1,28 @@
-const gulp = require("gulp");
-const plumber = require("gulp-plumber");
-const sourcemap = require("gulp-sourcemaps");
-const sass = require("gulp-sass");
-const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
-const sync = require("browser-sync").create();
-const magicImporter = require('node-sass-magic-importer');
+const { series, parallel, src, dest, watch } = require('gulp');
+const autoprefixer     = require('autoprefixer');
+const magicImporter    = require('node-sass-magic-importer');
+const plumber          = require('gulp-plumber');
+const postcss          = require('gulp-postcss');
+const postcssNormalize = require('postcss-normalize');
+const sass             = require('gulp-sass');
+const sourcemap        = require('gulp-sourcemaps');
+const sync             = require('browser-sync').create();
 
 // Styles
 
 const styles = () => {
-  return gulp.src("source/sass/style.scss")
+  return src('source/sass/style.scss')
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass({ importer: magicImporter() }).on('error', sass.logError))
     .pipe(postcss([
+      postcssNormalize({
+        forceImport: 'normalize.css'
+      }),
       autoprefixer()
     ]))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(sourcemap.write('.'))
+    .pipe(dest('source/css'))
     .pipe(sync.stream());
 }
 
@@ -43,10 +47,10 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  watch('source/sass/**/*.scss', series('styles'));
+  watch('source/*.html').on('change', sync.reload);
 }
 
-exports.default = gulp.series(
+exports.default = series(
   styles, server, watcher
 );

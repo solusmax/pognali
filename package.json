@@ -11,8 +11,9 @@
     "gulp-postcss": "9.0.0",
     "gulp-sass": "4.1.0",
     "gulp-sourcemaps": "3.0.0",
-    "node-sass-magic-importer": "^5.3.2",
+    "node-sass-magic-importer": "5.3.2",
     "postcss": "8.1.8",
+    "postcss-normalize": "9.0.0",
     "stylelint": "13.8.0",
     "stylelint-config-htmlacademy": "0.1.4"
   },
@@ -38,6 +39,5 @@
   ],
   "engines": {
     "node": "14.15.1"
-  },
-  "dependencies": {}
+  }
 }
