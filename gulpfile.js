@@ -56,6 +56,7 @@ const reload = done => {
 const watcher = () => {
   watch('source/sass/**/*.scss', series(styles, reload));
   watch('source/*.html', series(reload));
+  watch('source/js/**/*.js', series(reload))
 }
 
 exports.default = series(
