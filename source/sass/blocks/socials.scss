@@ -1,16 +1,11 @@
 .socials {
-  display: none;
+  display: flex;
   max-width: 219px;
   flex-wrap: wrap;
   justify-content: center;
   padding: 0;
 
   list-style: none;
-}
-
-.socials--open,
-.no-js .socials {
-  display: flex;
 }
 
 .socials__item {

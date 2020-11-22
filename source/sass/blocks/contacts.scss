@@ -1,13 +1,8 @@
 .contacts {
-  display: none;
+  display: block;
   padding: 0;
 
   list-style: none;
-}
-
-.contacts--open,
-.no-js .contacts {
-  display: block;
 }
 
 .contacts__item {
