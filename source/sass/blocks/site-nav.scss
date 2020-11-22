@@ -1,0 +1,33 @@
+.site-nav {
+  display: none;
+}
+
+.site-nav--open,
+.no-js .site-nav {
+  display: block;
+}
+
+.site-nav__list {
+  margin: 0;
+  padding: 0;
+
+  text-align: center;
+
+  list-style: none;
+}
+
+.site-nav__link {
+  font-size: 30px;
+  line-height: 35px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-special-blue-dark;
+
+  &[href]:hover {
+    color: rgba($color-special-blue-dark, 0.6);
+  }
+
+  &[href]:active {
+    color: rgba($color-special-blue-dark, 0.3);
+  }
+}

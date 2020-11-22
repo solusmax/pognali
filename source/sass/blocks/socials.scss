@@ -1,0 +1,43 @@
+.socials {
+  display: none;
+  max-width: 219px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+
+  list-style: none;
+}
+
+.socials--open,
+.no-js .socials {
+  display: flex;
+}
+
+.socials__item {
+  width: 23px;
+  height: 21px;
+
+  &:not(:nth-child(5n - 4)) {
+    margin-left: 26px;
+  }
+
+  &:nth-child(n + 6) {
+    margin-top: 26px;
+  }
+}
+
+.socials__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background-color: $color-special-blue-dark;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

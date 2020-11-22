@@ -1,0 +1,26 @@
+.page {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page__body {
+  min-width: $page-width-mobile;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: $menu-height-mobile;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  color: $color-basic-white;
+  overflow-wrap: break-word;
+
+  background-color: $color-basic-grey;
+}
+
+.no-js .page__body {
+  padding-top: 0;
+}

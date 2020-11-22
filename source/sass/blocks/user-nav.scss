@@ -1,0 +1,14 @@
+.user-nav {
+  display: none;
+  text-align: center;
+}
+
+.user-nav--open,
+.no-js .user-nav {
+  display: block;
+}
+
+.user-nav__link {
+  width: 270px;
+  min-height: 50px;
+}
