@@ -31,3 +31,9 @@ img {
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(100%);
 }
+
+// Полифил :focus-visible
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
