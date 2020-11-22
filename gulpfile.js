@@ -23,7 +23,6 @@ const styles = () => {
     ]))
     .pipe(sourcemap.write('.'))
     .pipe(dest('source/css'))
-    .pipe(sync.stream());
 }
 
 exports.styles = styles;
@@ -38,17 +37,25 @@ const server = (done) => {
     cors: true,
     notify: false,
     ui: false,
+    injectChanges: false
   });
   done();
 }
 
 exports.server = server;
 
+// Reload
+
+const reload = done => {
+  sync.reload();
+  done();
+};
+
 // Watcher
 
 const watcher = () => {
-  watch('source/sass/**/*.scss', series('styles'));
-  watch('source/*.html').on('change', sync.reload);
+  watch('source/sass/**/*.scss', series(styles, reload));
+  watch('source/*.html', series(reload));
 }
 
 exports.default = series(
