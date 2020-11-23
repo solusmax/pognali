@@ -1,10 +1,27 @@
 .promo {
+  position: relative;
+  z-index: 0;
+
   display: flex;
   flex-direction: column;
   padding-left: $page-padding-mobile;
   padding-right: $page-padding-mobile;
 
   background-color: $color-basic-blue;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    height: 278px;
+
+    background-color: $color-special-blue-dark;
+  }
 }
 
 .promo__tagline {
@@ -35,7 +52,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 450px;
+  max-width: $page-max-width-mobile;
   margin: 0;
   padding: 0;
   padding-left: 25px;
@@ -66,7 +83,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 450px;
+  max-width: $page-max-width-mobile;
   margin: 0;
   padding: 0;
 
@@ -98,6 +115,7 @@
   background-color: $color-special-orange;
 
   counter-increment: promoSteps;
+  user-select: text;
 
   &::after {
     content: counter(promoSteps);
