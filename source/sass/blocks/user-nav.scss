@@ -6,4 +6,9 @@
 .user-nav__link {
   width: 270px;
   min-height: 50px;
+
+  &--promo {
+    width: 190px;
+    min-height: 40px;
+  }
 }
