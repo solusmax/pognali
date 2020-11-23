@@ -8,12 +8,16 @@
   background: none;
   cursor: pointer;
 
+  transition: opacity $transitions-duration;
+
   &:hover {
     opacity: 0.6;
   }
 
   &:active {
     opacity: 0.3;
+
+    transition: none;
   }
 
   &::before,
@@ -30,7 +34,7 @@
     background-color: $color-basic-white;
 
     transition-property: transform, background-color, background-color;
-    transition-duration: 0.15s;
+    transition-duration: $transitions-duration;
   }
 
   &::before {

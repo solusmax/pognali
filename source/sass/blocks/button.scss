@@ -1,6 +1,8 @@
 .button {
-  display: inline-block;
-  padding: 10px 25px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 23px;
   border: none;
   border-radius: 25px;
 
@@ -11,11 +13,12 @@
   color: $color-basic-blue;
   text-transform: uppercase;
   text-decoration: none;
-  text-align: center;
 
   background: none;
   background-color: $color-basic-yellow;
   cursor: pointer;
+
+  transition: background-color $transitions-duration;
 
   &:hover {
     background-color: $color-special-yellow-dark;
@@ -23,6 +26,33 @@
 
   &:active {
     color: rgba($color-basic-blue, 0.3);
+  }
+
+  &--rectangle {
+    justify-content: space-between;
+    border-radius: 10px;
+
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: none;
+
+    &::after {
+      content: "";
+
+      width: 0;
+      height: 0;
+      border-width: 6px;
+      border-left-width: 10px;
+      border-style: solid;
+      border-color: $color-special-blue-light;
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+      border-right-style: none;
+    }
+
+    &:active::after {
+      opacity: 0.3;
+    }
   }
 
   &--promo {

@@ -20,6 +20,8 @@
 
   background-color: $color-special-yellow-dark;
 
+  transition: background-color $transitions-duration;
+
   &:hover {
     background-color: $color-special-orange;
   }
