@@ -19,6 +19,10 @@
   &:hover .direction__photo {
     transform: scale(1.06);
   }
+
+  &:active .direction__photo {
+    transform: scale(1.06);
+  }
 }
 
 .direction__inner {
