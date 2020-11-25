@@ -17,12 +17,12 @@ document.querySelector('.no-js').classList.remove('no-js');
 if (document.querySelector('.page-header')) {
   const menuToggle = document.querySelector('.menu-toggle');
   const pageHeader = document.querySelector('.page-header');
-  const siteNav = document.querySelector('.page-header__site-nav');
-  const userNav = document.querySelector('.page-header__user-nav');
-  const contacts = document.querySelector('.page-header__contacts');
-  const contactsWrapper = document.querySelector('.page-header__contacts-wrapper');
-  const socials = document.querySelector('.page-header__socials');
-  const socialsWrapper = document.querySelector('.page-header__socials-wrapper');
+  const siteNav = pageHeader.querySelector('.page-header__site-nav');
+  const userNav = pageHeader.querySelector('.page-header__user-nav');
+  const contacts = pageHeader.querySelector('.page-header__contacts');
+  const contactsWrapper = pageHeader.querySelector('.page-header__contacts-wrapper');
+  const socials = pageHeader.querySelector('.page-header__socials');
+  const socialsWrapper = pageHeader.querySelector('.page-header__socials-wrapper');
 
   menuToggle.addEventListener('click', function(evt) {
     evt.preventDefault();
