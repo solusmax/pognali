@@ -47,3 +47,35 @@ if (document.querySelector('.page-header')) {
     };
   });
 };
+
+//////////////////////////
+//                      //
+//        ЛЕВЕЛ         //
+//                      //
+//////////////////////////
+
+if (document.querySelector('.level')) {
+  const levels = document.querySelectorAll('.level');
+
+  for (const level of levels) {
+    const levelBar = level.querySelector('.level__bar');
+    const levelNumber = level.querySelector('.level__number').textContent;
+
+    const levelSize = parseInt(getComputedStyle(level).getPropertyValue("--level-size"));
+    const levelBarWidth = parseInt(getComputedStyle(level).getPropertyValue("--level-bar-width"));
+
+    levelBar.setAttribute("cx", levelSize / 2);
+    levelBar.setAttribute("cy", levelSize / 2);
+    levelBar.setAttribute("r", (levelSize / 2) - (levelBarWidth / 2));
+
+    const levelBarLength = (levelBar.r.baseVal.value * 2) * Math.PI;
+
+    levelBar.style.strokeDasharray = levelBarLength;
+
+    if (levelNumber >= 90 && levelNumber <= 99) {
+      levelBar.style.strokeDashoffset = levelBarLength * ((90 + ((levelNumber - 90) / 2)) / 100) - levelBarLength;
+    } else {
+      levelBar.style.strokeDashoffset = levelBarLength * (levelNumber / 100) - levelBarLength;
+    };
+  };
+};

@@ -1,5 +1,5 @@
 .direction {
-  width: $page-width-mobile - ($page-padding-mobile * 2);
+  width: 270px;
 }
 
 
@@ -7,11 +7,11 @@
   text-decoration: none;
 
   &:hover .direction__inner {
-    filter: drop-shadow(0 4px 3px rgba($color-basic-black, 0.16));
+    box-shadow: 0 4px 3px 0 rgba($color-basic-black, 0.16);
   }
 
   &:active .direction__inner {
-    filter: drop-shadow(0 4px 2px rgba($color-basic-black, 0.06));
+    box-shadow: 0 4px 3px 0 rgba($color-basic-black, 0.06);
 
     transition: none;
   }
@@ -34,7 +34,7 @@
 
   overflow: hidden;
 
-  transition: filter $transitions-duration;
+  transition: box-shadow $transitions-duration;
 }
 
 .direction__info-wrapper {
@@ -91,7 +91,7 @@
     height: 14px;
     margin-right: 5px;
 
-    background-color: $color-special-white-dark;
+    background-color: $color-special-grey-very-dark;
   }
 }
 
@@ -110,6 +110,8 @@
   grid-column: 1 / -1;
   grid-row: 1 / 3;
   height: 110px;
+
+  overflow: hidden;
 }
 
 .direction__photo {

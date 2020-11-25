@@ -1,0 +1,11 @@
+.page-main__directions {
+  position: relative;
+  z-index: 1;
+}
+
+.page-main__companions {
+  $underlay-height: 34px;
+
+  margin-top: -$underlay-height;
+  padding-top: $underlay-height;
+}

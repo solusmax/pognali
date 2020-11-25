@@ -1,0 +1,48 @@
+.transport {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 120px;
+  min-height: 25px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.transport__item {
+  position: relative;
+  z-index: 5;
+
+  width: 24px;
+  height: 25px;
+
+  background-color: rgba($color-special-blue-darkest, 0.15);
+
+  &.focus-visible .transport__tooltip,
+  &:hover .transport__tooltip {
+    display: block;
+  }
+
+  &--checked {
+    background-color: $color-special-blue-darkest;
+  }
+}
+
+.transport__tooltip {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + var(--tooltip-triangle-size));
+  z-index: 5;
+
+  display: none;
+
+  transform: translateX(-50%);
+
+  &::after {
+    transform: translateX(-50%);
+  }
+
+  &:hover {
+    display: block;
+  }
+}

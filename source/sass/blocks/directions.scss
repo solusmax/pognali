@@ -4,6 +4,8 @@
   padding-left: $page-padding-mobile;
   padding-right: $page-padding-mobile;
   border-radius: 0 0 30px 30px;
+
+  background-color: $color-basic-grey;
 }
 
 .directions__inner {
@@ -56,4 +58,5 @@
   width: 270px;
   min-height: 62px;
   margin-top: 27px;
+  margin-bottom: 34px;
 }
