@@ -28,11 +28,15 @@
 
   background-color: $color-special-blue-dark;
 
+  transition: opacity $transitions-duration;
+
   &:hover {
     opacity: 0.6;
   }
 
   &:active {
     opacity: 0.3;
+
+    transition: none;
   }
 }
