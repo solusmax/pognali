@@ -37,7 +37,7 @@ if (document.querySelector('.page-header')) {
     socialsWrapper.classList.toggle('page-header__socials-wrapper--open');
   });
 
-  window.addEventListener("scroll", function() {
+  window.addEventListener('scroll', function() {
     menuToggle.classList.add('menu-toggle--scroll');
     pageHeader.classList.add('page-header--scroll');
 
@@ -61,12 +61,12 @@ if (document.querySelector('.level')) {
     const levelBar = level.querySelector('.level__bar');
     const levelNumber = level.querySelector('.level__number').textContent;
 
-    const levelSize = parseInt(getComputedStyle(level).getPropertyValue("--level-size"));
-    const levelBarWidth = parseInt(getComputedStyle(level).getPropertyValue("--level-bar-width"));
+    const levelSize = parseInt(getComputedStyle(level).getPropertyValue('--level-size'));
+    const levelBarWidth = parseInt(getComputedStyle(level).getPropertyValue('--level-bar-width'));
 
-    levelBar.setAttribute("cx", levelSize / 2);
-    levelBar.setAttribute("cy", levelSize / 2);
-    levelBar.setAttribute("r", (levelSize / 2) - (levelBarWidth / 2));
+    levelBar.setAttribute('cx', levelSize / 2);
+    levelBar.setAttribute('cy', levelSize / 2);
+    levelBar.setAttribute('r', (levelSize / 2) - (levelBarWidth / 2));
 
     const levelBarLength = (levelBar.r.baseVal.value * 2) * Math.PI;
 
