@@ -4,6 +4,8 @@ $price-picture-size: 100px;
   display: flex;
   justify-content: center;
   border-radius: 0 0 30px 30px;
+
+  background-color: $color-basic-grey;
 }
 
 .new-profile__inner {
@@ -141,7 +143,7 @@ $price-picture-size: 100px;
 
 .new-profile__show-business-rates {
   margin-top: 30px;
-  margin-bottom: 23px;
+  margin-bottom: 39px;
 
   line-height: 16px;
   font-weight: 700;

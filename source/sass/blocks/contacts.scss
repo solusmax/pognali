@@ -47,4 +47,17 @@
 
     background-color: $color-special-blue-very-dark;
   }
+
+  &--registration {
+    line-height: 18px;
+    color: $color-basic-yellow;
+
+    &:hover {
+      color: $color-special-yellow-dark;
+    }
+
+    &:active {
+      color: rgba($color-basic-yellow, 0.3);
+    }
+  }
 }

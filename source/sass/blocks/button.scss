@@ -56,6 +56,14 @@
     }
   }
 
+  &--no-text {
+    justify-content: center;
+
+    &::after {
+      margin-left: 0;
+    }
+  }
+
   &--promo {
     line-height: 20px;
   }
