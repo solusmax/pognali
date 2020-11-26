@@ -1,3 +1,13 @@
+@keyframes modal-bounce {
+  0% {
+    transform: translateY(-100vh);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .business-rates {
   position: fixed;
   left: 0;
@@ -42,6 +52,9 @@
   background-color: $color-basic-white;
 
   box-shadow: 0 2px 8px 0 rgba($color-special-blue-light, 0.14);
+
+  animation-name: modal-bounce;
+  animation-duration: 0.3s;
 }
 
 .business-rates__inner {
