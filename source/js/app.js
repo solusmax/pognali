@@ -79,3 +79,39 @@ if (document.querySelector('.level')) {
     };
   };
 };
+
+//////////////////////////
+//                      //
+//        МОДАЛКА       //
+//    «БИЗНЕС-ТАРИФЫ»   //
+//                      //
+//////////////////////////
+
+if (document.querySelector('.business-rates')) {
+  const showBusinessRatesLink = document.querySelector('.new-profile__show-business-rates');
+  const businessRatesModal = document.querySelector('.business-rates');
+  const businessRatesCloseButton = document.querySelector(".business-rates__close");
+  const businessRatesBackground =document.querySelector(".business-rates__background");
+
+  showBusinessRatesLink.addEventListener('click', function(evt) {
+    evt.preventDefault();
+
+    businessRatesModal.classList.add('business-rates--shown');
+  });
+
+  function closeBusinessRatesModal() {
+    businessRatesModal.classList.remove('business-rates--shown');
+  };
+
+  businessRatesCloseButton.addEventListener('click', function(evt) {
+    evt.preventDefault();
+
+    closeBusinessRatesModal();
+  });
+
+  businessRatesBackground.addEventListener('click', function(evt) {
+    evt.preventDefault();
+
+    closeBusinessRatesModal();
+  });
+};

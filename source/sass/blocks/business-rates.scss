@@ -1,0 +1,121 @@
+.business-rates {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: $menu-height-mobile;
+  bottom: 0;
+  z-index: 15000;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding-left: $page-padding-mobile;
+  padding-right: $page-padding-mobile;
+
+  &--shown {
+    display: flex;
+  }
+}
+
+.business-rates__background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -$menu-height-mobile;
+  bottom: 0;
+
+  background-color: rgba($color-basic-black, 0.3);
+}
+
+.business-rates__window {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  min-width: $page-width-mobile - ($page-padding-mobile * 2);
+  max-width: $page-max-width-mobile;
+  max-height: calc(100%);
+  border-radius: 20px;
+
+  overflow: auto;
+
+  background-color: $color-basic-white;
+
+  box-shadow: 0 2px 8px 0 rgba($color-special-blue-light, 0.14);
+}
+
+.business-rates__inner {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 32px;
+}
+
+.business-rates__title {
+  margin: 0;
+  padding: 0;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $color-special-orange;
+  text-align: center;
+}
+
+.business-rates__price-list {
+  margin: 0;
+  margin-top: 29px;
+  padding: 0;
+
+  font-weight: 300;
+  color: $color-special-black-light;
+}
+
+.business-rates__item {
+  min-height: 66px;
+  padding-top: 10px;
+  padding-bottom: 11px;
+  border-top: 1px solid rgba($color-basic-black, 0.05);
+
+  &:last-child {
+    border-bottom: 1px solid rgba($color-basic-black, 0.05);
+  }
+}
+
+.business-rates__price {
+  margin: 0;
+}
+
+.business-rates__close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 59px;
+  margin-top: 34px;
+  padding: 10px;
+  border: none;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-special-blue-light;
+  border-radius: 0 0 20px 20px;
+
+  background-color: $color-special-grey-light;
+
+  cursor: pointer;
+
+  transition: background-color $transitions-duration;
+
+  &:hover {
+    background-color: $color-basic-grey;
+  }
+
+  &:active {
+    color: rgba($color-special-blue-light, 0.3);
+
+    background-color: $color-basic-grey;
+  }
+}
