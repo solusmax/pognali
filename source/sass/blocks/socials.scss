@@ -6,6 +6,10 @@
   padding: 0;
 
   list-style: none;
+
+  &--footer {
+    max-width: none;
+  }
 }
 
 .socials__item {
@@ -18,6 +22,19 @@
 
   &:nth-child(n + 6) {
     margin-top: 26px;
+  }
+
+  &--footer {
+    width: 45px;
+    height: 45px;
+
+    &:not(:nth-child(5n - 4)) {
+      margin-left: 0;
+    }
+
+    &:nth-child(n + 6) {
+      margin-top: 0;
+    }
   }
 }
 
@@ -38,5 +55,27 @@
     opacity: 0.3;
 
     transition: none;
+  }
+
+  &--footer {
+    border-radius: 50%;
+
+    background-color: $color-basic-yellow;
+
+    transition: background-color $transitions-duration;
+
+    &:hover {
+      background-color: $color-special-yellow-dark;
+
+      opacity: 1;
+    }
+
+    &:active {
+      background-color: $color-special-yellow-dark;
+
+      opacity: 1;
+
+      transition: none;
+    }
   }
 }

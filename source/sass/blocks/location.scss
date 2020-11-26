@@ -13,8 +13,8 @@
 
 .location__adress-inner {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   min-width: $page-width-mobile;
   max-width: $page-max-width-mobile;
@@ -61,6 +61,7 @@
   max-width: 100%;
   min-height: 330px;
   margin-top: -34px;
+  margin-bottom: -34px;
   border: none;
 
   object-fit: cover;
