@@ -18,7 +18,8 @@
   background-color: $color-basic-yellow;
   cursor: pointer;
 
-  transition: background-color $transitions-duration;
+  transition-property: background-color, color;
+  transition-duration: $transitions-duration;
 
   &:hover {
     background-color: $color-special-yellow-dark;
@@ -26,6 +27,8 @@
 
   &:active {
     color: rgba($color-basic-blue, 0.3);
+
+    transition: none;
   }
 
   &--rectangle {
@@ -45,14 +48,43 @@
       border-width: 6px;
       border-left-width: 10px;
       border-style: solid;
-      border-color: $color-special-blue-light;
+      border-left-color: $color-special-blue-light;
       border-top-color: transparent;
       border-bottom-color: transparent;
       border-right-style: none;
+
+      transition-property: border-left-color;
+      transition-duration: $transitions-duration;
     }
 
     &:active::after {
-      opacity: 0.3;
+      border-left-color: rgba($color-special-blue-light, 0.3);
+
+      transition: none;
+    }
+  }
+
+  &--stroke {
+    border: 3px solid $color-special-blue-dark;
+
+    &:hover {
+      color: $color-basic-white;
+
+      background-color: $color-special-blue-dark;
+
+      &::after {
+        border-left-color: $color-basic-white;
+      }
+    }
+
+    &:active {
+      color: rgba($color-basic-white, 0.3);
+
+      background-color: $color-special-blue-dark;
+
+      &::after {
+        border-left-color: rgba($color-basic-white, 0.3);
+      }
     }
   }
 
