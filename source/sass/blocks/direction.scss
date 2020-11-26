@@ -7,11 +7,11 @@
   text-decoration: none;
 
   &:hover .direction__inner {
-    box-shadow: 0 4px 3px 0 rgba($color-basic-black, 0.16);
+    box-shadow: 0 4px 9px 0 rgba($color-basic-black, 0.16);
   }
 
   &:active .direction__inner {
-    box-shadow: 0 4px 3px 0 rgba($color-basic-black, 0.06);
+    box-shadow: 0 4px 9px 0 rgba($color-basic-black, 0.06);
 
     transition: none;
   }
