@@ -1,4 +1,4 @@
-# Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+# Личный проект «Погнали» [![Build status][travis-image]][travis-url]
 
 * Студент: [Максим Солус](https://up.htmlacademy.ru/adaptive/21/user/1483111).
 * Наставник: [Натали Белоева](https://htmlacademy.ru/profile/id1123699).
@@ -56,5 +56,3 @@ git clone SSH-адрес_вашего_форка
 
 [travis-image]: https://travis-ci.com/htmlacademy-adaptive/1483111-pognali-21.svg?branch=master
 [travis-url]: https://travis-ci.com/htmlacademy-adaptive/1483111-pognali-21
-[dependency-image]: https://david-dm.org/htmlacademy-adaptive/1483111-pognali-21/dev-status.svg?style=flat-square
-[dependency-url]: https://david-dm.org/htmlacademy-adaptive/1483111-pognali-21?type=dev

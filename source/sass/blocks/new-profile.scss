@@ -1,0 +1,165 @@
+$price-picture-size: 100px;
+
+.new-profile {
+  display: flex;
+  justify-content: center;
+  border-radius: 0 0 30px 30px;
+
+  background-color: $color-basic-grey;
+}
+
+.new-profile__inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: $page-width-mobile;
+  max-width: $page-max-width-mobile;
+  padding-left: $page-padding-mobile;
+  padding-right: $page-padding-mobile;
+}
+
+.new-profile__title-link {
+  display: flex;
+  align-items: center;
+  min-height: 72px;
+  margin-left: 25px;
+  margin-right: $price-picture-size + 10px;
+  margin-top: 51px;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $color-special-orange;
+  text-decoration: none;
+
+  transition: color $transitions-duration;
+
+  &:hover {
+    color: rgba($color-special-orange, 0.7);
+  }
+
+  &:active {
+    color: rgba($color-special-orange, 0.3);
+
+    transition: none;
+  }
+}
+
+.new-profile__title {
+  margin: 0;
+  padding: 0;
+
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.new-profile__price-list {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+  margin-left: 25px;
+  margin-top: 44px;
+
+  font-weight: 300;
+  line-height: 16px;
+  color: $color-special-black-light;
+
+  list-style: none;
+
+  counter-reset: priceItems;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    right: 0;
+    top: -1 * ($price-picture-size + 31px);
+
+    width: $price-picture-size;
+    height: $price-picture-size;
+
+    background-color: $color-basic-white;
+  }
+}
+
+.new-profile__item {
+  $price-counter-size: 34px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 200px;
+  min-height: 66px;
+  margin-right: ($price-counter-size + 10px) + $page-padding-mobile;
+  padding-top: 10px;
+  padding-bottom: 13px;
+  border-top: 1px solid $color-special-grey-medium;
+
+  counter-increment: priceItems;
+
+  &::after {
+
+    content: counter(priceItems);
+
+    position: absolute;
+    top: 3px;
+    right: -1 * ($price-counter-size + 10px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: $price-counter-size;
+    height: $price-counter-size;
+    padding: 5px;
+    border-radius: 50%;
+
+    font-weight: 400;
+    line-height: 16px;
+    color: $color-basic-white;
+
+    background-color: $color-special-orange;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $color-special-grey-medium;
+  }
+
+  &--2::after {
+    background-color: $color-special-yellow-dark;
+  }
+
+  &--3::after {
+    background-color: $color-basic-yellow;
+  }
+}
+
+.new-profile__price {
+  margin-top: 6px;
+}
+
+.new-profile__show-business-rates {
+  margin-top: 30px;
+  margin-bottom: 39px;
+
+  line-height: 16px;
+  font-weight: 700;
+  color: $color-special-blue-almost-dark;
+  text-decoration: none;
+  text-align: center;
+
+  transition: color $transitions-duration;
+
+  &:hover {
+    color: rgba($color-special-blue-almost-dark, 0.7);
+  }
+
+  &:active {
+    color: rgba($color-special-blue-almost-dark, 0.3);
+
+    transition: none;
+  }
+}

@@ -1,0 +1,24 @@
+.underlay {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -34px;
+    bottom: 100%;
+    z-index: -1;
+
+    background-color: $color-basic-grey;
+  }
+
+  &--yellow::after {
+    background-color: $color-basic-yellow;
+  }
+
+  &--blue::after {
+    background-color: $color-special-blue-dark;
+  }
+}

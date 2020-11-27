@@ -1,0 +1,36 @@
+.contacts-compact {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.contacts-compact__item {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.contacts-compact__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  background-color: $color-special-yellow-dark;
+
+  transition: background-color $transitions-duration;
+
+  &:hover {
+    background-color: $color-special-orange;
+  }
+
+  &--call {
+    background-color: $color-special-orange;
+
+    &:hover {
+      background-color: $color-special-orange-dark;
+    }
+  }
+}
