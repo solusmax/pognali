@@ -15,6 +15,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   max-width: $page-max-width-mobile;
 
   &::before {
@@ -34,6 +35,7 @@
 }
 
 .companions__info-wrapper {
+  align-self: flex-start;
   padding-top: 66px;
   padding-left: 24px;
   padding-right: 30px;

@@ -43,6 +43,8 @@
 .page-header__site-nav {
   display: none;
   margin-top: 68px;
+
+  overflow: auto;
 }
 
 .page-header__site-nav--open,
