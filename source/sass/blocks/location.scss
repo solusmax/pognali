@@ -55,10 +55,14 @@
   margin-bottom: 35px;
 }
 
+.location__map-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .location__map {
   display: block;
   min-width: $page-width-mobile;
-  max-width: 100%;
   min-height: 330px;
   margin-top: -34px;
   margin-bottom: -34px;
@@ -77,12 +81,12 @@
   }
 }
 
-//.no-js {
-//  .location__map--interactive {
-//    display: none;
-//  }
+.no-js {
+  .location__map--interactive {
+    display: none;
+  }
 
-//  .location__map--static {
-//    display: block;
-//  }
-//}
+  .location__map--static {
+    display: block;
+  }
+}

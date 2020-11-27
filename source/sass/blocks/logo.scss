@@ -1,4 +1,42 @@
 .logo {
   display: flex;
   align-items: center;
+
+  &::before {
+    content: "";
+
+    display: none;
+    width: 96px;
+    height: 15px;
+
+    background-image: url("#{$img-path}/logo/logo-blue.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--open::before {
+    display: block;
+  }
+
+  &--scroll::before {
+    display: block;
+  }
+}
+
+.no-js .logo::before {
+  display: block;
+}
+
+.logo__picture {
+  &--open {
+    display: none;
+  }
+
+  &--scroll {
+    display: none;
+  }
+}
+
+.no-js .logo__picture {
+  display: none;
 }
