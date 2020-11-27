@@ -42,6 +42,10 @@
   height: inherit;
 }
 
+.no-js .level__svg {
+  display: none;
+}
+
 .level__bar {
   fill: transparent;
   stroke: $color-special-orange;

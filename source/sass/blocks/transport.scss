@@ -28,6 +28,10 @@
   }
 }
 
+.no-js .transport__item:focus .transport__tooltip {
+  display: block;
+}
+
 .transport__tooltip {
   position: absolute;
   left: 50%;

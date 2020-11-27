@@ -27,6 +27,10 @@
 
 .no-js .page-header {
   position: static;
+
+  min-height: auto;
+
+  overflow: visible;
 }
 
 .page-header__wrapper {
