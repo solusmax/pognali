@@ -99,4 +99,22 @@
   &--promo {
     line-height: 20px;
   }
+
+  &--upload {
+    font-size: 20px;
+    line-height: 18px;
+    font-weight: 500;
+
+    background-color: $color-special-grey-dark;
+
+    &:hover {
+      background-color: $color-special-grey-darker;
+    }
+
+    &:active {
+      background-color: $color-special-grey-dark;
+
+      color: rgba($color-basic-blue, 0.3);
+    }
+  }
 }

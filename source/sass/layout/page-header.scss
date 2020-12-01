@@ -15,6 +15,10 @@
 
   overflow: auto;
 
+  &--inner-page {
+    background-color: $color-special-blue-medium-light;
+  }
+
   &--scroll {
     background-color: $color-basic-white;
   }

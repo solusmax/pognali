@@ -12,7 +12,7 @@
   </head>
   <body class="page__body">
 
-    <header class="page-header">
+    <header class="page-header page-header--inner-page">
       <div class="page-header__wrapper">
         <a class="page-header__logo logo" href="index.html">
           <img class="logo__picture" src="img/logo/logo-white.png" width="96" height="15" alt="Логотип сервиса путешествий «Погнали?».">
@@ -79,63 +79,78 @@
     </header>
 
     <main class="page-main">
-      <h1 class="page-main__title">Направления</h1>
+      <div class="page-main__title-wrapper">
+        <div class="page-main__title-inner">
+          <h1 class="page-main__title">Направления</h1>
+        </div>
+      </div>
 
       <form class="form" action="https://echo.htmlacademy.ru" method="POST">
 
         <section class="form__profile profile">
           <h2 class="visually-hidden">Профиль</h2>
 
-          <p class="profile__level level">
-            <span class="level__title">Level</span>
-            <span class="level__number">80</span>
-          </p>
+          <div class="profile__inner">
+            <div class="profile__level-wrapper">
+              <p class="profile__level level level--profile">
+                <svg class="level__svg"></svg>
+                <span class="level__title level__title--profile">Level</span>
+                <span class="level__number level__number--profile">80</span>
+              </p>
+            </div>
 
-          <img class="profile__photo" src="https://via.placeholder.com/100x100" width="100" height="100" alt="Фотография Пети Демина.">
+            <div class="profile__photo-wrapper">
+              <img class="profile__photo" src="img/profile/profile-userpic-petya-demin.png" width="100" height="100" alt="Фотография Пети Демина.">
+            </div>
 
-          <p class="profile__upload">
-            <input class="profile__upload-field" id="photo-upload" type="file" accept="image/png, image/jpeg" name="avatar">
-            <label class="profile__upload-label" for="photo-upload">Сменить фото</label>
-          </p>
+            <p class="profile__upload">
+              <input class="profile__upload-field visually-hidden" id="photo-upload" type="file" accept="image/png, image/jpeg" name="avatar">
+              <label class="profile__upload-label button button--upload" for="photo-upload">Сменить фото</label>
+            </p>
 
-          <p class="profile__hashtags profile__border">
-            <label class="profile__hashtags-label profile__border-title" for="hashtags">Тэги</label>
-            <textarea class="profile__hashtags-field" id="hashtags" name="hashtags" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
-          </p>
+            <div class="profile__hashtags profile__border">
+              <label class="profile__hashtags-label profile__border-title" for="hashtags">Тэги</label>
+              <textarea class="profile__hashtags-field" id="hashtags" name="hashtags" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+            </div>
 
-          <fieldset class="profile__transport-wrapper profile__border">
-            <legend class="profile__border-title">Транспорт</legend>
+            <fieldset class="profile__transport-fieldset">
+              <div class="profile__transport-wrapper profile__border">
+                <legend class="profile__border-title">Транспорт</legend>
 
-            <ul class="profile__transport transport">
-              <li class="transport__item-wrapper">
-                <input class="transport__field visually-hidden" id="transport-plane" type="checkbox" name="transport-plane" checked>
-                <label class="transport__item transport__item--plane" for="transport-plane" data-tooltip="Авиаперелет">
-                  <span class="visually-hidden">Авиаперелет</span>
-                </label>
-              </li>
+                <div class="profile__transport-inner">
+                  <ul class="profile__transport transport transport--profile">
+                    <li class="transport__item-wrapper transport__item-wrapper--profile tooltip" data-tooltip="Авиаперелет">
+                      <input class="transport__field visually-hidden" id="transport-plane" type="checkbox" name="transport-plane" checked>
+                      <label class="transport__item transport__item--plane transport__item--profile" for="transport-plane">
+                        <span class="visually-hidden">Авиаперелет</span>
+                      </label>
+                    </li>
 
-              <li class="transport__item-wrapper">
-                <input class="transport__field visually-hidden" id="transport-car" type="checkbox" name="transport-car" checked>
-                <label class="transport__item transport__item--car" for="transport-car" data-tooltip="Автотранспорт">
-                  <span class="visually-hidden">Автотранспорт</span>
-                </label>
-              </li>
+                    <li class="transport__item-wrapper transport__item-wrapper--profile tooltip" data-tooltip="Автотранспорт">
+                      <input class="transport__field visually-hidden" id="transport-car" type="checkbox" name="transport-car" checked>
+                      <label class="transport__item transport__item--car transport__item--profile" for="transport-car">
+                        <span class="visually-hidden">Автотранспорт</span>
+                      </label>
+                    </li>
 
-              <li class="transport__item-wrapper">
-                <input class="transport__field visually-hidden" id="transport-bmx" type="checkbox" name="transport-bmx">
-                <label class="transport__item transport__item--bmx" for="transport-bmx" data-tooltip="Велосипед">
-                  <span class="visually-hidden">Велосипед</span>
-                </label>
-              </li>
+                    <li class="transport__item-wrapper transport__item-wrapper--profile tooltip" data-tooltip="Велосипед">
+                      <input class="transport__field visually-hidden" id="transport-bmx" type="checkbox" name="transport-bmx">
+                      <label class="transport__item transport__item--bmx transport__item--profile" for="transport-bmx">
+                        <span class="visually-hidden">Велосипед</span>
+                      </label>
+                    </li>
 
-              <li class="transport__item-wrapper">
-                <input class="transport__field visually-hidden" id="transport-walk" type="checkbox" name="transport-walk" checked>
-                <label class="transport__item transport__item--walk" for="transport-walk" data-tooltip="Пешком">
-                  <span class="visually-hidden">Пешком</span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+                    <li class="transport__item-wrapper transport__item-wrapper--profile tooltip" data-tooltip="Пешком">
+                      <input class="transport__field visually-hidden" id="transport-walk" type="checkbox" name="transport-walk" checked>
+                      <label class="transport__item transport__item--walk transport__item--profile" for="transport-walk">
+                        <span class="visually-hidden">Пешком</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </fieldset>
+          </div>
         </section>
 
         <section class="form__plans plans">
@@ -235,6 +250,8 @@
               </p>
 
               <table class="calendar__table">
+                <caption class="visually-hidden">Календарь</caption>
+
                 <thead class="calendar__table-head">
                   <tr class="calendar__days-of-the-week">
                     <th class="calendar__day-of-the-week">П<span class="calendar__second-letter">н</span></th>
