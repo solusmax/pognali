@@ -36,7 +36,12 @@ const server = (done) => {
     },
     cors: true,
     notify: false,
-    injectChanges: false
+    injectChanges: false,
+    ghostMode: {
+      clicks: false,
+      forms: false,
+      scroll: false
+    }
   });
   done();
 }
