@@ -87,7 +87,7 @@
 
       <form class="form" action="https://echo.htmlacademy.ru" method="POST">
 
-        <section class="form__profile profile">
+        <section class="form__profile profile underlay underlay--bottom">
           <h2 class="visually-hidden">Профиль</h2>
 
           <div class="profile__inner">
@@ -153,591 +153,621 @@
           </div>
         </section>
 
-        <section class="form__plans plans">
-          <h2 class="plans__title">Мои планы:</h2>
-
-          <ol class="plans__list">
-            <li class="plans__item">
-              <p class="plans__countries">Франция, Италия</p>
-              <p class="plans__companions-counter">3 попутчика</p>
-              <p class="plans__period">26 мар — 29 мар</p>
-              <a class="plans__change" href="404.html">Изменить</a>
-            </li>
-
-            <li class="plans__item">
-              <p class="plans__countries">Таиланд, Индонезия</p>
-              <p class="plans__companions-counter">1 попутчик</p>
-              <p class="plans__period">1 июл — 15 июл</p>
-              <a class="plans__change" href="404.html">Изменить</a>
-            </li>
-          </ol>
-        </section>
-
-        <section class="form__add-plan add-plan">
-          <h2 class="add-plan__title">Добавить план:</h2>
-
-          <ul class="add-plan__markers">
-            <li class="add-plan__marker">
-              <a class="add-plan__marker-link" href="#step-1">Даты</a>
-            </li>
-
-            <li class="add-plan__marker">
-              <a class="add-plan__marker-link" href="#step-2">Маршрут</a>
-            </li>
-
-            <li class="add-plan__marker">
-              <a class="add-plan__marker-link" href="#step-3">Развлечения</a>
-            </li>
-          </ul>
-
-          <fieldset class="add-plan__step step" id="step-1">
-            <legend class="step__title">Шаг 1. <br>Даты пребывания</legend>
-
-            <p class="step__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
-
-            <div class="step__counter counter">
-              <label class="counter__label" for="companions-counter">Ищу попутчиков:</label>
-
-              <div class="counter__wrapper">
-                <button class="counter__button counter__button--decrease" type="button">
-                  <span class="visually-hidden">Уменьшить на 1</span>
-                </button>
-
-                <input class="counter__field" id="companions-counter" type="number" name="companions-counter" value="2" min="1">
-
-                <button class="counter__button counter__button--increase" type="button">
-                  <span class="visually-hidden">Увеличить на 1</span>
-                </button>
-              </div>
-
-              <span class="counter__unit">чел.</span>
-            </div>
-
-            <div class="step__counter counter">
-              <label class="counter__label" for="duration-days">Длительность:</label>
-
-              <div class="counter__wrapper">
-                <button class="counter__button counter__button--decrease" type="button">
-                  <span class="visually-hidden">Уменьшить на 1</span>
-                </button>
-
-                <input class="counter__field" id="duration-days" type="number" name="duration-days" value="3" min="1">
-
-                <button class="counter__button counter__button--increase" type="button">
-                  <span class="visually-hidden">Увеличить на 1</span>
-                </button>
-              </div>
-
-              <span class="counter__unit">дн.</span>
-            </div>
-
-            <p class="step__checkbox">
-              <input class="step__checkbox-field" id="children-allow" type="checkbox" name="children-allow" checked>
-              <label class="step__checkbox-label" for="children-allow">Можно с детьми</label>
-            </p>
-
-            <div class="step__calendar calendar">
-              <p class="calendar__month-wrapper">
-                <button class="calendar__month-button calendar__month-button--previous" type="button">
-                  <span class="visually-hidden">Предыдущий месяц</span>
-                </button>
-
-                <span class="calendar__month">Март 2019</span>
-
-                <button class="calendar__month-button calendar__month-button--next" type="button">
-                  <span class="visually-hidden">Следующий месяц</span>
-                </button>
-              </p>
-
-              <table class="calendar__table">
-                <caption class="visually-hidden">Календарь</caption>
-
-                <thead class="calendar__table-head">
-                  <tr class="calendar__days-of-the-week">
-                    <th class="calendar__day-of-the-week">П<span class="calendar__second-letter">н</span></th>
-                    <th class="calendar__day-of-the-week">В<span class="calendar__second-letter">т</span></th>
-                    <th class="calendar__day-of-the-week">С<span class="calendar__second-letter">р</span></th>
-                    <th class="calendar__day-of-the-week">Ч<span class="calendar__second-letter">т</span></th>
-                    <th class="calendar__day-of-the-week">П<span class="calendar__second-letter">т</span></th>
-                    <th class="calendar__day-of-the-week calendar__day-of-the-week--weekend">С<span class="calendar__second-letter">б</span></th>
-                    <th class="calendar__day-of-the-week calendar__day-of-the-week--weekend">В<span class="calendar__second-letter">с</span></th>
-                  </tr>
-                </thead>
-
-                <tbody class="calendar__table-body">
-                  <tr class="calendar__week">
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">23</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">24</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">25</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">26</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">27</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">28</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">1<span class="calendar__first-day"> мар</span></td>
-                  </tr>
-                  <tr class="calendar__week">
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">2</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">3</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">4</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">5</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">6</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">7</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">8</td>
-                  </tr>
-                  <tr class="calendar__week">
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">9</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">10</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">11</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">12</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">13</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">14</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">15</td>
-                  </tr>
-                  <tr class="calendar__week">
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">16</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">17</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">18</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">19</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">20</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">21</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">22</td>
-                  </tr>
-                  <tr class="calendar__week">
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">23</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">24</td>
-                    <td class="calendar__day calendar__day--disabled" tabindex="0">25</td>
-                    <td class="calendar__day calendar__day--active" tabindex="0">26 <span class="calendar__event">Заезд</span></td>
-                    <td class="calendar__day calendar__day--active" tabindex="0">27</td>
-                    <td class="calendar__day calendar__day--active" tabindex="0">28 <span class="calendar__event">Выезд</span></td>
-                    <td class="calendar__day" tabindex="0">29</td>
-                  </tr>
-                  <tr class="calendar__week">
-                    <td class="calendar__day" tabindex="0">30</td>
-                    <td class="calendar__day" tabindex="0">31</td>
-                    <td class="calendar__day" tabindex="0">1<span class="calendar__first-day"> апр</span></td>
-                    <td class="calendar__day" tabindex="0">2</td>
-                    <td class="calendar__day" tabindex="0">3</td>
-                    <td class="calendar__day" tabindex="0">4</td>
-                    <td class="calendar__day" tabindex="0">5</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <a class="step__next button" href="#step-2">Следующий шаг</a>
-          </fieldset>
-
-          <fieldset class="add-plan__step step" id="step-2">
-            <legend class="step__title">Шаг 2. <br>Маршрут</legend>
-
-            <p class="step__description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
-
-            <div class="step__route route">
-              <ol class="route__list">
-                <li class="route__item">
-                  <button class="route__select-button" id="route-1" type="button">
-                    <span class="route__select-title">Босния и Герцеговина</span>
-                    <img class="route__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Герцеговины.">
-                  </button>
-
-                  <button class="route__remove" id="route-1-remove" type="button">
-                    <span class="visually-hidden">Удалить пункт</span>
-                  </button>
-                </li>
-
-                <li class="route__item">
-                  <button class="route__select-button" id="route-2" type="button">
-                    <span class="route__select-title">Чехия</span>
-                    <img class="route__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии.">
-                  </button>
-
-                  <button class="route__remove" id="route-2-remove" type="button">
-                    <span class="visually-hidden">Удалить пункт</span>
-                  </button>
-                </li>
-
-                <li class="route__item">
-                  <button class="route__select-button" id="route-3" type="button">
-                    <span class="route__select-title">Выберите страну</span>
-                  </button>
-
-                  <button class="route__remove" id="route-3-remove" type="button">
-                    <span class="visually-hidden">Удалить пункт</span>
-                  </button>
-
-                  <div class="route__select select">
-                    <ol class="select__letters">
-                      <li class="select__letter">
-                        <button class="select__letter-field select__letter-field--current" id="letter-a" type="button">А</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-b" type="button">Б</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-v" type="button">В</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-g" type="button">Г</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-d" type="button">Д</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-e" type="button">Е</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-z" type="button">З</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-i" type="button">И</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-k" type="button">К</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-l" type="button">Л</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-m" type="button">М</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-n" type="button">Н</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-o" type="button">О</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-p" type="button">П</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-r" type="button">Р</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-s" type="button">С</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-t" type="button">Т</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-u" type="button">У</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-f" type="button">Ф</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-h" type="button">Х</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-ch" type="button">Ч</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-sh" type="button">Ш</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-ee" type="button">Э</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-uu" type="button">Ю</button>
-                      </li>
-
-                      <li class="select__letter">
-                        <button class="select__letter-field" id="letter-ya" type="button">Я</button>
-                      </li>
-                    </ol>
-
-                    <ol class="select__countries select__countries--current" id="countries-a">
-                      <li class="select__country" tabindex="0">Австралия</li>
-                      <li class="select__country" tabindex="0">Австрия</li>
-                      <li class="select__country" tabindex="0">Азербайджан</li>
-                      <li class="select__country" tabindex="0">Албания</li>
-                      <li class="select__country" tabindex="0">Алжир</li>
-                      <li class="select__country" tabindex="0">Ангола</li>
-                      <li class="select__country" tabindex="0">Андорра</li>
-                      <li class="select__country" tabindex="0">Антигуа и Барбуда</li>
-                      <li class="select__country" tabindex="0">Аргентина</li>
-                      <li class="select__country" tabindex="0">Армения</li>
-                      <li class="select__country" tabindex="0">Афганистан</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-b">
-                      <li class="select__country" tabindex="0">Багамские Острова</li>
-                      <li class="select__country" tabindex="0">Бангладеш</li>
-                      <li class="select__country" tabindex="0">Барбадос</li>
-                      <li class="select__country" tabindex="0">Бахрейн</li>
-                      <li class="select__country" tabindex="0">Белоруссия</li>
-                      <li class="select__country" tabindex="0">Белиз</li>
-                      <li class="select__country" tabindex="0">Бельгия</li>
-                      <li class="select__country" tabindex="0">Бенин</li>
-                      <li class="select__country" tabindex="0">Болгария</li>
-                      <li class="select__country" tabindex="0">Боливия</li>
-                      <li class="select__country" tabindex="0">Босния и Герцеговина</li>
-                      <li class="select__country" tabindex="0">Ботсвана</li>
-                      <li class="select__country" tabindex="0">Бразилия</li>
-                      <li class="select__country" tabindex="0">Бруней</li>
-                      <li class="select__country" tabindex="0">Буркина-Фасо</li>
-                      <li class="select__country" tabindex="0">Бурунди</li>
-                      <li class="select__country" tabindex="0">Бутан</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-v">
-                      <li class="select__country" tabindex="0">Вануату</li>
-                      <li class="select__country" tabindex="0">Великобритания</li>
-                      <li class="select__country" tabindex="0">Венгрия</li>
-                      <li class="select__country" tabindex="0">Венесуэла</li>
-                      <li class="select__country" tabindex="0">Восточный Тимор</li>
-                      <li class="select__country" tabindex="0">Вьетнам</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-g">
-                      <li class="select__country" tabindex="0">Габон</li>
-                      <li class="select__country" tabindex="0">Гаити</li>
-                      <li class="select__country" tabindex="0">Гайана</li>
-                      <li class="select__country" tabindex="0">Гамбия</li>
-                      <li class="select__country" tabindex="0">Гана</li>
-                      <li class="select__country" tabindex="0">Гватемала</li>
-                      <li class="select__country" tabindex="0">Гвинея</li>
-                      <li class="select__country" tabindex="0">Гвинея-Бисау</li>
-                      <li class="select__country" tabindex="0">Германия</li>
-                      <li class="select__country" tabindex="0">Гондурас</li>
-                      <li class="select__country" tabindex="0">Гренада</li>
-                      <li class="select__country" tabindex="0">Греция</li>
-                      <li class="select__country" tabindex="0">Грузия</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-d">
-                      <li class="select__country" tabindex="0">Дания</li>
-                      <li class="select__country" tabindex="0">Джибути</li>
-                      <li class="select__country" tabindex="0">Доминика</li>
-                      <li class="select__country" tabindex="0">Доминикана</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-e">
-                      <li class="select__country" tabindex="0">Египет</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-z">
-                      <li class="select__country" tabindex="0">Замбия</li>
-                      <li class="select__country" tabindex="0">Зимбабве</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-i">
-                      <li class="select__country" tabindex="0">Израиль</li>
-                      <li class="select__country" tabindex="0">Индия</li>
-                      <li class="select__country" tabindex="0">Индонезия</li>
-                      <li class="select__country" tabindex="0">Иордания</li>
-                      <li class="select__country" tabindex="0">Ирак</li>
-                      <li class="select__country" tabindex="0">Иран</li>
-                      <li class="select__country" tabindex="0">Ирландия</li>
-                      <li class="select__country" tabindex="0">Исландия</li>
-                      <li class="select__country" tabindex="0">Испания</li>
-                      <li class="select__country" tabindex="0">Италия</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-k">
-                      <li class="select__country" tabindex="0">Кабо-Верде</li>
-                      <li class="select__country" tabindex="0">Казахстан</li>
-                      <li class="select__country" tabindex="0">Камбоджа</li>
-                      <li class="select__country" tabindex="0">Камерун</li>
-                      <li class="select__country" tabindex="0">Канада</li>
-                      <li class="select__country" tabindex="0">Катар</li>
-                      <li class="select__country" tabindex="0">Кения</li>
-                      <li class="select__country" tabindex="0">Кипр</li>
-                      <li class="select__country" tabindex="0">Киргизия</li>
-                      <li class="select__country" tabindex="0">Кирибати</li>
-                      <li class="select__country" tabindex="0">Китай</li>
-                      <li class="select__country" tabindex="0">Колумбия</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-l">
-                      <li class="select__country" tabindex="0">Лаос</li>
-                      <li class="select__country" tabindex="0">Латвия</li>
-                      <li class="select__country" tabindex="0">Лесото</li>
-                      <li class="select__country" tabindex="0">Либерия</li>
-                      <li class="select__country" tabindex="0">Ливан</li>
-                      <li class="select__country" tabindex="0">Ливия</li>
-                      <li class="select__country" tabindex="0">Литва</li>
-                      <li class="select__country" tabindex="0">Лихтенштейн</li>
-                      <li class="select__country" tabindex="0">Люксембург</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-m">
-                      <li class="select__country" tabindex="0">Маврикий</li>
-                      <li class="select__country" tabindex="0">Мавритания</li>
-                      <li class="select__country" tabindex="0">Мадагаскар</li>
-                      <li class="select__country" tabindex="0">Малави</li>
-                      <li class="select__country" tabindex="0">Малайзия</li>
-                      <li class="select__country" tabindex="0">Мали</li>
-                      <li class="select__country" tabindex="0">Мальдивы</li>
-                      <li class="select__country" tabindex="0">Мальта</li>
-                      <li class="select__country" tabindex="0">Марокко</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-n">
-                      <li class="select__country" tabindex="0">Намибия</li>
-                      <li class="select__country" tabindex="0">Науру</li>
-                      <li class="select__country" tabindex="0">Непал</li>
-                      <li class="select__country" tabindex="0">Нигер</li>
-                      <li class="select__country" tabindex="0">Нигерия</li>
-                      <li class="select__country" tabindex="0">Нидерланды</li>
-                      <li class="select__country" tabindex="0">Никарагуа</li>
-                      <li class="select__country" tabindex="0">Новая Зеландия</li>
-                      <li class="select__country" tabindex="0">Норвегия</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-o">
-                      <li class="select__country" tabindex="0">ОАЭ</li>
-                      <li class="select__country" tabindex="0">Оман</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-p">
-                      <li class="select__country" tabindex="0">Пакистан</li>
-                      <li class="select__country" tabindex="0">Палау</li>
-                      <li class="select__country" tabindex="0">Панама</li>
-                      <li class="select__country" tabindex="0">Папуа - Новая Гвинея</li>
-                      <li class="select__country" tabindex="0">Парагвай</li>
-                      <li class="select__country" tabindex="0">Перу</li>
-                      <li class="select__country" tabindex="0">Польша</li>
-                      <li class="select__country" tabindex="0">Португалия</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-r">
-                      <li class="select__country" tabindex="0">Руанда</li>
-                      <li class="select__country" tabindex="0">Румыния</li>
-                      <li class="select__country" tabindex="0">Россия</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-s">
-                      <li class="select__country" tabindex="0">Сальвадор</li>
-                      <li class="select__country" tabindex="0">Самоа</li>
-                      <li class="select__country" tabindex="0">Сан-Марино</li>
-                      <li class="select__country" tabindex="0">Саудовская Аравия</li>
-                      <li class="select__country" tabindex="0">Сейшелы</li>
-                      <li class="select__country" tabindex="0">Сенегал</li>
-                      <li class="select__country" tabindex="0">Сербия</li>
-                      <li class="select__country" tabindex="0">Сингапур</li>
-                      <li class="select__country" tabindex="0">Сирия</li>
-                      <li class="select__country" tabindex="0">Словакия</li>
-                      <li class="select__country" tabindex="0">Словения</li>
-                      <li class="select__country" tabindex="0">США</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-t">
-                      <li class="select__country" tabindex="0">Таджикистан</li>
-                      <li class="select__country" tabindex="0">Таиланд</li>
-                      <li class="select__country" tabindex="0">Танзания</li>
-                      <li class="select__country" tabindex="0">Того</li>
-                      <li class="select__country" tabindex="0">Тонга</li>
-                      <li class="select__country" tabindex="0">Тринидад и Тобаго</li>
-                      <li class="select__country" tabindex="0">Тувалу</li>
-                      <li class="select__country" tabindex="0">Тунис</li>
-                      <li class="select__country" tabindex="0">Туркмения</li>
-                      <li class="select__country" tabindex="0">Турция</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-u">
-                      <li class="select__country" tabindex="0">Уганда</li>
-                      <li class="select__country" tabindex="0">Узбекистан</li>
-                      <li class="select__country" tabindex="0">Украина</li>
-                      <li class="select__country" tabindex="0">Уругвай</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-f">
-                      <li class="select__country" tabindex="0">Фиджи</li>
-                      <li class="select__country" tabindex="0">Филиппины</li>
-                      <li class="select__country" tabindex="0">Финляндия</li>
-                      <li class="select__country" tabindex="0">Франция</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-h">
-                      <li class="select__country" tabindex="0">Хорватия</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-ch">
-                      <li class="select__country" tabindex="0">Чад</li>
-                      <li class="select__country" tabindex="0">Черногория</li>
-                      <li class="select__country" tabindex="0">Чехия</li>
-                      <li class="select__country" tabindex="0">Чили</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-sh">
-                      <li class="select__country" tabindex="0">Швейцария</li>
-                      <li class="select__country" tabindex="0">Швеция</li>
-                      <li class="select__country" tabindex="0">Шри-Ланка</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-ee">
-                      <li class="select__country" tabindex="0">Эквадор</li>
-                      <li class="select__country" tabindex="0">Эритрея</li>
-                      <li class="select__country" tabindex="0">Эсватини</li>
-                      <li class="select__country" tabindex="0">Эстония</li>
-                      <li class="select__country" tabindex="0">Эфиопия</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-uu">
-                      <li class="select__country" tabindex="0">ЮАР</li>
-                      <li class="select__country" tabindex="0">Южный Судан</li>
-                    </ol>
-
-                    <ol class="select__countries" id="countries-ya">
-                      <li class="select__country" tabindex="0">Ямайка</li>
-                      <li class="select__country" tabindex="0">Япония</li>
-                    </ol>
-                  </div>
-                </li>
-              </ol>
-
-              <button class="route__add" type="button">Добавить страну</button>
-            </div>
-
-            <a class="step__next button" href="#step-3">Следующий шаг</a>
-            <a class="step__previous" href="#step-1">На шаг назад</a>
-          </fieldset>
-
-          <fieldset class="add-plan__step step" id="step-3">
-            <legend class="step__title">Шаг 3. <br>Развлечения</legend>
-
-            <p class="step__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
-
-            <ol class="step__enjoy enjoy">
-              <li class="enjoy__item">
-                <label class="enjoy__item-label" for="enjoy-1">Босния и Герцеговина</label>
-                <img class="enjoy__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Герцеговины.">
-                <textarea class="enjoy__item-field" id="enjoy-1" name="enjoy-1" placeholder="План действий" required></textarea>
+        <section class="form__plans plans underlay underlay--bottom underlay--metallic">
+          <div class="plans__inner">
+            <h2 class="plans__title">Мои планы:</h2>
+
+            <ol class="plans__list">
+              <li class="plans__item">
+                <p class="plans__countries">Франция, Италия</p>
+                <div class="plans__details">
+                  <p class="plans__companions-counter">3 попутчика</p>
+                  <p class="plans__period">26 мар — 29 мар</p>
+                  <a class="plans__change" href="404.html">Изменить</a>
+                </div>
               </li>
 
-              <li class="enjoy__item">
-                <label class="enjoy__item-label" for="enjoy-2">Чехия</label>
-                <img class="enjoy__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии.">
-                <textarea class="enjoy__item-field" id="enjoy-2" name="enjoy-2" placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+              <li class="plans__item">
+                <p class="plans__countries">Таиланд, Индонезия</p>
+                <div class="plans__details">
+                  <p class="plans__companions-counter">1 попутчик</p>
+                  <p class="plans__period">1 июл — 15 июл</p>
+                  <a class="plans__change" href="404.html">Изменить</a>
+                </div>
               </li>
             </ol>
+          </div>
+        </section>
 
-            <button class="add-plan__submit button" type="submit">Отправить</button>
+        <section class="form__add-plan add-plan underlay underlay--bottom underlay--dark-metallic">
+          <div class="add-plan__inner">
+            <h2 class="add-plan__title">Добавить план:</h2>
 
-            <a class="step__previous" href="#step-2">На шаг назад</a>
-          </fieldset>
+            <ul class="add-plan__markers">
+              <li class="add-plan__marker add-plan__marker--current">
+                <span class="add-plan__marker-text">Даты</span>
+              </li>
+
+              <li class="add-plan__marker">
+                <span class="add-plan__marker-text">Маршрут</span>
+              </li>
+
+              <li class="add-plan__marker">
+                <span class="add-plan__marker-text">Развлечения</span>
+              </li>
+            </ul>
+
+            <fieldset class="add-plan__step add-plan__step--current step" id="step-1">
+              <legend class="step__title">Шаг 1. <br>Даты пребывания</legend>
+
+              <p class="step__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+
+              <div class="step__inner">
+                <div class="step__options">
+                  <div class="step__counter counter">
+                    <label class="counter__label" for="companions-counter">Ищу попутчиков:</label>
+
+                    <div class="counter__wrapper">
+                      <button class="counter__button counter__button--decrease" id="companions-counter-decrease" type="button">
+                        <span class="visually-hidden">Уменьшить на 1</span>
+                      </button>
+
+                      <input class="counter__field" id="companions-counter" type="number" name="companions-counter" value="2" min="1">
+
+                      <button class="counter__button counter__button--increase" id="companions-counter-increase" type="button">
+                        <span class="visually-hidden">Увеличить на 1</span>
+                      </button>
+                    </div>
+
+                    <span class="counter__unit">чел.</span>
+                  </div>
+
+                  <div class="step__counter counter">
+                    <label class="counter__label" for="duration-days">Длительность:</label>
+
+                    <div class="counter__wrapper">
+                      <button class="counter__button counter__button--decrease" id="duration-days-decrease" type="button">
+                        <span class="visually-hidden">Уменьшить на 1</span>
+                      </button>
+
+                      <input class="counter__field" id="duration-days" type="number" name="duration-days" value="3" min="1">
+
+                      <button class="counter__button counter__button--increase" id="duration-days-increase" type="button">
+                        <span class="visually-hidden">Увеличить на 1</span>
+                      </button>
+                    </div>
+
+                    <span class="counter__unit">дн.</span>
+                  </div>
+
+                  <p class="step__checkbox">
+                    <input class="step__checkbox-field visually-hidden" id="children-allow" type="checkbox" name="children-allow" checked>
+                    <label class="step__checkbox-label" for="children-allow">Можно с детьми</label>
+                  </p>
+                </div>
+
+                <div class="step__calendar calendar">
+                  <p class="calendar__month-wrapper">
+                    <button class="calendar__month-button calendar__month-button--previous" type="button">
+                      <span class="visually-hidden">Предыдущий месяц</span>
+                    </button>
+
+                    <span class="calendar__month">Март 2019</span>
+
+                    <button class="calendar__month-button calendar__month-button--next" type="button">
+                      <span class="visually-hidden">Следующий месяц</span>
+                    </button>
+                  </p>
+
+                  <table class="calendar__table">
+                    <caption class="visually-hidden">Календарь</caption>
+
+                    <thead class="calendar__table-head">
+                      <tr class="calendar__days-of-the-week">
+                        <th class="calendar__day-of-the-week">П<span class="calendar__second-letter">н</span></th>
+                        <th class="calendar__day-of-the-week">В<span class="calendar__second-letter">т</span></th>
+                        <th class="calendar__day-of-the-week">С<span class="calendar__second-letter">р</span></th>
+                        <th class="calendar__day-of-the-week">Ч<span class="calendar__second-letter">т</span></th>
+                        <th class="calendar__day-of-the-week">П<span class="calendar__second-letter">т</span></th>
+                        <th class="calendar__day-of-the-week calendar__day-of-the-week--weekend">С<span class="calendar__second-letter">б</span></th>
+                        <th class="calendar__day-of-the-week calendar__day-of-the-week--weekend">В<span class="calendar__second-letter">с</span></th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="calendar__table-body">
+                      <tr class="calendar__week">
+                        <td class="calendar__day calendar__day--disabled">23</td>
+                        <td class="calendar__day calendar__day--disabled">24</td>
+                        <td class="calendar__day calendar__day--disabled">25</td>
+                        <td class="calendar__day calendar__day--disabled">26</td>
+                        <td class="calendar__day calendar__day--disabled">27</td>
+                        <td class="calendar__day calendar__day--disabled">28</td>
+                        <td class="calendar__day calendar__day--disabled">1<span class="calendar__first-day"> мар</span></td>
+                      </tr>
+                      <tr class="calendar__week">
+                        <td class="calendar__day calendar__day--disabled">2</td>
+                        <td class="calendar__day calendar__day--disabled">3</td>
+                        <td class="calendar__day calendar__day--disabled">4</td>
+                        <td class="calendar__day calendar__day--disabled">5</td>
+                        <td class="calendar__day calendar__day--disabled">6</td>
+                        <td class="calendar__day calendar__day--disabled">7</td>
+                        <td class="calendar__day calendar__day--disabled">8</td>
+                      </tr>
+                      <tr class="calendar__week">
+                        <td class="calendar__day calendar__day--disabled">9</td>
+                        <td class="calendar__day calendar__day--disabled">10</td>
+                        <td class="calendar__day calendar__day--disabled">11</td>
+                        <td class="calendar__day calendar__day--disabled">12</td>
+                        <td class="calendar__day calendar__day--disabled">13</td>
+                        <td class="calendar__day calendar__day--disabled">14</td>
+                        <td class="calendar__day calendar__day--disabled">15</td>
+                      </tr>
+                      <tr class="calendar__week">
+                        <td class="calendar__day calendar__day--disabled">16</td>
+                        <td class="calendar__day calendar__day--disabled">17</td>
+                        <td class="calendar__day calendar__day--disabled">18</td>
+                        <td class="calendar__day calendar__day--disabled">19</td>
+                        <td class="calendar__day calendar__day--disabled">20</td>
+                        <td class="calendar__day calendar__day--disabled">21</td>
+                        <td class="calendar__day calendar__day--disabled">22</td>
+                      </tr>
+                      <tr class="calendar__week">
+                        <td class="calendar__day calendar__day--disabled">23</td>
+                        <td class="calendar__day calendar__day--disabled">24</td>
+                        <td class="calendar__day calendar__day--disabled">25</td>
+                        <td class="calendar__day calendar__day--active" tabindex="0">26 <span class="calendar__event">Заезд</span></td>
+                        <td class="calendar__day calendar__day--active" tabindex="0">27</td>
+                        <td class="calendar__day calendar__day--active" tabindex="0">28 <span class="calendar__event">Выезд</span></td>
+                        <td class="calendar__day" tabindex="0">29</td>
+                      </tr>
+                      <tr class="calendar__week">
+                        <td class="calendar__day" tabindex="0">30</td>
+                        <td class="calendar__day" tabindex="0">31</td>
+                        <td class="calendar__day" tabindex="0">1<span class="calendar__first-day"> апр</span></td>
+                        <td class="calendar__day" tabindex="0">2</td>
+                        <td class="calendar__day" tabindex="0">3</td>
+                        <td class="calendar__day" tabindex="0">4</td>
+                        <td class="calendar__day" tabindex="0">5</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <a class="step__next button" href="#step-2">Следующий шаг</a>
+              </div>
+            </fieldset>
+
+            <fieldset class="add-plan__step step" id="step-2">
+              <legend class="step__title">Шаг 2. <br>Маршрут</legend>
+
+              <p class="step__description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+
+              <div class="step__inner">
+                <div class="step__route route">
+                  <ol class="route__list">
+                    <li class="route__item">
+                      <button class="route__select-button" id="route-1" type="button">
+                        <span class="route__select-title">Босния и Герцеговина</span>
+                        <img class="route__flag" src="img/flags/flag-bosnia-and-herzegovina.png" width="35" height="24" alt="Флаг Боснии и Герцеговины.">
+                      </button>
+
+                      <button class="route__remove" id="route-1-remove" type="button">
+                        <span class="visually-hidden">Удалить пункт</span>
+                      </button>
+                    </li>
+
+                    <li class="route__item">
+                      <button class="route__select-button" id="route-2" type="button">
+                        <span class="route__select-title">Чехия</span>
+                        <img class="route__flag" src="img/flags/flag-czechia.png" width="35" height="24" alt="Флаг Чехии.">
+                      </button>
+
+                      <button class="route__remove" id="route-2-remove" type="button">
+                        <span class="visually-hidden">Удалить пункт</span>
+                      </button>
+                    </li>
+
+                    <li class="route__item">
+                      <button class="route__select-button" id="route-3" type="button">
+                        <span class="route__select-title">Выберите страну</span>
+                      </button>
+
+                      <button class="route__remove" id="route-3-remove" type="button">
+                        <span class="visually-hidden">Удалить пункт</span>
+                      </button>
+
+                      <div class="route__select select">
+                        <ol class="select__letters">
+                          <li class="select__letter">
+                            <button class="select__letter-field select__letter-field--current" id="letter-a" type="button">А</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-b" type="button">Б</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-v" type="button">В</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-g" type="button">Г</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-d" type="button">Д</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-e" type="button">Е</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-z" type="button">З</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-i" type="button">И</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-k" type="button">К</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-l" type="button">Л</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-m" type="button">М</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-n" type="button">Н</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-o" type="button">О</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-p" type="button">П</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-r" type="button">Р</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-s" type="button">С</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-t" type="button">Т</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-u" type="button">У</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-f" type="button">Ф</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-h" type="button">Х</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-ch" type="button">Ч</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-sh" type="button">Ш</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-ee" type="button">Э</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-uu" type="button">Ю</button>
+                          </li>
+
+                          <li class="select__letter">
+                            <button class="select__letter-field" id="letter-ya" type="button">Я</button>
+                          </li>
+                        </ol>
+
+                        <ol class="select__countries select__countries--current" id="countries-a">
+                          <li class="select__country" tabindex="0">Австралия</li>
+                          <li class="select__country" tabindex="0">Австрия</li>
+                          <li class="select__country" tabindex="0">Азербайджан</li>
+                          <li class="select__country" tabindex="0">Албания</li>
+                          <li class="select__country" tabindex="0">Алжир</li>
+                          <li class="select__country" tabindex="0">Ангола</li>
+                          <li class="select__country" tabindex="0">Андорра</li>
+                          <li class="select__country" tabindex="0">Антигуа и Барбуда</li>
+                          <li class="select__country" tabindex="0">Аргентина</li>
+                          <li class="select__country" tabindex="0">Армения</li>
+                          <li class="select__country" tabindex="0">Афганистан</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-b">
+                          <li class="select__country" tabindex="0">Багамские Острова</li>
+                          <li class="select__country" tabindex="0">Бангладеш</li>
+                          <li class="select__country" tabindex="0">Барбадос</li>
+                          <li class="select__country" tabindex="0">Бахрейн</li>
+                          <li class="select__country" tabindex="0">Белоруссия</li>
+                          <li class="select__country" tabindex="0">Белиз</li>
+                          <li class="select__country" tabindex="0">Бельгия</li>
+                          <li class="select__country" tabindex="0">Бенин</li>
+                          <li class="select__country" tabindex="0">Болгария</li>
+                          <li class="select__country" tabindex="0">Боливия</li>
+                          <li class="select__country" tabindex="0">Босния и Герцеговина</li>
+                          <li class="select__country" tabindex="0">Ботсвана</li>
+                          <li class="select__country" tabindex="0">Бразилия</li>
+                          <li class="select__country" tabindex="0">Бруней</li>
+                          <li class="select__country" tabindex="0">Буркина-Фасо</li>
+                          <li class="select__country" tabindex="0">Бурунди</li>
+                          <li class="select__country" tabindex="0">Бутан</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-v">
+                          <li class="select__country" tabindex="0">Вануату</li>
+                          <li class="select__country" tabindex="0">Великобритания</li>
+                          <li class="select__country" tabindex="0">Венгрия</li>
+                          <li class="select__country" tabindex="0">Венесуэла</li>
+                          <li class="select__country" tabindex="0">Восточный Тимор</li>
+                          <li class="select__country" tabindex="0">Вьетнам</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-g">
+                          <li class="select__country" tabindex="0">Габон</li>
+                          <li class="select__country" tabindex="0">Гаити</li>
+                          <li class="select__country" tabindex="0">Гайана</li>
+                          <li class="select__country" tabindex="0">Гамбия</li>
+                          <li class="select__country" tabindex="0">Гана</li>
+                          <li class="select__country" tabindex="0">Гватемала</li>
+                          <li class="select__country" tabindex="0">Гвинея</li>
+                          <li class="select__country" tabindex="0">Гвинея-Бисау</li>
+                          <li class="select__country" tabindex="0">Германия</li>
+                          <li class="select__country" tabindex="0">Гондурас</li>
+                          <li class="select__country" tabindex="0">Гренада</li>
+                          <li class="select__country" tabindex="0">Греция</li>
+                          <li class="select__country" tabindex="0">Грузия</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-d">
+                          <li class="select__country" tabindex="0">Дания</li>
+                          <li class="select__country" tabindex="0">Джибути</li>
+                          <li class="select__country" tabindex="0">Доминика</li>
+                          <li class="select__country" tabindex="0">Доминикана</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-e">
+                          <li class="select__country" tabindex="0">Египет</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-z">
+                          <li class="select__country" tabindex="0">Замбия</li>
+                          <li class="select__country" tabindex="0">Зимбабве</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-i">
+                          <li class="select__country" tabindex="0">Израиль</li>
+                          <li class="select__country" tabindex="0">Индия</li>
+                          <li class="select__country" tabindex="0">Индонезия</li>
+                          <li class="select__country" tabindex="0">Иордания</li>
+                          <li class="select__country" tabindex="0">Ирак</li>
+                          <li class="select__country" tabindex="0">Иран</li>
+                          <li class="select__country" tabindex="0">Ирландия</li>
+                          <li class="select__country" tabindex="0">Исландия</li>
+                          <li class="select__country" tabindex="0">Испания</li>
+                          <li class="select__country" tabindex="0">Италия</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-k">
+                          <li class="select__country" tabindex="0">Кабо-Верде</li>
+                          <li class="select__country" tabindex="0">Казахстан</li>
+                          <li class="select__country" tabindex="0">Камбоджа</li>
+                          <li class="select__country" tabindex="0">Камерун</li>
+                          <li class="select__country" tabindex="0">Канада</li>
+                          <li class="select__country" tabindex="0">Катар</li>
+                          <li class="select__country" tabindex="0">Кения</li>
+                          <li class="select__country" tabindex="0">Кипр</li>
+                          <li class="select__country" tabindex="0">Киргизия</li>
+                          <li class="select__country" tabindex="0">Кирибати</li>
+                          <li class="select__country" tabindex="0">Китай</li>
+                          <li class="select__country" tabindex="0">Колумбия</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-l">
+                          <li class="select__country" tabindex="0">Лаос</li>
+                          <li class="select__country" tabindex="0">Латвия</li>
+                          <li class="select__country" tabindex="0">Лесото</li>
+                          <li class="select__country" tabindex="0">Либерия</li>
+                          <li class="select__country" tabindex="0">Ливан</li>
+                          <li class="select__country" tabindex="0">Ливия</li>
+                          <li class="select__country" tabindex="0">Литва</li>
+                          <li class="select__country" tabindex="0">Лихтенштейн</li>
+                          <li class="select__country" tabindex="0">Люксембург</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-m">
+                          <li class="select__country" tabindex="0">Маврикий</li>
+                          <li class="select__country" tabindex="0">Мавритания</li>
+                          <li class="select__country" tabindex="0">Мадагаскар</li>
+                          <li class="select__country" tabindex="0">Малави</li>
+                          <li class="select__country" tabindex="0">Малайзия</li>
+                          <li class="select__country" tabindex="0">Мали</li>
+                          <li class="select__country" tabindex="0">Мальдивы</li>
+                          <li class="select__country" tabindex="0">Мальта</li>
+                          <li class="select__country" tabindex="0">Марокко</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-n">
+                          <li class="select__country" tabindex="0">Намибия</li>
+                          <li class="select__country" tabindex="0">Науру</li>
+                          <li class="select__country" tabindex="0">Непал</li>
+                          <li class="select__country" tabindex="0">Нигер</li>
+                          <li class="select__country" tabindex="0">Нигерия</li>
+                          <li class="select__country" tabindex="0">Нидерланды</li>
+                          <li class="select__country" tabindex="0">Никарагуа</li>
+                          <li class="select__country" tabindex="0">Новая Зеландия</li>
+                          <li class="select__country" tabindex="0">Норвегия</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-o">
+                          <li class="select__country" tabindex="0">ОАЭ</li>
+                          <li class="select__country" tabindex="0">Оман</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-p">
+                          <li class="select__country" tabindex="0">Пакистан</li>
+                          <li class="select__country" tabindex="0">Палау</li>
+                          <li class="select__country" tabindex="0">Панама</li>
+                          <li class="select__country" tabindex="0">Папуа - Новая Гвинея</li>
+                          <li class="select__country" tabindex="0">Парагвай</li>
+                          <li class="select__country" tabindex="0">Перу</li>
+                          <li class="select__country" tabindex="0">Польша</li>
+                          <li class="select__country" tabindex="0">Португалия</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-r">
+                          <li class="select__country" tabindex="0">Руанда</li>
+                          <li class="select__country" tabindex="0">Румыния</li>
+                          <li class="select__country" tabindex="0">Россия</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-s">
+                          <li class="select__country" tabindex="0">Сальвадор</li>
+                          <li class="select__country" tabindex="0">Самоа</li>
+                          <li class="select__country" tabindex="0">Сан-Марино</li>
+                          <li class="select__country" tabindex="0">Саудовская Аравия</li>
+                          <li class="select__country" tabindex="0">Сейшелы</li>
+                          <li class="select__country" tabindex="0">Сенегал</li>
+                          <li class="select__country" tabindex="0">Сербия</li>
+                          <li class="select__country" tabindex="0">Сингапур</li>
+                          <li class="select__country" tabindex="0">Сирия</li>
+                          <li class="select__country" tabindex="0">Словакия</li>
+                          <li class="select__country" tabindex="0">Словения</li>
+                          <li class="select__country" tabindex="0">США</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-t">
+                          <li class="select__country" tabindex="0">Таджикистан</li>
+                          <li class="select__country" tabindex="0">Таиланд</li>
+                          <li class="select__country" tabindex="0">Танзания</li>
+                          <li class="select__country" tabindex="0">Того</li>
+                          <li class="select__country" tabindex="0">Тонга</li>
+                          <li class="select__country" tabindex="0">Тринидад и Тобаго</li>
+                          <li class="select__country" tabindex="0">Тувалу</li>
+                          <li class="select__country" tabindex="0">Тунис</li>
+                          <li class="select__country" tabindex="0">Туркмения</li>
+                          <li class="select__country" tabindex="0">Турция</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-u">
+                          <li class="select__country" tabindex="0">Уганда</li>
+                          <li class="select__country" tabindex="0">Узбекистан</li>
+                          <li class="select__country" tabindex="0">Украина</li>
+                          <li class="select__country" tabindex="0">Уругвай</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-f">
+                          <li class="select__country" tabindex="0">Фиджи</li>
+                          <li class="select__country" tabindex="0">Филиппины</li>
+                          <li class="select__country" tabindex="0">Финляндия</li>
+                          <li class="select__country" tabindex="0">Франция</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-h">
+                          <li class="select__country" tabindex="0">Хорватия</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-ch">
+                          <li class="select__country" tabindex="0">Чад</li>
+                          <li class="select__country" tabindex="0">Черногория</li>
+                          <li class="select__country" tabindex="0">Чехия</li>
+                          <li class="select__country" tabindex="0">Чили</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-sh">
+                          <li class="select__country" tabindex="0">Швейцария</li>
+                          <li class="select__country" tabindex="0">Швеция</li>
+                          <li class="select__country" tabindex="0">Шри-Ланка</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-ee">
+                          <li class="select__country" tabindex="0">Эквадор</li>
+                          <li class="select__country" tabindex="0">Эритрея</li>
+                          <li class="select__country" tabindex="0">Эсватини</li>
+                          <li class="select__country" tabindex="0">Эстония</li>
+                          <li class="select__country" tabindex="0">Эфиопия</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-uu">
+                          <li class="select__country" tabindex="0">ЮАР</li>
+                          <li class="select__country" tabindex="0">Южный Судан</li>
+                        </ol>
+
+                        <ol class="select__countries" id="countries-ya">
+                          <li class="select__country" tabindex="0">Ямайка</li>
+                          <li class="select__country" tabindex="0">Япония</li>
+                        </ol>
+                      </div>
+                    </li>
+                  </ol>
+
+                  <button class="route__add" type="button">Добавить страну</button>
+                </div>
+
+                <a class="step__next button" href="#step-3">Следующий шаг</a>
+                <a class="step__previous" href="#step-1">На шаг назад</a>
+              </div>
+            </fieldset>
+
+            <fieldset class="add-plan__step step" id="step-3">
+              <legend class="step__title">Шаг 3. <br>Развлечения</legend>
+
+              <p class="step__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+
+              <div class="step__inner">
+                <ol class="step__enjoy enjoy">
+                  <li class="enjoy__item">
+                    <div class="enjoy__label-wrapper">
+                      <label class="enjoy__label" for="enjoy-1">Босния и Герцеговина</label>
+                      <div class="enjoy__flag-wrapper">
+                        <img class="enjoy__flag" src="img/flags/flag-bosnia-and-herzegovina.png" width="35" height="24" alt="Флаг Боснии и Герцеговины.">
+                      </div>
+                    </div>
+                    <div class="enjoy__field-wrapper">
+                      <textarea class="enjoy__field" id="enjoy-1" name="enjoy-1" placeholder="План действий" required></textarea>
+                      <div class="enjoy__required">Это поле должно быть заполнено</div>
+                    </div>
+                  </li>
+
+                  <li class="enjoy__item">
+                    <div class="enjoy__label-wrapper">
+                      <label class="enjoy__label" for="enjoy-2">Чехия</label>
+                      <div class="enjoy__flag-wrapper">
+                        <img class="enjoy__flag" src="img/flags/flag-czechia.png" width="35" height="24" alt="Флаг Чехии.">
+                      </div>
+                    </div>
+                    <div class="enjoy__field-wrapper">
+                      <textarea class="enjoy__field" id="enjoy-2" name="enjoy-2" placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                      <div class="enjoy__required">Это поле должно быть заполнено</div>
+                    </div>
+                  </li>
+                </ol>
+
+                <button class="step__submit button" type="submit">Отправить</button>
+
+                <a class="step__previous" href="#step-2">На шаг назад</a>
+              </div>
+            </fieldset>
+          </div>
         </section>
       </form>
     </main>

@@ -1,0 +1,95 @@
+.add-plan {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 43px;
+  border-radius: 30px 30px 0 0;
+
+  background-color: $color-special-grey-lightest;
+}
+
+.add-plan__inner {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: $page-max-width-mobile;
+  padding-left: $page-padding-mobile;
+  padding-right: $page-padding-mobile;
+  padding-top: 29px;
+}
+
+.add-plan__title {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  padding-right: 80px;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $color-special-blue-light;
+}
+
+.no-js .add-plan__title {
+  padding-right: 0;
+}
+
+.add-plan__markers {
+  position: absolute;
+  right: 43px;
+  top: 39px;
+
+  display: flex;
+  justify-content: space-between;
+  width: 47px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.no-js .add-plan__markers {
+  display: none;
+}
+
+.add-plan__marker {
+  display: flex;
+  align-items: center;
+
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba($color-basic-black, 0.6);
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &::before {
+    content: "";
+
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+
+    background-color: rgba($color-special-blue-light, 0.3);
+  }
+
+  &--current {
+    color: $color-basic-black;
+
+    &::before {
+      background-color: $color-special-blue-light;
+    }
+  }
+}
+
+.add-plan__marker-text {
+  display: none;
+}
+
+.add-plan__step {
+  margin: 0;
+
+  &:not(:first-of-type) {
+    margin-top: 10px;
+  }
+}
