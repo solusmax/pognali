@@ -6,6 +6,8 @@
   flex-direction: column;
   padding-left: $page-padding-mobile;
   padding-right: $page-padding-mobile;
+  padding-top: 18px;
+  padding-bottom: 38px;
 
   background-color: $color-basic-blue;
 
@@ -26,7 +28,6 @@
 
 .promo__tagline {
   margin: 0;
-  margin-top: 18px;
   padding: 0;
 
   font-weight: 700;
@@ -45,7 +46,7 @@
 .promo__review-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 11px;
+  margin-top: 27px;
 }
 
 .promo__review {
@@ -60,13 +61,14 @@
 
 .promo__quote {
   max-width: 90%;
+  margin: 0;
+  margin-bottom: 18px;
 
   font-weight: 300;
 }
 
 .promo__author {
   max-width: 90%;
-  margin-top: 1px;
 
   font-weight: 700;
   font-style: normal;
@@ -75,8 +77,7 @@
 .promo__plan-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 31px;
-  margin-bottom: 38px;
+  margin-top: 30px;
 }
 
 .promo__plan {

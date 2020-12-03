@@ -5,12 +5,14 @@
 
 .profile__inner {
   display: grid;
-  grid-template-rows: 142px;
+  grid-template-rows: 136px;
   grid-template-columns: 50% 50%;
   width: 100%;
   max-width: $page-max-width-mobile;
   padding-left: $page-padding-mobile;
   padding-right: $page-padding-mobile;
+  padding-top: 6px;
+  padding-bottom: 33px;
 }
 
 .profile__level-wrapper {
@@ -23,7 +25,6 @@
 
 .profile__level {
   margin: 0;
-  margin-top: 5px;
   padding: 0;
 }
 
@@ -36,7 +37,6 @@
 }
 
 .profile__photo {
-  margin-top: 5px;
   border-radius: 50%;
 }
 

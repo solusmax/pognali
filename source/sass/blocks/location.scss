@@ -20,6 +20,8 @@
   max-width: $page-max-width-mobile;
   padding-left: $page-padding-mobile;
   padding-right: $page-padding-mobile;
+  padding-top: 31px;
+  padding-bottom: 35px;
 }
 
 
@@ -27,7 +29,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 31px;
   padding-right: 25px;
 
   font-style: normal;
@@ -52,7 +53,6 @@
   width: 100%;
   min-height: 62px;
   margin-top: 33px;
-  margin-bottom: 35px;
 }
 
 .location__map-wrapper {

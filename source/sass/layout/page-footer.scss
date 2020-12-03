@@ -16,10 +16,8 @@
   min-width: $page-width-mobile;
   padding-left: $page-padding-mobile;
   padding-right: $page-padding-mobile;
-}
-
-.page-footer__logo {
-  margin-top: 37px;
+  padding-top: 37px;
+  padding-bottom: 19px;
 }
 
 .page-footer__socials {
@@ -34,7 +32,6 @@
 
   width: 100%;
   margin-top: 49px;
-  margin-bottom: 19px;
 
   &::after {
     content: "";
