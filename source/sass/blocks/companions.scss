@@ -3,6 +3,8 @@
   justify-content: center;
   padding-left: $page-padding-mobile;
   padding-right: $page-padding-mobile;
+  padding-top: 66px;
+  padding-bottom: 31px;
   border-radius: 0 0 30px 30px;
 
   background-color: $color-special-blue-dark;
@@ -36,7 +38,6 @@
 
 .companions__info-wrapper {
   align-self: flex-start;
-  padding-top: 66px;
   padding-left: 24px;
   padding-right: 30px;
 }
@@ -82,5 +83,4 @@
   width: 270px;
   min-height: 61px;
   margin-top: 20px;
-  margin-bottom: 31px;
 }

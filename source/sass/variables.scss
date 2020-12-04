@@ -1,6 +1,15 @@
 $fonts-path: "../fonts";
 $img-path: "../img";
 
+$page-width-mobile: 320px;
+$page-max-width-mobile: 450px;
+
+$page-padding-mobile: 25px;
+
+$menu-height-mobile: 73px;
+
+$transitions-duration: 0.15s;
+
 $color-basic-black: #000000;
 $color-basic-blue: #161c35;
 $color-basic-grey: #edeff6;
@@ -12,27 +21,31 @@ $color-special-blue-almost-dark: #132576;
 $color-special-blue-dark: #192144;
 $color-special-blue-darkest: #101d41;
 $color-special-blue-meduim-dark: #141b3b;
+$color-special-blue-medium-light: #182044;
 $color-special-blue-very-dark: #121936;
 $color-special-green: #81e31e;
+$color-special-grey-cloudy: #aeb4cb;
+$color-special-grey-cloudy-dark: #afb0b5;
 $color-special-grey-dark: #dfe3f0;
+$color-special-grey-darker: #d1d7e9;
+$color-special-grey-darkest: #cbced9;
 $color-special-grey-light: #f3f4f8;
-$color-special-grey-semi-light: #f2f2f2;
-$color-special-grey-medium: #e1e3e9;
+$color-special-grey-lightest: #d4d9eb;
 $color-special-grey-map: #e5e3df;
+$color-special-grey-most-dark: #959bb2;
+$color-special-grey-most-light: #d6d9e6;
+$color-special-grey-medium: #e1e3e9;
+$color-special-grey-semi-light: #f2f2f2;
 $color-special-grey-very-dark: #cccccc;
+$color-special-grey-very-light: #e2e5f1;
+$color-special-grey-very-very-light: #e5e5e5;
+$color-special-grey-very-very-dark: #999999;
 $color-special-orange-light: #ffa530;
 $color-special-orange: #ff8d30;
 $color-special-orange-dark: #f26926;
 $color-special-red: #f47e7e;
 $color-spacial-red-bright: #ff0000;
 $color-special-red-light: #f97676;
+$color-special-red-medium: #ff5c23;
+$color-special-red-pale: #ffefef;
 $color-special-yellow-dark: #ffbd30;
-
-$page-width-mobile: 320px;
-$page-max-width-mobile: 450px;
-
-$page-padding-mobile: 25px;
-
-$menu-height-mobile: 73px;
-
-$transitions-duration: 0.15s;

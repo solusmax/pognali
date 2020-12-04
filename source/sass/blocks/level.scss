@@ -31,6 +31,15 @@
 
     background-color: rgba($color-basic-black, 0.6);
   }
+
+  &--profile {
+    --level-size: 100px;
+    --level-bar-width: 3px;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .level__svg {
@@ -82,6 +91,22 @@
 
     transform: translateX(-50%);
   }
+
+  &--profile {
+    margin-top: 8px;
+
+    font-size: 18px;
+    line-height: 18px;
+    color: $color-special-black-light;
+
+    &::before {
+      top: -6px;
+
+      width: 50px;
+
+      background-color: $color-special-black-light;
+    }
+  }
 }
 
 .level__number {
@@ -90,4 +115,10 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
+
+  &--profile {
+    font-size: 38px;
+    line-height: 38px;
+    color: $color-basic-blue;
+  }
 }

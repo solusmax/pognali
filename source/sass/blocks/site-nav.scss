@@ -20,11 +20,11 @@
 
   transition: color $transitions-duration;
 
-  &[href]:hover {
+  &:any-link:hover {
     color: rgba($color-special-blue-dark, 0.6);
   }
 
-  &[href]:active {
+  &:any-link:active {
     color: rgba($color-special-blue-dark, 0.3);
 
     transition: none;

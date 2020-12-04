@@ -10,10 +10,15 @@
   min-height: $menu-height-mobile;
   padding-left: $page-padding-mobile;
   padding-right: $page-padding-mobile;
+  padding-top: 25px;
 
   background-color: $color-basic-blue;
 
   overflow: auto;
+
+  &--inner-page {
+    background-color: $color-special-blue-medium-light;
+  }
 
   &--scroll {
     background-color: $color-basic-white;
@@ -22,6 +27,8 @@
 
 .page-header--open,
 .no-js .page-header {
+  padding-bottom: 40px;
+
   background-color: $color-basic-white;
 }
 
@@ -37,12 +44,11 @@
   display: flex;
   justify-content: space-between;
   height: 19px;
-  margin-top: 28px;
 }
 
 .page-header__site-nav {
   display: none;
-  margin-top: 68px;
+  margin-top: 71px;
 
   overflow: auto;
 }
@@ -54,7 +60,7 @@
 
 .page-header__user-nav {
   display: none;
-  margin-top: 53px;
+  margin-top: 54px;
 }
 
 .page-header__user-nav--open,
@@ -66,7 +72,7 @@
   display: none;
   justify-content: center;
   grid-template-columns: min-content;
-  margin-top: 52px;
+  margin-top: 51px;
 }
 
 .page-header__contacts-wrapper--open,
@@ -89,7 +95,6 @@
   display: none;
   justify-content: center;
   margin-top: 41px;
-  margin-bottom: 40px;
 }
 
 .page-header__socials-wrapper--open,

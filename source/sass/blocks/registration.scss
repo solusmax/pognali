@@ -14,11 +14,12 @@
   max-width: $page-max-width-mobile;
   padding-left: $page-padding-mobile;
   padding-right: $page-padding-mobile;
+  padding-top: 70px;
+  padding-bottom: 29px;
 }
 
 .registration__tagline {
   margin: 0;
-  margin-top: 70px;
   padding: 0;
 
   font-size: 24px;
@@ -149,7 +150,6 @@
   justify-content: center;
   grid-template-columns: min-content;
   margin-top: 18px;
-  margin-bottom: 29px;
 }
 
 .registration__contacts {

@@ -2,7 +2,10 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 23px;
+  padding-left: 23px;
+  padding-right: 23px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   border: none;
   border-radius: 25px;
 
@@ -98,5 +101,23 @@
 
   &--promo {
     line-height: 20px;
+  }
+
+  &--upload {
+    font-size: 20px;
+    line-height: 18px;
+    font-weight: 500;
+
+    background-color: $color-special-grey-dark;
+
+    &:hover {
+      background-color: $color-special-grey-darker;
+    }
+
+    &:active {
+      background-color: $color-special-grey-dark;
+
+      color: rgba($color-basic-blue, 0.3);
+    }
   }
 }

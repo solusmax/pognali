@@ -5,13 +5,9 @@
     <title>Погнали? • Главная страница</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preload" href="fonts/bloggersans.woff2" as="font" type="font/woff2">
-    <link rel="preload" href="fonts/bloggersans-italic.woff2" as="font" type="font/woff2">
     <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" type="font/woff2">
-    <link rel="preload" href="fonts/bloggersans-bolditalic.woff2" as="font" type="font/woff2">
     <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" type="font/woff2">
-    <link rel="preload" href="fonts/bloggersans-lightitalic.woff2" as="font" type="font/woff2">
     <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" type="font/woff2">
-    <link rel="preload" href="fonts/bloggersans-mediumitalic.woff2" as="font" type="font/woff2">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
@@ -168,7 +164,7 @@
                     <p class="direction__views">18321</p>
                   </div>
 
-                  <div class="direction__flag-wrapper">
+                  <div class="direction__flag-wrapper tooltip" data-tooltip="Таиланд">
                     <img class="direction__flag" src="img/flags/flag-thailand.png" width="35" height="24" alt="Флаг Таиланда.">
                   </div>
 
@@ -190,7 +186,7 @@
                     <p class="direction__views">12518</p>
                   </div>
 
-                  <div class="direction__flag-wrapper">
+                  <div class="direction__flag-wrapper tooltip" data-tooltip="Франция">
                     <img class="direction__flag" src="img/flags/flag-france.png" width="35" height="24" alt="Флаг Франции.">
                   </div>
 
@@ -212,7 +208,7 @@
                     <p class="direction__views">5326</p>
                   </div>
 
-                  <div class="direction__flag-wrapper">
+                  <div class="direction__flag-wrapper tooltip" data-tooltip="Чехия">
                     <img class="direction__flag" src="img/flags/flag-czechia.png" width="35" height="24" alt="Флаг Чехии.">
                   </div>
 
@@ -261,27 +257,27 @@
                 </p>
 
                 <ul class="companion__transport transport">
-                  <li class="transport__item transport__item--plane transport__item--checked" tabindex="0">
-                    <div class="transport__tooltip tooltip">
-                      Авиаперелет
+                  <li class="transport__item transport__item--plane transport__item--checked">
+                    <div class="transport__tooltip tooltip" data-tooltip="Авиаперелет">
+                      <span class="visually-hidden">Авиаперелет</span>
                     </div>
                   </li>
 
-                  <li class="transport__item transport__item--car" tabindex="0">
-                    <div class="transport__tooltip tooltip">
-                      Автотранспорт
+                  <li class="transport__item transport__item--car">
+                    <div class="transport__tooltip tooltip" data-tooltip="Автотранспорт">
+                      <span class="visually-hidden">Автотранспорт</span>
                     </div>
                   </li>
 
-                  <li class="transport__item transport__item--bmx" tabindex="0">
-                    <div class="transport__tooltip tooltip">
-                      Велосипед
+                  <li class="transport__item transport__item--bmx">
+                    <div class="transport__tooltip tooltip" data-tooltip="Велосипед">
+                      <span class="visually-hidden">Велосипед</span>
                     </div>
                   </li>
 
-                  <li class="transport__item transport__item--walk" tabindex="0">
-                    <div class="transport__tooltip tooltip">
-                      Пешком
+                  <li class="transport__item transport__item--walk">
+                    <div class="transport__tooltip tooltip" data-tooltip="Пешком">
+                      <span class="visually-hidden">Пешком</span>
                     </div>
                   </li>
                 </ul>
@@ -292,24 +288,22 @@
               </div>
 
               <p class="companion__level level">
-                <svg class="level__svg">
-                  <circle class="level__bar" r="30"></circle>
-                </svg>
+                <svg class="level__svg"></svg>
                 <span class="level__title">Level</span>
                 <span class="level__number">99</span>
               </p>
 
               <div class="companion__countries-wrapper">
                 <ul class="companion__countries">
-                  <li class="companion__country">
+                  <li class="companion__country tooltip" data-tooltip="Шри&#8209;Ланка">
                     <img class="companion__flag" src="img/flags/flag-sri-lanka.png" width="35" height="24" alt="Флаг Шри-Ланки.">
                   </li>
 
-                  <li class="companion__country">
+                  <li class="companion__country tooltip" data-tooltip="Таиланд">
                     <img class="companion__flag" src="img/flags/flag-thailand.png" width="35" height="24" alt="Флаг Таиланда.">
                   </li>
 
-                  <li class="companion__country">
+                  <li class="companion__country tooltip" data-tooltip="Республика Сейшелы">
                     <img class="companion__flag" src="img/flags/flag-seychelles.png" width="35" height="24" alt="Флаг Республики Сейшелы.">
                   </li>
                 </ul>
@@ -337,27 +331,27 @@
                 </p>
 
                 <ul class="companion__transport transport">
-                  <li class="transport__item transport__item--plane transport__item--checked" tabindex="0">
-                    <div class="transport__tooltip tooltip">
-                      Авиаперелет
+                  <li class="transport__item transport__item--plane transport__item--checked">
+                    <div class="transport__tooltip tooltip" data-tooltip="Авиаперелет">
+                      <span class="visually-hidden">Авиаперелет</span>
                     </div>
                   </li>
 
-                  <li class="transport__item transport__item--car transport__item--checked" tabindex="0">
-                    <div class="transport__tooltip tooltip">
-                      Автотранспорт
+                  <li class="transport__item transport__item--car transport__item--checked">
+                    <div class="transport__tooltip tooltip" data-tooltip="Автотранспорт">
+                      <span class="visually-hidden">Автотранспорт</span>
                     </div>
                   </li>
 
-                  <li class="transport__item transport__item--bmx" tabindex="0">
-                    <div class="transport__tooltip tooltip">
-                      Велосипед
+                  <li class="transport__item transport__item--bmx">
+                    <div class="transport__tooltip tooltip" data-tooltip="Велосипед">
+                      <span class="visually-hidden">Велосипед</span>
                     </div>
                   </li>
 
-                  <li class="transport__item transport__item--walk transport__item--checked" tabindex="0">
-                    <div class="transport__tooltip tooltip">
-                      Пешком
+                  <li class="transport__item transport__item--walk transport__item--checked">
+                    <div class="transport__tooltip tooltip" data-tooltip="Пешком">
+                      <span class="visually-hidden">Пешком</span>
                     </div>
                   </li>
                 </ul>
@@ -368,20 +362,18 @@
               </div>
 
               <p class="companion__level level">
-                <svg class="level__svg">
-                  <circle class="level__bar" r="30"></circle>
-                </svg>
+                <svg class="level__svg"></svg>
                 <span class="level__title">Level</span>
                 <span class="level__number">80</span>
               </p>
 
               <div class="companion__countries-wrapper">
                 <ul class="companion__countries">
-                  <li class="companion__country">
+                  <li class="companion__country tooltip" data-tooltip="Бельгия">
                     <img class="companion__flag" src="img/flags/flag-belgium.png" width="35" height="24" alt="Флаг Бельгии.">
                   </li>
 
-                  <li class="companion__country">
+                  <li class="companion__country tooltip" data-tooltip="Чехия">
                     <img class="companion__flag" src="img/flags/flag-czechia.png" width="35" height="24" alt="Флаг Чехии.">
                   </li>
                 </ul>
