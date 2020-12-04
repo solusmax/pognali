@@ -149,6 +149,94 @@ if (document.querySelector('.business-rates')) {
 
 //////////////////////////
 //                      //
+//     ШАГИ В ФОРМЕ     //
+//                      //
+//////////////////////////
+
+if (document.querySelector('.step')) {
+  const steps = document.querySelectorAll('.step');
+  const nextStep1 = document.querySelector('.step__next--step-1');
+  const nextStep2 = document.querySelector('.step__next--step-2');
+  const previousStep2 = document.querySelector('.step__previous--step-2');
+  const previousStep3 = document.querySelector('.step__previous--step-3');
+  const markers = document.querySelectorAll('.add-plan__marker');
+  const addPlan = document.querySelector('.add-plan');
+  const addPlanPositionY = addPlan.getBoundingClientRect().top + pageYOffset;
+  const menuHeight = parseInt(document.querySelector('.page-header').clientHeight);
+
+  function clearCurrentStepClasses() {
+    for (const step of steps) {
+      step.classList.remove('step--current');
+    };
+
+    for (const marker of markers) {
+      marker.classList.remove('add-plan__marker--current');
+    };
+  };
+
+  nextStep1.addEventListener('click', function(evt) {
+    evt.preventDefault();
+
+    clearCurrentStepClasses();
+
+    steps[1].classList.add('step--current');
+    markers[1].classList.add('add-plan__marker--current');
+
+    window.scrollTo({
+      top: addPlanPositionY - menuHeight,
+      left: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  nextStep2.addEventListener('click', function(evt) {
+    evt.preventDefault();
+
+    clearCurrentStepClasses();
+
+    steps[2].classList.add('step--current');
+    markers[2].classList.add('add-plan__marker--current');
+
+    window.scrollTo({
+      top: addPlanPositionY - menuHeight,
+      left: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  previousStep2.addEventListener('click', function(evt) {
+    evt.preventDefault();
+
+    clearCurrentStepClasses();
+
+    steps[0].classList.add('step--current');
+    markers[0].classList.add('add-plan__marker--current');
+
+    window.scrollTo({
+      top: addPlanPositionY - menuHeight,
+      left: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  previousStep3.addEventListener('click', function(evt) {
+    evt.preventDefault();
+
+    clearCurrentStepClasses();
+
+    steps[1].classList.add('step--current');
+    markers[1].classList.add('add-plan__marker--current');
+
+    window.scrollTo({
+      top: addPlanPositionY - menuHeight,
+      left: 0,
+      behavior: 'smooth'
+    });
+  });
+};
+
+//////////////////////////
+//                      //
 //   СЧЁТЧИКИ В ФОРМЕ   //
 //                      //
 //////////////////////////
@@ -166,7 +254,7 @@ if (document.querySelector('.counter')) {
   companionsCounterDecrease.addEventListener('click', function(evt) {
     evt.preventDefault();
 
-    if (companionsCounter.value === "") {
+    if (companionsCounter.value === '') {
       companionsCounter.value = companionsCounter.min;
     } else if (companionsCounter.value > companionsCounter.min) {
       companionsCounter.value -= 1;
@@ -176,7 +264,7 @@ if (document.querySelector('.counter')) {
   companionsCounterIncrease.addEventListener('click', function(evt) {
     evt.preventDefault();
 
-    if (companionsCounter.value === "") {
+    if (companionsCounter.value === '') {
       companionsCounter.value = companionsCounter.min;
     } else {
       companionsCounter.value = parseInt(companionsCounter.value) + 1;
@@ -184,7 +272,7 @@ if (document.querySelector('.counter')) {
   });
 
   companionsCounter.addEventListener('input', function() {
-    if ((companionsCounter.value < companionsCounter.min) && companionsCounter.value !== "") {
+    if ((companionsCounter.value < companionsCounter.min) && companionsCounter.value !== '') {
       companionsCounter.value = companionsCounter.min;
     };
   });
@@ -194,7 +282,7 @@ if (document.querySelector('.counter')) {
   durationDaysDecrease.addEventListener('click', function(evt) {
     evt.preventDefault();
 
-    if (durationDays.value === "") {
+    if (durationDays.value === '') {
       durationDays.value = durationDays.min;
     } else if (durationDays.value > durationDays.min) {
       durationDays.value -= 1;
@@ -204,7 +292,7 @@ if (document.querySelector('.counter')) {
   durationDaysIncrease.addEventListener('click', function(evt) {
     evt.preventDefault();
 
-    if (durationDays.value === "") {
+    if (durationDays.value === '') {
       durationDays.value = durationDays.min;
     } else {
       durationDays.value = parseInt(durationDays.value) + 1;
@@ -212,8 +300,57 @@ if (document.querySelector('.counter')) {
   });
 
   durationDays.addEventListener('input', function() {
-    if ((durationDays.value < durationDays.min) && durationDays.value !== "") {
+    if ((durationDays.value < durationDays.min) && durationDays.value !== '') {
       durationDays.value = durationDays.min;
     };
   });
+};
+
+//////////////////////////
+//                      //
+//   «ВЫБЕРИТЕ СТРАНУ»  //
+//                      //
+//////////////////////////
+
+if (document.querySelector('.select')) {
+  const select = document.querySelector('.select');
+  const route3 = document.querySelector('.route__item--item-3');
+  const routeButton3 = route3.querySelector('#route-3');
+  const routeRemove3 = route3.querySelector('#route-3-remove');
+  const letters = select.querySelectorAll('.select__letter');
+  const lettersFields = select.querySelectorAll('.select__letter-field');
+  const countriesLists = select.querySelectorAll('.select__countries');
+
+  // Открытие селекта
+
+  routeButton3.addEventListener('click', function(evt) {
+    evt.preventDefault();
+
+    select.classList.toggle('select--open');
+    route3.classList.toggle('route__item--open');
+    routeButton3.classList.toggle('route__button--open');
+    routeRemove3.classList.toggle('route__remove--open');
+  });
+
+  // Выбор буквы
+
+  function clearCurrentCountries() {
+    for (let i = 0; i < letters.length; i += 1) {
+      letters[i].classList.remove('select__letter--current');
+      lettersFields[i].classList.remove('select__letter-field--current');
+      countriesLists[i].classList.remove('select__countries--current');
+    };
+  };
+
+  for (let i = 0; i < letters.length; i += 1) {
+    lettersFields[i].addEventListener('click', function(evt) {
+      evt.preventDefault();
+
+      clearCurrentCountries();
+
+      letters[i].classList.add('select__letter--current');
+      lettersFields[i].classList.add('select__letter-field--current');
+      countriesLists[i].classList.add('select__countries--current');
+    });
+  };
 };

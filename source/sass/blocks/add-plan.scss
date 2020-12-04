@@ -88,8 +88,8 @@
 
 .add-plan__step {
   margin: 0;
+}
 
-  &:not(:first-of-type) {
-    margin-top: 10px;
-  }
+.no-js .add-plan__step:not(:first-of-type) {
+  margin-top: 10px;
 }
