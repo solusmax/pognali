@@ -77,6 +77,7 @@
   opacity: 1;
 }
 
+.no-js .transport__field:focus + .transport__item,
 .transport__field.focus-visible + .transport__item {
   @include default-outline;
 }
