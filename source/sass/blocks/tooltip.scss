@@ -22,10 +22,14 @@
     line-height: 20px;
     font-weight: 400;
     word-break: normal;
+    text-align: center;
+    color: $color-basic-white;
 
     background-color: $color-special-blue-darkest;
 
     transform: translateX(-50%);
+
+    pointer-events: none;
   }
 
   &::before {
