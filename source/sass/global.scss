@@ -1,13 +1,9 @@
 // Смена боксовой модели
 
-html {
-  box-sizing: border-box;
-}
-
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 // Изображение никогда не станет больше своего контейнера
