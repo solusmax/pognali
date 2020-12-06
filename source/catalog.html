@@ -12,17 +12,19 @@
   </head>
   <body class="page__body">
 
-    <header class="page-header">
-      <a class="page-header__logo logo" href="index.html">
-        <img class="logo__picture" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса путешествий «Погнали?».">
-      </a>
+    <header class="page-header page-header--inner-page">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo logo" href="index.html">
+          <img class="logo__picture" src="img/logo/logo-white.png" width="96" height="15" alt="Логотип сервиса путешествий «Погнали?».">
+        </a>
 
-      <nav class="page-header__nav nav">
-        <button class="nav__toggle" type="button">
+        <button class="page-header__menu-toggle menu-toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
+      </div>
 
-        <ul class="nav__site-nav site-nav">
+      <nav class="page-header__site-nav site-nav">
+        <ul class="site-nav__list">
           <li class="site-nav__item">
             <a class="site-nav__link" href="404.html">О сервисе</a>
           </li>
@@ -32,15 +34,17 @@
           </li>
 
           <li class="site-nav__item">
-            <a class="site-nav__link site-nav__link--current">Попутчики</a>
+            <a class="site-nav__link">Попутчики</a>
           </li>
         </ul>
+      </nav>
 
-        <div class="nav__user-nav user-nav">
-          <a class="user-nav__link button" href="404.html">Авторизация</a>
-        </div>
+      <div class="page-header__user-nav user-nav">
+        <a class="user-nav__link button" href="404.html">Авторизация</a>
+      </div>
 
-        <ul class="nav__contacts contacts">
+      <div class="page-header__contacts-wrapper">
+        <ul class="page-header__contacts contacts">
           <li class="contacts__item">
             <a class="contacts__link contacts__link--phone" href="tel:88005558628">8 800 555-86-28</a>
           </li>
@@ -49,8 +53,10 @@
             <a class="contacts__link contacts__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </li>
         </ul>
+      </div>
 
-        <ul class="nav__socials socials">
+      <div class="page-header__socials-wrapper">
+        <ul class="page-header__socials socials">
           <li class="socials__item">
             <a class="socials__link socials__link--facebook" href="https://facebook.com/">
               <span class="visually-hidden">Facebook</span>
@@ -69,11 +75,15 @@
             </a>
           </li>
         </ul>
-      </nav>
+      </div>
     </header>
 
     <main class="page-main">
-      <h1 class="page-main__title">Попутчики</h1>
+      <div class="page-main__title-wrapper">
+        <div class="page-main__title-inner">
+          <h1 class="page-main__title">Попутчики</h1>
+        </div>
+      </div>
 
       <a class="page-main__go-home" href="index.html">На главную</a>
 
@@ -1298,37 +1308,39 @@
       </section>
     </main>
 
-    <footer class="page-footer">
-      <a class="page-footer__logo logo">
-        <img class="logo__picture" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса путешествий «Погнали?».">
-      </a>
-
-      <ul class="page-footer__socials socials">
-        <li class="socials__item">
-          <a class="socials__link socials__link--facebook" href="https://facebook.com/">
-            <span class="visually-hidden">Facebook</span>
-          </a>
-        </li>
-
-        <li class="socials__item">
-          <a class="socials__link socials__link--vk" href="https://vk.com/">
-            <span class="visually-hidden">ВКонтакте</span>
-          </a>
-        </li>
-
-        <li class="socials__item">
-          <a class="socials__link socials__link--instagram" href="https://instagram.com/">
-            <span class="visually-hidden">Instagram</span>
-          </a>
-        </li>
-      </ul>
-
-      <p class="page-footer__copyright copyright">
-        <span class="copyright__text">Разработано:</span>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive/">
-          <img class="copyright__picture" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML Academy.">
+    <footer class="page__page-footer page-footer">
+      <div class="page-footer__inner">
+        <a class="page-footer__logo logo" href="index.html">
+          <img class="logo__picture" src="img/logo/logo-blue.png" width="96" height="15" alt="Логотип сервиса путешествий «Погнали?».">
         </a>
-      </p>
+
+        <ul class="page-footer__socials socials socials--footer">
+          <li class="socials__item socials__item--footer">
+            <a class="socials__link socials__link--footer socials__link--facebook" href="https://facebook.com/">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+
+          <li class="socials__item socials__item--footer">
+            <a class="socials__link socials__link--footer socials__link--vk" href="https://vk.com/">
+              <span class="visually-hidden">ВКонтакте</span>
+            </a>
+          </li>
+
+          <li class="socials__item socials__item--footer">
+            <a class="socials__link socials__link--footer socials__link--instagram" href="https://instagram.com/">
+              <span class="visually-hidden">Instagram</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="page-footer__copyright-wrapper">
+          <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive/">
+            Разработано
+            <img class="copyright__picture" src="img/copyright/htmlacademy-logo.svg" width="27" height="34" alt="Логотип HTML Academy.">
+          </a>
+        </div>
+      </div>
     </footer>
 
     <script src="js/focus-visible.js"></script>
