@@ -1,4 +1,7 @@
 .page-main__title-wrapper {
+  position: relative;
+  z-index: 1;
+
   display: flex;
   justify-content: center;
   padding-top: 30px;
@@ -39,4 +42,8 @@
 
     background-color: $color-special-orange;
   }
+}
+
+.page-main__go-home {
+  display: none;
 }

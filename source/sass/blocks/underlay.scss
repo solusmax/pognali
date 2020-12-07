@@ -34,4 +34,8 @@
   &--dark-metallic::after {
     background-color: $color-special-grey-lightest;
   }
+
+  &--light-metallic::after {
+    background-color: $color-special-grey-very-light;
+  }
 }
