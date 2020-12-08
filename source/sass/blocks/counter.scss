@@ -167,14 +167,13 @@
   transition-property: border-color;
   transition-duration: $transitions-duration;
 
-
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
-    margin: 0;
-
     // stylelint-disable-next-line
     -webkit-appearance: none;
     appearance: none;
+
+    margin: 0;
   }
 }
 
