@@ -62,3 +62,16 @@
   right: 0;
   z-index: 10000;
 }
+
+.page-main__companions-filter-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 21px;
+}
+
+.page-main__companions-filter-inner {
+  width: 100%;
+  max-width: $page-max-width-mobile;
+  padding-left: $page-padding-mobile;
+  padding-right: $page-padding-mobile;
+}
