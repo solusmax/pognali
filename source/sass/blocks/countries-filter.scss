@@ -17,10 +17,11 @@
   padding-right: $page-padding-mobile;
   padding-top: 21px;
   padding-bottom: 16px;
+}
 
-  &--open {
-    padding-bottom: 28px;
-  }
+.countries-filter__inner--open,
+.no-js .countries-filter__inner {
+  padding-bottom: 28px;
 }
 
 .countries-filter__title {
@@ -55,6 +56,10 @@
 
     transform: translateY(-50%);
   }
+}
+
+.no-js .countries-filter__title {
+  grid-column: 1 / -1;
 }
 
 .countries-filter__toggle {
@@ -103,21 +108,25 @@
       transition: none;
     }
   }
+}
 
-  &--open {
-    &::before {
-      left: 0;
-      top: 0;
+.countries-filter__toggle--open {
+  &::before {
+    left: 0;
+    top: 0;
 
-      width: 100%;
-      height: 100%;
+    width: 100%;
+    height: 100%;
 
-      background-image: url("../img/countries-filter/countries-filter-close-icon.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 17px 17px;
-    }
+    background-image: url("../img/countries-filter/countries-filter-close-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 17px 17px;
   }
+}
+
+.no-js .countries-filter__toggle {
+  display: none;
 }
 
 .countries-filter__toggle-text {
@@ -138,10 +147,11 @@
   padding: 0;
 
   list-style: none;
+}
 
-  &--open {
-    display: grid;
-  }
+.countries-filter__continents--open,
+.no-js .countries-filter__continents {
+  display: grid;
 }
 
 .countries-filter__continent-link {
@@ -181,10 +191,11 @@
   padding: 0;
 
   list-style: none;
+}
 
-  &--open {
-    display: grid;
-  }
+.countries-filter__letters--open,
+.no-js .countries-filter__letters {
+  display: grid;
 }
 
 .countries-filter__letter {
@@ -268,10 +279,11 @@
   margin-top: 11px;
   margin-left: 25px;
   margin-right: 25px;
+}
 
-  &--open {
-    display: flex;
-  }
+.countries-filter__countries-all--open,
+.no-js .countries-filter__countries-all {
+  display: flex;
 }
 
 .countries-filter__countries-letter {
@@ -317,8 +329,12 @@
   display: none;
   min-height: 39px;
   margin-top: 30px;
+}
 
-  &--open {
-    display: inline-flex;
-  }
+.countries-filter__close--open {
+  display: inline-flex;
+}
+
+.no-js .countries-filter__close {
+  display: none;
 }
