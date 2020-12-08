@@ -374,7 +374,7 @@ if (document.querySelector('.countries-filter')) {
     evt.preventDefault();
 
     countriesFilterToggle.classList.toggle('countries-filter__toggle--open');
-    countriesFilterInner.classList.toggle('.countries-filter__inner');
+    countriesFilterInner.classList.toggle('countries-filter__inner--open');
     countriesFilterContinents.classList.toggle('countries-filter__continents--open');
     countriesFilterLetters.classList.toggle('countries-filter__letters--open');
     countriesFilterCountriesAll.classList.toggle('countries-filter__countries-all--open');
@@ -385,7 +385,7 @@ if (document.querySelector('.countries-filter')) {
     evt.preventDefault();
 
     countriesFilterToggle.classList.remove('countries-filter__toggle--open');
-    countriesFilterInner.classList.remove('.countries-filter__inner');
+    countriesFilterInner.classList.remove('countries-filter__inner--open');
     countriesFilterContinents.classList.remove('countries-filter__continents--open');
     countriesFilterLetters.classList.remove('countries-filter__letters--open');
     countriesFilterCountriesAll.classList.remove('countries-filter__countries-all--open');
