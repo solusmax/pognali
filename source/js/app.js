@@ -354,3 +354,41 @@ if (document.querySelector('.select')) {
     });
   };
 };
+
+//////////////////////////
+//                      //
+//     «ФИЛЬТРАЦИЯ      //
+//      ПО СТРАНАМ»     //
+//                      //
+//////////////////////////
+
+if (document.querySelector('.countries-filter')) {
+  const countriesFilterToggle = document.querySelector('.countries-filter__toggle');
+  const countriesFilterClose = document.querySelector('.countries-filter__close')
+  const countriesFilterInner = document.querySelector('.countries-filter__inner');
+  const countriesFilterContinents = document.querySelector('.countries-filter__continents');
+  const countriesFilterLetters = document.querySelector('.countries-filter__letters');
+  const countriesFilterCountriesAll = document.querySelector('.countries-filter__countries-all');
+
+  countriesFilterToggle.addEventListener('click', function(evt) {
+    evt.preventDefault();
+
+    countriesFilterToggle.classList.toggle('countries-filter__toggle--open');
+    countriesFilterInner.classList.toggle('.countries-filter__inner');
+    countriesFilterContinents.classList.toggle('countries-filter__continents--open');
+    countriesFilterLetters.classList.toggle('countries-filter__letters--open');
+    countriesFilterCountriesAll.classList.toggle('countries-filter__countries-all--open');
+    countriesFilterClose.classList.toggle('countries-filter__close--open');
+  });
+
+  countriesFilterClose.addEventListener('click', function(evt) {
+    evt.preventDefault();
+
+    countriesFilterToggle.classList.remove('countries-filter__toggle--open');
+    countriesFilterInner.classList.remove('.countries-filter__inner');
+    countriesFilterContinents.classList.remove('countries-filter__continents--open');
+    countriesFilterLetters.classList.remove('countries-filter__letters--open');
+    countriesFilterCountriesAll.classList.remove('countries-filter__countries-all--open');
+    countriesFilterClose.classList.remove('countries-filter__close--open');
+  });
+}
