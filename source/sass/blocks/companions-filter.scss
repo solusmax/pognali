@@ -107,16 +107,33 @@
   }
 }
 
+.no-js .companions-filter__block-button {
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color-special-blue-light;
+
+    cursor: default;
+
+    user-select: text;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
 .companions-filter__colon {
   display: none;
 }
 
 .companions-filter__content {
   display: none;
+}
 
-  &--open {
-    display: block;
-  }
+.companions-filter__content--open,
+.no-js .companions-filter__content {
+  display: block;
 }
 
 .companions-filter__list {
