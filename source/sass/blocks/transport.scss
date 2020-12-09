@@ -16,6 +16,11 @@
     justify-content: flex-start;
     width: auto;
   }
+
+  &--card {
+    justify-content: flex-start;
+    width: auto;
+  }
 }
 
 .transport__item-wrapper {
@@ -38,6 +43,17 @@
   &--companions-filter {
     width: 32px;
     height: 32px;
+
+    &:not(:first-child) {
+      margin-left: 1px;
+    }
+  }
+
+  &--card {
+    width: 32px;
+    height: 32px;
+
+    background-color: $color-basic-grey;
 
     &:not(:first-child) {
       margin-left: 1px;
@@ -83,6 +99,16 @@
   }
 
   &--companions-filter {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    &::before {
+      background-size: 17px 16px;
+    }
+  }
+
+  &--card {
     width: 100%;
     height: 100%;
     border-radius: 50%;

@@ -48,6 +48,10 @@
   display: none;
 }
 
+.page-main__catalog-wrapper {
+  padding-bottom: 46px;
+}
+
 .page-main__countries-filter-wrapper {
   position: relative;
 
@@ -74,6 +78,19 @@
 }
 
 .page-main__companions-filter-inner {
+  width: 100%;
+  max-width: $page-max-width-mobile;
+  padding-left: $page-padding-mobile;
+  padding-right: $page-padding-mobile;
+}
+
+.page-main__companions-list-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.page-main__companions-list-inner {
   width: 100%;
   max-width: $page-max-width-mobile;
   padding-left: $page-padding-mobile;
