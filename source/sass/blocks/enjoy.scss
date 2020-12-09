@@ -179,7 +179,7 @@ $enjoy-line-distantion: 13px;
   padding-bottom: 10px;
   border-radius: 4px;
 
-  color: rgba($color-spacial-red-bright, 0.4);
+  color: rgba($color-special-red-bright, 0.4);
 
   background-color: rgba($color-special-red-pale, 0.4);
 
@@ -200,7 +200,7 @@ $enjoy-line-distantion: 13px;
 }
 
 .enjoy__field:invalid:focus + .enjoy__required {
-  color: $color-spacial-red-bright;
+  color: $color-special-red-bright;
 
   background-color: $color-special-red-pale;
 
