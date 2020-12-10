@@ -40,6 +40,17 @@
       display: none;
     }
   }
+
+  &--card {
+    --level-size: 45px;
+    --level-bar-width: 3px;
+
+    color: $color-special-blue-light;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .level__svg {
@@ -107,6 +118,10 @@
       background-color: $color-special-black-light;
     }
   }
+
+  &--card {
+    display: none;
+  }
 }
 
 .level__number {
@@ -120,5 +135,10 @@
     font-size: 38px;
     line-height: 38px;
     color: $color-basic-blue;
+  }
+
+  &--card {
+    font-size: 24px;
+    line-height: 24px;
   }
 }

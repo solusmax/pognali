@@ -1,4 +1,7 @@
 .page-main__title-wrapper {
+  position: relative;
+  z-index: 20000;
+
   display: flex;
   justify-content: center;
   padding-top: 30px;
@@ -39,4 +42,57 @@
 
     background-color: $color-special-orange;
   }
+}
+
+.page-main__go-home {
+  display: none;
+}
+
+.page-main__catalog-wrapper {
+  padding-bottom: 46px;
+}
+
+.page-main__countries-filter-wrapper {
+  position: relative;
+
+  width: 100%;
+  min-height: 55px;
+}
+
+.page-main__countries-filter-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+}
+
+.no-js .page-main__countries-filter-inner {
+  position: static;
+}
+
+.page-main__companions-filter-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 21px;
+}
+
+.page-main__companions-filter-inner {
+  width: 100%;
+  max-width: $page-max-width-mobile;
+  padding-left: $page-padding-mobile;
+  padding-right: $page-padding-mobile;
+}
+
+.page-main__companions-list-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.page-main__companions-list-inner {
+  width: 100%;
+  max-width: $page-max-width-mobile;
+  padding-left: $page-padding-mobile;
+  padding-right: $page-padding-mobile;
 }

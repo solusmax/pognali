@@ -354,3 +354,125 @@ if (document.querySelector('.select')) {
     });
   };
 };
+
+//////////////////////////
+//                      //
+//     «ФИЛЬТРАЦИЯ      //
+//      ПО СТРАНАМ»     //
+//                      //
+//////////////////////////
+
+if (document.querySelector('.countries-filter')) {
+  const countriesFilter = document.querySelector('.countries-filter');
+  const countriesFilterToggle = countriesFilter.querySelector('.countries-filter__toggle');
+  const countriesFilterClose = countriesFilter.querySelector('.countries-filter__close')
+  const countriesFilterInner = countriesFilter.querySelector('.countries-filter__inner');
+  const countriesFilterContinents = countriesFilter.querySelector('.countries-filter__continents');
+  const countriesFilterLetters = countriesFilter.querySelector('.countries-filter__letters');
+  const countriesFilterCountriesAll = countriesFilter.querySelector('.countries-filter__countries-all');
+  const letters = countriesFilter.querySelectorAll('.countries-filter__letter');
+  const lettersFields = countriesFilter.querySelectorAll('.countries-filter__letter-field');
+  const countriesLists = countriesFilter.querySelectorAll('.countries-filter__countries-wrapper');
+
+  // Скрытие/открытие
+
+  countriesFilterToggle.addEventListener('click', function(evt) {
+    evt.preventDefault();
+
+    countriesFilterToggle.classList.toggle('countries-filter__toggle--open');
+    countriesFilterInner.classList.toggle('countries-filter__inner--open');
+    countriesFilterContinents.classList.toggle('countries-filter__continents--open');
+    countriesFilterLetters.classList.toggle('countries-filter__letters--open');
+    countriesFilterCountriesAll.classList.toggle('countries-filter__countries-all--open');
+    countriesFilterClose.classList.toggle('countries-filter__close--open');
+  });
+
+  countriesFilterClose.addEventListener('click', function(evt) {
+    evt.preventDefault();
+
+    countriesFilterToggle.classList.remove('countries-filter__toggle--open');
+    countriesFilterInner.classList.remove('countries-filter__inner--open');
+    countriesFilterContinents.classList.remove('countries-filter__continents--open');
+    countriesFilterLetters.classList.remove('countries-filter__letters--open');
+    countriesFilterCountriesAll.classList.remove('countries-filter__countries-all--open');
+    countriesFilterClose.classList.remove('countries-filter__close--open');
+  });
+
+  // Выбор буквы
+
+  function clearCurrentCountries() {
+    for (let i = 0; i < letters.length; i += 1) {
+      letters[i].classList.remove('countries-filter__letter--current');
+      lettersFields[i].classList.remove('countries-filter__letter-field--current');
+      countriesLists[i].classList.remove('countries-filter__countries-wrapper--current');
+    };
+  };
+
+  for (let i = 0; i < letters.length; i += 1) {
+    lettersFields[i].addEventListener('click', function(evt) {
+      evt.preventDefault();
+
+      clearCurrentCountries();
+
+      letters[i].classList.add('countries-filter__letter--current');
+      lettersFields[i].classList.add('countries-filter__letter-field--current');
+      countriesLists[i].classList.add('countries-filter__countries-wrapper--current');
+    });
+  };
+};
+
+//////////////////////////
+//                      //
+//     «ПОДБЕРИТЕ       //
+//      ИДЕАЛЬНОГО      //
+//      ПОПУТЧИКА»      //
+//                      //
+//////////////////////////
+
+if (document.querySelector('.companions-filter')) {
+  const companionsFilterButtons = document.querySelectorAll('.companions-filter__block-button');
+  const companionsFilterContents = document.querySelectorAll('.companions-filter__content');
+
+  for (let i = 0; i < companionsFilterButtons.length; i += 1) {
+    companionsFilterButtons[i].addEventListener('click', function(evt) {
+      evt.preventDefault();
+
+      companionsFilterButtons[i].classList.toggle('companions-filter__block-button--open');
+      companionsFilterContents[i].classList.toggle('companions-filter__content--open');
+    });
+  };
+};
+
+//////////////////////////
+//                      //
+//         ЛАЙК         //
+//                      //
+//////////////////////////
+
+if (document.querySelector('.like')) {
+  const likeButtons = document.querySelectorAll('.like__button');
+  const likeTexts = document.querySelectorAll('.like__button span');
+  const likeCounters = document.querySelectorAll('.like__counter');
+
+  for (let i = 0; i < likeButtons.length; i += 1) {
+    likeButtons[i].addEventListener('click', function(evt) {
+      evt.preventDefault();
+
+      likeButtons[i].classList.toggle('like__button--liked');
+
+      if (likeButtons[i].classList.contains('like__button--liked')) {
+        likeTexts[i].textContent = 'Снять лайк';
+
+        if (!(/[^\d]/.test(likeCounters[i].textContent))) {
+          likeCounters[i].textContent = parseInt(likeCounters[i].textContent) + 1;
+        };
+      } else {
+        likeTexts[i].textContent = 'Поставить лайк';
+
+        if (!(/[^\d]/.test(likeCounters[i].textContent))) {
+          likeCounters[i].textContent = parseInt(likeCounters[i].textContent) - 1;
+        };
+      };
+    });
+  };
+};

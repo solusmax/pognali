@@ -120,4 +120,63 @@
       color: rgba($color-basic-blue, 0.3);
     }
   }
+
+  &--countries-filter {
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-special-blue-dark;
+    letter-spacing: 0.05em;
+
+    background-color: $color-special-grey-some;
+
+    &::before {
+      content: "";
+
+      display: block;
+      width: 14px;
+      height: 14px;
+      margin-right: 10px;
+
+      background-image: url("../img/button/button-close-icon.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      transition: $transitions-duration;
+    }
+
+    &:hover {
+      background-color: $color-special-grey-some-dark;
+    }
+
+    &:active {
+      color: rgba($color-special-blue-dark, 0.3);
+
+      &::before {
+        opacity: 0.3;
+
+        transition: none;
+      }
+    }
+  }
+
+  &--companions-filter {
+    background-color: $color-basic-white;
+
+    transition-property: background-color, color, box-shadow;
+    transition-duration: $transitions-duration;
+
+    &:hover {
+      background-color: $color-basic-white;
+
+      box-shadow: 0 3px 6px 0 rgba($color-basic-black, 0.14);
+    }
+
+    &:active {
+      color: rgba($color-basic-blue, 0.3);
+
+      background-color: $color-special-yellow-very-dark;
+
+      box-shadow: none;
+    }
+  }
 }
