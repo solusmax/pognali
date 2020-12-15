@@ -1,24 +1,28 @@
-const gulp = require("gulp");
-const plumber = require("gulp-plumber");
-const sourcemap = require("gulp-sourcemaps");
-const sass = require("gulp-sass");
-const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
-const sync = require("browser-sync").create();
+const { series, parallel, src, dest, watch } = require('gulp');
+const autoprefixer     = require('autoprefixer');
+const magicImporter    = require('node-sass-magic-importer');
+const plumber          = require('gulp-plumber');
+const postcss          = require('gulp-postcss');
+const postcssNormalize = require('postcss-normalize');
+const sass             = require('gulp-sass');
+const sourcemap        = require('gulp-sourcemaps');
+const sync             = require('browser-sync').create();
 
 // Styles
 
 const styles = () => {
-  return gulp.src("source/sass/style.scss")
+  return src('source/sass/style.scss')
     .pipe(plumber())
     .pipe(sourcemap.init())
-    .pipe(sass())
+    .pipe(sass({ importer: magicImporter() }).on('error', sass.logError))
     .pipe(postcss([
+      postcssNormalize({
+        forceImport: 'normalize.css'
+      }),
       autoprefixer()
     ]))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
-    .pipe(sync.stream());
+    .pipe(sourcemap.write('.'))
+    .pipe(dest('source/css'))
 }
 
 exports.styles = styles;
@@ -32,20 +36,33 @@ const server = (done) => {
     },
     cors: true,
     notify: false,
-    ui: false,
+    injectChanges: false,
+    ghostMode: {
+      clicks: false,
+      forms: false,
+      scroll: false
+    }
   });
   done();
 }
 
 exports.server = server;
 
+// Reload
+
+const reload = done => {
+  sync.reload();
+  done();
+};
+
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  watch('source/sass/**/*.scss', series(styles, reload));
+  watch('source/*.html', series(reload));
+  watch('source/js/**/*.js', series(reload))
 }
 
-exports.default = gulp.series(
+exports.default = series(
   styles, server, watcher
 );
