@@ -63,7 +63,7 @@ const buildHtml = () => {
 // CSS
 
 const buildCss = () => {
-  return src('source/sass/style.scss', { sourcemaps: true })
+  return src('./source/sass/style.scss', { sourcemaps: true })
     .pipe(gulpIf(!production, plumber()))
     .pipe(sass({ importer: magicImporter() }).on('error', sass.logError))
     .pipe(postcss([
@@ -74,7 +74,7 @@ const buildCss = () => {
       cssnano()
     ]))
     .pipe(rename('style.min.css'))
-    .pipe(dest('./build/css', { sourcemaps: '.' }))
+    .pipe(dest('./build/css', { sourcemaps: '.' }));
 };
 
 // JS
@@ -137,7 +137,7 @@ const buildSvgSprite = () => {
       inlineSvg: true
     }))
     .pipe(rename('sprite.svg'))
-    .pipe(dest('./build/img'))
+    .pipe(dest('./build/img'));
 };
 
 // Шрифты
