@@ -18,7 +18,16 @@
     <header class="page-header page-header--inner-page">
       <div class="page-header__wrapper">
         <a class="page-header__logo logo" href="index.html">
-          <img class="logo__picture" src="img/logo/logo-white.png" width="96" height="15" alt="Логотип сервиса путешествий «Погнали?».">
+          <picture class="logo__picture-wrapper">
+            <source srcset="img/logo/logo-white-desktop.webp 1x, img/logo/logo-white-desktop@2x.webp 2x" media="(min-width: 1440px)" type="image/webp">
+            <source srcset="img/logo/logo-white-desktop.png 1x, img/logo/logo-white-desktop@2x.png 2x" media="(min-width: 1440px)">
+
+            <source srcset="img/logo/logo-white-tablet.webp 1x, img/logo/logo-white-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+            <source srcset="img/logo/logo-white-tablet.png 1x, img/logo/logo-white-tablet@2x.png 2x" media="(min-width: 768px)">
+
+            <source srcset="img/logo/logo-white.webp 1x, img/logo/logo-white@2x.webp 2x" type="image/webp">
+            <img class="logo__picture" src="img/logo/logo-white.png" srcset="img/logo/logo-white@2x.png 2x" alt="Логотип сервиса путешествий «Погнали?».">
+          </picture>
         </a>
 
         <button class="page-header__menu-toggle menu-toggle" type="button">
@@ -43,7 +52,7 @@
       </nav>
 
       <div class="page-header__user-nav user-nav">
-        <a class="user-nav__link button" href="404.html">Авторизация</a>
+        <a class="user-nav__link button button--user-nav" href="404.html">Авторизация</a>
       </div>
 
       <div class="page-header__contacts-wrapper">

@@ -1,5 +1,10 @@
 .site-nav {
   display: block;
+
+  @media (min-width: $page-width-tablet) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .site-nav__list {
@@ -9,6 +14,19 @@
   text-align: center;
 
   list-style: none;
+
+  @media (min-width: $page-width-tablet) {
+    width: 100%;
+    max-width: $page-width-tablet - ($page-padding-tablet * 2);
+
+    text-align: left;
+  }
+}
+
+.site-nav__item {
+  @media (min-width: $page-width-tablet) {
+    margin-left: 57px;
+  }
 }
 
 .site-nav__link {
@@ -28,5 +46,10 @@
     color: rgba($color-special-blue-dark, 0.3);
 
     transition: none;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    font-size: 60px;
+    line-height: 71px;
   }
 }

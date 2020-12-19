@@ -7,6 +7,10 @@
 
 .contacts__item {
   display: flex;
+
+  @media (min-width: $page-width-tablet) {
+    margin-left: 57px;
+  }
 }
 
 .contacts__link {
@@ -47,6 +51,11 @@
       color: rgba($color-basic-yellow, 0.3);
     }
   }
+
+  @media (min-width: $page-width-tablet) {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
 .contacts__link-icon-wrapper {
@@ -61,6 +70,12 @@
   border-radius: 50%;
 
   background-color: $color-special-blue-very-dark;
+
+  @media (min-width: $page-width-tablet) {
+    width: 68px;
+    height: 68px;
+    margin-right: 23px;
+  }
 }
 
 .contacts__link-icon {
@@ -74,6 +89,16 @@
   &--email {
     width: 18px;
     height: 18px;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    width: 24px;
+    height: 23px;
+
+    &--email {
+      width: 28px;
+      height: 19px;
+    }
   }
 }
 

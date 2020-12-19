@@ -1,6 +1,10 @@
 .user-nav {
   display: block;
   text-align: center;
+
+  @media (min-width: $page-width-tablet) {
+    text-align: right;
+  }
 }
 
 .user-nav__link {
@@ -10,5 +14,10 @@
   &--promo {
     width: 190px;
     min-height: 40px;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    width: auto;
+    min-width: 188px;
   }
 }

@@ -25,6 +25,10 @@
   word-break: break-word;
 
   background-color: $color-basic-grey;
+
+  @media (min-width: $page-width-tablet) {
+    padding-top: $menu-height-tablet;
+  }
 }
 
 .no-js .page__body {

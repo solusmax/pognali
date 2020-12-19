@@ -14,6 +14,7 @@
     background-image: url("#{$img-path}/logo/logo-blue.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 96px 15px;
   }
 
   &:any-link:hover {
@@ -33,19 +34,41 @@
   &--scroll::before {
     display: block;
   }
+
+  @media (min-width: $page-width-tablet) {
+    &::before {
+      width: 162px;
+      height: 42px;
+
+      background-image: url("#{$img-path}/logo/logo-blue-tablet.png");
+      background-size: 162px 42px;
+    }
+  }
 }
 
 .no-js .logo::before {
   display: block;
 }
 
+.logo__picture-wrapper {
+  display: flex;
+}
+
 .logo__picture {
+  width: 96px;
+  height: 15px;
+
   &--open {
     display: none;
   }
 
   &--scroll {
     display: none;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    width: 162px;
+    height: 42px;
   }
 }
 
