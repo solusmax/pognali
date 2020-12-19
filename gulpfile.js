@@ -94,7 +94,7 @@ const buildJs = () => {
 // Изображения
 
 const buildImg = () => {
-  return src(['./source/img/**/*.{jpg,jpeg,png,svg}', '!./source/img/**/*icon*.svg'], { base: './source/img' })
+  return src(['./source/img/**/*.{jpg,jpeg,png,svg}', '!./source/img/**/icon-*.svg'], { base: './source/img' })
     .pipe(gulpIf(!production, plumber()))
     .pipe(gulpIf(!production, newer('./build/img')))
     .pipe(gulpIf(production, imagemin([
@@ -125,7 +125,7 @@ const buildWebp = () => {
 // SVG-спрайт
 
 const buildSvgSprite = () => {
-  return src('./source/img/**/*icon*.svg')
+  return src('./source/img/**/icon-*.svg')
     .pipe(imagemin([
       imagemin.svgo({
         plugins: [{
@@ -164,11 +164,11 @@ const startServer = () => {
     }
   });
 
-  watch(['./source/*.html', './source/img/**/*icon*.svg'], series(buildSvgSprite, buildHtml, reload));
+  watch(['./source/*.html', './source/img/**/icon-*.svg'], series(buildSvgSprite, buildHtml, reload));
   watch('./source/sass/**/*.scss', series(buildCss, reload));
   watch('./source/js/**/*.js', series(buildJs, reload))
   watch('./source/img/**/*.{jpg,jpeg,png}', series(buildImg, buildWebp, reload));
-  watch(['./source/img/**/*.{svg}', '!./source/img/**/*icon*.svg'], series(buildImg, reload));
+  watch(['./source/img/**/*.svg', '!./source/img/**/icon-*.svg'], series(buildImg, reload));
   watch('./source/fonts/**/*.{woff2,woff}', series(buildFonts, reload));
 };
 

@@ -17,11 +17,11 @@
   height: 21px;
 
   &:not(:nth-child(5n - 4)) {
-    margin-left: 26px;
+    margin-left: 22px;
   }
 
   &:nth-child(n + 6) {
-    margin-top: 26px;
+    margin-top: 22px;
   }
 
   &--footer {
@@ -39,22 +39,58 @@
 }
 
 .socials__link {
+  position: relative;
+
   display: block;
   width: 100%;
   height: 100%;
 
-  background-color: $color-special-blue-dark;
+  &::before {
+    content: "";
 
-  transition: opacity $transitions-duration;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    background-image: url("../img/socials/socials-facebook.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 11px 21px;
+
+    transition-property: opacity;
+    transition-duration: $transitions-duration;
+
+    pointer-events: none;
+  }
 
   &:hover {
-    opacity: 0.6;
+    &::before {
+      opacity: 0.6;
+    }
   }
 
   &:active {
-    opacity: 0.3;
+    &::before {
+      opacity: 0.3;
 
-    transition: none;
+      transition: none;
+    }
+  }
+
+  &--vk {
+    &::before {
+      background-image: url("../img/socials/socials-vk.svg");
+      background-size: 23px 12px;
+    }
+  }
+
+  &--instagram {
+    &::before {
+      background-image: url("../img/socials/socials-instagram.svg");
+      background-size: 18px 18px;
+    }
   }
 
   &--footer {
@@ -62,20 +98,25 @@
 
     background-color: $color-basic-yellow;
 
-    transition: background-color $transitions-duration;
+    transition-property: background-color;
+    transition-duration: $transitions-duration;
 
     &:hover {
       background-color: $color-special-yellow-dark;
 
-      opacity: 1;
+      &::before {
+        opacity: 1;
+      }
     }
 
     &:active {
       background-color: $color-special-yellow-dark;
 
-      opacity: 1;
-
       transition: none;
+
+      &::before {
+        opacity: 0.3;
+      }
     }
   }
 }

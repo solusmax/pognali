@@ -35,19 +35,6 @@
     transition: none;
   }
 
-  &::before {
-    content: "";
-
-    flex-shrink: 0;
-    margin-right: 16px;
-
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-
-    background-color: $color-special-blue-very-dark;
-  }
-
   &--registration {
     line-height: 18px;
     color: $color-basic-yellow;
@@ -60,4 +47,44 @@
       color: rgba($color-basic-yellow, 0.3);
     }
   }
+}
+
+.contacts__link-icon-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+  background-color: $color-special-blue-very-dark;
+}
+
+.contacts__link-icon {
+  width: 16px;
+  height: 15px;
+
+  color: $color-basic-yellow;
+
+  transition: $transitions-duration;
+
+  &--email {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.contacts__link:hover .contacts__link-icon {
+  color: $color-special-yellow-dark;
+}
+
+.contacts__link:active .contacts__link-icon {
+  color: $color-special-yellow-dark;
+
+  opacity: 0.3;
+
+  transition: none;
 }

@@ -38,4 +38,8 @@
   &--light-metallic::after {
     background-color: $color-special-grey-very-light;
   }
+
+  &--medium-metalic::after {
+    background-color: $color-special-grey-most-medium;
+  }
 }

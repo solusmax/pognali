@@ -49,11 +49,25 @@
       <div class="page-header__contacts-wrapper">
         <ul class="page-header__contacts contacts">
           <li class="contacts__item">
-            <a class="contacts__link contacts__link--phone" href="tel:88005558628">8 800 555-86-28</a>
+            <a class="contacts__link" href="tel:88005558628">
+              <div class="contacts__link-icon-wrapper">
+                <svg class="contacts__link-icon contacts__link-icon--phone" width="16" height="15" aria-hidden="true" focusable="false">
+                  <use xlink:href="#icon-contacts-phone"></use>
+                </svg>
+              </div>
+              8 800 555-86-28
+            </a>
           </li>
 
           <li class="contacts__item">
-            <a class="contacts__link contacts__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
+              <div class="contacts__link-icon-wrapper">
+                <svg class="contacts__link-icon contacts__link-icon--email" width="18" height="18" aria-hidden="true" focusable="false">
+                  <use xlink:href="#icon-contacts-email"></use>
+                </svg>
+              </div>
+              mail@htmlacademy.ru
+            </a>
           </li>
         </ul>
       </div>
@@ -990,6 +1004,9 @@
                       <li class="transport__item-wrapper transport__item-wrapper--companions-filter tooltip" data-tooltip="Авиаперелет">
                         <input class="transport__field visually-hidden" id="transport-plane" type="checkbox" name="transport-plane" checked>
                         <label class="transport__item transport__item--plane transport__item--companions-filter" for="transport-plane">
+                          <svg class="transport__icon transport__icon--plane transport__icon--companions-filter" width="17px" height="16px" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-transport-plane"></use>
+                          </svg>
                           <span class="visually-hidden">Авиаперелет</span>
                         </label>
                       </li>
@@ -997,6 +1014,9 @@
                       <li class="transport__item-wrapper transport__item-wrapper--companions-filter tooltip" data-tooltip="Автотранспорт">
                         <input class="transport__field visually-hidden" id="transport-car" type="checkbox" name="transport-car" checked>
                         <label class="transport__item transport__item--car transport__item--companions-filter" for="transport-car">
+                          <svg class="transport__icon transport__icon--car transport__icon--companions-filter" width="17px" height="16px" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-transport-car"></use>
+                          </svg>
                           <span class="visually-hidden">Автотранспорт</span>
                         </label>
                       </li>
@@ -1004,6 +1024,9 @@
                       <li class="transport__item-wrapper transport__item-wrapper--companions-filter tooltip" data-tooltip="Велосипед">
                         <input class="transport__field visually-hidden" id="transport-bmx" type="checkbox" name="transport-bmx">
                         <label class="transport__item transport__item--bmx transport__item--companions-filter" for="transport-bmx">
+                          <svg class="transport__icon transport__icon--bmx transport__icon--companions-filter" width="15px" height="12px" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-transport-bmx"></use>
+                          </svg>
                           <span class="visually-hidden">Велосипед</span>
                         </label>
                       </li>
@@ -1011,6 +1034,9 @@
                       <li class="transport__item-wrapper transport__item-wrapper--companions-filter tooltip" data-tooltip="Пешком">
                         <input class="transport__field visually-hidden" id="transport-walk" type="checkbox" name="transport-walk" checked>
                         <label class="transport__item transport__item--walk transport__item--companions-filter" for="transport-walk">
+                          <svg class="transport__icon transport__icon--walk transport__icon--companions-filter" width="14px" height="14px" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-transport-walk"></use>
+                          </svg>
                           <span class="visually-hidden">Пешком</span>
                         </label>
                       </li>
@@ -1109,21 +1135,21 @@
                     <ul class="card__countries">
                       <li class="card__country">
                         <div class="card__flag-wrapper tooltip" data-tooltip="Шри&#8209;Ланка">
-                          <img class="card__flag" src="img/flags/flag-sri-lanka-catalog.png" width="26" height="18" alt="Флаг Шри-Ланки.">
+                          <img class="card__flag" src="img/flags/catalog-flag-sri-lanka.png" width="26" height="18" alt="Флаг Шри-Ланки.">
                         </div>
                         <span class="card__country-name">Шри-Ланка</span>
                       </li>
 
                       <li class="card__country">
                         <div class="card__flag-wrapper tooltip" data-tooltip="Тайланд">
-                          <img class="card__flag" src="img/flags/flag-thailand-catalog.png" width="26" height="18" alt="Флаг Таиланда.">
+                          <img class="card__flag" src="img/flags/catalog-flag-thailand.png" width="26" height="18" alt="Флаг Таиланда.">
                         </div>
                         <span class="card__country-name">Тайланд</span>
                       </li>
 
                       <li class="card__country">
                         <div class="card__flag-wrapper tooltip" data-tooltip="Республика Сейшелы">
-                          <img class="card__flag" src="img/flags/flag-seychelles-catalog.png" width="26" height="18" alt="Флаг Республики Сейшелы.">
+                          <img class="card__flag" src="img/flags/catalog-flag-seychelles.png" width="26" height="18" alt="Флаг Республики Сейшелы.">
                         </div>
                         <span class="card__country-name">Сейшелы</span>
                       </li>
@@ -1138,24 +1164,36 @@
                     <ul class="card__transport transport transport--card">
                       <li class="transport__item-wrapper transport__item-wrapper--card tooltip" data-tooltip="Авиаперелет">
                         <div class="transport__item transport__item--plane transport__item--card transport__item--checked">
+                          <svg class="transport__icon transport__icon--plane transport__icon--card" width="16px" height="14px" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-transport-plane"></use>
+                          </svg>
                           <span class="visually-hidden">Авиаперелет</span>
                         </div>
                       </li>
 
                       <li class="transport__item-wrapper transport__item-wrapper--card tooltip" data-tooltip="Автотранспорт">
                         <div class="transport__item transport__item--car transport__item--card">
+                          <svg class="transport__icon transport__icon--car transport__icon--card" width="14px" height="16px" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-transport-car"></use>
+                          </svg>
                           <span class="visually-hidden">Автотранспорт</span>
                         </div>
                       </li>
 
                       <li class="transport__item-wrapper transport__item-wrapper--card tooltip" data-tooltip="Велосипед">
                         <div class="transport__item transport__item--bmx transport__item--card">
+                          <svg class="transport__icon transport__icon--bmx transport__icon--card" width="14px" height="11px" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-transport-bmx"></use>
+                          </svg>
                           <span class="visually-hidden">Велосипед</span>
                         </div>
                       </li>
 
                       <li class="transport__item-wrapper transport__item-wrapper--card tooltip" data-tooltip="Пешком">
                         <div class="transport__item transport__item--walk transport__item--card">
+                          <svg class="transport__icon transport__icon--walk transport__icon--card" width="13px" height="13px" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-transport-walk"></use>
+                          </svg>
                           <span class="visually-hidden">Пешком</span>
                         </div>
                       </li>
@@ -1168,7 +1206,7 @@
                     </div>
 
                     <p class="card__level level level--card">
-                      <svg class="level__svg"></svg>
+                      <svg class="level__svg" aria-hidden="true" focusable="false"></svg>
                       <span class="level__title level__title--card">Level</span>
                       <span class="level__number level__number--card">99</span>
                     </p>
@@ -1213,14 +1251,14 @@
                     <ul class="card__countries">
                       <li class="card__country">
                         <div class="card__flag-wrapper tooltip" data-tooltip="Бельгия">
-                          <img class="card__flag" src="img/flags/flag-belgium-catalog.png" width="26" height="18" alt="Флаг Бельгии.">
+                          <img class="card__flag" src="img/flags/catalog-flag-belgium.png" width="26" height="18" alt="Флаг Бельгии.">
                         </div>
                         <span class="card__country-name">Бельгия</span>
                       </li>
 
                       <li class="card__country">
                         <div class="card__flag-wrapper tooltip" data-tooltip="Чехия">
-                          <img class="card__flag" src="img/flags/flag-czechia-catalog.png" width="26" height="18" alt="Флаг Чехии.">
+                          <img class="card__flag" src="img/flags/catalog-flag-czechia.png" width="26" height="18" alt="Флаг Чехии.">
                         </div>
                         <span class="card__country-name">Чехия</span>
                       </li>
@@ -1235,24 +1273,36 @@
                     <ul class="card__transport transport transport--card">
                       <li class="transport__item-wrapper transport__item-wrapper--card tooltip" data-tooltip="Авиаперелет">
                         <div class="transport__item transport__item--plane transport__item--card transport__item--checked">
+                          <svg class="transport__icon transport__icon--plane transport__icon--card" width="16px" height="14px" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-transport-plane"></use>
+                          </svg>
                           <span class="visually-hidden">Авиаперелет</span>
                         </div>
                       </li>
 
                       <li class="transport__item-wrapper transport__item-wrapper--card tooltip" data-tooltip="Автотранспорт">
                         <div class="transport__item transport__item--car transport__item--card transport__item--checked">
+                          <svg class="transport__icon transport__icon--car transport__icon--card" width="14px" height="16px" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-transport-car"></use>
+                          </svg>
                           <span class="visually-hidden">Автотранспорт</span>
                         </div>
                       </li>
 
                       <li class="transport__item-wrapper transport__item-wrapper--card tooltip" data-tooltip="Велосипед">
                         <div class="transport__item transport__item--bmx transport__item--card">
+                          <svg class="transport__icon transport__icon--bmx transport__icon--card" width="14px" height="11px" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-transport-bmx"></use>
+                          </svg>
                           <span class="visually-hidden">Велосипед</span>
                         </div>
                       </li>
 
                       <li class="transport__item-wrapper transport__item-wrapper--card tooltip" data-tooltip="Пешком">
                         <div class="transport__item transport__item--walk transport__item--card transport__item--checked">
+                          <svg class="transport__icon transport__icon--walk transport__icon--card" width="13px" height="13px" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-transport-walk"></use>
+                          </svg>
                           <span class="visually-hidden">Пешком</span>
                         </div>
                       </li>
@@ -1265,7 +1315,7 @@
                     </div>
 
                     <p class="card__level level level--card">
-                      <svg class="level__svg"></svg>
+                      <svg class="level__svg" aria-hidden="true" focusable="false"></svg>
                       <span class="level__title level__title--card">Level</span>
                       <span class="level__number level__number--card">80</span>
                     </p>
@@ -1310,21 +1360,21 @@
                     <ul class="card__countries">
                       <li class="card__country">
                         <div class="card__flag-wrapper tooltip" data-tooltip="США">
-                          <img class="card__flag" src="img/flags/flag-usa-catalog.png" width="26" height="18" alt="Флаг США.">
+                          <img class="card__flag" src="img/flags/catalog-flag-usa.png" width="26" height="18" alt="Флаг США.">
                         </div>
                         <span class="card__country-name">США</span>
                       </li>
 
                       <li class="card__country">
                         <div class="card__flag-wrapper tooltip" data-tooltip="Австралия">
-                          <img class="card__flag" src="img/flags/flag-australia-catalog.png" width="26" height="18" alt="Флаг Австралии.">
+                          <img class="card__flag" src="img/flags/catalog-flag-australia.png" width="26" height="18" alt="Флаг Австралии.">
                         </div>
                         <span class="card__country-name">Австралия</span>
                       </li>
 
                       <li class="card__country">
                         <div class="card__flag-wrapper tooltip" data-tooltip="Доминика">
-                          <img class="card__flag" src="img/flags/flag-dominica-catalog.png" width="26" height="18" alt="Флаг Доминики.">
+                          <img class="card__flag" src="img/flags/catalog-flag-dominica.png" width="26" height="18" alt="Флаг Доминики.">
                         </div>
                         <span class="card__country-name">Доминика</span>
                       </li>
@@ -1339,24 +1389,36 @@
                     <ul class="card__transport transport transport--card">
                       <li class="transport__item-wrapper transport__item-wrapper--card tooltip" data-tooltip="Авиаперелет">
                         <div class="transport__item transport__item--plane transport__item--card transport__item--checked">
+                          <svg class="transport__icon transport__icon--plane transport__icon--card" width="16px" height="14px" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-transport-plane"></use>
+                          </svg>
                           <span class="visually-hidden">Авиаперелет</span>
                         </div>
                       </li>
 
                       <li class="transport__item-wrapper transport__item-wrapper--card tooltip" data-tooltip="Автотранспорт">
                         <div class="transport__item transport__item--car transport__item--card">
+                          <svg class="transport__icon transport__icon--car transport__icon--card" width="14px" height="16px" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-transport-car"></use>
+                          </svg>
                           <span class="visually-hidden">Автотранспорт</span>
                         </div>
                       </li>
 
                       <li class="transport__item-wrapper transport__item-wrapper--card tooltip" data-tooltip="Велосипед">
                         <div class="transport__item transport__item--bmx transport__item--card transport__item--checked">
+                          <svg class="transport__icon transport__icon--bmx transport__icon--card" width="14px" height="11px" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-transport-bmx"></use>
+                          </svg>
                           <span class="visually-hidden">Велосипед</span>
                         </div>
                       </li>
 
                       <li class="transport__item-wrapper transport__item-wrapper--card tooltip" data-tooltip="Пешком">
                         <div class="transport__item transport__item--walk transport__item--card">
+                          <svg class="transport__icon transport__icon--walk transport__icon--card" width="13px" height="13px" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-transport-walk"></use>
+                          </svg>
                           <span class="visually-hidden">Пешком</span>
                         </div>
                       </li>
@@ -1369,7 +1431,7 @@
                     </div>
 
                     <p class="card__level level level--card">
-                      <svg class="level__svg"></svg>
+                      <svg class="level__svg" aria-hidden="true" focusable="false"></svg>
                       <span class="level__title level__title--card">Level</span>
                       <span class="level__number level__number--card">25</span>
                     </p>
@@ -1413,14 +1475,14 @@
                     <ul class="card__countries">
                       <li class="card__country">
                         <div class="card__flag-wrapper tooltip" data-tooltip="Великобритания">
-                          <img class="card__flag" src="img/flags/flag-united-kingdom-catalog.png" width="26" height="18" alt="Флаг Великобритании.">
+                          <img class="card__flag" src="img/flags/catalog-flag-united-kingdom.png" width="26" height="18" alt="Флаг Великобритании.">
                         </div>
                         <span class="card__country-name">Великобритания</span>
                       </li>
 
                       <li class="card__country">
                         <div class="card__flag-wrapper tooltip" data-tooltip="Германия">
-                          <img class="card__flag" src="img/flags/flag-germany-catalog.png" width="26" height="18" alt="Флаг Германии.">
+                          <img class="card__flag" src="img/flags/catalog-flag-germany.png" width="26" height="18" alt="Флаг Германии.">
                         </div>
                         <span class="card__country-name">Германия</span>
                       </li>
@@ -1435,24 +1497,36 @@
                     <ul class="card__transport transport transport--card">
                       <li class="transport__item-wrapper transport__item-wrapper--card tooltip" data-tooltip="Авиаперелет">
                         <div class="transport__item transport__item--plane transport__item--card transport__item--checked">
+                          <svg class="transport__icon transport__icon--plane transport__icon--card" width="16px" height="14px" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-transport-plane"></use>
+                          </svg>
                           <span class="visually-hidden">Авиаперелет</span>
                         </div>
                       </li>
 
                       <li class="transport__item-wrapper transport__item-wrapper--card tooltip" data-tooltip="Автотранспорт">
                         <div class="transport__item transport__item--car transport__item--card transport__item--checked">
+                          <svg class="transport__icon transport__icon--car transport__icon--card" width="14px" height="16px" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-transport-car"></use>
+                          </svg>
                           <span class="visually-hidden">Автотранспорт</span>
                         </div>
                       </li>
 
                       <li class="transport__item-wrapper transport__item-wrapper--card tooltip" data-tooltip="Велосипед">
                         <div class="transport__item transport__item--bmx transport__item--card">
+                          <svg class="transport__icon transport__icon--bmx transport__icon--card" width="14px" height="11px" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-transport-bmx"></use>
+                          </svg>
                           <span class="visually-hidden">Велосипед</span>
                         </div>
                       </li>
 
                       <li class="transport__item-wrapper transport__item-wrapper--card tooltip" data-tooltip="Пешком">
                         <div class="transport__item transport__item--walk transport__item--card">
+                          <svg class="transport__icon transport__icon--walk transport__icon--card" width="13px" height="13px" aria-hidden="true" focusable="false">
+                            <use xlink:href="#icon-transport-walk"></use>
+                          </svg>
                           <span class="visually-hidden">Пешком</span>
                         </div>
                       </li>
@@ -1465,7 +1539,7 @@
                     </div>
 
                     <p class="card__level level level--card">
-                      <svg class="level__svg"></svg>
+                      <svg class="level__svg" aria-hidden="true" focusable="false"></svg>
                       <span class="level__title level__title--card">Level</span>
                       <span class="level__number level__number--card">50</span>
                     </p>

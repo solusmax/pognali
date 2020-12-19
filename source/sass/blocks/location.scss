@@ -11,7 +11,7 @@
   background-color: $color-basic-yellow;
 }
 
-.location__adress-inner {
+.location__address-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,6 +46,10 @@
     border-radius: 50%;
 
     background-color: $color-special-blue-very-dark;
+    background-image: url("../../img/location/location-address.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 17px 21px;
   }
 }
 

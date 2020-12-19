@@ -19,6 +19,10 @@
   &::before {
     content: "";
 
+    position: relative;
+    left: 1px;
+    top: 1px;
+
     display: block;
     width: 0;
     height: 0;
@@ -53,6 +57,8 @@
     border-radius: 0 20px 20px 0;
 
     &::before {
+      left: -1px;
+
       transform: rotate(180deg);
     }
   }

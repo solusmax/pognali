@@ -12,7 +12,8 @@
 .calendar__month-button {
   position: relative;
 
-  width: 10px;
+  width: 16px;
+  padding: 0;
   border: none;
 
   background: none;
@@ -31,8 +32,8 @@
 
     background-image: url("../img/calendar/calendar-arrow.svg");
     background-repeat: no-repeat;
-    background-size: 10px 19px;
-    background-position: 50% 50%;
+    background-size: 9px 18px;
+    background-position: 0 50%;
 
     opacity: 0.3;
 

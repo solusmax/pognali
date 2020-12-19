@@ -5,7 +5,7 @@ $price-picture-size: 100px;
   justify-content: center;
   border-radius: 0 0 30px 30px;
 
-  background-color: $color-basic-grey;
+  background-color: $color-special-grey-most-medium;
 }
 
 .new-profile__inner {
@@ -76,12 +76,14 @@ $price-picture-size: 100px;
 
     position: absolute;
     right: 0;
-    top: -1 * ($price-picture-size + 31px);
+    top: -1 * ($price-picture-size + 30px);
 
     width: $price-picture-size;
     height: $price-picture-size;
 
-    background-color: $color-basic-white;
+    background-image: url("../img/new-profile/new-profile-price.png");
+    background-repeat: no-repeat;
+    background-size: $price-picture-size $price-picture-size;
   }
 }
 

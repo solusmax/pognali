@@ -54,7 +54,8 @@
       height: 10px;
 
       background-image: url("../img/route/route-next-arrow.svg");
-      background-repeat: none;
+      background-repeat: no-repeat;
+      background-size: 8px 11px;
     }
   }
 
@@ -148,6 +149,7 @@
       background-image: url("../img/route/route-select-arrow.svg");
       background-repeat: no-repeat;
       background-position: 50% 50%;
+      background-size: 12px 16px;
     }
 
     &:active {
@@ -187,6 +189,7 @@
     &::after {
       background-image: url("../img/route/route-select-close.svg");
       background-position: 45% 50%;
+      background-size: 9px 10px;
 
       opacity: 0.3;
 
