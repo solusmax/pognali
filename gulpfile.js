@@ -66,13 +66,19 @@ const buildCss = () => {
   return src('./source/sass/style.scss', { sourcemaps: true })
     .pipe(gulpIf(!production, plumber()))
     .pipe(sass({ importer: magicImporter() }).on('error', sass.logError))
-    .pipe(postcss([
+    .pipe(gulpIf(production, postcss([
       postcssNormalize({
         forceImport: 'normalize.css'
       }),
       autoprefixer(),
       cssnano()
-    ]))
+    ])))
+    .pipe(gulpIf(!production, postcss([
+      postcssNormalize({
+        forceImport: 'normalize.css'
+      }),
+      autoprefixer()
+    ])))
     .pipe(rename('style.min.css'))
     .pipe(dest('./build/css', { sourcemaps: '.' }));
 };
