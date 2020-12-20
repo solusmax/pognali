@@ -32,6 +32,16 @@
     padding-left: $page-padding-tablet;
     padding-right: $page-padding-tablet;
     padding-top: 40px;
+
+    background-color: $color-special-blue-medium-light;
+
+    &--inner-page {
+      background-color: $color-special-blue-medium-light;
+    }
+
+    &--scroll {
+      background-color: $color-basic-white;
+    }
   }
 }
 
