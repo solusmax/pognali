@@ -215,6 +215,12 @@
     font-size: 24px;
     line-height: 24px;
 
+    &--rectangle {
+      padding-left: 32px;
+      padding-right: 35px;
+      border-radius: 20px;
+    }
+
     &--user-nav {
       font-size: 20px;
       line-height: 20px;

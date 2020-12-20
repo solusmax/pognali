@@ -2,5 +2,6 @@
 @import "mixins.scss";
 @import "fonts.scss";
 @import "global.scss";
-@import "blocks/**/*.scss";
-@import "layout/**/*.scss";
+@import "1-components/**/*.scss";
+@import "2-blocks/**/*.scss";
+@import "3-layout/**/*.scss";
