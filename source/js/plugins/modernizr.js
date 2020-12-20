@@ -26,7 +26,7 @@
 ;(function(scriptGlobalObject, window, document, undefined){
 
   var tests = [];
-  
+
 
   /**
    * ModernizrProto is the constructor for Modernizr
@@ -72,7 +72,7 @@
     }
   };
 
-  
+
 
   // Fake some of Object.create so we can force non test results to be non "own" properties.
   var Modernizr = function() {};
@@ -82,10 +82,10 @@
   // Overwrite name so constructor name is nicer :D
   Modernizr = new Modernizr();
 
-  
+
 
   var classes = [];
-  
+
 
   /**
    * is returns a boolean if the typeof an obj is exactly type.
@@ -178,7 +178,7 @@
    * @returns {HTMLElement|SVGElement} The root element of the document
    */
   var docElement = document.documentElement;
-  
+
 
   /**
    * A convenience helper to check if the document we are running in is an SVG document
@@ -188,7 +188,7 @@
    */
   var isSVG = docElement.nodeName.toLowerCase() === 'svg';
 
-  
+
 
   /**
    * setClasses takes an array of class names and adds them to the root element
@@ -260,7 +260,7 @@
     }
   })();
 
-  
+
 
 
   // _l tracks listeners for async tests, as well as tests that execute after the initial run
@@ -468,7 +468,7 @@
     ModernizrProto.addTest = addTest;
   });
 
-  
+
 
 /*!
 {
