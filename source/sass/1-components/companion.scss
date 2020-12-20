@@ -18,6 +18,12 @@
   &:hover .companion__photo {
     transform: scale(1.06);
   }
+
+  @media (min-width: $page-width-tablet) {
+    grid-template-rows: 273px 12px minmax(12px, min-content) min-content;
+    width: 285px;
+    border-radius: 25px 25px 20px 20px;
+  }
 }
 
 .companion__info-wrapper {
@@ -30,12 +36,21 @@
   padding-right: 25px;
   padding-top: 11px;
   padding-bottom: 21px;
+
+  @media (min-width: $page-width-tablet) {
+    padding-top: 17px;
+    padding-bottom: 28px;
+  }
 }
 
 .companion__name-wrapper {
   display: flex;
   align-items: center;
   padding-right: 15px;
+
+  @media (min-width: $page-width-tablet) {
+    padding-right: 20px;
+  }
 }
 
 .companion__name-link {
@@ -67,6 +82,11 @@
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
+
+  @media (min-width: $page-width-tablet) {
+    font-size: 24px;
+    line-height: 22px;
+  }
 }
 
 .companion__status {
@@ -74,6 +94,10 @@
   margin-right: 10px;
 
   transition: opacity $transitions-duration;
+
+  @media (min-width: $page-width-tablet) {
+    margin-right: 15px;
+  }
 }
 
 .companion__photo-wrapper {
@@ -85,21 +109,38 @@
   border-radius: 10px 10px 0 0;
 
   overflow: hidden;
+
+  @media (min-width: $page-width-tablet) {
+    border-radius: 20px 20px 0 0;
+  }
 }
 
 .companion__photo {
+  width: 270px;
+  height: 270px;
+
   transition: transform $transitions-duration;
+
+  @media (min-width: $page-width-tablet) {
+    width: 285px;
+    height: 285px;
+  }
 }
 
 .companion__level {
   position: absolute;
-  top: 17px;
   left: 17px;
+  top: 17px;
   z-index: 1;
 
   grid-row: 1 / 2;
   grid-column: 1 / -1;
   margin: 0;
+
+  @media (min-width: $page-width-tablet) {
+    left: 22px;
+    top: 20px;
+  }
 }
 
 .companion__countries-wrapper {
@@ -144,9 +185,20 @@
   font-weight: 400;
   color: $color-special-black-light;
   text-align: center;
+
+  @media (min-width: $page-width-tablet) {
+    margin-top: 24px;
+
+    font-size: 20px;
+    line-height: 23px;
+  }
 }
 
 .companion__transport {
   margin: 0;
   margin-top: 14px;
+
+  @media (min-width: $page-width-tablet) {
+    margin-top: 24px;
+  }
 }

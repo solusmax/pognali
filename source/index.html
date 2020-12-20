@@ -297,9 +297,9 @@
           <div class="companions__info-wrapper">
             <h2 class="companions__title">Попутчики</h2>
 
-            <p class="companions__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+            <p class="companions__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а&nbsp;<br class="companions__description-br">другому маршрут для хайкинга.</p>
 
-            <p class="companions__description companions__description--bold">Теперь можно легко найти единомышленников!</p>
+            <p class="companions__tagline">Теперь можно легко<br class="companions__tagline-br"> найти единомышленников!</p>
           </div>
 
           <ul class="companions__list">
@@ -326,7 +326,7 @@
 
                 <ul class="companion__transport transport">
                   <li class="transport__item transport__item--plane transport__item--checked">
-                    <svg class="transport__icon transport__icon--plane" width="21px" height="21px" aria-hidden="true" focusable="false">
+                    <svg class="transport__icon transport__icon--plane transport__icon--companions" width="21px" height="21px" aria-hidden="true" focusable="false">
                       <use xlink:href="#icon-transport-plane"></use>
                     </svg>
                     <div class="transport__tooltip tooltip" data-tooltip="Авиаперелет">
@@ -335,7 +335,7 @@
                   </li>
 
                   <li class="transport__item transport__item--car">
-                    <svg class="transport__icon transport__icon--car" width="17px" height="19px" aria-hidden="true" focusable="false">
+                    <svg class="transport__icon transport__icon--car transport__icon--companions" width="17px" height="19px" aria-hidden="true" focusable="false">
                       <use xlink:href="#icon-transport-car"></use>
                     </svg>
                     <div class="transport__tooltip tooltip" data-tooltip="Автотранспорт">
@@ -344,7 +344,7 @@
                   </li>
 
                   <li class="transport__item transport__item--bmx">
-                    <svg class="transport__icon transport__icon--bmx" width="21px" height="18px" aria-hidden="true" focusable="false">
+                    <svg class="transport__icon transport__icon--bmx transport__icon--companions" width="21px" height="18px" aria-hidden="true" focusable="false">
                       <use xlink:href="#icon-transport-bmx"></use>
                     </svg>
                     <div class="transport__tooltip tooltip" data-tooltip="Велосипед">
@@ -353,7 +353,7 @@
                   </li>
 
                   <li class="transport__item transport__item--walk">
-                    <svg class="transport__icon transport__icon--walk" width="18px" height="19px" aria-hidden="true" focusable="false">
+                    <svg class="transport__icon transport__icon--walk transport__icon--companions" width="18px" height="19px" aria-hidden="true" focusable="false">
                       <use xlink:href="#icon-transport-walk"></use>
                     </svg>
                     <div class="transport__tooltip tooltip" data-tooltip="Пешком">
@@ -364,7 +364,13 @@
               </div>
 
               <div class="companion__photo-wrapper">
-                <img class="companion__photo" src="img/companions/companion-tanya-firsova.jpg" width="270" height="270" alt="Фотография Тани Фирсовой.">
+                <picture>
+                  <source srcset="img/companions/companion-tanya-firsova-tablet.webp 1x, img/companions/companion-tanya-firsova-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                  <source srcset="img/companions/companion-tanya-firsova-tablet.jpg 1x, img/companions/companion-tanya-firsova-tablet@2x.jpg 2x" media="(min-width: 768px)">
+
+                  <source srcset="img/companions/companion-tanya-firsova.webp 1x, img/companions/companion-tanya-firsova@2x.webp 2x" type="image/webp">
+                  <img class="companion__photo" src="img/companions/companion-tanya-firsova.jpg" srcset="img/companions/companion-tanya-firsova@2x.jpg 2x" alt="Фотография Тани Фирсовой.">
+                </picture>
               </div>
 
               <p class="companion__level level">
@@ -412,7 +418,7 @@
 
                 <ul class="companion__transport transport">
                   <li class="transport__item transport__item--plane transport__item--checked">
-                    <svg class="transport__icon transport__icon--plane" width="21px" height="21px" aria-hidden="true" focusable="false">
+                    <svg class="transport__icon transport__icon--plane transport__icon--companions" width="21px" height="21px" aria-hidden="true" focusable="false">
                       <use xlink:href="#icon-transport-plane"></use>
                     </svg>
                     <div class="transport__tooltip tooltip" data-tooltip="Авиаперелет">
@@ -421,7 +427,7 @@
                   </li>
 
                   <li class="transport__item transport__item--car transport__item--checked">
-                    <svg class="transport__icon transport__icon--car" width="17px" height="19px" aria-hidden="true" focusable="false">
+                    <svg class="transport__icon transport__icon--car transport__icon--companions" width="17px" height="19px" aria-hidden="true" focusable="false">
                       <use xlink:href="#icon-transport-car"></use>
                     </svg>
                     <div class="transport__tooltip tooltip" data-tooltip="Автотранспорт">
@@ -430,7 +436,7 @@
                   </li>
 
                   <li class="transport__item transport__item--bmx">
-                    <svg class="transport__icon transport__icon--bmx" width="21px" height="18px" aria-hidden="true" focusable="false">
+                    <svg class="transport__icon transport__icon--bmx transport__icon--companions" width="21px" height="18px" aria-hidden="true" focusable="false">
                       <use xlink:href="#icon-transport-bmx"></use>
                     </svg>
                     <div class="transport__tooltip tooltip" data-tooltip="Велосипед">
@@ -439,7 +445,7 @@
                   </li>
 
                   <li class="transport__item transport__item--walk transport__item--checked">
-                    <svg class="transport__icon transport__icon--walk" width="18px" height="19px" aria-hidden="true" focusable="false">
+                    <svg class="transport__icon transport__icon--walk transport__icon--companions" width="18px" height="19px" aria-hidden="true" focusable="false">
                       <use xlink:href="#icon-transport-walk"></use>
                     </svg>
                     <div class="transport__tooltip tooltip" data-tooltip="Пешком">
@@ -450,7 +456,13 @@
               </div>
 
               <div class="companion__photo-wrapper">
-                <img class="companion__photo" src="img/companions/companion-petya-demin.jpg" width="270" height="270" alt="Фотография Пети Демина.">
+                <picture>
+                  <source srcset="img/companions/companion-petya-demin-tablet.webp 1x, img/companions/companion-petya-demin-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                  <source srcset="img/companions/companion-petya-demin-tablet.jpg 1x, img/companions/companion-petya-demin-tablet@2x.jpg 2x" media="(min-width: 768px)">
+
+                  <source srcset="img/companions/companion-petya-demin.webp 1x, img/companions/companion-petya-demin@2x.webp 2x" type="image/webp">
+                  <img class="companion__photo" src="img/companions/companion-petya-demin.jpg" srcset="img/companions/companion-petya-demin@2x.jpg 2x" alt="Фотография Пети Демина.">
+                </picture>
               </div>
 
               <p class="companion__level level">
@@ -473,7 +485,9 @@
             </li>
           </ul>
 
-          <a class="companions__show-everyone button button--rectangle button--companions" href="catalog.html">Показать всех</a>
+          <div class="companions__show-everyone-wrapper">
+            <a class="companions__show-everyone button button--rectangle button--companions" href="catalog.html">Показать всех</a>
+          </div>
         </div>
       </section>
 

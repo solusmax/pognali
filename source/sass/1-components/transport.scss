@@ -221,6 +221,28 @@
     --transport-icon-width: 13px;
     --transport-icon-height: 13px;
   }
+
+  @media (min-width: $page-width-tablet) {
+    &--companions.transport__icon--plane {
+      --transport-icon-width: 23px;
+      --transport-icon-height: 23px;
+    }
+
+    &--companions.transport__icon--car {
+      --transport-icon-width: 18px;
+      --transport-icon-height: 20px;
+    }
+
+    &--companions.transport__icon--bmx {
+      --transport-icon-width: 23px;
+      --transport-icon-height: 20px;
+    }
+
+    &--companions.transport__icon--walk {
+      --transport-icon-width: 18px;
+      --transport-icon-height: 20px;
+    }
+  }
 }
 
 .transport__item--checked .transport__icon,

@@ -12,4 +12,9 @@
   &--online {
     background-color: $color-special-green;
   }
+
+  @media (min-width: $page-width-tablet) {
+    width: 8px;
+    height: 8px;
+  }
 }
