@@ -13,7 +13,7 @@
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
-  color: $color-basic-blue;
+  color: $color-special-blue-light;
   text-transform: uppercase;
   text-decoration: none;
 
@@ -97,6 +97,10 @@
     &::after {
       margin-left: 0;
     }
+  }
+
+  &--user-nav {
+    color: $color-basic-blue;
   }
 
   &--directions {
@@ -224,6 +228,12 @@
     &--user-nav {
       font-size: 20px;
       line-height: 20px;
+    }
+
+    &--about {
+      &::after {
+        border-left-width: 10px;
+      }
     }
   }
 }

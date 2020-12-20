@@ -42,4 +42,14 @@
   &--medium-metalic::after {
     background-color: $color-special-grey-most-medium;
   }
+
+  @media (min-width: $page-width-tablet) {
+    &::after {
+      top: -70px;
+    }
+
+    &--bottom::after {
+      bottom: -70px;
+    }
+  }
 }
