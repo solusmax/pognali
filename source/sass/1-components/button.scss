@@ -239,5 +239,16 @@
     &--registration {
       border-radius: 0 20px 20px 0;
     }
+
+    &--location {
+      padding-left: 34px;
+
+      &::after {
+        left: 3;
+
+        border-width: 7px;
+        border-left-width: 12px;
+      }
+    }
   }
 }

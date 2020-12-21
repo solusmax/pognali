@@ -582,7 +582,16 @@
 
         <div class="location__map-wrapper">
           <iframe class="location__map location__map--interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6126946773036!2d30.322993754549326!3d59.93856868683872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1603996691785!5m2!1sen!2sru" width="320" height="330" allowfullscreen title="Адрес офиса сервиса путешествий «Погнали?» на ул. Б. Конюшенная, дом 19/8 на карте Санкт-Петербурга."></iframe>
-          <img class="location__map location__map--static" src="img/location/map.png" width="415" height="330" alt="Адрес офиса сервиса путешествий «Погнали?» на ул. Б. Конюшенная, дом 19/8 на карте Санкт-Петербурга.">
+          <picture>
+            <source srcset="img/location/map-desktop.webp 1x, img/location/map-desktop@2x.webp 2x" media="(min-width: 1440px)" type="image/webp">
+            <source srcset="img/location/map-desktop.jpg 1x, img/location/map-desktop@2x.jpg 2x" media="(min-width: 1440px)">
+
+            <source srcset="img/location/map-tablet.webp 1x, img/location/map-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+            <source srcset="img/location/map-tablet.jpg 1x, img/location/map-tablet@2x.jpg 2x" media="(min-width: 768px)">
+
+            <source srcset="img/location/map.webp 1x, img/location/map@2x.webp 2x" type="image/webp">
+            <img class="location__map location__map--static" src="img/location/map.jpg" srcset="img/location/map@2x.jpg 2x" alt="Адрес офиса сервиса путешествий «Погнали?» на ул. Б. Конюшенная, дом 19/8 на карте Санкт-Петербурга.">
+          </picture>
         </div>
       </section>
     </main>
@@ -623,7 +632,16 @@
     <footer class="page__page-footer page-footer">
       <div class="page-footer__inner">
         <a class="page-footer__logo logo">
-          <img class="logo__picture" src="img/logo/logo-blue.png" width="96" height="15" alt="Логотип сервиса путешествий «Погнали?».">
+          <picture>
+            <source srcset="img/logo/logo-blue-desktop.webp 1x, img/logo/logo-blue-desktop@2x.webp 2x" media="(min-width: 1440px)" type="image/webp">
+            <source srcset="img/logo/logo-blue-desktop.png 1x, img/logo/logo-blue-desktop@2x.png 2x" media="(min-width: 1440px)">
+
+            <source srcset="img/logo/logo-blue-tablet.webp 1x, img/logo/logo-blue-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+            <source srcset="img/logo/logo-blue-tablet.png 1x, img/logo/logo-blue-tablet@2x.png 2x" media="(min-width: 768px)">
+
+            <source srcset="img/logo/logo-blue.webp 1x, img/logo/logo-blue@2x.webp 2x" type="image/webp">
+            <img class="logo__picture" src="img/logo/logo-blue.png" srcset="img/logo/logo-blue@2x.png 2x" alt="Логотип сервиса путешествий «Погнали?».">
+          </picture>
         </a>
 
         <ul class="page-footer__socials socials socials--footer">

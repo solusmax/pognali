@@ -13,6 +13,10 @@
 
   @media (min-width: $page-width-tablet) {
     justify-content: flex-start;
+
+    &--footer {
+      justify-content: center;
+    }
   }
 }
 
@@ -56,6 +60,16 @@
 
     &:nth-child(n + 6) {
       margin-top: 0;
+    }
+
+    &--footer {
+      width: 62px;
+      height: 62px;
+      margin-bottom: 0;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
     }
   }
 }

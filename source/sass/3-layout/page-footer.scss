@@ -6,6 +6,10 @@
   border-radius: 30px 30px 0 0;
 
   background-color: $color-basic-white;
+
+  @media (min-width: $page-width-tablet) {
+    border-radius: 56px 56px 0 0;
+  }
 }
 
 .page-footer__inner {
@@ -18,6 +22,22 @@
   padding-right: $page-padding-mobile;
   padding-top: 37px;
   padding-bottom: 19px;
+
+  @media (min-width: $page-width-tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: $page-padding-tablet;
+    padding-right: $page-padding-tablet;
+    padding-top: 46px;
+    padding-bottom: 32px;
+  }
+}
+
+.page-footer__logo {
+  @media (min-width: $page-width-tablet) {
+    flex-shrink: 0;
+    margin-right: 40px;
+  }
 }
 
 .page-footer__socials {
@@ -25,6 +45,10 @@
 
   margin: 0;
   margin-top: 40px;
+
+  @media (min-width: $page-width-tablet) {
+    margin-top: 0;
+  }
 }
 
 .page-footer__copyright-wrapper {
@@ -44,6 +68,18 @@
     height: 1px;
 
     background-color: $color-special-grey-semi-light;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    flex-shrink: 0;
+    width: 162px;
+    margin-left: 40px;
+    margin-top: -6px;
+    padding-left: 8px;
+
+    &::after {
+      display: none;
+    }
   }
 }
 

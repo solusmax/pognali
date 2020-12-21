@@ -1615,7 +1615,16 @@
     <footer class="page__page-footer page-footer">
       <div class="page-footer__inner">
         <a class="page-footer__logo logo" href="index.html">
-          <img class="logo__picture" src="img/logo/logo-blue.png" width="96" height="15" alt="Логотип сервиса путешествий «Погнали?».">
+          <picture>
+            <source srcset="img/logo/logo-blue-desktop.webp 1x, img/logo/logo-blue-desktop@2x.webp 2x" media="(min-width: 1440px)" type="image/webp">
+            <source srcset="img/logo/logo-blue-desktop.png 1x, img/logo/logo-blue-desktop@2x.png 2x" media="(min-width: 1440px)">
+
+            <source srcset="img/logo/logo-blue-tablet.webp 1x, img/logo/logo-blue-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+            <source srcset="img/logo/logo-blue-tablet.png 1x, img/logo/logo-blue-tablet@2x.png 2x" media="(min-width: 768px)">
+
+            <source srcset="img/logo/logo-blue.webp 1x, img/logo/logo-blue@2x.webp 2x" type="image/webp">
+            <img class="logo__picture" src="img/logo/logo-blue.png" srcset="img/logo/logo-blue@2x.png 2x" alt="Логотип сервиса путешествий «Погнали?».">
+          </picture>
         </a>
 
         <ul class="page-footer__socials socials socials--footer">
