@@ -10,6 +10,10 @@
 
   @media (min-width: $page-width-tablet) {
     margin-left: 57px;
+
+    &--registration {
+      margin-left: 35px;
+    }
   }
 }
 

@@ -1,9 +1,15 @@
 .registration {
+  --registration-form-padding: 36px;
+
   display: flex;
   justify-content: center;
   border-radius: 0 0 30px 30px;
 
   background-color: $color-special-blue-dark;
+
+  @media (min-width: $page-width-tablet) {
+    border-radius: 0 0 60px 60px;
+  }
 }
 
 .registration__inner {
@@ -16,6 +22,15 @@
   padding-right: $page-padding-mobile;
   padding-top: 70px;
   padding-bottom: 29px;
+
+  @media (min-width: $page-width-tablet) {
+    align-items: center;
+    max-width: $page-width-tablet - (2 * $page-padding-tablet);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 72px;
+    padding-bottom: 60px;
+  }
 }
 
 .registration__tagline {
@@ -27,6 +42,11 @@
   font-weight: 700;
   color: $color-special-orange;
   text-align: center;
+
+  @media (min-width: $page-width-tablet) {
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 
 .registration__text {
@@ -37,12 +57,40 @@
   padding-right: 25px;
 
   font-weight: 300;
+  letter-spacing: 0.01em;
   text-align: center;
+
+  &--questions {
+    margin-top: 28px;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    max-width: $page-width-tablet - (2 * $page-padding-tablet);
+    margin-top: 61px;
+    padding-left: 0;
+    padding-right: 0;
+
+    font-size: 28px;
+    line-height: 32px;
+
+    &--questions {
+      margin-top: 57px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.registration__text-br {
+  @media (min-width: $page-width-tablet) {
+    display: none;
+  }
 }
 
 .registration__link {
   color: $color-basic-yellow;
   text-underline-offset: 1px;
+  text-decoration-thickness: 1px;
   text-decoration-skip-ink: none;
 
   transition: color $transitions-duration;
@@ -62,7 +110,13 @@
   position: relative;
 
   margin-top: 30px;
-  margin-bottom: 8px;
+
+  @media (min-width: $page-width-tablet) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 67px;
+  }
 }
 
 .registration__field {
@@ -119,6 +173,17 @@
   &:invalid {
     color: $color-special-red-bright;
   }
+
+  @media (min-width: $page-width-tablet) {
+    max-width: calc(#{$page-width-tablet} - (2 * #{$page-padding-tablet}) - (2 * var(--registration-form-padding)));
+    min-height: 80px;
+    padding-left: 34px;
+    padding-right: 100px;
+    border-radius: 20px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .registration__submit {
@@ -128,6 +193,12 @@
   bottom: 0;
 
   width: 60px;
+
+  @media (min-width: $page-width-tablet) {
+    right: var(--registration-form-padding);
+
+    width: 80px;
+  }
 }
 
 .registration__submit-text {
@@ -150,11 +221,21 @@
 .registration__contacts-wrapper {
   display: grid;
   justify-content: center;
-  grid-template-columns: min-content;
+  grid-template-columns: auto;
   margin-top: 18px;
+
+  @media (min-width: $page-width-tablet) {
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 41px;
+  }
 }
 
 .registration__contacts {
   margin: 0;
   min-width: $page-width-mobile - ($page-padding-mobile * 2);
+
+  @media (min-width: $page-width-tablet) {
+    min-width: auto;
+  }
 }
