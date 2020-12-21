@@ -47,21 +47,6 @@
       background-repeat: no-repeat;
       background-size: 288px 574px;
     }
-
-    &::after {
-      content: "";
-
-      position: absolute;
-      left: 0;
-      top: 337px;
-      z-index: -1;
-
-      width: 141px;
-      height: 141px;
-      border-radius: 20px;
-
-      background-color: $color-special-grey-very-very-medium;
-    }
   }
 }
 
@@ -109,6 +94,8 @@
 }
 
 .directions__list {
+  position: relative;
+
   margin: 0;
   margin-top: 61px;
   padding: 0;
@@ -122,6 +109,21 @@
     width: 100%;
     margin-top: 106px;
     padding-left: 26px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      left: -9px;
+      top: -38px;
+      z-index: -1;
+
+      width: 141px;
+      height: 141px;
+      border-radius: 20px;
+
+      background-color: $color-special-grey-very-very-medium;
+    }
   }
 }
 
