@@ -39,7 +39,7 @@
     background-color: $color-special-grey-very-light;
   }
 
-  &--medium-metalic::after {
+  &--new-profile::after {
     background-color: $color-special-grey-most-medium;
   }
 
@@ -50,6 +50,10 @@
 
     &--bottom::after {
       bottom: -70px;
+    }
+
+    &--new-profile::after {
+      background-color: $color-basic-grey;
     }
   }
 }

@@ -8,7 +8,7 @@
 //////////////////////////
 
 if (document.querySelector('.business-rates')) {
-  const showBusinessRatesLink = document.querySelector('.new-profile__show-business-rates');
+  const showBusinessRatesLink = document.querySelector('.new-profile__show-business-rates-link');
   const businessRatesModal = document.querySelector('.business-rates');
   const businessRatesCloseButton = document.querySelector('.business-rates__close');
   const businessRatesBackground =document.querySelector('.business-rates__background');
