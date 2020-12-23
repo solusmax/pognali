@@ -49,7 +49,7 @@
     text-align: left;
   }
 
-  @media (min-width: $page-width-tablet) {
+  @media (min-width: $page-width-desktop) {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -61,7 +61,7 @@
     margin-left: 57px;
   }
 
-  @media (min-width: $page-width-tablet) {
+  @media (min-width: $page-width-desktop) {
     margin-left: 0;
     margin-right: 34px;
   }
