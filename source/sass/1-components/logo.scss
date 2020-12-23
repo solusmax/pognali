@@ -47,11 +47,11 @@
 
   @media (min-width: $page-width-desktop) {
     &::before {
-      width: 192px;
+      width: 196px;
       height: 52px;
 
       background-image: url("#{$img-path}/logo/logo-blue-desktop.png");
-      background-size: 192px 52px;
+      background-size: 196px 52px;
     }
 
     &--open::before {
@@ -91,7 +91,7 @@
   }
 
   @media (min-width: $page-width-desktop) {
-    width: 192px;
+    width: 196px;
     height: 52px;
 
     &--open {
