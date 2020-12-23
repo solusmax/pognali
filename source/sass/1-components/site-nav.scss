@@ -5,6 +5,33 @@
     display: flex;
     justify-content: center;
   }
+
+  @media (min-width: $page-width-desktop) {
+    position: relative;
+
+    padding-left: 105px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      top: calc(50% - 3px);
+
+      width: 60px;
+      height: 2px;
+
+      background-color: $color-basic-white;
+
+      transform: translateY(-50%);
+    }
+
+    &--scroll {
+      &::before {
+        background-color: $color-special-blue-dark;
+      }
+    }
+  }
 }
 
 .site-nav__list {
@@ -21,11 +48,22 @@
 
     text-align: left;
   }
+
+  @media (min-width: $page-width-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }
 
 .site-nav__item {
   @media (min-width: $page-width-tablet) {
     margin-left: 57px;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    margin-left: 0;
+    margin-right: 34px;
   }
 }
 
@@ -51,5 +89,66 @@
   @media (min-width: $page-width-tablet) {
     font-size: 60px;
     line-height: 71px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    position: relative;
+
+    display: inline-block;
+    height: 1em;
+
+    overflow: hidden;
+
+    font-size: 20px;
+    line-height: 20px;
+    color: $color-basic-white;
+
+    transition: none;
+
+    &:any-link:hover {
+      color: $color-basic-yellow;
+    }
+
+    &:any-link:active {
+      color: rgba($color-basic-yellow, 0.3);
+    }
+
+    &--scroll {
+      color: $color-special-blue-dark;
+
+      &:any-link:hover {
+        color: rgba($color-special-blue-dark, 0.6);
+      }
+
+      &:any-link:active {
+        color: rgba($color-special-blue-dark, 0.3);
+      }
+    }
+  }
+}
+
+.site-nav__text {
+  @media (min-width: $page-width-desktop) {
+    position: relative;
+
+    display: inline-block;
+
+    transition-property: transform;
+    transition-duration: $transitions-duration;
+
+    &::before {
+      content: attr(data-hover);
+
+      position: absolute;
+      top: 100%;
+
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+.site-nav__link:any-link:hover .site-nav__text {
+  @media (min-width: $page-width-desktop) {
+    transform: translateY(-100%);
   }
 }

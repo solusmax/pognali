@@ -44,10 +44,32 @@
       background-size: 162px 42px;
     }
   }
+
+  @media (min-width: $page-width-desktop) {
+    &::before {
+      width: 192px;
+      height: 52px;
+
+      background-image: url("#{$img-path}/logo/logo-blue-desktop.png");
+      background-size: 192px 52px;
+    }
+
+    &--open::before {
+      display: none;
+    }
+
+    &--scroll::before {
+      display: block;
+    }
+  }
 }
 
 .no-js .logo::before {
   display: block;
+
+  @media (min-width: $page-width-desktop) {
+    display: none;
+  }
 }
 
 .logo__picture {
@@ -67,8 +89,25 @@
     width: 162px;
     height: 42px;
   }
+
+  @media (min-width: $page-width-desktop) {
+    width: 192px;
+    height: 52px;
+
+    &--open {
+      display: block;
+    }
+
+    &--scroll {
+      display: none;
+    }
+  }
 }
 
 .no-js .logo__picture {
   display: none;
+
+  @media (min-width: $page-width-desktop) {
+    display: block;
+  }
 }

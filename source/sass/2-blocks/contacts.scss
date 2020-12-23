@@ -3,6 +3,12 @@
   padding: 0;
 
   list-style: none;
+
+  @media (min-width: $page-width-desktop) {
+    &--page-header {
+      display: flex;
+    }
+  }
 }
 
 .contacts__item {
@@ -13,6 +19,12 @@
 
     &--registration {
       margin-left: 35px;
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    &--page-header {
+      margin-left: 0;
     }
   }
 }
@@ -80,6 +92,61 @@
     height: 68px;
     margin-right: 23px;
   }
+
+  @media (min-width: $page-width-desktop) {
+    &--page-header {
+      position: relative;
+
+      width: 50px;
+      height: 50px;
+      margin-right: 0;
+
+      background-color: $color-special-orange;
+
+      transition-property: background-color;
+      transition-duration: $transitions-duration;
+
+      &::before {
+        content: "";
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        background-image: url("../img/contacts/contacts-call.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 16px 17px;
+
+        pointer-events: none;
+      }
+
+      &:hover {
+        background-color: $color-special-orange-dark;
+      }
+
+      &:active {
+        &::before {
+          opacity: 0.3;
+        }
+      }
+    }
+
+    &--page-header.contacts__link-icon-wrapper--email {
+      background-color: $color-special-yellow-dark;
+
+      &::before {
+        background-image: url("../img/contacts/contacts-envelope-closed.svg");
+        background-size: 15px 12px;
+      }
+
+      &:hover {
+        background-color: $color-special-orange;
+      }
+    }
+  }
 }
 
 .contacts__link-icon {
@@ -104,6 +171,12 @@
       height: 19px;
     }
   }
+
+  @media (min-width: $page-width-desktop) {
+    &--page-header {
+      display: none;
+    }
+  }
 }
 
 .contacts__link:hover .contacts__link-icon {
@@ -116,4 +189,12 @@
   opacity: 0.3;
 
   transition: none;
+}
+
+.contacts__text {
+  @media (min-width: $page-width-desktop) {
+    &--page-header {
+      display: none;
+    }
+  }
 }

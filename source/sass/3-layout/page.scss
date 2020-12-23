@@ -29,6 +29,10 @@
   @media (min-width: $page-width-tablet) {
     padding-top: $menu-height-tablet;
   }
+
+  @media (min-width: $page-width-desktop) {
+    padding-top: $menu-height-desktop;
+  }
 }
 
 .no-js .page__body {
