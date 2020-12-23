@@ -7,16 +7,21 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: -34px;
+    top: -$underlay-height-mobile;
     bottom: 100%;
     z-index: -1;
 
     background-color: $color-basic-grey;
   }
 
+  &--self::after {
+    top: calc(100% - #{$underlay-height-mobile});
+    bottom: 0;
+  }
+
   &--bottom::after {
     top: 100%;
-    bottom: -34px;
+    bottom: -$underlay-height-mobile;
   }
 
   &--yellow::after {
@@ -39,21 +44,35 @@
     background-color: $color-special-grey-very-light;
   }
 
+  &--about::after {
+    display: none;
+  }
+
   &--new-profile::after {
     background-color: $color-special-grey-most-medium;
   }
 
   @media (min-width: $page-width-tablet) {
     &::after {
-      top: -70px;
+      top: -$underlay-height-tablet;
+    }
+
+    &--self::after {
+      top: calc(100% - #{$underlay-height-tablet});
     }
 
     &--bottom::after {
-      bottom: -70px;
+      bottom: -$underlay-height-tablet;
     }
 
     &--new-profile::after {
       background-color: $color-basic-grey;
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    &--about::after {
+      display: block;
     }
   }
 }
