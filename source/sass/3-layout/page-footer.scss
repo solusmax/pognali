@@ -31,6 +31,11 @@
     padding-top: 46px;
     padding-bottom: 32px;
   }
+
+  @media (min-width: $page-width-desktop) {
+    padding-left: $page-padding-desktop;
+    padding-right: $page-padding-desktop;
+  }
 }
 
 .page-footer__logo {
@@ -80,6 +85,11 @@
     &::after {
       display: none;
     }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    width: 196px;
+    padding-left: 41px;
   }
 }
 
