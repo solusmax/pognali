@@ -8,6 +8,13 @@
     &--page-header {
       display: flex;
     }
+
+    &--registration {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 }
 
@@ -25,6 +32,14 @@
   @media (min-width: $page-width-desktop) {
     &--page-header {
       margin-left: 0;
+    }
+
+    &--registration {
+      margin-left: 0;
+
+      &:not(:last-child) {
+        margin-right: 109px;
+      }
     }
   }
 }
@@ -146,6 +161,12 @@
         background-color: $color-special-orange;
       }
     }
+
+    &--registration {
+      width: 90px;
+      height: 90px;
+      margin-right: 33px;
+    }
   }
 }
 
@@ -175,6 +196,16 @@
   @media (min-width: $page-width-desktop) {
     &--page-header {
       display: none;
+    }
+
+    &--registration.contacts__link-icon--email {
+      width: 37px;
+      height: 26px;
+    }
+
+    &--registration.contacts__link-icon--phone {
+      width: 32px;
+      height: 30px;
     }
   }
 }

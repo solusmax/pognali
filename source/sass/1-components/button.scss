@@ -251,4 +251,11 @@
       }
     }
   }
+
+  @media (min-width: $page-width-desktop) {
+    &--registration {
+      justify-content: space-between;
+      padding-left: 36px;
+    }
+  }
 }
