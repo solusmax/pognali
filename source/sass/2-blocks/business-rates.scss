@@ -32,6 +32,10 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  @media (min-width: $page-width-desktop) {
+    top: $menu-height-desktop;
+  }
 }
 
 .business-rates__background {
@@ -46,6 +50,10 @@
 
   @media (min-width: $page-width-tablet) {
     top: -$menu-height-tablet;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    top: -$menu-height-desktop;
   }
 }
 
@@ -70,10 +78,14 @@
 
   @media (min-width: $page-width-tablet) {
     width: $page-width-tablet - ($page-padding-tablet * 2);
-    min-width: auto;
     max-width: none;
 
     box-shadow: 0 4px 22px 0 rgba($color-special-blue-light, 0.18);
+  }
+
+  @media (min-width: $page-width-desktop) {
+    width: 750px;
+    border-radius: 30px;
   }
 }
 
@@ -86,6 +98,11 @@
     padding-left: 90px;
     padding-right: 90px;
     padding-top: 50px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    padding-left: 59px;
+    padding-right: 59px;
   }
 }
 
