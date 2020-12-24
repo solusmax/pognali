@@ -31,12 +31,20 @@ if (document.querySelector('.business-rates')) {
     evt.preventDefault();
 
     closeBusinessRatesModal();
+
+    if (pageYOffset === 0) {
+      notScrolledMenu();
+    };
   });
 
   businessRatesBackground.addEventListener('click', function(evt) {
     evt.preventDefault();
 
     closeBusinessRatesModal();
+
+    if (pageYOffset === 0) {
+      notScrolledMenu();
+    };
   });
 
   window.addEventListener('keydown', function(evt) {
@@ -45,6 +53,10 @@ if (document.querySelector('.business-rates')) {
         evt.preventDefault();
 
         closeBusinessRatesModal();
+
+        if (pageYOffset === 0) {
+          notScrolledMenu();
+        };
       };
     };
   });
