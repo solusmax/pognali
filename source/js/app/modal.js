@@ -19,6 +19,10 @@ if (document.querySelector('.business-rates')) {
     evt.preventDefault();
 
     businessRatesModal.classList.add('business-rates--shown');
+
+    if (pageYOffset === 0) {
+      scrolledMenu();
+    };
   });
 
   // Закрытие модалки
