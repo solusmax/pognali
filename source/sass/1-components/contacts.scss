@@ -5,7 +5,7 @@
   list-style: none;
 
   @media (min-width: $page-width-desktop) {
-    &--page-header {
+    &--header {
       display: flex;
     }
 
@@ -30,7 +30,7 @@
   }
 
   @media (min-width: $page-width-desktop) {
-    &--page-header {
+    &--header {
       margin-left: 0;
     }
 
@@ -109,7 +109,7 @@
   }
 
   @media (min-width: $page-width-desktop) {
-    &--page-header {
+    &--header {
       position: relative;
 
       width: 50px;
@@ -149,7 +149,7 @@
       }
     }
 
-    &--page-header.contacts__link-icon-wrapper--email {
+    &--header.contacts__link-icon-wrapper--email {
       background-color: $color-special-yellow-dark;
 
       &::before {
@@ -194,7 +194,7 @@
   }
 
   @media (min-width: $page-width-desktop) {
-    &--page-header {
+    &--header {
       display: none;
     }
 
@@ -224,7 +224,7 @@
 
 .contacts__text {
   @media (min-width: $page-width-desktop) {
-    &--page-header {
+    &--header {
       display: none;
     }
   }

@@ -7,38 +7,38 @@
 //////////////////////////
 
 const menuToggle = document.querySelector('.menu-toggle');
-const pageHeader = document.querySelector('.page-header');
-const pageHeaderInner = pageHeader.querySelector('.page-header__inner');
-const pageHeaderSiteNav = pageHeader.querySelector('.page-header__site-nav');
+const header = document.querySelector('.header');
+const headerInner = header.querySelector('.header__inner');
+const headerSiteNav = header.querySelector('.header__site-nav');
 const siteNav = document.querySelector('.site-nav');
 const siteNavLinks = document.querySelectorAll('.site-nav__link');
-const userNav = pageHeader.querySelector('.page-header__user-nav');
-const contacts = pageHeader.querySelector('.page-header__contacts');
-const contactsWrapper = pageHeader.querySelector('.page-header__contacts-wrapper');
-const socials = pageHeader.querySelector('.page-header__socials');
-const socialsWrapper = pageHeader.querySelector('.page-header__socials-wrapper');
-const logo = pageHeader.querySelector('.page-header__logo');
+const userNav = header.querySelector('.header__user-nav');
+const contacts = header.querySelector('.header__contacts');
+const contactsWrapper = header.querySelector('.header__contacts-wrapper');
+const socials = header.querySelector('.header__socials');
+const socialsWrapper = header.querySelector('.header__socials-wrapper');
+const logo = header.querySelector('.header__logo');
 const logoPicture = logo.querySelector('.logo__picture');
 
 menuToggle.addEventListener('click', function(evt) {
   evt.preventDefault();
 
   menuToggle.classList.toggle('menu-toggle--open');
-  pageHeaderInner.classList.toggle('page-header__inner--open');
-  pageHeaderSiteNav.classList.toggle('page-header__site-nav--open');
-  userNav.classList.toggle('page-header__user-nav--open');
-  contacts.classList.toggle('page-header__contacts--open');
-  contactsWrapper.classList.toggle('page-header__contacts-wrapper--open');
-  socials.classList.toggle('page-header__socials--open');
-  socialsWrapper.classList.toggle('page-header__socials-wrapper--open');
+  headerInner.classList.toggle('header__inner--open');
+  headerSiteNav.classList.toggle('header__site-nav--open');
+  userNav.classList.toggle('header__user-nav--open');
+  contacts.classList.toggle('header__contacts--open');
+  contactsWrapper.classList.toggle('header__contacts-wrapper--open');
+  socials.classList.toggle('header__socials--open');
+  socialsWrapper.classList.toggle('header__socials-wrapper--open');
   logo.classList.toggle('logo--open');
   logoPicture.classList.toggle('logo__picture--open');
 });
 
 function scrolledMenu() {
   menuToggle.classList.add('menu-toggle--scroll');
-  pageHeader.classList.add('page-header--scroll');
-  pageHeaderInner.classList.add('page-header__inner--scroll');
+  header.classList.add('header--scroll');
+  headerInner.classList.add('header__inner--scroll');
   siteNav.classList.add('site-nav--scroll');
   for (let siteNavLink of siteNavLinks) {
     siteNavLink.classList.add('site-nav__link--scroll')
@@ -49,8 +49,8 @@ function scrolledMenu() {
 
 function notScrolledMenu() {
   menuToggle.classList.remove('menu-toggle--scroll');
-  pageHeader.classList.remove('page-header--scroll');
-  pageHeaderInner.classList.remove('page-header__inner--scroll');
+  header.classList.remove('header--scroll');
+  headerInner.classList.remove('header__inner--scroll');
   siteNav.classList.remove('site-nav--scroll');
   for (let siteNavLink of siteNavLinks) {
     siteNavLink.classList.remove('site-nav__link--scroll')

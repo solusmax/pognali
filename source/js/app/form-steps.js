@@ -15,7 +15,7 @@ if (document.querySelector('.step')) {
   const markers = document.querySelectorAll('.add-plan__marker');
   const addPlan = document.querySelector('.add-plan');
   const addPlanPositionY = addPlan.getBoundingClientRect().top + pageYOffset;
-  const menuHeight = parseInt(document.querySelector('.page-header').clientHeight);
+  const menuHeight = parseInt(document.querySelector('.header').clientHeight);
 
   function clearCurrentStepClasses() {
     for (const step of steps) {
