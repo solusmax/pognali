@@ -65,9 +65,16 @@ if (pageYOffset > 0) {
 
 window.addEventListener('scroll', function() {
   scrolledMenu();
-  let isModal = document.querySelector('.business-rates').classList.contains('business-rates--shown');
 
-  if (pageYOffset === 0 && !isModal) {
-    notScrolledMenu();
+  if (pageYOffset === 0) {
+    if (document.querySelector('.business-rates')) {
+      let isModal = document.querySelector('.business-rates').classList.contains('business-rates--shown');
+
+      if (!isModal) {
+        notScrolledMenu();
+      };
+    } else {
+      notScrolledMenu();
+    };
   };
 });
