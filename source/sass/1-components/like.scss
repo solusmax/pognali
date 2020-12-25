@@ -15,7 +15,7 @@
   border-radius: 50%;
 
   background: none;
-  background-color: $color-special-grey-very-very-medium;
+  background-color: $color-special-grey-350;
 
   cursor: pointer;
 
@@ -46,7 +46,7 @@
   }
 
   &:hover {
-    background-color: $color-special-grey-very-light;
+    background-color: $color-special-grey-325;
 
     &::before {
       opacity: 0.5;
@@ -54,7 +54,7 @@
   }
 
   &:active {
-    background-color: $color-special-grey-very-light;
+    background-color: $color-special-grey-325;
 
     &::before {
       opacity: 0.1;
@@ -64,7 +64,7 @@
   }
 
   &--liked {
-    background-color: $color-special-red-very-pale;
+    background-color: $color-special-red-300;
 
     &::before {
       background-image: url("../img/like/like-heart.svg");
@@ -73,7 +73,7 @@
     }
 
     &:hover {
-      background-color: $color-special-red-semi-pale;
+      background-color: $color-special-red-400;
 
       &::before {
         opacity: 1;
@@ -81,7 +81,7 @@
     }
 
     &:active {
-      background-color: $color-special-red-semi-pale;
+      background-color: $color-special-red-400;
 
       &::before {
         opacity: 0.3;

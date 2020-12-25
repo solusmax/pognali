@@ -4,7 +4,7 @@
   padding-bottom: 43px;
   border-radius: 30px 30px 0 0;
 
-  background-color: $color-special-grey-lightest;
+  background-color: $color-special-grey-550;
 }
 
 .add-plan__inner {
@@ -28,7 +28,7 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
 }
 
 .no-js .add-plan__title {
@@ -70,14 +70,14 @@
     height: 5px;
     border-radius: 50%;
 
-    background-color: rgba($color-special-blue-light, 0.3);
+    background-color: rgba($color-special-blue-400, 0.3);
   }
 
   &--current {
     color: $color-basic-black;
 
     &::before {
-      background-color: $color-special-blue-light;
+      background-color: $color-special-blue-400;
     }
   }
 }

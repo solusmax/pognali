@@ -52,7 +52,7 @@
   align-items: center;
   min-height: 45px;
 
-  color: $color-special-blue-dark;
+  color: $color-special-blue-500;
   line-height: 18px;
   font-weight: 700;
   text-decoration: none;
@@ -61,11 +61,11 @@
   transition: color $transitions-duration;
 
   &:hover {
-    color: rgba($color-special-blue-dark, 0.6);
+    color: rgba($color-special-blue-500, 0.6);
   }
 
   &:active {
-    color: rgba($color-special-blue-dark, 0.3);
+    color: rgba($color-special-blue-500, 0.3);
 
     transition: none;
   }
@@ -75,7 +75,7 @@
     color: $color-basic-yellow;
 
     &:hover {
-      color: $color-special-yellow-dark;
+      color: $color-special-yellow-500;
     }
 
     &:active {
@@ -100,7 +100,7 @@
   height: 45px;
   border-radius: 50%;
 
-  background-color: $color-special-blue-very-dark;
+  background-color: $color-special-blue-900;
 
   @media (min-width: $page-width-tablet) {
     width: 68px;
@@ -116,7 +116,7 @@
       height: 50px;
       margin-right: 0;
 
-      background-color: $color-special-orange;
+      background-color: $color-special-orange-500;
 
       transition-property: background-color;
       transition-duration: $transitions-duration;
@@ -139,7 +139,7 @@
       }
 
       &:hover {
-        background-color: $color-special-orange-dark;
+        background-color: $color-special-orange-600;
       }
 
       &:active {
@@ -150,7 +150,7 @@
     }
 
     &--header.contacts__link-icon-wrapper--email {
-      background-color: $color-special-yellow-dark;
+      background-color: $color-special-yellow-500;
 
       &::before {
         background-image: url("../img/contacts/contacts-envelope-closed.svg");
@@ -158,7 +158,7 @@
       }
 
       &:hover {
-        background-color: $color-special-orange;
+        background-color: $color-special-orange-500;
       }
     }
 
@@ -211,11 +211,11 @@
 }
 
 .contacts__link:hover .contacts__link-icon {
-  color: $color-special-yellow-dark;
+  color: $color-special-yellow-500;
 }
 
 .contacts__link:active .contacts__link-icon {
-  color: $color-special-yellow-dark;
+  color: $color-special-yellow-500;
 
   opacity: 0.3;
 

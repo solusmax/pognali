@@ -28,7 +28,7 @@
 
     &--scroll {
       &::before {
-        background-color: $color-special-blue-dark;
+        background-color: $color-special-blue-500;
       }
     }
   }
@@ -80,16 +80,16 @@
   line-height: 35px;
   text-transform: uppercase;
   text-decoration: none;
-  color: $color-special-blue-dark;
+  color: $color-special-blue-500;
 
   transition: color $transitions-duration;
 
   &:any-link:hover {
-    color: rgba($color-special-blue-dark, 0.6);
+    color: rgba($color-special-blue-500, 0.6);
   }
 
   &:any-link:active {
-    color: rgba($color-special-blue-dark, 0.3);
+    color: rgba($color-special-blue-500, 0.3);
 
     transition: none;
   }
@@ -122,14 +122,14 @@
     }
 
     &--scroll {
-      color: $color-special-blue-dark;
+      color: $color-special-blue-500;
 
       &:any-link:hover {
-        color: rgba($color-special-blue-dark, 0.6);
+        color: rgba($color-special-blue-500, 0.6);
       }
 
       &:any-link:active {
-        color: rgba($color-special-blue-dark, 0.3);
+        color: rgba($color-special-blue-500, 0.3);
       }
     }
 

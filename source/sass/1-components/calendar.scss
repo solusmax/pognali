@@ -5,8 +5,8 @@
   min-height: 44px;
   margin: 0;
   padding: 0;
-  border-top: 1px solid $color-special-grey-most-light;
-  border-bottom: 1px solid $color-special-grey-most-light;
+  border-top: 1px solid $color-special-grey-450;
+  border-bottom: 1px solid $color-special-grey-450;
 }
 
 .calendar__month-button {
@@ -68,7 +68,7 @@
   font-size: 20px;
   line-height: 20px;
   font-weight: 700;
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
 }
 
 .calendar__table {
@@ -88,10 +88,10 @@
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
-  color: $color-special-black-light;
+  color: $color-special-grey-900;
 
   &--weekend {
-    color: $color-special-red-medium;
+    color: $color-special-orange-700;
   }
 }
 
@@ -110,7 +110,7 @@
 
   font-size: 14px;
   line-height: 18px;
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
 
   background-color: $color-basic-grey;
 
@@ -123,7 +123,7 @@
     top: -1px;
     bottom: -1px;
 
-    border: 1px solid $color-special-grey-darkest;
+    border: 1px solid $color-special-grey-700;
 
     pointer-events: none;
   }
@@ -132,7 +132,7 @@
   &.focus-visible {
     color: $color-basic-white;
 
-    background-color: $color-special-blue-light;
+    background-color: $color-special-blue-400;
 
     outline: none;
 
@@ -146,24 +146,24 @@
       bottom: -1px;
       z-index: 1;
 
-      border: 2px solid $color-special-red-medium;
+      border: 2px solid $color-special-orange-700;
 
       pointer-events: none;
     }
   }
 
   &--disabled {
-    color: rgba($color-special-black-light, 0.3);
+    color: rgba($color-special-grey-900, 0.3);
 
     background-color: $color-basic-white;
 
     &::after {
-      border-color: $color-special-grey-most-light;
+      border-color: $color-special-grey-450;
     }
 
     &:hover,
     &.focus-visible {
-      color: rgba($color-special-black-light, 0.3);
+      color: rgba($color-special-grey-900, 0.3);
 
       background-color: $color-basic-white;
 
@@ -176,7 +176,7 @@
   &--active {
     color: $color-basic-white;
 
-    background-color: $color-special-blue-light;
+    background-color: $color-special-blue-400;
   }
 }
 

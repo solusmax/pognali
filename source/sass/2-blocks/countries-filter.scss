@@ -3,7 +3,7 @@
   justify-content: center;
   border-radius: 0 0 20px 20px;
 
-  background-color: $color-special-grey-very-light;
+  background-color: $color-special-grey-325;
 }
 
 .countries-filter__inner {
@@ -36,7 +36,7 @@
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
-  color: $color-special-blue-dark;
+  color: $color-special-blue-500;
   text-transform: uppercase;
 
   &::before {
@@ -157,24 +157,24 @@
 .countries-filter__continent-link {
   line-height: 18px;
   font-weight: 700;
-  color: rgba($color-special-blue-dark, 0.3);
+  color: rgba($color-special-blue-500, 0.3);
   text-transform: uppercase;
   text-decoration: none;
 
   transition: $transitions-duration;
 
   &:any-link:hover {
-    color: rgba($color-special-blue-dark, 0.6);
+    color: rgba($color-special-blue-500, 0.6);
   }
 
   &:any-link:active {
-    color: $color-special-blue-dark;
+    color: $color-special-blue-500;
 
     transition: none;
   }
 
   &--current {
-    color: $color-special-blue-dark;
+    color: $color-special-blue-500;
   }
 }
 
@@ -215,7 +215,7 @@
     top: -1px;
     bottom: 0;
 
-    border: 1px solid $color-special-grey-darkest;
+    border: 1px solid $color-special-grey-700;
 
     pointer-events: none;
   }
@@ -228,13 +228,13 @@
     &::before {
       z-index: 1;
 
-      border-color: $color-special-grey-most-dark;
+      border-color: $color-special-grey-850;
     }
   }
 
   &:active {
     &::before {
-      border-color: $color-special-blue-light;
+      border-color: $color-special-blue-400;
     }
   }
 
@@ -242,11 +242,11 @@
     &::before {
       z-index: 2;
 
-      border-color: $color-special-blue-light;
+      border-color: $color-special-blue-400;
     }
 
     &:hover::before {
-      border-color: $color-special-blue-light;
+      border-color: $color-special-blue-400;
     }
   }
 }
@@ -264,7 +264,7 @@
   font-size: 14px;
   line-height: 14px;
   font-weight: 500;
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
   text-align: center;
   text-transform: uppercase;
 
@@ -276,13 +276,13 @@
   &:active {
     color: $color-basic-white;
 
-    background-color: $color-special-blue-light;
+    background-color: $color-special-blue-400;
   }
 
   &--current {
     color: $color-basic-white;
 
-    background-color: $color-special-blue-light;
+    background-color: $color-special-blue-400;
   }
 }
 
@@ -328,17 +328,17 @@
 
 .countries-filter__country-link {
   font-weight: 400;
-  color: $color-special-black-light;
+  color: $color-special-grey-900;
   text-decoration: none;
 
   transition: $transitions-duration;
 
   &:hover {
-    color: $color-special-blue-light;
+    color: $color-special-blue-400;
   }
 
   &:active {
-    color: rgba($color-special-blue-light, 0.3);
+    color: rgba($color-special-blue-400, 0.3);
 
     transition: none;
   }

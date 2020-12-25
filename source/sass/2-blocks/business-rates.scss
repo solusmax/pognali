@@ -76,7 +76,7 @@
 
   background-color: $color-basic-white;
 
-  box-shadow: 0 2px 8px 0 rgba($color-special-blue-light, 0.14);
+  box-shadow: 0 2px 8px 0 rgba($color-special-blue-400, 0.14);
 
   animation-name: modal-bounce;
   animation-duration: 0.3s;
@@ -85,7 +85,7 @@
     width: $page-width-tablet - ($page-padding-tablet * 2);
     max-width: none;
 
-    box-shadow: 0 4px 22px 0 rgba($color-special-blue-light, 0.18);
+    box-shadow: 0 4px 22px 0 rgba($color-special-blue-400, 0.18);
   }
 
   @media (min-width: $page-width-desktop) {
@@ -118,7 +118,7 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
-  color: $color-special-orange;
+  color: $color-special-orange-500;
   text-align: center;
 
   @media (min-width: $page-width-tablet) {
@@ -133,7 +133,7 @@
   padding: 0;
 
   font-weight: 300;
-  color: $color-special-black-light;
+  color: $color-special-grey-900;
 
   @media (min-width: $page-width-tablet) {
     margin-top: 50px;
@@ -180,10 +180,10 @@
   line-height: 24px;
   font-weight: 700;
   text-transform: uppercase;
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
   border-radius: 0 0 20px 20px;
 
-  background-color: $color-special-grey-light;
+  background-color: $color-special-grey-100;
 
   cursor: pointer;
 
@@ -194,7 +194,7 @@
   }
 
   &:active {
-    color: rgba($color-special-blue-light, 0.3);
+    color: rgba($color-special-blue-400, 0.3);
 
     background-color: $color-basic-grey;
   }

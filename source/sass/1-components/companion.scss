@@ -56,7 +56,7 @@
 .companion__name-link {
   order: 1;
 
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
   text-decoration: none;
   text-align: center;
 
@@ -183,7 +183,7 @@
 
   line-height: 18px;
   font-weight: 400;
-  color: $color-special-black-light;
+  color: $color-special-grey-900;
   text-align: center;
 
   @media (min-width: $page-width-tablet) {

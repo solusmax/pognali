@@ -6,11 +6,11 @@
   border-radius: 50%;
 
   &--offline {
-    background-color: $color-special-red-light;
+    background-color: $color-special-red-600;
   }
 
   &--online {
-    background-color: $color-special-green;
+    background-color: $color-special-green-500;
   }
 
   @media (min-width: $page-width-tablet) {

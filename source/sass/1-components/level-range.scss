@@ -12,7 +12,7 @@
   height: var(--level-range-scale-width);
   border-radius: 2px;
 
-  background-color: rgba($color-special-blue-light, 0.2);
+  background-color: rgba($color-special-blue-400, 0.2);
 }
 
 .level-range__bar {
@@ -23,7 +23,7 @@
   height: 100%;
   width: 100%;
 
-  background-color: $color-special-blue-light;
+  background-color: $color-special-blue-400;
 }
 
 .level-range__toggles {
@@ -46,7 +46,7 @@
   border-radius: 50%;
 
   background: none;
-  background-color: $color-special-blue-light;
+  background-color: $color-special-blue-400;
 
   cursor: grab;
 

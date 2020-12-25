@@ -46,7 +46,7 @@
     &:active {
       box-shadow: none;
 
-      background-color: $color-special-grey-very-light;
+      background-color: $color-special-grey-325;
     }
   }
 
@@ -65,7 +65,7 @@
     &:active {
       box-shadow: none;
 
-      background-color: $color-special-yellow-very-dark;
+      background-color: $color-special-yellow-600;
     }
   }
 
@@ -127,7 +127,7 @@
   width: var(--transport-icon-width);
   height: var(--transport-icon-height);
 
-  color: $color-special-blue-darkest;
+  color: $color-special-blue-800;
 
   opacity: 0.15;
 
@@ -147,7 +147,7 @@
   }
 
   &--profile {
-    color: $color-special-grey-some-dark;
+    color: $color-special-grey-425;
 
     opacity: 1;
   }
@@ -173,7 +173,7 @@
   }
 
   &--companions-filter {
-    color: $color-special-grey-some-dark;
+    color: $color-special-grey-425;
 
     opacity: 1;
   }
@@ -199,7 +199,7 @@
   }
 
   &--card {
-    color: $color-special-blue-light;
+    color: $color-special-blue-400;
   }
 
   &--card.transport__icon--plane {
@@ -253,27 +253,27 @@
 // --profile ↓↓↓
 
 .transport__item--profile:hover .transport__icon {
-  color: $color-special-grey-some-very-dark;
+  color: $color-special-grey-725;
 }
 
 .transport__item--profile:active .transport__icon {
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
 
   opacity: 0.1;
 }
 
 .transport__field:checked + .transport__item--profile .transport__icon {
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
 }
 
 .transport__field:checked + .transport__item--profile:hover .transport__icon {
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
 
   opacity: 0.7;
 }
 
 .transport__field:checked + .transport__item--profile:active .transport__icon {
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
 
   opacity: 0.3;
 }
@@ -283,27 +283,27 @@
 // --companions-filter ↓↓↓
 
 .transport__item--companions-filter:hover .transport__icon {
-  color: $color-special-grey-some-very-dark;
+  color: $color-special-grey-725;
 }
 
 .transport__item--companions-filter:active .transport__icon {
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
 
   opacity: 0.1;
 }
 
 .transport__field:checked + .transport__item--companions-filter .transport__icon {
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
 }
 
 .transport__field:checked + .transport__item--companions-filter:hover .transport__icon {
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
 
   opacity: 0.7;
 }
 
 .transport__field:checked + .transport__item--companions-filter:active .transport__icon {
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
 
   opacity: 0.3;
 }

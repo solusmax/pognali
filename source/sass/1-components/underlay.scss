@@ -29,19 +29,19 @@
   }
 
   &--blue::after {
-    background-color: $color-special-blue-dark;
+    background-color: $color-special-blue-500;
   }
 
   &--metallic::after {
-    background-color: $color-special-grey-dark;
+    background-color: $color-special-grey-400;
   }
 
   &--dark-metallic::after {
-    background-color: $color-special-grey-lightest;
+    background-color: $color-special-grey-550;
   }
 
   &--light-metallic::after {
-    background-color: $color-special-grey-very-light;
+    background-color: $color-special-grey-325;
   }
 
   &--about::after {
@@ -49,7 +49,7 @@
   }
 
   &--new-profile::after {
-    background-color: $color-special-grey-most-medium;
+    background-color: $color-special-grey-250;
   }
 
   &--not-found::after {
@@ -80,7 +80,7 @@
       bottom: calc(100% - #{$underlay-height-tablet});
       top: 0;
 
-      background-color: $color-special-blue-medium-light;
+      background-color: $color-special-blue-600;
     }
   }
 

@@ -37,18 +37,18 @@ $card-photo-size: 70px;
   font-size: 20px;
   line-height: 20px;
   font-weight: 700;
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
   text-decoration: none;
 
   transition-property: color;
   transition-duration: $transitions-duration;
 
   &:hover {
-    color: rgba($color-special-blue-light, 0.6);
+    color: rgba($color-special-blue-400, 0.6);
   }
 
   &:active {
-    color: rgba($color-special-blue-light, 0.3);
+    color: rgba($color-special-blue-400, 0.3);
 
     transition: none;
   }
@@ -98,7 +98,7 @@ $card-photo-size: 70px;
   font-size: 15px;
   line-height: 18px;
   font-weight: 400;
-  color: $color-special-black-light;
+  color: $color-special-grey-900;
 }
 
 .card__photo-link {
@@ -164,7 +164,7 @@ $card-photo-size: 70px;
   font-size: 15px;
   line-height: 16px;
   font-weight: 400;
-  color: $color-special-black-light;
+  color: $color-special-grey-900;
   text-transform: lowercase;
 
   background-color: $color-basic-white;
@@ -194,7 +194,7 @@ $card-photo-size: 70px;
 .card__country-name {
   font-size: 15px;
   line-height: 16px;
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
   text-transform: uppercase;
 }
 
@@ -246,7 +246,7 @@ $card-photo-size: 70px;
   font-size: 15px;
   line-height: 16px;
   font-weight: 400;
-  color: $color-special-black-light;
+  color: $color-special-grey-900;
   text-transform: lowercase;
 
   background-color: $color-basic-white;
@@ -308,7 +308,7 @@ $card-photo-size: 70px;
   font-size: 15px;
   line-height: 16px;
   font-weight: 400;
-  color: $color-special-black-light;
+  color: $color-special-grey-900;
   text-transform: lowercase;
 
   background-color: $color-basic-white;

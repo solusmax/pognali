@@ -13,7 +13,7 @@
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
   text-transform: uppercase;
   text-decoration: none;
 
@@ -25,7 +25,7 @@
   transition-duration: $transitions-duration;
 
   &:hover {
-    background-color: $color-special-yellow-dark;
+    background-color: $color-special-yellow-500;
   }
 
   &:active {
@@ -51,7 +51,7 @@
       border-width: 6px;
       border-left-width: 12px;
       border-style: solid;
-      border-left-color: $color-special-blue-light;
+      border-left-color: $color-special-blue-400;
       border-top-color: transparent;
       border-bottom-color: transparent;
       border-right-style: none;
@@ -61,19 +61,19 @@
     }
 
     &:active::after {
-      border-left-color: rgba($color-special-blue-light, 0.3);
+      border-left-color: rgba($color-special-blue-400, 0.3);
 
       transition: none;
     }
   }
 
   &--stroke {
-    border: 3px solid $color-special-blue-dark;
+    border: 3px solid $color-special-blue-500;
 
     &:hover {
       color: $color-basic-white;
 
-      background-color: $color-special-blue-dark;
+      background-color: $color-special-blue-500;
 
       &::after {
         border-left-color: $color-basic-white;
@@ -83,7 +83,7 @@
     &:active {
       color: rgba($color-basic-white, 0.3);
 
-      background-color: $color-special-blue-dark;
+      background-color: $color-special-blue-500;
 
       &::after {
         border-left-color: rgba($color-basic-white, 0.3);
@@ -142,14 +142,14 @@
     line-height: 18px;
     font-weight: 500;
 
-    background-color: $color-special-grey-dark;
+    background-color: $color-special-grey-400;
 
     &:hover {
-      background-color: $color-special-grey-darker;
+      background-color: $color-special-grey-600;
     }
 
     &:active {
-      background-color: $color-special-grey-dark;
+      background-color: $color-special-grey-400;
 
       color: rgba($color-basic-blue, 0.3);
     }
@@ -158,10 +158,10 @@
   &--countries-filter {
     font-size: 16px;
     line-height: 20px;
-    color: $color-special-blue-dark;
+    color: $color-special-blue-500;
     letter-spacing: 0.05em;
 
-    background-color: $color-special-grey-some;
+    background-color: $color-special-grey-500;
 
     &::before {
       content: "";
@@ -180,11 +180,11 @@
     }
 
     &:hover {
-      background-color: $color-special-grey-some-dark;
+      background-color: $color-special-grey-625;
     }
 
     &:active {
-      color: rgba($color-special-blue-dark, 0.3);
+      color: rgba($color-special-blue-500, 0.3);
 
       &::before {
         opacity: 0.3;
@@ -209,7 +209,7 @@
     &:active {
       color: rgba($color-basic-blue, 0.3);
 
-      background-color: $color-special-yellow-very-dark;
+      background-color: $color-special-yellow-600;
 
       box-shadow: none;
     }

@@ -67,7 +67,7 @@
 
     grid-row: 2 / 4;
     grid-column: 1 / -1;
-    border: 1px solid $color-special-grey-darkest;
+    border: 1px solid $color-special-grey-700;
     border-radius: 10px;
 
     transition: $transitions-duration;
@@ -86,7 +86,7 @@
 
   line-height: 18px;
   font-weight: 700;
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
   text-transform: uppercase;
   text-align: center;
   word-break: normal;
@@ -99,7 +99,7 @@
   margin-top: 24px;
 
   &:hover::before {
-    border-color: $color-special-grey-cloudy;
+    border-color: $color-special-grey-775;
   }
 
   &:focus-within::before {
@@ -124,14 +124,14 @@
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
-  color: rgba($color-special-black-light, 0.6);
+  color: rgba($color-special-grey-900, 0.6);
 
   background-color: transparent;
 
   resize: none;
 
   &:focus {
-    color: $color-special-black-light;
+    color: $color-special-grey-900;
 
     outline: none;
   }

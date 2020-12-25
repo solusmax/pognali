@@ -56,7 +56,7 @@
 
   font-style: normal;
   font-weight: 700;
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
   text-transform: uppercase;
 
   &::before {
@@ -68,7 +68,7 @@
     margin-right: 16px;
     border-radius: 50%;
 
-    background-color: $color-special-blue-very-dark;
+    background-color: $color-special-blue-900;
     background-image: url("../img/location/location-address.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -131,7 +131,7 @@
 
   object-fit: cover;
   object-position: center;
-  background-color: $color-special-grey-map;
+  background-color: $color-special-grey-175;
 
   &--interactive {
     width: 100%;

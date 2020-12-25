@@ -5,7 +5,7 @@
   justify-content: center;
   border-radius: 0 0 30px 30px;
 
-  background-color: $color-special-blue-dark;
+  background-color: $color-special-blue-500;
 
   @media (min-width: $page-width-tablet) {
     border-radius: 0 0 60px 60px;
@@ -50,7 +50,7 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
-  color: $color-special-orange;
+  color: $color-special-orange-500;
   text-align: center;
 
   @media (min-width: $page-width-tablet) {
@@ -120,11 +120,11 @@
   transition: color $transitions-duration;
 
   &:hover {
-    color: $color-special-orange;
+    color: $color-special-orange-500;
   }
 
   &:active {
-    color: rgba($color-special-orange, 0.3);
+    color: rgba($color-special-orange-500, 0.3);
 
     transition: none;
   }
@@ -165,13 +165,13 @@
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
-  color: $color-special-blue-dark;
+  color: $color-special-blue-500;
 
   transition-property: background-color, border-color, color;
   transition-duration: $transitions-duration;
 
   &::placeholder {
-    color: rgba($color-special-black-light, 0.3);
+    color: rgba($color-special-grey-900, 0.3);
 
     transition: color $transitions-duration;
   }
@@ -183,13 +183,13 @@
   }
 
   &:hover::placeholder {
-    color: rgba($color-special-black-light, 0.5);
+    color: rgba($color-special-grey-900, 0.5);
   }
 
   &:focus {
     color: $color-basic-white;
 
-    background-color: $color-special-blue-dark;
+    background-color: $color-special-blue-500;
 
     outline: none;
 
@@ -203,7 +203,7 @@
   }
 
   &:invalid {
-    color: $color-special-red-bright;
+    color: $color-special-red-700;
   }
 
   @media (min-width: $page-width-tablet) {

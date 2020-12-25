@@ -2,13 +2,13 @@
   display: none;
   flex-direction: column;
   width: 100%;
-  border: 1px solid $color-special-grey-darkest;
+  border: 1px solid $color-special-grey-700;
   border-top: none;
   border-radius: 0 0 4px 4px;
 
   background-color: $color-basic-white;
 
-  box-shadow: 0 2px 16px 0 rgba($color-special-grey-lightest, 0.25);
+  box-shadow: 0 2px 16px 0 rgba($color-special-grey-550, 0.25);
 
   &--open {
     display: flex;
@@ -39,7 +39,7 @@
     top: -1px;
     bottom: 0;
 
-    border: 1px solid $color-special-grey-darkest;
+    border: 1px solid $color-special-grey-700;
 
     pointer-events: none;
   }
@@ -52,7 +52,7 @@
     &::before {
       z-index: 1;
 
-      border-color: $color-special-grey-most-dark;
+      border-color: $color-special-grey-850;
     }
   }
 }
@@ -70,7 +70,7 @@
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
   text-align: center;
   text-transform: uppercase;
 
@@ -114,7 +114,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: $color-special-black-light;
+  color: $color-special-grey-900;
 
   background: none;
 
@@ -124,11 +124,11 @@
   cursor: pointer;
 
   &:hover {
-    color: $color-special-blue-light;
+    color: $color-special-blue-400;
   }
 
   &:active {
-    color: rgba($color-special-blue-light, 0.3);
+    color: rgba($color-special-blue-400, 0.3);
 
     transition: none;
   }

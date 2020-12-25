@@ -7,7 +7,7 @@
   padding-bottom: 31px;
   border-radius: 0 0 30px 30px;
 
-  background-color: $color-special-blue-dark;
+  background-color: $color-special-blue-500;
 
   @media (min-width: $page-width-tablet) {
     padding-left: 0;
@@ -45,7 +45,7 @@
     height: 132px;
     border-radius: 20px;
 
-    background-color: $color-special-blue-meduim-dark;
+    background-color: $color-special-blue-700;
   }
 
   &::after {
@@ -145,7 +145,7 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
-  color: $color-special-orange;
+  color: $color-special-orange-500;
 
   @media (min-width: $page-width-tablet) {
     font-size: 45px;

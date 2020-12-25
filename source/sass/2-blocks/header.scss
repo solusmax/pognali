@@ -19,7 +19,7 @@
     background-color: $color-basic-blue;
 
     &--inner-page {
-      background-color: $color-special-blue-dark;
+      background-color: $color-special-blue-500;
     }
 
     &--scroll {
@@ -37,7 +37,7 @@
     background-color: $color-basic-blue;
 
     &--inner-page {
-      background-color: $color-special-blue-dark;
+      background-color: $color-special-blue-500;
     }
   }
 }
@@ -60,7 +60,7 @@
   background-color: $color-basic-blue;
 
   &--inner-page {
-    background-color: $color-special-blue-medium-light;
+    background-color: $color-special-blue-600;
   }
 
   &--scroll {
@@ -76,10 +76,10 @@
     padding-right: $page-padding-tablet;
     padding-top: 40px;
 
-    background-color: $color-special-blue-medium-light;
+    background-color: $color-special-blue-600;
 
     &--inner-page {
-      background-color: $color-special-blue-medium-light;
+      background-color: $color-special-blue-600;
     }
 
     &--scroll {
@@ -107,7 +107,7 @@
     transition-timing-function: ease-in-out;
 
     &--inner-page {
-      background-color: $color-special-blue-dark;
+      background-color: $color-special-blue-500;
     }
 
     &--scroll {
@@ -136,7 +136,7 @@
       background-color: $color-basic-blue;
 
       &.header__inner--inner-page {
-        background-color: $color-special-blue-dark;
+        background-color: $color-special-blue-500;
       }
     }
   }
@@ -160,7 +160,7 @@
     background-color: $color-basic-blue;
 
     &.header__inner--inner-page {
-      background-color: $color-special-blue-dark;
+      background-color: $color-special-blue-500;
     }
 
     &.header__inner--scroll {

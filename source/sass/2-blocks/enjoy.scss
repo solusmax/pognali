@@ -21,7 +21,7 @@ $enjoy-line-distantion: 13px;
     bottom: $enjoy-field-height + $enjoy-between-margin + ($enjoy-label-height / 2);
 
     width: 2px;
-    background-color: $color-special-blue-light;
+    background-color: $color-special-blue-400;
   }
 }
 
@@ -42,7 +42,7 @@ $enjoy-line-distantion: 13px;
     height: $enjoy-dot-size;
     border-radius: 50%;
 
-    background-color: $color-special-blue-light;
+    background-color: $color-special-blue-400;
   }
 
   &::after {
@@ -55,7 +55,7 @@ $enjoy-line-distantion: 13px;
 
     height: $enjoy-short-line-thickness;
 
-    background-color: $color-special-blue-light;
+    background-color: $color-special-blue-400;
   }
 
   &:only-of-type::after {
@@ -81,7 +81,7 @@ $enjoy-line-distantion: 13px;
 
   font-size: 18px;
   line-height: 18px;
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
   text-overflow: clip;
   white-space: nowrap;
 
@@ -126,13 +126,13 @@ $enjoy-line-distantion: 13px;
   padding-right: 14px;
   padding-top: 10px;
   padding-bottom: 10px;
-  border: 1px solid $color-special-grey-darkest;
+  border: 1px solid $color-special-grey-700;
   border-radius: 4px;
 
   font-family: inherit;
   font-size: 16px;
   line-height: 22px;
-  color: rgba($color-special-black-light, 0.3);
+  color: rgba($color-special-grey-900, 0.3);
 
   transition-property: border-color, color;
   transition-duration: $transitions-duration;
@@ -140,13 +140,13 @@ $enjoy-line-distantion: 13px;
   resize: none;
 
   &:hover {
-    border-color: $color-special-grey-most-dark;
+    border-color: $color-special-grey-850;
   }
 
   &:focus {
     border-color: $color-basic-blue;
 
-    color: $color-special-black-light;
+    color: $color-special-grey-900;
 
     outline: none;
 
@@ -154,14 +154,14 @@ $enjoy-line-distantion: 13px;
   }
 
   &:invalid {
-    border-color: rgba($color-special-red, 0.4);
+    border-color: rgba($color-special-red-500, 0.4);
 
     &:hover {
-      border-color: rgba($color-special-red, 0.6);
+      border-color: rgba($color-special-red-500, 0.6);
     }
 
     &:focus {
-      border-color: $color-special-red;
+      border-color: $color-special-red-500;
     }
   }
 }
@@ -179,15 +179,15 @@ $enjoy-line-distantion: 13px;
   padding-bottom: 10px;
   border-radius: 4px;
 
-  color: rgba($color-special-red-bright, 0.4);
+  color: rgba($color-special-red-700, 0.4);
 
-  background-color: rgba($color-special-red-pale, 0.4);
+  background-color: rgba($color-special-red-200, 0.4);
 
   transition-property: color, background-color;
   transition-duration: $transitions-duration;
 
   &:hover {
-    background-color: rgba($color-special-red-pale, 0.7);
+    background-color: rgba($color-special-red-200, 0.7);
   }
 }
 
@@ -196,13 +196,13 @@ $enjoy-line-distantion: 13px;
 }
 
 .enjoy__field:invalid:hover + .enjoy__required {
-  background-color: rgba($color-special-red-pale, 0.7);
+  background-color: rgba($color-special-red-200, 0.7);
 }
 
 .enjoy__field:invalid:focus + .enjoy__required {
-  color: $color-special-red-bright;
+  color: $color-special-red-700;
 
-  background-color: $color-special-red-pale;
+  background-color: $color-special-red-200;
 
   transition: none;
 }

@@ -35,7 +35,7 @@
     height: var(--route-point-size);
     border-radius: 50%;
 
-    background-color: $color-special-blue-light;
+    background-color: $color-special-blue-400;
 
     transform: translateY(-50%);
 
@@ -61,7 +61,7 @@
 
   &--choose {
     &::before {
-      border: 1px solid $color-special-grey-darkest;
+      border: 1px solid $color-special-grey-700;
       background-color: transparent;
     }
   }
@@ -78,7 +78,7 @@
     }
 
     &::before {
-      border: 1px solid $color-special-grey-darkest;
+      border: 1px solid $color-special-grey-700;
       background-color: transparent;
     }
   }
@@ -90,7 +90,7 @@
   padding-left: 9px;
   padding-top: 5px;
   padding-bottom: 5px;
-  border: 1px solid $color-special-grey-darkest;
+  border: 1px solid $color-special-grey-700;
   border-radius: 4px;
 
   font-family: inherit;
@@ -98,7 +98,7 @@
   line-height: 18px;
   font-weight: 500;
   letter-spacing: 0.1em;
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
   text-transform: uppercase;
   text-align: left;
   text-overflow: clip;
@@ -127,11 +127,11 @@
   }
 
   &:hover {
-    border-color: $color-special-grey-most-dark;
+    border-color: $color-special-grey-850;
   }
 
   &:active {
-    border-color: $color-special-grey-most-dark;
+    border-color: $color-special-grey-850;
   }
 
   &--select {
@@ -176,14 +176,14 @@
 
     color: $color-basic-white;
 
-    background-color: $color-special-blue-light;
+    background-color: $color-special-blue-400;
 
     transition: none;
 
     &::before {
       width: calc(var(--route-white-fade-size) + 26px);
 
-      background-image: linear-gradient(to left, $color-special-blue-light 75%, transparent);
+      background-image: linear-gradient(to left, $color-special-blue-400 75%, transparent);
     }
 
     &::after {
@@ -247,10 +247,10 @@
     }
 
     &:hover {
-      background-color: $color-special-grey-dark;
+      background-color: $color-special-grey-400;
 
       &::before {
-        background-image: linear-gradient(to left, $color-special-grey-dark 75%, transparent);
+        background-image: linear-gradient(to left, $color-special-grey-400 75%, transparent);
       }
 
       &::after {
@@ -259,7 +259,7 @@
     }
 
     &:active {
-      background-color: $color-special-grey-dark;
+      background-color: $color-special-grey-400;
 
       &::after {
         opacity: 0.1;
@@ -274,7 +274,7 @@
   align-items: center;
   width: var(--route-flag-wrapper-size);
   margin-left: -1px;
-  border: 1px solid $color-special-grey-darkest;
+  border: 1px solid $color-special-grey-700;
   border-radius: 4px;
 }
 
@@ -308,7 +308,7 @@
     height: 10px;
     border-radius: 1px;
 
-    background-color: $color-special-grey-cloudy-dark;
+    background-color: $color-special-grey-750;
 
     transform: translate(-50%, -50%) rotate(45deg);
     transition: $transitions-duration;
@@ -325,7 +325,7 @@
     height: 10px;
     border-radius: 1px;
 
-    background-color: $color-special-grey-cloudy-dark;
+    background-color: $color-special-grey-750;
 
     transform: translate(-50%, -50%) rotate(-45deg);
     transition: $transitions-duration;
@@ -333,25 +333,25 @@
 
   &:hover {
     &::before {
-      background-color: $color-special-grey-darkest;
+      background-color: $color-special-grey-700;
     }
 
     &::after {
-      background-color: $color-special-grey-darkest;
+      background-color: $color-special-grey-700;
     }
   }
 
   &:active {
-    background-color: $color-special-grey-very-light;
+    background-color: $color-special-grey-325;
 
     transition: none;
 
     &::before {
-      background-color: $color-special-grey-darkest;
+      background-color: $color-special-grey-700;
     }
 
     &::after {
-      background-color: $color-special-grey-darkest;
+      background-color: $color-special-grey-700;
     }
   }
 

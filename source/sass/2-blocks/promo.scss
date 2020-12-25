@@ -6,7 +6,7 @@
   @media (min-width: $page-width-tablet) {
     padding-top: 26px;
 
-    background-color: $color-special-blue-medium-light;
+    background-color: $color-special-blue-600;
   }
 
   @media (min-width: $page-width-desktop) {
@@ -53,13 +53,13 @@
 
     height: 240px;
 
-    background-color: $color-special-blue-dark;
+    background-color: $color-special-blue-500;
   }
 
   @media (min-width: $page-width-tablet) {
     display: grid;
 
-    background-color: $color-special-blue-medium-light;
+    background-color: $color-special-blue-600;
 
     &::before {
       display: none;
@@ -413,7 +413,7 @@
   padding-bottom: $step-padding-bottom + $step-margin;
   border-radius: 10px 10px 0 0;
 
-  background-color: $color-special-orange;
+  background-color: $color-special-orange-500;
 
   counter-increment: promoSteps;
   user-select: text;
@@ -435,11 +435,11 @@
   }
 
   &--step-2 {
-    background-color: $color-special-orange-light;
+    background-color: $color-special-orange-400;
   }
 
   &--step-3 {
-    background-color: $color-special-yellow-dark;
+    background-color: $color-special-yellow-500;
   }
 
   &--step-4 {
@@ -475,7 +475,7 @@
       top: 0;
       bottom: 0;
 
-      background-color: $color-special-orange;
+      background-color: $color-special-orange-500;
     }
 
     &:not(:first-child) {
@@ -508,7 +508,7 @@
       border-radius: 0 0 0 20px;
 
       &::before {
-        background-color: $color-special-yellow-dark;
+        background-color: $color-special-yellow-500;
       }
     }
 
@@ -550,7 +550,7 @@
       width: 345px;
 
       &::before {
-        background-color: $color-special-orange-light;
+        background-color: $color-special-orange-400;
       }
     }
 

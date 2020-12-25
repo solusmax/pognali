@@ -45,7 +45,7 @@
     --level-size: 45px;
     --level-bar-width: 3px;
 
-    color: $color-special-blue-light;
+    color: $color-special-blue-400;
 
     &::before {
       display: none;
@@ -68,7 +68,7 @@
 
 .level__bar {
   fill: transparent;
-  stroke: $color-special-orange;
+  stroke: $color-special-orange-500;
   stroke-width: var(--level-bar-width);
   stroke-linecap: round;
 
@@ -108,14 +108,14 @@
 
     font-size: 18px;
     line-height: 18px;
-    color: $color-special-black-light;
+    color: $color-special-grey-900;
 
     &::before {
       top: -6px;
 
       width: 50px;
 
-      background-color: $color-special-black-light;
+      background-color: $color-special-grey-900;
     }
   }
 

@@ -11,7 +11,7 @@
 
   line-height: 16px;
   letter-spacing: 0.09em;
-  color: $color-special-blue-light;
+  color: $color-special-blue-400;
   text-transform: uppercase;
 }
 
@@ -46,7 +46,7 @@
     width: 14px;
     height: 2px;
 
-    background-color: $color-special-grey-very-dark;
+    background-color: $color-special-grey-650;
 
     transform: translate(-50%, -50%);
     transition: $transitions-duration;
@@ -66,7 +66,7 @@
       width: 2px;
       height: 14px;
 
-      background-color: $color-special-grey-very-dark;
+      background-color: $color-special-grey-650;
 
       transform: translate(-50%, -50%);
       transition: $transitions-duration;
@@ -76,32 +76,32 @@
 
 .counter__wrapper:hover .counter__button {
   &::before {
-    background-color: $color-special-grey-most-dark;
+    background-color: $color-special-grey-850;
   }
 
   &::after {
-    background-color: $color-special-grey-most-dark;
+    background-color: $color-special-grey-850;
   }
 
   &:hover {
     &::before {
-      background-color: $color-special-grey-very-very-dark;
+      background-color: $color-special-grey-800;
     }
 
     &::after {
-      background-color: $color-special-grey-very-very-dark;
+      background-color: $color-special-grey-800;
     }
   }
 
   &:active {
     &::before {
-      background-color: $color-special-grey-very-very-light;
+      background-color: $color-special-grey-300;
 
       transition: none;
     }
 
     &::after {
-      background-color: $color-special-grey-very-very-light;
+      background-color: $color-special-grey-300;
 
       transition: none;
     }
@@ -120,23 +120,23 @@
   &:hover,
   &.focus-visible {
     &::before {
-      background-color: $color-special-grey-very-very-dark;
+      background-color: $color-special-grey-800;
     }
 
     &::after {
-      background-color: $color-special-grey-very-very-dark;
+      background-color: $color-special-grey-800;
     }
   }
 
   &:active {
     &::before {
-      background-color: $color-special-grey-very-very-light;
+      background-color: $color-special-grey-300;
 
       transition: none;
     }
 
     &::after {
-      background-color: $color-special-grey-very-very-light;
+      background-color: $color-special-grey-300;
 
       transition: none;
     }
@@ -152,7 +152,7 @@
   min-height: 43px;
   padding-left: 41px;
   padding-right: 41px;
-  border: 1px solid $color-special-grey-darkest;
+  border: 1px solid $color-special-grey-700;
   border-radius: 4px;
 
   font-family: inherit;
@@ -178,7 +178,7 @@
 }
 
 .counter__wrapper:hover .counter__field {
-  border-color: $color-special-grey-most-dark;
+  border-color: $color-special-grey-850;
 }
 
 .counter__wrapper:focus-within .counter__field {
@@ -195,7 +195,7 @@
 
   line-height: 16px;
   letter-spacing: 0.07em;
-  color: rgba($color-special-blue-light, 0.3);
+  color: rgba($color-special-blue-400, 0.3);
   text-transform: uppercase;
   text-align: right;
 }

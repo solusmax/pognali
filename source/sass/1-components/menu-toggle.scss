@@ -48,7 +48,7 @@
   &--scroll {
     &::before,
     &::after {
-      background-color: $color-special-grey-very-dark;
+      background-color: $color-special-grey-650;
     }
   }
 
@@ -57,7 +57,7 @@
     &::after {
       height: 2px;
 
-      background-color: $color-special-grey-very-dark;
+      background-color: $color-special-grey-650;
     }
 
     &::before {

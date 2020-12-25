@@ -20,7 +20,7 @@
   height: 100%;
   border-radius: 50%;
 
-  background-color: $color-special-yellow-dark;
+  background-color: $color-special-yellow-500;
 
   transition: background-color $transitions-duration;
 
@@ -42,7 +42,7 @@
   }
 
   &:hover {
-    background-color: $color-special-orange;
+    background-color: $color-special-orange-500;
   }
 
   &:active {
@@ -52,14 +52,14 @@
   }
 
   &--call {
-    background-color: $color-special-orange;
+    background-color: $color-special-orange-500;
 
     &::before {
       background-position: 50% 53%;
     }
 
     &:hover {
-      background-color: $color-special-orange-dark;
+      background-color: $color-special-orange-600;
     }
   }
 

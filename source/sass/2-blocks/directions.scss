@@ -99,7 +99,7 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
-  color: $color-special-orange;
+  color: $color-special-orange-500;
 
   @media (min-width: $page-width-tablet) {
     font-size: 45px;
@@ -113,7 +113,7 @@
   padding: 0;
 
   font-weight: 300;
-  color: $color-special-black-light;
+  color: $color-special-grey-900;
 
   @media (min-width: $page-width-tablet) {
     margin-top: 59px;
@@ -156,7 +156,7 @@
       height: 141px;
       border-radius: 20px;
 
-      background-color: $color-special-grey-very-very-medium;
+      background-color: $color-special-grey-350;
     }
   }
 
