@@ -64,6 +64,12 @@
     background-size: 143px 143px;
   }
 
+  @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+    &::after {
+      background-image: url("../img/companions/background-companions-1@2x.png");
+    }
+  }
+
   @media (min-width: $page-width-tablet) {
     width: 100%;
     max-width: $page-width-tablet - ($page-padding-tablet * 2);
@@ -86,6 +92,12 @@
 
       background-image: url("../img/companions/background-companions-2-tablet.png");
       background-size: 285px 285px;
+    }
+
+    @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+      &::after {
+        background-image: url("../img/companions/background-companions-2-tablet@2x.png");
+      }
     }
   }
 
@@ -225,6 +237,12 @@
     background-size: 75px 71px;
   }
 
+  @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+    &::before {
+      background-image: url("../img/companions/background-companions-2@2x.png");
+    }
+  }
+
   @media (min-width: $page-width-tablet) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -244,6 +262,12 @@
 
       background-image: url("../img/companions/background-companions-1.png");
       background-size: 143px 143px;
+    }
+
+    @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+      &::before {
+        background-image: url("../img/companions/background-companions-1@2x.png");
+      }
     }
   }
 

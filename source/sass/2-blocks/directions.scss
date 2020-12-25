@@ -51,6 +51,12 @@
       background-repeat: no-repeat;
       background-size: 288px 574px;
     }
+
+    @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+      &::before {
+        background-image: url("../img/directions/background-directions-tablet@2x.png");
+      }
+    }
   }
 
   @media (min-width: $page-width-desktop) {

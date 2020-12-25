@@ -35,6 +35,12 @@
     display: block;
   }
 
+  @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+    &::before {
+      background-image: url("#{$img-path}/logo/file-logo-blue@2x.png");
+    }
+  }
+
   @media (min-width: $page-width-tablet) {
     &::before {
       width: 162px;
@@ -42,6 +48,12 @@
 
       background-image: url("#{$img-path}/logo/file-logo-blue-tablet.png");
       background-size: 162px 42px;
+    }
+
+    @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+      &::before {
+        background-image: url("#{$img-path}/logo/file-logo-blue-tablet@2x.png");
+      }
     }
   }
 
@@ -60,6 +72,12 @@
 
     &--scroll::before {
       display: block;
+    }
+
+    @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+      &::before {
+        background-image: url("#{$img-path}/logo/file-logo-blue-desktop@2x.png");
+      }
     }
   }
 
