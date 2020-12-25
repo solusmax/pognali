@@ -159,6 +159,8 @@
 
     background-color: $color-basic-blue;
 
+    min-height: $menu-height-desktop;
+
     &.header__inner--inner-page {
       background-color: $color-special-blue-500;
     }
