@@ -13,8 +13,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-
-    overflow: visible;
+    max-height: 35vh;
 
     background-color: $color-basic-blue;
 
@@ -98,8 +97,6 @@
     padding-top: 49px;
     padding-bottom: 2px;
 
-    overflow: visible;
-
     background-color: $color-basic-blue;
 
     transition-property: padding;
@@ -180,6 +177,10 @@
     grid-row: 1 / 2;
     grid-column: 1 / 2;
   }
+
+  @media (min-width: $page-width-desktop) {
+    flex-shrink: 0;
+  }
 }
 
 .header__logo {
@@ -211,6 +212,7 @@
     position: relative;
     top: 4px;
 
+    flex-shrink: 0;
     display: flex;
     margin-top: 0;
   }
