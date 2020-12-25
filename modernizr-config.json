@@ -1,9 +1,0 @@
-{
-  "enableJSClass": false,
-  "options": [
-    "setClasses"
-  ],
-  "feature-detects": [
-    "test/img/webp"
-  ]
-}
