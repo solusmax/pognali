@@ -32,6 +32,14 @@
       }
     }
   }
+
+  @media (max-height: $page-max-height-mobile) and (max-width: $page-width-mobile-last), (max-height: $page-max-height-tablet) and (min-width: $page-width-tablet) {
+    @media (min-width: $page-width-desktop) {
+      &::before {
+        background-color: $color-basic-white;
+      }
+    }
+  }
 }
 
 .site-nav__list {
@@ -122,6 +130,20 @@
 
       &:any-link:active {
         color: rgba($color-special-blue-dark, 0.3);
+      }
+    }
+
+    @media (max-height: $page-max-height-mobile) and (max-width: $page-width-mobile-last), (max-height: $page-max-height-tablet) and (min-width: $page-width-tablet) {
+      @media (min-width: $page-width-desktop) {
+        color: $color-basic-white;
+
+        &:any-link:hover {
+          color: $color-basic-yellow;
+        }
+
+        &:any-link:active {
+          color: rgba($color-basic-yellow, 0.3);
+        }
       }
     }
   }

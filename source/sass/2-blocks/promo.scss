@@ -20,6 +20,16 @@
     background-size: 1724px 750px;
     background-position: center bottom;
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+      background-image: url("../img/promo/promo-background-desktop@2x.jpg");
+    }
+  }
+
+  @media (max-height: $page-max-height-mobile) and (max-width: $page-width-mobile-last), (max-height: $page-max-height-tablet) and (min-width: $page-width-tablet) {
+    @media (min-width: $page-width-desktop) {
+      padding-top: 0;
+    }
   }
 }
 

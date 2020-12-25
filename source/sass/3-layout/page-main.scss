@@ -8,6 +8,12 @@
   border-radius: 0 0 20px 20px;
 
   background-color: $color-special-blue-medium-light;
+
+  @media (max-height: $page-max-height-mobile) and (max-width: $page-width-mobile-last), (max-height: $page-max-height-tablet) and (min-width: $page-width-tablet) {
+    @media (min-width: $page-width-desktop) {
+      padding-top: 25px;
+    }
+  }
 }
 
 .page-main__title-inner {

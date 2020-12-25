@@ -33,6 +33,10 @@
   @media (min-width: $page-width-desktop) {
     padding-top: $menu-height-desktop;
   }
+
+  @media (max-height: $page-max-height-mobile) and (max-width: $page-width-mobile-last), (max-height: $page-max-height-tablet) and (min-width: $page-width-tablet) {
+    padding-top: 0;
+  }
 }
 
 .no-js .page__body {
