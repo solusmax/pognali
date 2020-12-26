@@ -1,0 +1,231 @@
+.contacts {
+  display: block;
+  padding: 0;
+
+  list-style: none;
+
+  @media (min-width: $page-width-desktop) {
+    &--header {
+      display: flex;
+    }
+
+    &--registration {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
+.contacts__item {
+  display: flex;
+
+  @media (min-width: $page-width-tablet) {
+    margin-left: 57px;
+
+    &--registration {
+      margin-left: 35px;
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    &--header {
+      margin-left: 0;
+    }
+
+    &--registration {
+      margin-left: 0;
+
+      &:not(:last-child) {
+        margin-right: 109px;
+      }
+    }
+  }
+}
+
+.contacts__link {
+  position: relative;
+
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 45px;
+
+  color: $color-special-blue-500;
+  line-height: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition: color $transitions-duration;
+
+  &:hover {
+    color: rgba($color-special-blue-500, 0.6);
+  }
+
+  &:active {
+    color: rgba($color-special-blue-500, 0.3);
+
+    transition: none;
+  }
+
+  &--registration {
+    line-height: 18px;
+    color: $color-basic-yellow;
+
+    &:hover {
+      color: $color-special-yellow-500;
+    }
+
+    &:active {
+      color: rgba($color-basic-yellow, 0.3);
+    }
+  }
+
+  @media (min-width: $page-width-tablet) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
+.contacts__link-icon-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+  background-color: $color-special-blue-900;
+
+  @media (min-width: $page-width-tablet) {
+    width: 68px;
+    height: 68px;
+    margin-right: 23px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    &--header {
+      position: relative;
+
+      width: 50px;
+      height: 50px;
+      margin-right: 0;
+
+      background-color: $color-special-orange-500;
+
+      transition-property: background-color;
+      transition-duration: $transitions-duration;
+
+      &::before {
+        content: "";
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        background-image: url("../img/contacts/contacts-call.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 16px 17px;
+
+        pointer-events: none;
+      }
+
+      &:hover {
+        background-color: $color-special-orange-600;
+      }
+
+      &:active {
+        &::before {
+          opacity: 0.3;
+        }
+      }
+    }
+
+    &--header.contacts__link-icon-wrapper--email {
+      background-color: $color-special-yellow-500;
+
+      &::before {
+        background-image: url("../img/contacts/contacts-envelope-closed.svg");
+        background-size: 15px 12px;
+      }
+
+      &:hover {
+        background-color: $color-special-orange-500;
+      }
+    }
+
+    &--registration {
+      width: 90px;
+      height: 90px;
+      margin-right: 33px;
+    }
+  }
+}
+
+.contacts__link-icon {
+  width: 16px;
+  height: 15px;
+
+  color: $color-basic-yellow;
+
+  transition: $transitions-duration;
+
+  &--email {
+    width: 18px;
+    height: 18px;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    width: 24px;
+    height: 23px;
+
+    &--email {
+      width: 28px;
+      height: 19px;
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    &--header {
+      display: none;
+    }
+
+    &--registration.contacts__link-icon--email {
+      width: 37px;
+      height: 26px;
+    }
+
+    &--registration.contacts__link-icon--phone {
+      width: 32px;
+      height: 30px;
+    }
+  }
+}
+
+.contacts__link:hover .contacts__link-icon {
+  color: $color-special-yellow-500;
+}
+
+.contacts__link:active .contacts__link-icon {
+  color: $color-special-yellow-500;
+
+  opacity: 0.3;
+
+  transition: none;
+}
+
+.contacts__text {
+  @media (min-width: $page-width-desktop) {
+    &--header {
+      display: none;
+    }
+  }
+}

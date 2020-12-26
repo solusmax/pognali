@@ -1,0 +1,48 @@
+.page {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  min-width: $page-width-mobile;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: $menu-height-mobile;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  color: $color-basic-white;
+  overflow-wrap: break-word;
+  word-break: break-word;
+
+  background-color: $color-basic-grey;
+
+  @media (min-width: $page-width-tablet) {
+    padding-top: $menu-height-tablet;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    padding-top: $menu-height-desktop;
+  }
+
+  @media (max-height: $page-max-height-mobile) and (max-width: $page-width-mobile-last), (max-height: $page-max-height-tablet) and (min-width: $page-width-tablet) {
+    padding-top: 0;
+  }
+}
+
+.no-js .page__body {
+  padding-top: 0;
+}
+
+.page__footer {
+  margin-top: auto;
+}

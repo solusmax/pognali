@@ -1,0 +1,96 @@
+.underlay {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -$underlay-height-mobile;
+    bottom: 100%;
+    z-index: -1;
+
+    background-color: $color-basic-grey;
+  }
+
+  &--self::after {
+    top: calc(100% - #{$underlay-height-mobile});
+    bottom: 0;
+  }
+
+  &--bottom::after {
+    top: 100%;
+    bottom: -$underlay-height-mobile;
+  }
+
+  &--yellow::after {
+    background-color: $color-basic-yellow;
+  }
+
+  &--blue::after {
+    background-color: $color-special-blue-500;
+  }
+
+  &--metallic::after {
+    background-color: $color-special-grey-400;
+  }
+
+  &--dark-metallic::after {
+    background-color: $color-special-grey-550;
+  }
+
+  &--light-metallic::after {
+    background-color: $color-special-grey-325;
+  }
+
+  &--about::after {
+    display: none;
+  }
+
+  &--new-profile::after {
+    background-color: $color-special-grey-250;
+  }
+
+  &--not-found::after {
+    bottom: calc(100% - #{$underlay-height-mobile});
+    top: 0;
+
+    background-color: $color-basic-blue;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    &::after {
+      top: -$underlay-height-tablet;
+    }
+
+    &--self::after {
+      top: calc(100% - #{$underlay-height-tablet});
+    }
+
+    &--bottom::after {
+      bottom: -$underlay-height-tablet;
+    }
+
+    &--new-profile::after {
+      background-color: $color-basic-grey;
+    }
+
+    &--not-found::after {
+      bottom: calc(100% - #{$underlay-height-tablet});
+      top: 0;
+
+      background-color: $color-special-blue-600;
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    &--about::after {
+      display: block;
+    }
+
+    &--not-found::after {
+      background-color: $color-basic-blue;
+    }
+  }
+}

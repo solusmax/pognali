@@ -1,0 +1,144 @@
+.level {
+  --level-size: 60px;
+  --level-bar-width: 4px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: var(--level-size);
+  height: var(--level-size);
+  padding: 0;
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  color: $color-basic-white;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 1px;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    z-index: -1;
+
+    border-radius: 50%;
+
+    background-color: rgba($color-basic-black, 0.6);
+  }
+
+  &--profile {
+    --level-size: 100px;
+    --level-bar-width: 3px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &--card {
+    --level-size: 45px;
+    --level-bar-width: 3px;
+
+    color: $color-special-blue-400;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.level__svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: inherit;
+  height: inherit;
+}
+
+.no-js .level__svg {
+  display: none;
+}
+
+.level__bar {
+  fill: transparent;
+  stroke: $color-special-orange-500;
+  stroke-width: var(--level-bar-width);
+  stroke-linecap: round;
+
+  transform: scale(-1, 1) rotate(-93deg);
+  transform-origin: var(--level-size) / 2 var(--level-size) / 2;
+}
+
+.level__title {
+  position: relative;
+
+  order: 1;
+  margin-top: 2px;
+
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  text-transform: lowercase;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -3px;
+    left: 50%;
+
+    height: 1px;
+    width: 30px;
+
+    background-color: $color-basic-white;
+    opacity: 0.3;
+
+    transform: translateX(-50%);
+  }
+
+  &--profile {
+    margin-top: 8px;
+
+    font-size: 18px;
+    line-height: 18px;
+    color: $color-special-grey-900;
+
+    &::before {
+      top: -6px;
+
+      width: 50px;
+
+      background-color: $color-special-grey-900;
+    }
+  }
+
+  &--card {
+    display: none;
+  }
+}
+
+.level__number {
+  z-index: 0;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+
+  &--profile {
+    font-size: 38px;
+    line-height: 38px;
+    color: $color-basic-blue;
+  }
+
+  &--card {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}

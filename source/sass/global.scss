@@ -33,3 +33,15 @@ img {
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
+
+.js-focus-visible .focus-visible {
+  outline-style: groove;
+  outline-color: $color-basic-white;
+  outline-width: 2px;
+}
+
+.no-js :focus {
+  outline-style: groove;
+  outline-color: $color-basic-white;
+  outline-width: 2px;
+}

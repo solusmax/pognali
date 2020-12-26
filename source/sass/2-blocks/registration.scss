@@ -1,0 +1,280 @@
+.registration {
+  --registration-form-padding: 36px;
+
+  display: flex;
+  justify-content: center;
+  border-radius: 0 0 30px 30px;
+
+  background-color: $color-special-blue-500;
+
+  @media (min-width: $page-width-tablet) {
+    border-radius: 0 0 60px 60px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    --registration-form-padding: 73px;
+  }
+}
+
+.registration__inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: $page-width-mobile;
+  max-width: $page-max-width-mobile;
+  padding-left: $page-padding-mobile;
+  padding-right: $page-padding-mobile;
+  padding-top: 70px;
+  padding-bottom: 29px;
+
+  @media (min-width: $page-width-tablet) {
+    align-items: center;
+    max-width: $page-width-tablet - (2 * $page-padding-tablet);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 72px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    max-width: $page-width-desktop - (2 * $page-padding-desktop);
+    padding-top: 105px;
+    padding-bottom: 104px;
+  }
+}
+
+.registration__tagline {
+  margin: 0;
+  padding: 0;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $color-special-orange-500;
+  text-align: center;
+
+  @media (min-width: $page-width-tablet) {
+    font-size: 45px;
+    line-height: 45px;
+  }
+}
+
+.registration__text {
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  text-align: center;
+
+  &--questions {
+    margin-top: 28px;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    max-width: $page-width-tablet - (2 * $page-padding-tablet);
+    margin-top: 61px;
+    padding-left: 0;
+    padding-right: 0;
+
+    font-size: 28px;
+    line-height: 32px;
+
+    &--questions {
+      margin-top: 57px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    margin-top: 59px;
+
+    line-height: 31px;
+    letter-spacing: normal;
+
+    &--questions {
+      margin-top: 68px;
+
+      line-height: 30px;
+      letter-spacing: 0.01em;
+    }
+  }
+}
+
+.registration__text-br {
+  @media (min-width: $page-width-tablet) {
+    display: none;
+  }
+}
+
+.registration__link {
+  color: $color-basic-yellow;
+  text-underline-offset: 1px;
+  text-decoration-thickness: 1px;
+  text-decoration-skip-ink: none;
+
+  transition: color $transitions-duration;
+
+  &:hover {
+    color: $color-special-orange-500;
+  }
+
+  &:active {
+    color: rgba($color-special-orange-500, 0.3);
+
+    transition: none;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    text-underline-offset: 3px;
+  }
+}
+
+.registration__form {
+  position: relative;
+
+  margin-top: 30px;
+
+  @media (min-width: $page-width-tablet) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 67px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    margin-top: 62px;
+  }
+}
+
+.registration__field {
+  width: 100%;
+  min-height: 62px;
+  padding-left: 25px;
+  padding-right: 85px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 2px solid $color-basic-white;
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $color-special-blue-500;
+
+  transition-property: background-color, border-color, color;
+  transition-duration: $transitions-duration;
+
+  &::placeholder {
+    color: rgba($color-special-grey-900, 0.3);
+
+    transition: color $transitions-duration;
+  }
+
+  &:hover {
+    border-color: $color-basic-grey;
+
+    background-color: $color-basic-grey;
+  }
+
+  &:hover::placeholder {
+    color: rgba($color-special-grey-900, 0.5);
+  }
+
+  &:focus {
+    color: $color-basic-white;
+
+    background-color: $color-special-blue-500;
+
+    outline: none;
+
+    transition: none;
+  }
+
+  &:focus::placeholder {
+    color: rgba($color-basic-white, 0.5);
+
+    transition: none;
+  }
+
+  &:invalid {
+    color: $color-special-red-700;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    max-width: calc(#{$page-width-tablet} - (2 * #{$page-padding-tablet}) - (2 * var(--registration-form-padding)));
+    min-height: 80px;
+    padding-left: 34px;
+    padding-right: 100px;
+    border-radius: 20px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    max-width: calc(#{$page-width-desktop} - (2 * #{$page-padding-desktop}) - (2 * var(--registration-form-padding)));
+    min-height: 81px;
+    padding-right: 335px;
+  }
+}
+
+.registration__submit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 60px;
+
+  @media (min-width: $page-width-tablet) {
+    right: var(--registration-form-padding);
+
+    width: 80px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    width: 324px;
+  }
+}
+
+.registration__submit-text {
+  @include visually-hidden;
+
+  @media (min-width: $page-width-desktop) {
+    @include visually-unhidden;
+  }
+}
+
+.registration__contacts-wrapper {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto;
+  margin-top: 18px;
+
+  @media (min-width: $page-width-tablet) {
+    justify-content: start;
+    width: 100%;
+    margin-top: 41px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    display: flex;
+    justify-content: center;
+    margin-top: 44px;
+  }
+}
+
+.registration__contacts {
+  margin: 0;
+  min-width: $page-width-mobile - ($page-padding-mobile * 2);
+
+  @media (min-width: $page-width-tablet) {
+    min-width: auto;
+  }
+}
