@@ -12,6 +12,8 @@
 }
 
 .direction__inner-link {
+  display: flex;
+
   text-decoration: none;
 
   &:hover .direction__inner {
