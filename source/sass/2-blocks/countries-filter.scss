@@ -161,7 +161,8 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  transition: $transitions-duration;
+  transition-property: color;
+  transition-duration: $transitions-duration;
 
   &:any-link:hover {
     color: rgba($color-special-blue-500, 0.6);
@@ -273,6 +274,10 @@
 
   cursor: pointer;
 
+  &.focus-visible {
+    @include outline(-2px);
+  }
+
   &:active {
     color: $color-basic-white;
 
@@ -284,6 +289,10 @@
 
     background-color: $color-special-blue-400;
   }
+}
+
+.no-js .countries-filter__letter-field:focus {
+  @include outline(-2px);
 }
 
 .countries-filter__countries-all {
@@ -331,7 +340,8 @@
   color: $color-special-grey-900;
   text-decoration: none;
 
-  transition: $transitions-duration;
+  transition-property: color;
+  transition-duration: $transitions-duration;
 
   &:hover {
     color: $color-special-blue-400;

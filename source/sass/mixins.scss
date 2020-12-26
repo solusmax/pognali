@@ -1,9 +1,9 @@
 // Дефолтный outline при фокусе в Chrome и Firefox
 
-@mixin default-outline($outline-offset: 0) {
-  outline: thin dotted;
-  // stylelint-disable-next-line
-  outline: 5px auto -webkit-focus-ring-color;
+@mixin outline($outline-offset: 0) {
+  outline-style: groove;
+  outline-color: $color-basic-white;
+  outline-width: 2px;
   outline-offset: $outline-offset;
 }
 

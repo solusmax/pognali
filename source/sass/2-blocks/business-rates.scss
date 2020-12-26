@@ -189,6 +189,10 @@
 
   transition: background-color $transitions-duration;
 
+  &.focus-visible {
+    @include outline(-4px);
+  }
+
   &:hover {
     background-color: $color-basic-grey;
   }
@@ -208,4 +212,8 @@
     line-height: 24px;
     text-transform: none;
   }
+}
+
+.no-js .business-rates__close:focus {
+  @include outline(-4px);
 }

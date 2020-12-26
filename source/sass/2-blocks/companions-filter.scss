@@ -244,7 +244,7 @@
 
 .no-js .companions-filter__field:focus + .companions-filter__label,
 .companions-filter__field.focus-visible + .companions-filter__label {
-  @include default-outline(2px);
+  @include outline(2px);
 }
 
 .companions-filter__transport {

@@ -141,7 +141,7 @@
 
 .no-js .step__checkbox-field:focus + .step__checkbox-label,
 .step__checkbox-field.focus-visible + .step__checkbox-label {
-  @include default-outline(2px);
+  @include outline(2px);
 }
 
 .step__calendar {

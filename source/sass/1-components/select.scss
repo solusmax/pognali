@@ -78,6 +78,10 @@
 
   cursor: pointer;
 
+  &.focus-visible {
+    @include outline(-2px);
+  }
+
   &:active {
     background-color: $color-basic-grey;
   }
@@ -85,6 +89,10 @@
   &--current {
     background-color: $color-basic-grey;
   }
+}
+
+.no-js .select__letter-field:focus {
+  @include outline(-2px);
 }
 
 .select__countries {

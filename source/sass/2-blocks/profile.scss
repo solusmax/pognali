@@ -54,7 +54,7 @@
 
 .no-js .profile__upload-field:focus + .profile__upload-label,
 .profile__upload-field.focus-visible + .profile__upload-label {
-  @include default-outline(2px);
+  @include outline(2px);
 }
 
 .profile__border {

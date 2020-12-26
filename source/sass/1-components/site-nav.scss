@@ -84,6 +84,10 @@
 
   transition: color $transitions-duration;
 
+  &.focus-visible {
+    @include outline(-1px);
+  }
+
   &:any-link:hover {
     color: rgba($color-special-blue-500, 0.6);
   }
@@ -147,6 +151,10 @@
       }
     }
   }
+}
+
+.no-js .site-nav__link:focus {
+  @include outline(-1px);
 }
 
 .site-nav__text {

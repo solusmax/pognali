@@ -113,7 +113,7 @@
 
 .no-js .transport__field:focus + .transport__item,
 .transport__field.focus-visible + .transport__item {
-  @include default-outline;
+  @include outline;
 }
 
 .transport__icon {
