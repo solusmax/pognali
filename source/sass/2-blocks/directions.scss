@@ -178,6 +178,8 @@
       height: 91px;
 
       background-image: linear-gradient(to top, $color-basic-grey 30%, transparent);
+
+      pointer-events: none;
     }
 
     &::after {
