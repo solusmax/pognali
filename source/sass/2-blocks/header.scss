@@ -129,8 +129,8 @@
     }
 
     @media (min-width: $page-width-desktop) {
-      padding-top: 49px;
-      padding-bottom: 2px;
+      padding-top: 48px;
+      padding-bottom: 1px;
 
       background-color: $color-basic-blue;
 
@@ -286,12 +286,20 @@
 
   @media (max-height: $page-max-height-mobile) and (max-width: $page-width-mobile-last), (max-height: $page-max-height-tablet) and (min-width: $page-width-tablet) {
     display: grid;
+
+    @media (min-width: $page-width-desktop) {
+      display: flex;
+    }
   }
 }
 
 .header__contacts-wrapper--open,
 .no-js .header__contacts-wrapper {
   display: grid;
+
+  @media (min-width: $page-width-desktop) {
+    display: flex;
+  }
 }
 
 .header__contacts {
