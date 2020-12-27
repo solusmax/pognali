@@ -336,8 +336,8 @@
   }
 }
 
-.promo__author-nbsp {
-  @media (min-width: $page-width-tablet) {
+.promo__author-br {
+  @media (min-width: $page-width-mobile-second) {
     display: none;
   }
 }

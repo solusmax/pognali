@@ -5,6 +5,7 @@ $page-width-mobile: 320px;
 $page-max-width-mobile: 450px;
 $page-width-tablet: 768px;
 $page-width-desktop: 1440px;
+$page-width-mobile-second: $page-width-mobile + 1px;
 $page-width-mobile-last: $page-width-tablet - 1px;
 
 $page-padding-mobile: 25px;
