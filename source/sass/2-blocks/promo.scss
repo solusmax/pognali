@@ -113,7 +113,7 @@
 
   @media (min-width: $page-width-desktop) {
     padding-left: 68px;
-    padding-right: 68px;
+    padding-right: 80px;
     padding-top: 105px;
 
     text-align: left;
@@ -336,8 +336,8 @@
   }
 }
 
-.promo__author-nbsp {
-  @media (min-width: $page-width-tablet) {
+.promo__author-br {
+  @media (min-width: $page-width-mobile-second) {
     display: none;
   }
 }

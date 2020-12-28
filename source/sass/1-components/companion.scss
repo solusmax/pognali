@@ -45,7 +45,7 @@
 
 .companion__name-wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding-right: 15px;
 
   @media (min-width: $page-width-tablet) {
@@ -90,7 +90,9 @@
 }
 
 .companion__status {
+  flex-shrink: 0;
   margin: 0;
+  margin-top: 9px;
   margin-right: 10px;
 
   transition: opacity $transitions-duration;
