@@ -43,6 +43,19 @@
   padding-top: 0;
 }
 
+.page__header {
+  flex-shrink: 0;
+}
+
+.page__page-main {
+  flex-shrink: 0;
+}
+
+.page__not-found {
+  flex-shrink: 0;
+}
+
 .page__footer {
+  flex-shrink: 0;
   margin-top: auto;
 }
