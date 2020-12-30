@@ -121,7 +121,6 @@ const buildImg = () => {
 const buildWebp = () => {
   return src('./source/img/**/file-*.{jpg,jpeg,png}', { base: './source/img' })
     .pipe(gulpIf(!production, plumber()))
-    .pipe(gulpIf(!production, newer('./build/img')))
     .pipe(webp({
       quality: 85
     }))
