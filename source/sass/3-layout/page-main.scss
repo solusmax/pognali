@@ -9,6 +9,11 @@
 
   background-color: $color-special-blue-600;
 
+  @media (min-width: $page-width-tablet) {
+    padding-top: 88px;
+    border-radius: 0 0 60px 60px;
+  }
+
   @media (max-height: $page-max-height-mobile) and (max-width: $page-width-mobile-last), (max-height: $page-max-height-tablet) and (min-width: $page-width-tablet) {
     @media (min-width: $page-width-desktop) {
       padding-top: 25px;
@@ -21,6 +26,12 @@
   max-width: $page-max-width-mobile;
   padding-left: $page-padding-mobile;
   padding-right: $page-padding-mobile;
+
+  @media (min-width: $page-width-tablet) {
+    max-width: $page-width-tablet - ($page-padding-tablet * 2);
+    padding-left: 35px;
+    padding-right: 40px;
+  }
 }
 
 .page-main__title {
@@ -47,6 +58,19 @@
     border-radius: 4px;
 
     background-color: $color-special-orange-500;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    padding-bottom: 70px;
+
+    font-size: 60px;
+    line-height: 60px;
+
+    &::before {
+      bottom: -4px;
+
+      height: 8px;
+    }
   }
 }
 
