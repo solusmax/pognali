@@ -62,13 +62,16 @@
   @media (min-width: $page-width-tablet) {
     &::after {
       top: -$underlay-height-tablet;
+      bottom: 100%;
     }
 
     &--self::after {
       top: calc(100% - #{$underlay-height-tablet});
+      bottom: 0;
     }
 
     &--bottom::after {
+      top: 100%;
       bottom: -$underlay-height-tablet;
     }
 
@@ -77,8 +80,8 @@
     }
 
     &--not-found::after {
-      bottom: calc(100% - #{$underlay-height-tablet});
       top: 0;
+      bottom: calc(100% - #{$underlay-height-tablet});
 
       background-color: $color-special-blue-600;
     }

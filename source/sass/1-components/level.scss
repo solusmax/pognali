@@ -51,6 +51,13 @@
       display: none;
     }
   }
+
+  @media (min-width: $page-width-tablet) {
+    &--profile {
+      --level-size: 94px;
+      --level-bar-width: 3px;
+    }
+  }
 }
 
 .level__svg {
