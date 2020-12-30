@@ -51,6 +51,11 @@
   flex-shrink: 0;
 }
 
+.page__not-found {
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
 .page__footer {
   flex-shrink: 0;
   margin-top: auto;
