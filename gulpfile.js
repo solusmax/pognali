@@ -29,7 +29,7 @@ const productionOn = done => {
   done();
 };
 
-// Очиска папки build
+// Очистка папки build
 
 const cleanBuild = () => {
   return del('./build', {
