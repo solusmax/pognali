@@ -14,8 +14,6 @@ if (document.querySelector('.step')) {
   const previousStep3 = document.querySelector('.step__previous--step-3');
   const markers = document.querySelectorAll('.add-plan__marker');
   const addPlan = document.querySelector('.add-plan');
-  const addPlanPositionY = addPlan.getBoundingClientRect().top + pageYOffset;
-  const menuHeight = parseInt(document.querySelector('.header').clientHeight);
 
   function clearCurrentStepClasses() {
     for (const step of steps) {
@@ -35,6 +33,9 @@ if (document.querySelector('.step')) {
     steps[1].classList.add('step--current');
     markers[1].classList.add('add-plan__marker--current');
 
+    let addPlanPositionY = addPlan.getBoundingClientRect().top + pageYOffset;
+    let menuHeight = parseInt(document.querySelector('.header').clientHeight);
+
     window.scrollTo({
       top: addPlanPositionY - menuHeight,
       left: 0,
@@ -49,6 +50,9 @@ if (document.querySelector('.step')) {
 
     steps[2].classList.add('step--current');
     markers[2].classList.add('add-plan__marker--current');
+
+    let addPlanPositionY = addPlan.getBoundingClientRect().top + pageYOffset;
+    let menuHeight = parseInt(document.querySelector('.header').clientHeight);
 
     window.scrollTo({
       top: addPlanPositionY - menuHeight,
@@ -65,6 +69,9 @@ if (document.querySelector('.step')) {
     steps[0].classList.add('step--current');
     markers[0].classList.add('add-plan__marker--current');
 
+    let addPlanPositionY = addPlan.getBoundingClientRect().top + pageYOffset;
+    let menuHeight = parseInt(document.querySelector('.header').clientHeight);
+
     window.scrollTo({
       top: addPlanPositionY - menuHeight,
       left: 0,
@@ -79,6 +86,9 @@ if (document.querySelector('.step')) {
 
     steps[1].classList.add('step--current');
     markers[1].classList.add('add-plan__marker--current');
+
+    let addPlanPositionY = addPlan.getBoundingClientRect().top + pageYOffset;
+    let menuHeight = parseInt(document.querySelector('.header').clientHeight);
 
     window.scrollTo({
       top: addPlanPositionY - menuHeight,

@@ -135,11 +135,11 @@
 
             <div class="profile__photo-wrapper">
               <picture>
-                <source srcset="img/profile/file-profile-userpic-petya-demin.webp 1x, img/profile/file-profile-userpic-petya-demin@2x.webp 2x" media="(min-width: 1440px)" type="image/webp">
-                <source srcset="img/profile/file-profile-userpic-petya-demin.png 1x, img/profile/file-profile-userpic-petya-demin@2x.png 2x" media="(min-width: 1440px)">
+                <source srcset="img/profile/file-profile-userpic-petya-demin-desktop.webp 1x, img/profile/file-profile-userpic-petya-demin-desktop@2x.webp 2x" media="(min-width: 1440px)" type="image/webp">
+                <source srcset="img/profile/file-profile-userpic-petya-demin-desktop.png 1x, img/profile/file-profile-userpic-petya-demin-desktop@2x.png 2x" media="(min-width: 1440px)">
 
-                <source srcset="img/profile/file-profile-userpic-petya-demin.webp 1x, img/profile/file-profile-userpic-petya-demin@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
-                <source srcset="img/profile/file-profile-userpic-petya-demin.png 1x, img/profile/file-profile-userpic-petya-demin@2x.png 2x" media="(min-width: 768px)">
+                <source srcset="img/profile/file-profile-userpic-petya-demin-tablet.webp 1x, img/profile/file-profile-userpic-petya-demin-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                <source srcset="img/profile/file-profile-userpic-petya-demin-tablet.png 1x, img/profile/file-profile-userpic-petya-demin-tablet@2x.png 2x" media="(min-width: 768px)">
 
                 <source srcset="img/profile/file-profile-userpic-petya-demin.webp 1x, img/profile/file-profile-userpic-petya-demin@2x.webp 2x" type="image/webp">
                 <img class="profile__photo" src="img/profile/file-profile-userpic-petya-demin.jpg" srcset="img/profile/file-profile-userpic-petya-demin@2x.jpg 2x" alt="Фотография Пети Демина.">
@@ -250,12 +250,12 @@
               </li>
             </ol>
 
-            <fieldset class="add-plan__step step step--current" id="step-1">
+            <fieldset class="add-plan__step step step--step-1 step--current" id="step-1">
               <legend class="step__title">Шаг 1. <br>Даты пребывания</legend>
 
               <p class="step__description">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
 
-              <div class="step__inner">
+              <div class="step__inner step__inner--step-1">
                 <div class="step__options">
                   <div class="step__counter step__counter--companions counter">
                     <label class="counter__label" for="companions-counter">Ищу попутчиков:</label>
@@ -390,12 +390,12 @@
               </div>
             </fieldset>
 
-            <fieldset class="add-plan__step step" id="step-2">
+            <fieldset class="add-plan__step step step--step-2" id="step-2">
               <legend class="step__title">Шаг 2. <br>Маршрут</legend>
 
-              <p class="step__description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+              <p class="step__description">Укажите страны, которые вы хотели бы посетить. <br class="step__step-2-br">Это может быть одна или сразу несколько.</p>
 
-              <div class="step__inner">
+              <div class="step__inner step__inner--step-2">
                 <div class="step__route route">
                   <ol class="route__list">
                     <li class="route__item route__item--item-1">
@@ -404,11 +404,20 @@
                       </button>
                       <div class="route__flag-wrapper">
                         <div class="route__flag-tooltip tooltip" data-tooltip="Босния и Герцеговина">
-                          <img class="route__flag" src="img/flags/file-flag-bosnia-and-herzegovina.png" width="35" height="24" alt="Флаг Боснии и Герцеговины.">
+                          <picture>
+                            <source srcset="img/flags/file-flag-bosnia-and-herzegovina-tablet.webp 1x, img/flags/file-flag-bosnia-and-herzegovina-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                            <source srcset="img/flags/file-flag-bosnia-and-herzegovina-tablet.png 1x, img/flags/file-flag-bosnia-and-herzegovina-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                            <source srcset="img/flags/file-flag-bosnia-and-herzegovina.webp 1x, img/flags/file-flag-bosnia-and-herzegovina@2x.webp 2x" type="image/webp">
+                            <img class="route__flag" src="img/flags/file-flag-bosnia-and-herzegovina.png" srcset="img/flags/file-flag-bosnia-and-herzegovina@2x.png 2x" alt="Флаг Боснии и Герцеговины.">
+                          </picture>
                         </div>
                       </div>
                       <button class="route__remove" id="route-1-remove" type="button">
                         <span class="visually-hidden">Удалить пункт</span>
+                        <svg class="route__remove-icon" width="7" height="7" aria-hidden="true" focusable="false">
+                          <use xlink:href="#icon-route-remove-cross"></use>
+                        </svg>
                       </button>
                     </li>
 
@@ -418,11 +427,20 @@
                       </button>
                       <div class="route__flag-wrapper">
                         <div class="route__flag-tooltip tooltip" data-tooltip="Чехия">
-                          <img class="route__flag" src="img/flags/file-flag-czechia.png" width="35" height="24" alt="Флаг Чехии.">
+                          <picture>
+                            <source srcset="img/flags/file-flag-czechia-tablet.webp 1x, img/flags/file-flag-czechia-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                            <source srcset="img/flags/file-flag-czechia-tablet.png 1x, img/flags/file-flag-czechia-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                            <source srcset="img/flags/file-flag-czechia.webp 1x, img/flags/file-flag-czechia@2x.webp 2x" type="image/webp">
+                            <img class="route__flag" src="img/flags/file-flag-czechia.png" srcset="img/flags/file-flag-czechia@2x.png 2x" alt="Флаг Чехии.">
+                          </picture>
                         </div>
                       </div>
                       <button class="route__remove" id="route-2-remove" type="button">
                         <span class="visually-hidden">Удалить пункт</span>
+                        <svg class="route__remove-icon" width="7" height="7" aria-hidden="true" focusable="false">
+                          <use xlink:href="#icon-route-remove-cross"></use>
+                        </svg>
                       </button>
                     </li>
 
@@ -433,6 +451,9 @@
 
                       <button class="route__remove" id="route-3-remove" type="button">
                         <span class="visually-hidden">Удалить пункт</span>
+                        <svg class="route__remove-icon" width="7" height="7" aria-hidden="true" focusable="false">
+                          <use xlink:href="#icon-route-remove-cross"></use>
+                        </svg>
                       </button>
 
                       <div class="route__select select">
@@ -1114,19 +1135,25 @@
               </div>
             </fieldset>
 
-            <fieldset class="add-plan__step step" id="step-3">
+            <fieldset class="add-plan__step step step--step-3" id="step-3">
               <legend class="step__title">Шаг 3. <br>Развлечения</legend>
 
               <p class="step__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
 
-              <div class="step__inner">
+              <div class="step__inner step__inner--step-3">
                 <ol class="step__enjoy enjoy">
                   <li class="enjoy__item">
                     <div class="enjoy__label-wrapper">
                       <label class="enjoy__label" for="enjoy-1">Босния и Герцеговина</label>
                       <div class="enjoy__flag-wrapper">
                         <div class="enjoy__flag-tooltip tooltip" data-tooltip="Босния и Герцеговина">
-                          <img class="enjoy__flag" src="img/flags/file-flag-bosnia-and-herzegovina.png" width="35" height="24" alt="Флаг Боснии и Герцеговины.">
+                          <picture>
+                            <source srcset="img/flags/file-flag-bosnia-and-herzegovina-tablet.webp 1x, img/flags/file-flag-bosnia-and-herzegovina-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                            <source srcset="img/flags/file-flag-bosnia-and-herzegovina-tablet.png 1x, img/flags/file-flag-bosnia-and-herzegovina-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                            <source srcset="img/flags/file-flag-bosnia-and-herzegovina.webp 1x, img/flags/file-flag-bosnia-and-herzegovina@2x.webp 2x" type="image/webp">
+                            <img class="enjoy__flag" src="img/flags/file-flag-bosnia-and-herzegovina.png" srcset="img/flags/file-flag-bosnia-and-herzegovina@2x.png 2x" alt="Флаг Боснии и Герцеговины.">
+                          </picture>
                         </div>
                       </div>
                     </div>
@@ -1141,7 +1168,13 @@
                       <label class="enjoy__label" for="enjoy-2">Чехия</label>
                       <div class="enjoy__flag-wrapper">
                         <div class="enjoy__flag-tooltip tooltip" data-tooltip="Чехия">
-                          <img class="enjoy__flag" src="img/flags/file-flag-czechia.png" width="35" height="24" alt="Флаг Чехии.">
+                          <picture>
+                            <source srcset="img/flags/file-flag-czechia-tablet.webp 1x, img/flags/file-flag-czechia-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                            <source srcset="img/flags/file-flag-czechia-tablet.png 1x, img/flags/file-flag-czechia-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                            <source srcset="img/flags/file-flag-czechia.webp 1x, img/flags/file-flag-czechia@2x.webp 2x" type="image/webp">
+                            <img class="enjoy__flag" src="img/flags/file-flag-czechia.png" srcset="img/flags/file-flag-czechia@2x.png 2x" alt="Флаг Чехии.">
+                          </picture>
                         </div>
                       </div>
                     </div>

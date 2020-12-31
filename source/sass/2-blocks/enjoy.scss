@@ -119,6 +119,17 @@ $enjoy-line-distantion: 13px;
   margin-top: $enjoy-between-margin;
 }
 
+.enjoy__flag {
+  display: block;
+  width: 35px;
+  height: 24px;
+
+  @media (min-width: $page-width-tablet) {
+    width: 70px;
+    height: 47px;
+  }
+}
+
 .enjoy__field {
   width: 100%;
   height: $enjoy-field-height;

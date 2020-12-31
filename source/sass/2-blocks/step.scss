@@ -11,7 +11,7 @@
 
   background-color: $color-basic-white;
 
-  &:first-of-type {
+  &--step-1 {
     padding-bottom: 23px;
   }
 
@@ -19,11 +19,17 @@
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 45px;
+    padding-bottom: 54px;
 
     border-radius: 30px;
 
-    &:first-of-type {
+    &--step-1 {
       padding-bottom: 56px;
+    }
+
+    &--step-2 {
+      padding-left: 43px;
+      padding-right: $page-padding-tablet;
     }
   }
 }
@@ -65,6 +71,14 @@
   }
 }
 
+.step__step-2-br {
+  display: none;
+
+  @media (min-width: $page-width-tablet) {
+    display: inline;
+  }
+}
+
 .step__inner {
   display: flex;
   flex-direction: column;
@@ -72,6 +86,13 @@
 
   @media (min-width: $page-width-tablet) {
     margin-top: 64px;
+
+    &--step-2 {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 33px;
+    }
   }
 }
 
@@ -239,6 +260,12 @@
   }
 }
 
+.step__route {
+  @media (min-width: $page-width-tablet) {
+    width: 100%;
+  }
+}
+
 .step__next {
   width: 100%;
   min-height: 40px;
@@ -252,6 +279,11 @@
     width: 284px;
     min-height: 80px;
     margin-top: 47px;
+
+    &--step-2 {
+      width: 286px;
+      margin-top: 49px;
+    }
   }
 }
 
@@ -262,12 +294,12 @@
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
-  letter-spacing: 0.01em;
   color: $color-special-blue-400;
   text-transform: uppercase;
   text-decoration: none;
 
-  transition: color $transitions-duration;
+  transition-property: color;
+  transition-duration: $transitions-duration;
 
   &:hover {
     color: rgba($color-special-blue-400, 0.7);
@@ -277,6 +309,55 @@
     color: rgba($color-special-blue-400, 0.3);
 
     transition: none;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    position: relative;
+
+    align-self: flex-start;
+    max-width: 220px;
+    margin-top: 78px;
+    padding-left: 37px;
+
+    font-size: 24px;
+    line-height: 22px;
+    text-transform: none;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      top: 50%;
+
+      width: 0;
+      height: 0;
+      border-width: 7px;
+      border-right-width: 12px;
+      border-style: solid;
+      border-right-color: $color-special-blue-400;
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+      border-left-style: none;
+
+      transform: translateY(-50%);
+      transition-property: border-right-color;
+      transition-duration: $transitions-duration;
+    }
+
+    &:hover {
+      &::before {
+        border-right-color: rgba($color-special-blue-400, 0.7);
+      }
+    }
+
+    &:active {
+      &::before {
+        border-right-color: rgba($color-special-blue-400, 0.3);
+
+        transition: none;
+      }
+    }
   }
 }
 
