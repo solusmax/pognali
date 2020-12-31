@@ -3,6 +3,11 @@
   grid-template-rows: min-content min-content;
   grid-template-columns: 1fr 50px;
   row-gap: 9px;
+
+  @media (min-width: $page-width-tablet) {
+    grid-template-columns: 1fr 110px;
+    row-gap: 24px;
+  }
 }
 
 .counter__label {
@@ -13,6 +18,12 @@
   letter-spacing: 0.09em;
   color: $color-special-blue-400;
   text-transform: uppercase;
+
+  @media (min-width: $page-width-tablet) {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+  }
 }
 
 .counter__wrapper {
@@ -70,6 +81,20 @@
 
       transform: translate(-50%, -50%);
       transition: $transitions-duration;
+    }
+  }
+
+  @media (min-width: $page-width-tablet) {
+    width: 66px;
+
+    &::before {
+      width: 20px;
+    }
+
+    &--increase {
+      &::after {
+        height: 20px;
+      }
     }
   }
 }
@@ -175,6 +200,13 @@
 
     margin: 0;
   }
+
+  @media (min-width: $page-width-tablet) {
+    font-size: 20px;
+    line-height: 20px;
+
+    min-height: 70px;
+  }
 }
 
 .counter__wrapper:hover .counter__field {
@@ -198,4 +230,10 @@
   color: rgba($color-special-blue-400, 0.3);
   text-transform: uppercase;
   text-align: right;
+
+  @media (min-width: $page-width-tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+  }
 }

@@ -14,6 +14,18 @@
   &:first-of-type {
     padding-bottom: 23px;
   }
+
+  @media (min-width: $page-width-tablet) {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 45px;
+
+    border-radius: 30px;
+
+    &:first-of-type {
+      padding-bottom: 56px;
+    }
+  }
 }
 
 .no-js .step,
@@ -30,6 +42,11 @@
   line-height: 20px;
   font-weight: 700;
   color: $color-special-blue-400;
+
+  @media (min-width: $page-width-tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .step__description {
@@ -39,17 +56,64 @@
 
   font-weight: 400;
   color: $color-special-grey-900;
+
+  @media (min-width: $page-width-tablet) {
+    margin-top: 36px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .step__inner {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
+
+  @media (min-width: $page-width-tablet) {
+    margin-top: 64px;
+  }
+}
+
+.step__options {
+  @media (min-width: $page-width-tablet) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .step__counter {
   &:not(:first-child) {
     margin-top: 19px;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -25px;
+
+      height: 1px;
+
+      background-color: $color-special-grey-200;
+    }
+
+    &:not(:first-child) {
+      margin-top: 50px;
+    }
+
+    &--companions {
+      order: 1;
+    }
+
+    &--duration {
+      order: 3;
+    }
   }
 }
 
@@ -57,17 +121,23 @@
   margin: 0;
   margin-top: 20px;
   padding: 0;
+
+  @media (min-width: $page-width-tablet) {
+    order: 2;
+
+    margin-top: 25px;
+  }
 }
 
 .step__checkbox-label {
-  $step-checkbox-size: 26px;
+  --step-checkbox-size: 26px;
 
   position: relative;
 
   display: inline-flex;
   align-items: center;
-  min-height: $step-checkbox-size;
-  padding-left: 39px;
+  min-height: var(--step-checkbox-size);
+  padding-left: calc(var(--step-checkbox-size) + 13px);
 
   font-size: 15px;
   line-height: 15px;
@@ -83,8 +153,8 @@
     left: 0;
     top: 50%;
 
-    width: $step-checkbox-size;
-    height: $step-checkbox-size;
+    width: var(--step-checkbox-size);
+    height: var(--step-checkbox-size);
     border: 1px solid $color-special-grey-700;
     border-radius: 4px;
 
@@ -100,12 +170,12 @@
     top: 50%;
 
     display: none;
-    width: $step-checkbox-size;
-    height: $step-checkbox-size;
+    width: var(--step-checkbox-size);
+    height: var(--step-checkbox-size);
 
     background-image: url("../img/checkbox/check-mark.svg");
-    background-size: 13px 14px;
     background-repeat: no-repeat;
+    background-size: 13px 14px;
     background-position: 49% 50%;
 
     transition: $transitions-duration;
@@ -133,6 +203,23 @@
       transition: none;
     }
   }
+
+  @media (min-width: $page-width-tablet) {
+    --step-checkbox-size: 36px;
+
+    padding-left: calc(var(--step-checkbox-size) + 22px);
+
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    &::after {
+      background-size: 18px 17px;
+      background-position: 50% 50%;
+    }
+  }
 }
 
 .step__checkbox-field:checked + .step__checkbox-label::after {
@@ -146,6 +233,10 @@
 
 .step__calendar {
   margin-top: 23px;
+
+  @media (min-width: $page-width-tablet) {
+    margin-top: 59px;
+  }
 }
 
 .step__next {
@@ -155,6 +246,12 @@
 
   &--step-2 {
     margin-top: 25px;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    width: 284px;
+    min-height: 80px;
+    margin-top: 47px;
   }
 }
 

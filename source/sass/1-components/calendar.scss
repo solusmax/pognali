@@ -7,6 +7,10 @@
   padding: 0;
   border-top: 1px solid $color-special-grey-450;
   border-bottom: 1px solid $color-special-grey-450;
+
+  @media (min-width: $page-width-tablet) {
+    min-height: 87px;
+  }
 }
 
 .calendar__month-button {
@@ -60,6 +64,24 @@
       transform: translateY(-50%) rotate(180deg);
     }
   }
+
+  @media (min-width: $page-width-tablet) {
+    width: 54px;
+
+    &::before {
+      background-image: url("../img/calendar/calendar-arrow-tablet.svg");
+      background-size: 20px 35px;
+      background-position: 50% 50%;
+
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    &--next {
+      &::before {
+        transform: translateY(-50%);
+      }
+    }
+  }
 }
 
 .calendar__month {
@@ -69,6 +91,11 @@
   line-height: 20px;
   font-weight: 700;
   color: $color-special-blue-400;
+
+  @media (min-width: $page-width-tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .calendar__table {
@@ -77,6 +104,10 @@
   border-collapse: collapse;
 
   text-align: center;
+
+  @media (min-width: $page-width-tablet) {
+    margin-top: 29px;
+  }
 }
 
 .calendar__day-of-the-week {
@@ -93,20 +124,35 @@
   &--weekend {
     color: $color-special-orange-700;
   }
+
+  @media (min-width: $page-width-tablet) {
+    padding-top: 9px;
+    padding-bottom: 9px;
+
+    font-size: 18px;
+    line-height: 18px;
+  }
 }
 
 .calendar__second-letter {
   display: none;
+
+  @media (min-width: $page-width-tablet) {
+    display: inline;
+  }
 }
 
 .calendar__day {
   position: relative;
 
+  width: calc(100% / 7);
   padding-left: 4px;
   padding-right: 4px;
   padding-top: 6px;
   padding-bottom: 6px;
   border: 1px solid transparent;
+  vertical-align: middle;
+
 
   font-size: 14px;
   line-height: 18px;
@@ -128,8 +174,9 @@
     pointer-events: none;
   }
 
-  &:hover,
-  &.focus-visible {
+  &:focus,
+  &.focus-visible,
+  &:hover {
     color: $color-basic-white;
 
     background-color: $color-special-blue-400;
@@ -161,8 +208,9 @@
       border-color: $color-special-grey-450;
     }
 
-    &:hover,
-    &.focus-visible {
+    &:focus,
+    &.focus-visible,
+    &:hover {
       color: rgba($color-special-grey-900, 0.3);
 
       background-color: $color-basic-white;
@@ -177,6 +225,36 @@
     color: $color-basic-white;
 
     background-color: $color-special-blue-400;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    height: 69px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &:focus,
+    &.focus-visible,
+    &:hover {
+      &::before {
+        border-width: 4px;
+      }
+    }
+
+    &--disabled {
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    &--active {
+      &:not(:last-child) {
+        border-right-width: 1px;
+      }
+    }
   }
 }
 

@@ -156,6 +156,19 @@
     }
   }
 
+  &--step {
+    justify-content: center;
+    border-radius: 25px;
+
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    &::after {
+      display: none;
+    }
+  }
+
   &--countries-filter {
     font-size: 16px;
     line-height: 20px;
@@ -258,6 +271,22 @@
       letter-spacing: 0.09em;
 
       border-radius: 10px;
+    }
+
+    &--step {
+      justify-content: space-between;
+      padding-left: 34px;
+      padding-right: 37px;
+      border-radius: 20px;
+
+      font-size: 24px;
+      line-height: 24px;
+      text-transform: none;
+
+      &::after {
+        display: block;
+        border-left-width: 10px;
+      }
     }
   }
 
