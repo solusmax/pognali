@@ -232,8 +232,16 @@
   text-align: right;
 
   @media (min-width: $page-width-tablet) {
+    padding-right: 5px;
+
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.08em;
+
+    &--duration {
+      padding-right: 0;
+
+      letter-spacing: normal;
+    }
   }
 }

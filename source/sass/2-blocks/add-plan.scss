@@ -1,4 +1,10 @@
 .add-plan {
+  // Для steps.js
+  --step-page-width-tablet: #{$page-width-tablet};
+  --step-page-width-mobile-last: #{$page-width-mobile-last};
+  --step-page-max-height-mobile: #{$page-max-height-mobile};
+  --step-page-max-height-tablet: #{$page-max-height-tablet};
+
   display: flex;
   justify-content: center;
   padding-bottom: 43px;
@@ -123,6 +129,20 @@
   margin: 0;
 }
 
-.no-js .add-plan__step:not(:first-of-type) {
-  margin-top: 10px;
+.no-js .add-plan__step {
+  &:not(:first-of-type) {
+    margin-top: 10px;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    &:not(:first-of-type) {
+      margin-top: 39px;
+    }
+
+    &--step-3 {
+      &:not(:first-of-type) {
+        margin-top: 51px;
+      }
+    }
+  }
 }

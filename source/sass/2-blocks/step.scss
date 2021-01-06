@@ -31,6 +31,10 @@
       padding-left: 43px;
       padding-right: $page-padding-tablet;
     }
+
+    &--step-3 {
+      padding-bottom: 53px;
+    }
   }
 }
 
@@ -52,6 +56,10 @@
   @media (min-width: $page-width-tablet) {
     font-size: 36px;
     line-height: 36px;
+
+    &--step-3 {
+      padding-left: 3px;
+    }
   }
 }
 
@@ -68,6 +76,19 @@
 
     font-size: 20px;
     line-height: 24px;
+
+    &--step-3 {
+      margin-top: 34px;
+      padding-left: 3px;
+    }
+  }
+}
+
+.step__description-br {
+  display: none;
+
+  @media (min-width: $page-width-tablet) {
+    display: inline;
   }
 }
 
@@ -91,7 +112,16 @@
       flex-wrap: wrap;
       flex-direction: row;
       justify-content: space-between;
+      align-items: flex-start;
       margin-top: 33px;
+    }
+
+    &--step-3 {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 73px;
     }
   }
 }
@@ -358,11 +388,34 @@
         transition: none;
       }
     }
+
+    &--step-3 {
+      margin-top: 75px;
+    }
   }
 }
 
 .step__enjoy {
   margin: 0;
+
+  @media (min-width: $page-width-tablet) {
+    position: relative;
+
+    width: 100%;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -38px;
+
+      height: 1px;
+
+      background-color: $color-special-grey-200;
+    }
+  }
 }
 
 .step__submit {
@@ -372,4 +425,11 @@
   min-height: 40px;
   margin-left: calc(-1 * var(--step-submit-button-extra-size));
   margin-top: 22px;
+
+  @media (min-width: $page-width-tablet) {
+    width: 286px;
+    min-height: 80px;
+    margin-left: 3px;
+    margin-top: 47px;
+  }
 }
