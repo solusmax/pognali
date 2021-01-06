@@ -11,6 +11,12 @@
     --plans-item-padding-left: 40px;
     --plans-item-padding-right: 28px;
   }
+
+  @media (min-width: $page-width-desktop) {
+    z-index: 30000;
+
+    border-radius: 60px 60px 0 0;
+  }
 }
 
 .plans__inner {
