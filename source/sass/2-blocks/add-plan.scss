@@ -15,6 +15,12 @@
   @media (min-width: $page-width-tablet) {
     padding-bottom: 63px;
   }
+
+  @media (min-width: $page-width-desktop) {
+    z-index: 30000;
+
+    border-radius: 60px 60px 0 0;
+  }
 }
 
 .add-plan__inner {
