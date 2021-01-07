@@ -48,6 +48,10 @@
       padding-top: 95px;
       padding-bottom: 104px;
     }
+
+    &--step-3 {
+      padding-bottom: 103px;
+    }
   }
 }
 
@@ -77,6 +81,10 @@
 
   @media (min-width: $page-width-desktop) {
     padding-right: 430px;
+
+    &--step-3 {
+      padding-left: 0;
+    }
   }
 }
 
@@ -113,6 +121,10 @@
     &--step-2 {
       margin-top: 36px;
     }
+
+    &--step-3 {
+      padding-left: 0;
+    }
   }
 }
 
@@ -145,7 +157,7 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
-      margin-top: 73px;
+      margin-top: 63px;
     }
   }
 
@@ -154,6 +166,10 @@
 
     &--step-2 {
       margin-top: 56px;
+    }
+
+    &--step-3 {
+      margin-top: 132px;
     }
   }
 }
@@ -487,8 +503,12 @@
     }
   }
 
-  @media (min-width: $page-width-tablet) {
+  @media (min-width: $page-width-desktop) {
     margin-top: 84px;
+
+    &--step-3 {
+      margin-top: 87px;
+    }
   }
 }
 
@@ -506,11 +526,17 @@
       position: absolute;
       left: 0;
       right: 0;
-      top: -38px;
+      top: -28px;
 
       height: 1px;
 
       background-color: $color-special-grey-200;
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    &::after {
+      top: -76px;
     }
   }
 }
@@ -528,5 +554,10 @@
     min-height: 80px;
     margin-left: 3px;
     margin-top: 47px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    margin-left: 0;
+    margin-top: 59px;
   }
 }

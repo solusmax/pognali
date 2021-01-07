@@ -33,6 +33,13 @@
   }
 }
 
+.no-js .promo {
+  @media (min-width: $page-width-desktop) {
+    margin-top: -1px;
+    padding-top: 0;
+  }
+}
+
 .promo__inner {
   position: relative;
   z-index: 0;

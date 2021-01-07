@@ -25,6 +25,12 @@
   }
 }
 
+.no-js .page-main__title-wrapper {
+  @media (min-width: $page-width-desktop) {
+    padding-top: 118px;
+  }
+}
+
 .page-main__title-inner {
   width: 100%;
   max-width: $page-max-width-mobile;

@@ -185,4 +185,16 @@
       }
     }
   }
+
+  @media (min-width: $page-width-desktop) {
+    &:not(:first-of-type) {
+      margin-top: 44px;
+    }
+
+    &--step-3 {
+      &:not(:first-of-type) {
+        margin-top: 43px;
+      }
+    }
+  }
 }
