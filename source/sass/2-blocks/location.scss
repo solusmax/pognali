@@ -4,6 +4,8 @@
 }
 
 .location__address-wrapper {
+  position: relative;
+
   display: flex;
   justify-content: center;
   border-radius: 0 0 30px 30px;
@@ -69,7 +71,7 @@
     border-radius: 50%;
 
     background-color: $color-special-blue-900;
-    background-image: url("../img/location/location-address.svg");
+    background-image: url("#{$img-path}/location/location-address.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 17px 21px;

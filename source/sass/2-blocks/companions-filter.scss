@@ -199,7 +199,7 @@
     width: var(--companions-filter-checkbox-size);
     height: var(--companions-filter-checkbox-size);
 
-    background-image: url("../img/checkbox/check-mark.svg");
+    background-image: url("#{$img-path}/checkbox/check-mark.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 14px 14px;

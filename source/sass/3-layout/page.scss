@@ -59,10 +59,4 @@
 .page__footer {
   flex-shrink: 0;
   margin-top: auto;
-
-  @media (min-width: $page-width-desktop) {
-    &--form {
-      z-index: 32500;
-    }
-  }
 }

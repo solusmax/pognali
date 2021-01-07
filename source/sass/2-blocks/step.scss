@@ -43,6 +43,11 @@
     padding-top: 98px;
     padding-bottom: 106px;
     border-radius: 60px;
+
+    &--step-2 {
+      padding-top: 95px;
+      padding-bottom: 104px;
+    }
   }
 }
 
@@ -104,18 +109,14 @@
   @media (min-width: $page-width-desktop) {
     margin-top: 34px;
     padding-right: 412px;
+
+    &--step-2 {
+      margin-top: 36px;
+    }
   }
 }
 
 .step__description-br {
-  display: none;
-
-  @media (min-width: $page-width-tablet) {
-    display: inline;
-  }
-}
-
-.step__step-2-br {
   display: none;
 
   @media (min-width: $page-width-tablet) {
@@ -150,6 +151,10 @@
 
   @media (min-width: $page-width-desktop) {
     margin-top: 87px;
+
+    &--step-2 {
+      margin-top: 56px;
+    }
   }
 }
 
@@ -294,7 +299,7 @@
     width: var(--step-checkbox-size);
     height: var(--step-checkbox-size);
 
-    background-image: url("../img/checkbox/check-mark.svg");
+    background-image: url("#{$img-path}/checkbox/check-mark.svg");
     background-repeat: no-repeat;
     background-size: 13px 14px;
     background-position: 49% 50%;
@@ -398,6 +403,10 @@
   @media (min-width: $page-width-desktop) {
     width: 286px;
     margin-top: 57px;
+
+    &--step-2 {
+      min-height: 81px;
+    }
   }
 }
 
@@ -476,6 +485,10 @@
     &--step-3 {
       margin-top: 75px;
     }
+  }
+
+  @media (min-width: $page-width-tablet) {
+    margin-top: 84px;
   }
 }
 

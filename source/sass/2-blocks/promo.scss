@@ -16,13 +16,13 @@
     border-radius: 0 0 60px 60px;
 
     background-color: $color-basic-blue;
-    background-image: url("../img/promo/promo-background-desktop.jpg");
+    background-image: url("#{$img-path}/promo/promo-background-desktop.jpg");
     background-size: 1724px 750px;
     background-position: center bottom;
     background-repeat: no-repeat;
 
     @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
-      background-image: url("../img/promo/promo-background-desktop@2x.jpg");
+      background-image: url("#{$img-path}/promo/promo-background-desktop@2x.jpg");
     }
   }
 
@@ -142,7 +142,7 @@
     max-width: 100%;
     height: 248px;
 
-    background-image: url("../img/promo/promo-background.jpg");
+    background-image: url("#{$img-path}/promo/promo-background.jpg");
     background-repeat: no-repeat;
     background-size: 344px 248px;
   }
@@ -158,18 +158,18 @@
     width: 192px;
     height: 255px;
 
-    background-image: url("../img/promo/promo-traveler.png");
+    background-image: url("#{$img-path}/promo/promo-traveler.png");
     background-repeat: no-repeat;
     background-size: 192px 255px;
   }
 
   @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
     &::before {
-      background-image: url("../img/promo/promo-background@2x.jpg");
+      background-image: url("#{$img-path}/promo/promo-background@2x.jpg");
     }
 
     &::after {
-      background-image: url("../img/promo/promo-traveler@2x.png");
+      background-image: url("#{$img-path}/promo/promo-traveler@2x.png");
     }
   }
 
@@ -188,7 +188,7 @@
       width: 850px;
       height: 612px;
 
-      background-image: url("../img/promo/promo-background-tablet.jpg");
+      background-image: url("#{$img-path}/promo/promo-background-tablet.jpg");
       background-size: 850px 612px;
     }
 
@@ -199,17 +199,17 @@
       width: 372px;
       height: 451px;
 
-      background-image: url("../img/promo/promo-traveler-tablet.png");
+      background-image: url("#{$img-path}/promo/promo-traveler-tablet.png");
       background-size: 372px 451px;
     }
 
     @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
       &::before {
-        background-image: url("../img/promo/promo-background-tablet@2x.jpg");
+        background-image: url("#{$img-path}/promo/promo-background-tablet@2x.jpg");
       }
 
       &::after {
-        background-image: url("../img/promo/promo-traveler-tablet@2x.png");
+        background-image: url("#{$img-path}/promo/promo-traveler-tablet@2x.png");
       }
     }
   }
@@ -229,13 +229,13 @@
       width: 431px;
       height: 640px;
 
-      background-image: url("../img/promo/promo-traveler-desktop.png");
+      background-image: url("#{$img-path}/promo/promo-traveler-desktop.png");
       background-size: 431px 640px;
     }
 
     @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
       &::after {
-        background-image: url("../img/promo/promo-traveler-desktop@2x.png");
+        background-image: url("#{$img-path}/promo/promo-traveler-desktop@2x.png");
       }
     }
   }

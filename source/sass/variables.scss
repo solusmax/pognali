@@ -8,6 +8,9 @@ $page-width-desktop: 1440px;
 $page-width-mobile-second: $page-width-mobile + 1px;
 $page-width-mobile-last: $page-width-tablet - 1px;
 
+$page-max-height-mobile: 280px;
+$page-max-height-tablet: 480px;
+
 $page-padding-mobile: 25px;
 $page-padding-tablet: 40px;
 $page-padding-desktop: 60px;
@@ -15,12 +18,6 @@ $page-padding-desktop: 60px;
 $menu-height-mobile: 56px;
 $menu-height-tablet: 132px;
 $menu-height-desktop: 90px;
-
-$underlay-height-mobile: 34px;
-$underlay-height-tablet: 70px;
-
-$page-max-height-mobile: 280px;
-$page-max-height-tablet: 480px;
 
 $transitions-duration: 0.15s;
 
