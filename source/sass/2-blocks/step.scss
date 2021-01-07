@@ -36,6 +36,14 @@
       padding-bottom: 53px;
     }
   }
+
+  @media (min-width: $page-width-desktop) {
+    padding-left: 160px;
+    padding-right: 161px;
+    padding-top: 98px;
+    padding-bottom: 106px;
+    border-radius: 60px;
+  }
 }
 
 .no-js .step,
@@ -61,6 +69,16 @@
       padding-left: 3px;
     }
   }
+
+  @media (min-width: $page-width-desktop) {
+    padding-right: 430px;
+  }
+}
+
+.step__title-br {
+  @media (min-width: $page-width-desktop) {
+    display: none;
+  }
 }
 
 .step__description {
@@ -81,6 +99,11 @@
       margin-top: 34px;
       padding-left: 3px;
     }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    margin-top: 34px;
+    padding-right: 412px;
   }
 }
 
@@ -124,12 +147,37 @@
       margin-top: 73px;
     }
   }
+
+  @media (min-width: $page-width-desktop) {
+    margin-top: 87px;
+  }
 }
 
 .step__options {
   @media (min-width: $page-width-tablet) {
     display: flex;
     flex-direction: column;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: auto 242px;
+    align-items: start;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -31px;
+
+      height: 1px;
+
+      background-color: $color-special-grey-200;
+    }
   }
 }
 
@@ -156,6 +204,10 @@
 
     &:not(:first-child) {
       margin-top: 50px;
+
+      &::before {
+        top: -24px;
+      }
     }
 
     &--companions {
@@ -164,6 +216,18 @@
 
     &--duration {
       order: 3;
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    grid-column: 1 / 2;
+
+    &::before {
+      display: none;
+    }
+
+    &:not(:first-child) {
+      margin-top: 14px;
     }
   }
 }
@@ -177,6 +241,12 @@
     order: 2;
 
     margin-top: 25px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+    margin-top: 17px;
   }
 }
 
@@ -271,6 +341,11 @@
       background-position: 50% 50%;
     }
   }
+
+  @media (min-width: $page-width-desktop) {
+    margin-right: -10px;
+    padding-left: calc(var(--step-checkbox-size) + 23px);
+  }
 }
 
 .step__checkbox-field:checked + .step__checkbox-label::after {
@@ -287,6 +362,10 @@
 
   @media (min-width: $page-width-tablet) {
     margin-top: 59px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    margin-top: 32px;
   }
 }
 
@@ -314,6 +393,11 @@
       width: 286px;
       margin-top: 49px;
     }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    width: 286px;
+    margin-top: 57px;
   }
 }
 

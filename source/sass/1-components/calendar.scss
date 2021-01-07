@@ -16,6 +16,7 @@
 .calendar__month-button {
   position: relative;
 
+  flex-shrink: 0;
   width: 16px;
   padding: 0;
   border: none;
@@ -82,6 +83,22 @@
       }
     }
   }
+
+  @media (min-width: $page-width-desktop) {
+    &::before {
+      background-image: url("../img/calendar/calendar-arrow.svg");
+      background-size: 18px 30px;
+      background-position: 0 50%;
+
+      transform: translateY(-50%);
+    }
+
+    &--next {
+      &::before {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
 }
 
 .calendar__month {
@@ -91,6 +108,7 @@
   line-height: 20px;
   font-weight: 700;
   color: $color-special-blue-400;
+  text-align: center;
 
   @media (min-width: $page-width-tablet) {
     font-size: 36px;
@@ -107,6 +125,10 @@
 
   @media (min-width: $page-width-tablet) {
     margin-top: 29px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    margin-top: 8px;
   }
 }
 
@@ -132,6 +154,15 @@
     font-size: 18px;
     line-height: 18px;
   }
+
+  @media (min-width: $page-width-desktop) {
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-bottom: 20px;
+    vertical-align: top;
+
+    text-align: left;
+  }
 }
 
 .calendar__second-letter {
@@ -152,7 +183,6 @@
   padding-bottom: 6px;
   border: 1px solid transparent;
   vertical-align: middle;
-
 
   font-size: 14px;
   line-height: 18px;
@@ -200,6 +230,7 @@
   }
 
   &--disabled {
+    font-weight: 400;
     color: rgba($color-special-grey-900, 0.3);
 
     background-color: $color-basic-white;
@@ -256,12 +287,59 @@
       }
     }
   }
+
+  @media (min-width: $page-width-desktop) {
+    height: 71px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    vertical-align: top;
+
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 400;
+    text-align: left;
+
+    &:focus,
+    &.focus-visible,
+    &:hover {
+      &::before {
+        left: -3px;
+        right: -3px;
+        top: -3px;
+        bottom: -3px;
+      }
+    }
+
+    &--first-day:not(.calendar__day--disabled) {
+      letter-spacing: 0.04em;
+    }
+
+    &--active {
+      padding-left: 13px;
+      padding-right: 13px;
+      padding-top: 12px;
+      padding-bottom: 8px;
+    }
+  }
 }
 
 .calendar__first-day {
   display: none;
+
+  @media (min-width: $page-width-desktop) {
+    display: inline;
+  }
 }
 
 .calendar__event {
   display: none;
+
+  @media (min-width: $page-width-desktop) {
+    display: block;
+    margin: 0;
+    margin-top: 9px;
+    padding: 0;
+  }
 }

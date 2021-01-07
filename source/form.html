@@ -255,7 +255,7 @@
             </ol>
 
             <fieldset class="add-plan__step step step--step-1 step--current" id="step-1">
-              <legend class="step__title step__title--step-1">Шаг 1. <br>Даты пребывания</legend>
+              <legend class="step__title step__title--step-1">Шаг 1. <br class="step__title-br">Даты пребывания</legend>
 
               <p class="step__description step__description--step-1">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
 
@@ -339,7 +339,7 @@
                         <td class="calendar__day calendar__day--disabled">26</td>
                         <td class="calendar__day calendar__day--disabled">27</td>
                         <td class="calendar__day calendar__day--disabled">28</td>
-                        <td class="calendar__day calendar__day--disabled">1<span class="calendar__first-day"> мар</span></td>
+                        <td class="calendar__day calendar__day--first-day calendar__day--disabled">1<span class="calendar__first-day"> мар</span></td>
                       </tr>
                       <tr class="calendar__week">
                         <td class="calendar__day calendar__day--disabled">2</td>
@@ -372,15 +372,21 @@
                         <td class="calendar__day calendar__day--disabled">23</td>
                         <td class="calendar__day calendar__day--disabled">24</td>
                         <td class="calendar__day calendar__day--disabled">25</td>
-                        <td class="calendar__day calendar__day--active" tabindex="0">26 <span class="calendar__event">Заезд</span></td>
+                        <td class="calendar__day calendar__day--active" tabindex="0">
+                          26
+                          <p class="calendar__event">Заезд</p>
+                        </td>
                         <td class="calendar__day calendar__day--active" tabindex="0">27</td>
-                        <td class="calendar__day calendar__day--active" tabindex="0">28 <span class="calendar__event">Выезд</span></td>
+                        <td class="calendar__day calendar__day--active" tabindex="0">
+                          28
+                          <p class="calendar__event">Выезд</p>
+                        </td>
                         <td class="calendar__day" tabindex="0">29</td>
                       </tr>
                       <tr class="calendar__week">
                         <td class="calendar__day" tabindex="0">30</td>
                         <td class="calendar__day" tabindex="0">31</td>
-                        <td class="calendar__day" tabindex="0">1<span class="calendar__first-day"> апр</span></td>
+                        <td class="calendar__day calendar__day--first-day" tabindex="0">1<span class="calendar__first-day"> апр</span></td>
                         <td class="calendar__day" tabindex="0">2</td>
                         <td class="calendar__day" tabindex="0">3</td>
                         <td class="calendar__day" tabindex="0">4</td>
@@ -1199,7 +1205,7 @@
       </form>
     </main>
 
-    <footer class="page__footer footer">
+    <footer class="page__footer page__footer--form footer">
       <div class="footer__inner">
         <a class="footer__logo logo" href="index.html">
           <picture>

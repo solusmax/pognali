@@ -19,6 +19,7 @@
   @media (min-width: $page-width-desktop) {
     z-index: 30000;
 
+    padding-bottom: 73px;
     border-radius: 60px 60px 0 0;
   }
 }
@@ -40,6 +41,13 @@
     padding-right: 35px;
     padding-top: 50px;
   }
+
+  @media (min-width: $page-width-desktop) {
+    max-width: $page-width-desktop - ($page-padding-desktop * 2);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 52px;
+  }
 }
 
 .add-plan__title {
@@ -59,6 +67,11 @@
 
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    margin-bottom: 57px;
+    padding-left: 69px;
   }
 }
 
@@ -85,6 +98,14 @@
 
     width: 76px;
   }
+
+  @media (min-width: $page-width-desktop) {
+    right: 88px;
+    top: 249px;
+
+    flex-direction: column;
+    width: 300px;
+  }
 }
 
 .no-js .add-plan__markers {
@@ -97,6 +118,8 @@
 
   font-size: 20px;
   line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
   color: rgba($color-basic-black, 0.6);
   text-transform: uppercase;
   text-decoration: none;
@@ -104,6 +127,7 @@
   &::before {
     content: "";
 
+    flex-shrink: 0;
     width: 5px;
     height: 5px;
     border-radius: 50%;
@@ -113,6 +137,7 @@
 
   &--current {
     color: $color-basic-black;
+    letter-spacing: 0.11em;
 
     &::before {
       background-color: $color-special-blue-400;
@@ -125,10 +150,21 @@
       height: 6px;
     }
   }
+
+  @media (min-width: $page-width-desktop) {
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
 }
 
 .add-plan__marker-text {
   display: none;
+
+  @media (min-width: $page-width-desktop) {
+    display: inline;
+    margin-left: 36px;
+  }
 }
 
 .add-plan__step {

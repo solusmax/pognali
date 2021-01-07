@@ -29,7 +29,7 @@ if (document.querySelector('.level')) {
       levelBar.setAttribute('stroke-dasharray', levelBarLength);
 
       if (levelNumber >= 90 && levelNumber <= 99) {
-        levelBar.setAttribute('stroke-dashoffset', levelBarLength * ((90 + ((levelNumber - 90) / 2)) / 100) - levelBarLength);
+        levelBar.setAttribute('stroke-dashoffset', levelBarLength * ((90 + ((levelNumber - 90) / 1.5)) / 100) - levelBarLength);
       } else {
         levelBar.setAttribute('stroke-dashoffset', levelBarLength * (levelNumber / 100) - levelBarLength);
       };
