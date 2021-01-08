@@ -196,6 +196,10 @@
   display: flex;
   justify-content: center;
   margin-top: 21px;
+
+  @media (min-width: $page-width-tablet) {
+    margin-top: 43px;
+  }
 }
 
 .page-main__companions-filter-inner {
@@ -203,6 +207,12 @@
   max-width: $page-max-width-mobile;
   padding-left: $page-padding-mobile;
   padding-right: $page-padding-mobile;
+
+  @media (min-width: $page-width-tablet) {
+    max-width: $page-width-tablet - ($page-padding-tablet * 2);
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .page-main__companions-list-wrapper {

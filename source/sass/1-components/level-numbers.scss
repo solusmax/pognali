@@ -25,6 +25,14 @@
 
     pointer-events: none;
   }
+
+  @media (min-width: $page-width-tablet) and (max-width: $page-width-tablet-last) {
+    --level-numbers-separator-width: 21px;
+    --level-numbers-separator-border-height: 7px;
+
+    width: 149px;
+    min-height: 46px;
+  }
 }
 
 .level-numbers__field {
@@ -80,5 +88,11 @@
 
   &--max {
     border-radius: 0 4px 4px 0;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
   }
 }

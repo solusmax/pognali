@@ -7,6 +7,7 @@ $page-width-tablet: 768px;
 $page-width-desktop: 1440px;
 $page-width-mobile-second: $page-width-mobile + 1px;
 $page-width-mobile-last: $page-width-tablet - 1px;
+$page-width-tablet-last: $page-width-desktop - 1px;
 
 $page-max-height-mobile: 280px;
 $page-max-height-tablet: 480px;

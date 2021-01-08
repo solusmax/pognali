@@ -3,6 +3,11 @@
   --level-range-scale-width: 2px;
 
   position: relative;
+
+  @media (min-width: $page-width-tablet) {
+    --level-range-toggle-size: 13px;
+    --level-range-scale-width: 3px;
+  }
 }
 
 .level-range__scale {
@@ -13,6 +18,10 @@
   border-radius: 2px;
 
   background-color: rgba($color-special-blue-400, 0.2);
+
+  @media (min-width: $page-width-tablet) and (max-width: $page-width-tablet-last) {
+    width: 281px;
+  }
 }
 
 .level-range__bar {
