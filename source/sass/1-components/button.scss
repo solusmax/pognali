@@ -181,6 +181,7 @@
     &::before {
       content: "";
 
+      flex-shrink: 0;
       display: block;
       width: 14px;
       height: 14px;
@@ -287,6 +288,22 @@
       &::after {
         display: block;
         border-left-width: 10px;
+      }
+    }
+
+    &--countries-filter {
+      border-radius: 20px;
+
+      font-size: 20px;
+      letter-spacing: normal;
+
+      &::before {
+        width: 25px;
+        height: 25px;
+        margin-right: 17px;
+
+        background-image: url("#{$img-path}/button/button-close-tablet.svg");
+        background-size: 25px 25px;
       }
     }
   }

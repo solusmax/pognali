@@ -170,14 +170,22 @@
 
   width: 100%;
   min-height: 55px;
+
+  @media (min-width: $page-width-tablet) {
+    min-height: 139px;
+  }
 }
 
 .page-main__countries-filter-inner {
-  position: absolute;
+  position: static;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10000;
+
+  &--open {
+    position: absolute;
+  }
 }
 
 .no-js .page-main__countries-filter-inner {
