@@ -9,10 +9,25 @@
 
   background-color: $color-special-blue-600;
 
+  @media (min-width: $page-width-tablet) {
+    padding-top: 88px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    padding-top: 130px;
+  }
+
   @media (max-height: $page-max-height-mobile) and (max-width: $page-width-mobile-last), (max-height: $page-max-height-tablet) and (min-width: $page-width-tablet) {
     @media (min-width: $page-width-desktop) {
-      padding-top: 25px;
+      padding-top: 119px;
     }
+  }
+}
+
+.no-js .page-main__title-wrapper {
+  @media (min-width: $page-width-desktop) {
+    padding-top: 118px;
   }
 }
 
@@ -21,6 +36,31 @@
   max-width: $page-max-width-mobile;
   padding-left: $page-padding-mobile;
   padding-right: $page-padding-mobile;
+
+  @media (min-width: $page-width-tablet) {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: end;
+    max-width: $page-width-tablet - ($page-padding-tablet * 2);
+    padding-left: 35px;
+    padding-right: 35px;
+
+    &--page-companions {
+      display: block;
+      padding-right: 40px;
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    max-width: $page-width-desktop - ($page-padding-desktop * 2);
+    padding-left: 64px;
+    padding-right: 64px;
+
+    &--page-companions {
+      padding-right: 500px;
+    }
+  }
 }
 
 .page-main__title {
@@ -48,10 +88,77 @@
 
     background-color: $color-special-orange-500;
   }
+
+  @media (min-width: $page-width-tablet) {
+    padding-bottom: 70px;
+
+    font-size: 60px;
+    line-height: 60px;
+
+    &::before {
+      bottom: -4px;
+
+      height: 8px;
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    padding-bottom: 71px;
+  }
 }
 
 .page-main__go-home {
   display: none;
+
+  @media (min-width: $page-width-tablet) {
+    position: relative;
+
+    flex-shrink: 0;
+    display: inline-block;
+    max-width: 280px;
+    margin-left: 20px;
+    margin-bottom: 87px;
+    padding-right: 60px;
+
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    color: $color-basic-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: right;
+
+    transition-property: opacity;
+    transition-duration: $transitions-duration;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      right: 0;
+      top: 50%;
+
+      width: 32px;
+      height: 16px;
+
+      background-image: url("#{$img-path}/page-main/go-home-arrow.svg");
+      background-size: 32px 16px;
+
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    max-width: 600px;
+  }
 }
 
 .page-main__catalog-wrapper {
@@ -63,14 +170,22 @@
 
   width: 100%;
   min-height: 55px;
+
+  @media (min-width: $page-width-tablet) {
+    min-height: 139px;
+  }
 }
 
 .page-main__countries-filter-inner {
-  position: absolute;
+  position: static;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10000;
+
+  &--open {
+    position: absolute;
+  }
 }
 
 .no-js .page-main__countries-filter-inner {
@@ -81,6 +196,10 @@
   display: flex;
   justify-content: center;
   margin-top: 21px;
+
+  @media (min-width: $page-width-tablet) {
+    margin-top: 43px;
+  }
 }
 
 .page-main__companions-filter-inner {
@@ -88,6 +207,12 @@
   max-width: $page-max-width-mobile;
   padding-left: $page-padding-mobile;
   padding-right: $page-padding-mobile;
+
+  @media (min-width: $page-width-tablet) {
+    max-width: $page-width-tablet - ($page-padding-tablet * 2);
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .page-main__companions-list-wrapper {

@@ -33,7 +33,7 @@
     top: 0;
     bottom: 0;
 
-    background-image: url("../img/contacts/contacts-call.svg");
+    background-image: url("#{$img-path}/contacts/contacts-call.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 18px 18px;
@@ -65,7 +65,7 @@
 
   &--email {
     &::before {
-      background-image: url("../img/contacts/contacts-envelope-closed.svg");
+      background-image: url("#{$img-path}/contacts/contacts-envelope-closed.svg");
       background-size: 18px 16px;
     }
   }

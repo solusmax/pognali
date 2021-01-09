@@ -90,7 +90,7 @@
     top: 0;
     bottom: 0;
 
-    background-image: url("../img/socials/socials-facebook.svg");
+    background-image: url("#{$img-path}/socials/socials-facebook.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 11px 21px;
@@ -117,14 +117,14 @@
 
   &--vk {
     &::before {
-      background-image: url("../img/socials/socials-vk.svg");
+      background-image: url("#{$img-path}/socials/socials-vk.svg");
       background-size: 23px 12px;
     }
   }
 
   &--instagram {
     &::before {
-      background-image: url("../img/socials/socials-instagram.svg");
+      background-image: url("#{$img-path}/socials/socials-instagram.svg");
       background-size: 18px 18px;
     }
   }

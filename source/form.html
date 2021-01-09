@@ -114,14 +114,14 @@
 
     <main class="page__page-main page-main">
       <div class="page-main__title-wrapper">
-        <div class="page-main__title-inner">
+        <div class="page-main__title-inner page-main__title-inner--page-companions">
           <h1 class="page-main__title">Направления</h1>
         </div>
       </div>
 
       <form class="form" action="https://echo.htmlacademy.ru" method="POST">
 
-        <section class="form__profile profile underlay underlay--bottom">
+        <section class="form__profile profile">
           <h2 class="visually-hidden">Профиль</h2>
 
           <div class="profile__inner">
@@ -134,21 +134,34 @@
             </div>
 
             <div class="profile__photo-wrapper">
-              <img class="profile__photo" src="img/profile/file-profile-userpic-petya-demin.jpg" width="100" height="100" alt="Фотография Пети Демина.">
+              <picture>
+                <source srcset="img/profile/file-profile-userpic-petya-demin-desktop.webp 1x, img/profile/file-profile-userpic-petya-demin-desktop@2x.webp 2x" media="(min-width: 1440px)" type="image/webp">
+                <source srcset="img/profile/file-profile-userpic-petya-demin-desktop.png 1x, img/profile/file-profile-userpic-petya-demin-desktop@2x.png 2x" media="(min-width: 1440px)">
+
+                <source srcset="img/profile/file-profile-userpic-petya-demin-tablet.webp 1x, img/profile/file-profile-userpic-petya-demin-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                <source srcset="img/profile/file-profile-userpic-petya-demin-tablet.png 1x, img/profile/file-profile-userpic-petya-demin-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                <source srcset="img/profile/file-profile-userpic-petya-demin.webp 1x, img/profile/file-profile-userpic-petya-demin@2x.webp 2x" type="image/webp">
+                <img class="profile__photo" src="img/profile/file-profile-userpic-petya-demin.jpg" srcset="img/profile/file-profile-userpic-petya-demin@2x.jpg 2x" alt="Фотография Пети Демина.">
+              </picture>
             </div>
 
             <p class="profile__upload">
               <input class="profile__upload-field visually-hidden" id="photo-upload" type="file" accept="image/png, image/jpeg" name="avatar">
-              <label class="profile__upload-label button button--upload" for="photo-upload">Сменить фото</label>
+              <label class="profile__upload-label button button--upload" for="photo-upload">
+                <span class="button__inner button__inner--upload">
+                  <span class="button__upload-text-part">Сменить&nbsp;</span>фото
+                </span>
+              </label>
             </p>
 
-            <div class="profile__hashtags profile__border">
-              <label class="profile__hashtags-label profile__border-title" for="hashtags">Тэги</label>
+            <div class="profile__hashtags profile__border profile__border profile__border--hashtags">
+              <label class="profile__hashtags-label profile__border-title profile__border-title--hashtags" for="hashtags">Тэги</label>
               <textarea class="profile__hashtags-field" id="hashtags" name="hashtags" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
             </div>
 
-            <div class="profile__transport-wrapper profile__border">
-              <p class="profile__border-title">Транспорт</p>
+            <div class="profile__transport-wrapper profile__border profile__border--transport">
+              <p class="profile__border-title profile__border-title--transport">Транспорт</p>
 
               <div class="profile__transport-inner">
                 <ul class="profile__transport transport transport--profile">
@@ -197,7 +210,7 @@
           </div>
         </section>
 
-        <section class="form__plans plans underlay underlay--bottom underlay--metallic">
+        <section class="form__plans plans underlay">
           <div class="plans__inner">
             <h2 class="plans__title">Мои планы:</h2>
 
@@ -223,7 +236,7 @@
           </div>
         </section>
 
-        <section class="form__add-plan add-plan underlay underlay--bottom underlay--dark-metallic">
+        <section class="form__add-plan add-plan underlay underlay--metallic">
           <div class="add-plan__inner">
             <h2 class="add-plan__title">Добавить план:</h2>
 
@@ -241,14 +254,14 @@
               </li>
             </ol>
 
-            <fieldset class="add-plan__step step step--current" id="step-1">
-              <legend class="step__title">Шаг 1. <br>Даты пребывания</legend>
+            <fieldset class="add-plan__step step step--step-1 step--current" id="step-1">
+              <legend class="step__title step__title--step-1">Шаг 1. <br class="step__title-br">Даты пребывания</legend>
 
-              <p class="step__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+              <p class="step__description step__description--step-1">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
 
-              <div class="step__inner">
+              <div class="step__inner step__inner--step-1">
                 <div class="step__options">
-                  <div class="step__counter counter">
+                  <div class="step__counter step__counter--companions counter">
                     <label class="counter__label" for="companions-counter">Ищу попутчиков:</label>
 
                     <div class="counter__wrapper">
@@ -266,7 +279,7 @@
                     <span class="counter__unit">чел.</span>
                   </div>
 
-                  <div class="step__counter counter">
+                  <div class="step__counter step__counter--duration counter">
                     <label class="counter__label" for="duration-days">Длительность:</label>
 
                     <div class="counter__wrapper">
@@ -281,7 +294,7 @@
                       </button>
                     </div>
 
-                    <span class="counter__unit">дн.</span>
+                    <span class="counter__unit counter__unit--duration">дн.</span>
                   </div>
 
                   <p class="step__checkbox">
@@ -326,7 +339,7 @@
                         <td class="calendar__day calendar__day--disabled">26</td>
                         <td class="calendar__day calendar__day--disabled">27</td>
                         <td class="calendar__day calendar__day--disabled">28</td>
-                        <td class="calendar__day calendar__day--disabled">1<span class="calendar__first-day"> мар</span></td>
+                        <td class="calendar__day calendar__day--first-day calendar__day--disabled">1<span class="calendar__first-day"> мар</span></td>
                       </tr>
                       <tr class="calendar__week">
                         <td class="calendar__day calendar__day--disabled">2</td>
@@ -359,15 +372,21 @@
                         <td class="calendar__day calendar__day--disabled">23</td>
                         <td class="calendar__day calendar__day--disabled">24</td>
                         <td class="calendar__day calendar__day--disabled">25</td>
-                        <td class="calendar__day calendar__day--active" tabindex="0">26 <span class="calendar__event">Заезд</span></td>
+                        <td class="calendar__day calendar__day--active" tabindex="0">
+                          26
+                          <p class="calendar__event">Заезд</p>
+                        </td>
                         <td class="calendar__day calendar__day--active" tabindex="0">27</td>
-                        <td class="calendar__day calendar__day--active" tabindex="0">28 <span class="calendar__event">Выезд</span></td>
+                        <td class="calendar__day calendar__day--active" tabindex="0">
+                          28
+                          <p class="calendar__event">Выезд</p>
+                        </td>
                         <td class="calendar__day" tabindex="0">29</td>
                       </tr>
                       <tr class="calendar__week">
                         <td class="calendar__day" tabindex="0">30</td>
                         <td class="calendar__day" tabindex="0">31</td>
-                        <td class="calendar__day" tabindex="0">1<span class="calendar__first-day"> апр</span></td>
+                        <td class="calendar__day calendar__day--first-day" tabindex="0">1<span class="calendar__first-day"> апр</span></td>
                         <td class="calendar__day" tabindex="0">2</td>
                         <td class="calendar__day" tabindex="0">3</td>
                         <td class="calendar__day" tabindex="0">4</td>
@@ -377,16 +396,16 @@
                   </table>
                 </div>
 
-                <a class="step__next step__next--step-1 button" href="#step-2">Следующий шаг</a>
+                <a class="step__next step__next--step-1 button button--rectangle button--step" href="#step-2">Следующий шаг</a>
               </div>
             </fieldset>
 
-            <fieldset class="add-plan__step step" id="step-2">
-              <legend class="step__title">Шаг 2. <br>Маршрут</legend>
+            <fieldset class="add-plan__step step step--step-2" id="step-2">
+              <legend class="step__title step__title--step-2">Шаг 2. <br class="step__title-br">Маршрут</legend>
 
-              <p class="step__description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+              <p class="step__description step__description--step-2">Укажите страны, которые вы хотели бы посетить. <br class="step__description-br">Это может быть одна или сразу несколько.</p>
 
-              <div class="step__inner">
+              <div class="step__inner step__inner--step-2">
                 <div class="step__route route">
                   <ol class="route__list">
                     <li class="route__item route__item--item-1">
@@ -395,11 +414,20 @@
                       </button>
                       <div class="route__flag-wrapper">
                         <div class="route__flag-tooltip tooltip" data-tooltip="Босния и Герцеговина">
-                          <img class="route__flag" src="img/flags/file-flag-bosnia-and-herzegovina.png" width="35" height="24" alt="Флаг Боснии и Герцеговины.">
+                          <picture>
+                            <source srcset="img/flags/file-flag-bosnia-and-herzegovina-tablet.webp 1x, img/flags/file-flag-bosnia-and-herzegovina-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                            <source srcset="img/flags/file-flag-bosnia-and-herzegovina-tablet.png 1x, img/flags/file-flag-bosnia-and-herzegovina-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                            <source srcset="img/flags/file-flag-bosnia-and-herzegovina.webp 1x, img/flags/file-flag-bosnia-and-herzegovina@2x.webp 2x" type="image/webp">
+                            <img class="route__flag" src="img/flags/file-flag-bosnia-and-herzegovina.png" srcset="img/flags/file-flag-bosnia-and-herzegovina@2x.png 2x" alt="Флаг Боснии и Герцеговины.">
+                          </picture>
                         </div>
                       </div>
                       <button class="route__remove" id="route-1-remove" type="button">
                         <span class="visually-hidden">Удалить пункт</span>
+                        <svg class="route__remove-icon" width="7" height="7" aria-hidden="true" focusable="false">
+                          <use xlink:href="#icon-route-remove-cross"></use>
+                        </svg>
                       </button>
                     </li>
 
@@ -409,11 +437,20 @@
                       </button>
                       <div class="route__flag-wrapper">
                         <div class="route__flag-tooltip tooltip" data-tooltip="Чехия">
-                          <img class="route__flag" src="img/flags/file-flag-czechia.png" width="35" height="24" alt="Флаг Чехии.">
+                          <picture>
+                            <source srcset="img/flags/file-flag-czechia-tablet.webp 1x, img/flags/file-flag-czechia-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                            <source srcset="img/flags/file-flag-czechia-tablet.png 1x, img/flags/file-flag-czechia-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                            <source srcset="img/flags/file-flag-czechia.webp 1x, img/flags/file-flag-czechia@2x.webp 2x" type="image/webp">
+                            <img class="route__flag" src="img/flags/file-flag-czechia.png" srcset="img/flags/file-flag-czechia@2x.png 2x" alt="Флаг Чехии.">
+                          </picture>
                         </div>
                       </div>
                       <button class="route__remove" id="route-2-remove" type="button">
                         <span class="visually-hidden">Удалить пункт</span>
+                        <svg class="route__remove-icon" width="7" height="7" aria-hidden="true" focusable="false">
+                          <use xlink:href="#icon-route-remove-cross"></use>
+                        </svg>
                       </button>
                     </li>
 
@@ -424,6 +461,9 @@
 
                       <button class="route__remove" id="route-3-remove" type="button">
                         <span class="visually-hidden">Удалить пункт</span>
+                        <svg class="route__remove-icon" width="7" height="7" aria-hidden="true" focusable="false">
+                          <use xlink:href="#icon-route-remove-cross"></use>
+                        </svg>
                       </button>
 
                       <div class="route__select select">
@@ -1099,24 +1139,31 @@
                   </div>
                 </div>
 
-                <a class="step__next step__next--step-2 button" href="#step-3">Следующий шаг</a>
+                <a class="step__next step__next--step-2 button button--rectangle button--step" href="#step-3">Следующий шаг</a>
+
                 <a class="step__previous step__previous--step-2" href="#step-1">На шаг назад</a>
               </div>
             </fieldset>
 
-            <fieldset class="add-plan__step step" id="step-3">
-              <legend class="step__title">Шаг 3. <br>Развлечения</legend>
+            <fieldset class="add-plan__step add-plan__step--step-3 step step--step-3" id="step-3">
+              <legend class="step__title step__title--step-3">Шаг 3. <br class="step__title-br">Развлечения</legend>
 
-              <p class="step__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <p class="step__description step__description--step-3">Наконец, расскажите о своих планах времяпровождения.<br class="step__description-br"> Можно писать в свободной форме и ставить тэги.</p>
 
-              <div class="step__inner">
+              <div class="step__inner step__inner--step-3">
                 <ol class="step__enjoy enjoy">
                   <li class="enjoy__item">
                     <div class="enjoy__label-wrapper">
                       <label class="enjoy__label" for="enjoy-1">Босния и Герцеговина</label>
                       <div class="enjoy__flag-wrapper">
                         <div class="enjoy__flag-tooltip tooltip" data-tooltip="Босния и Герцеговина">
-                          <img class="enjoy__flag" src="img/flags/file-flag-bosnia-and-herzegovina.png" width="35" height="24" alt="Флаг Боснии и Герцеговины.">
+                          <picture>
+                            <source srcset="img/flags/file-flag-bosnia-and-herzegovina-tablet.webp 1x, img/flags/file-flag-bosnia-and-herzegovina-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                            <source srcset="img/flags/file-flag-bosnia-and-herzegovina-tablet.png 1x, img/flags/file-flag-bosnia-and-herzegovina-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                            <source srcset="img/flags/file-flag-bosnia-and-herzegovina.webp 1x, img/flags/file-flag-bosnia-and-herzegovina@2x.webp 2x" type="image/webp">
+                            <img class="enjoy__flag" src="img/flags/file-flag-bosnia-and-herzegovina.png" srcset="img/flags/file-flag-bosnia-and-herzegovina@2x.png 2x" alt="Флаг Боснии и Герцеговины.">
+                          </picture>
                         </div>
                       </div>
                     </div>
@@ -1131,18 +1178,24 @@
                       <label class="enjoy__label" for="enjoy-2">Чехия</label>
                       <div class="enjoy__flag-wrapper">
                         <div class="enjoy__flag-tooltip tooltip" data-tooltip="Чехия">
-                          <img class="enjoy__flag" src="img/flags/file-flag-czechia.png" width="35" height="24" alt="Флаг Чехии.">
+                          <picture>
+                            <source srcset="img/flags/file-flag-czechia-tablet.webp 1x, img/flags/file-flag-czechia-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                            <source srcset="img/flags/file-flag-czechia-tablet.png 1x, img/flags/file-flag-czechia-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                            <source srcset="img/flags/file-flag-czechia.webp 1x, img/flags/file-flag-czechia@2x.webp 2x" type="image/webp">
+                            <img class="enjoy__flag" src="img/flags/file-flag-czechia.png" srcset="img/flags/file-flag-czechia@2x.png 2x" alt="Флаг Чехии.">
+                          </picture>
                         </div>
                       </div>
                     </div>
                     <div class="enjoy__field-wrapper">
-                      <textarea class="enjoy__field" id="enjoy-2" name="enjoy-2" placeholder="План действий" required>Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                      <textarea class="enjoy__field" id="enjoy-2" name="enjoy-2" placeholder="План действий" required>Пить пиво и лазить по&nbsp;старым замкам, наслаждаться&nbsp;архитектурой и вот это все.</textarea>
                       <div class="enjoy__required">Это поле должно быть заполнено</div>
                     </div>
                   </li>
                 </ol>
 
-                <button class="step__submit button" type="submit">Отправить</button>
+                <button class="step__submit button button--rectangle button--step" type="submit">Отправить</button>
 
                 <a class="step__previous step__previous--step-3" href="#step-2">На шаг назад</a>
               </div>
@@ -1152,7 +1205,7 @@
       </form>
     </main>
 
-    <footer class="page__footer footer">
+    <footer class="page__footer footer underlay underlay--dark-metallic">
       <div class="footer__inner">
         <a class="footer__logo logo" href="index.html">
           <picture>

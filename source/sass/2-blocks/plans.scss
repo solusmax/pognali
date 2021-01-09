@@ -1,8 +1,23 @@
 .plans {
+  --plans-item-padding-left: 25px;
+  --plans-item-padding-right: 25px;
+
   display: flex;
   justify-content: center;
   background-color: $color-special-grey-400;
   border-radius: 30px 30px 0 0;
+
+  @media (min-width: $page-width-tablet) {
+    --plans-item-padding-left: 40px;
+    --plans-item-padding-right: 28px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    --plans-item-padding-left: 42px;
+    --plans-item-padding-right: 30px;
+
+    border-radius: 60px 60px 0 0;
+  }
 }
 
 .plans__inner {
@@ -10,8 +25,24 @@
   max-width: $page-max-width-mobile;
   padding-left: $page-padding-mobile;
   padding-right: $page-padding-mobile;
-  padding-top: 27px;
+  padding-top: 26px;
   padding-bottom: 30px;
+
+  @media (min-width: $page-width-tablet) {
+    max-width: $page-width-tablet - ($page-padding-tablet * 2);
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 54px;
+    padding-bottom: 77px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    max-width: $page-width-desktop - ($page-padding-desktop * 2);
+    padding-left: 64px;
+    padding-right: 0;
+    padding-top: 51px;
+    padding-bottom: 65px;
+  }
 }
 
 .plans__title {
@@ -22,6 +53,15 @@
   line-height: 24px;
   font-weight: 700;
   color: $color-special-blue-400;
+
+  @media (min-width: $page-width-tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    padding-left: 7px;
+  }
 }
 
 .plans__list {
@@ -32,13 +72,21 @@
   list-style: none;
 
   counter-reset: plansList;
+
+  @media (min-width: $page-width-tablet) {
+    margin-top: 51px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    margin-top: 52px;
+  }
 }
 
 .plans__item {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: var(--plans-item-padding-left);
+  padding-right: var(--plans-item-padding-right);
   padding-top: 23px;
   padding-bottom: 24px;
 
@@ -51,6 +99,7 @@
   &::before {
     content: counter(plansList) ".";
 
+    max-width: 50px;
     margin-right: 5px;
 
     line-height: 16px;
@@ -59,6 +108,40 @@
 
   &:not(:first-child) {
     margin-top: 10px;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 38px;
+    padding-bottom: 16px;
+
+    &::before {
+      margin-top: 3px;
+
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    display: grid;
+    grid-template-columns: auto 1fr 600px;
+    align-items: center;
+    min-height: 97px;
+    padding-top: 13px;
+    padding-bottom: 14px;
+
+    &::before {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+      margin-right: 0;
+      margin-top: 0;
+    }
+
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
   }
 }
 
@@ -69,6 +152,20 @@
   line-height: 16px;
   font-weight: 700;
   color: $color-special-blue-400;
+
+  @media (min-width: $page-width-tablet) {
+    order: -1;
+    max-width: 490px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    padding-left: 38px;
+  }
 }
 
 .plans__details {
@@ -77,6 +174,42 @@
   align-items: flex-start;
   width: 100%;
   margin-top: 21px;
+
+  @media (min-width: $page-width-tablet) {
+    position: relative;
+
+    display: grid;
+    align-items: start;
+    grid-template-columns: auto auto 184px;
+    margin-top: 54px;
+    padding-right: 11px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: calc(-1 * var(--plans-item-padding-left));
+      right: calc(-1 * var(--plans-item-padding-right));
+      top: -19px;
+
+      height: 1px;
+
+      background-color: rgba($color-special-grey-700, 0.3);
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+    grid-template-columns: 1fr 1.28fr 184px;
+    align-items: center;
+    width: auto;
+    margin-top: 0;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .plans__companions-counter {
@@ -88,6 +221,14 @@
   letter-spacing: 0.06em;
   color: $color-special-blue-400;
   text-transform: uppercase;
+
+  @media (min-width: $page-width-tablet) {
+    padding-right: 15px;
+
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
 }
 
 .plans__period {
@@ -100,6 +241,18 @@
   letter-spacing: 0.06em;
   color: $color-special-blue-400;
   text-transform: uppercase;
+
+  @media (min-width: $page-width-tablet) {
+    margin-top: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    text-align: left;
+  }
 }
 
 .plans__change {
@@ -123,5 +276,18 @@
     color: rgba($color-basic-black, 0.1);
 
     transition: none;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    margin-top: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-align: right;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    letter-spacing: 0.08em;
   }
 }

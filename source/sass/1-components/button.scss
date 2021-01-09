@@ -140,8 +140,9 @@
 
   &--upload {
     font-size: 20px;
-    line-height: 18px;
+    line-height: 20px;
     font-weight: 500;
+    text-align: center;
 
     background-color: $color-special-grey-400;
 
@@ -156,6 +157,19 @@
     }
   }
 
+  &--step {
+    justify-content: center;
+    border-radius: 25px;
+
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    &::after {
+      display: none;
+    }
+  }
+
   &--countries-filter {
     font-size: 16px;
     line-height: 20px;
@@ -167,12 +181,13 @@
     &::before {
       content: "";
 
+      flex-shrink: 0;
       display: block;
       width: 14px;
       height: 14px;
       margin-right: 10px;
 
-      background-image: url("../img/button/button-close.svg");
+      background-image: url("#{$img-path}/button/button-close.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: 14px 14px;
@@ -251,6 +266,51 @@
         border-left-width: 12px;
       }
     }
+
+    &--upload {
+      font-size: 20px;
+      line-height: 20px;
+      letter-spacing: 0.09em;
+
+      border-radius: 10px;
+    }
+
+    &--step {
+      justify-content: space-between;
+      padding-left: 34px;
+      padding-right: 37px;
+      border-radius: 20px;
+
+      font-size: 24px;
+      line-height: 24px;
+      text-transform: none;
+
+      &::after {
+        display: block;
+        border-left-width: 10px;
+      }
+    }
+
+    &--countries-filter {
+      border-radius: 20px;
+
+      font-size: 20px;
+      letter-spacing: normal;
+
+      &::before {
+        width: 25px;
+        height: 25px;
+        margin-right: 17px;
+
+        background-image: url("#{$img-path}/button/button-close-tablet.svg");
+        background-size: 25px 25px;
+      }
+    }
+
+    &--companions-filter {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 
   @media (min-width: $page-width-desktop) {
@@ -258,5 +318,17 @@
       justify-content: space-between;
       padding-left: 36px;
     }
+
+    &--upload {
+      letter-spacing: normal;
+
+      border-radius: 0 0 10px 10px;
+    }
+  }
+}
+
+.button__upload-text-part {
+  @media (min-width: $page-width-desktop) {
+    display: none;
   }
 }

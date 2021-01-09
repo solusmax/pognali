@@ -51,6 +51,19 @@
       display: none;
     }
   }
+
+  @media (min-width: $page-width-tablet) {
+    &--profile {
+      --level-size: 94px;
+      --level-bar-width: 3px;
+    }
+  }
+
+  @media (min-width: $page-width-tablet) {
+    &--profile {
+      --level-size: 95px;
+    }
+  }
 }
 
 .level__svg {
@@ -122,6 +135,18 @@
   &--card {
     display: none;
   }
+
+  @media (min-width: $page-width-desktop) {
+    &--profile {
+      color: $color-basic-white;
+
+      &::before {
+        height: 2px;
+
+        background-color: $color-basic-white;
+      }
+    }
+  }
 }
 
 .level__number {
@@ -140,5 +165,11 @@
   &--card {
     font-size: 24px;
     line-height: 24px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    &--profile {
+      color: $color-basic-white;
+    }
   }
 }

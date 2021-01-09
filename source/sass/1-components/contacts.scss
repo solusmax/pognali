@@ -130,10 +130,10 @@
         top: 0;
         bottom: 0;
 
-        background-image: url("../img/contacts/contacts-call.svg");
+        background-image: url("#{$img-path}/contacts/contacts-call.svg");
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 16px 17px;
+        background-size: 17px 18px;
 
         pointer-events: none;
       }
@@ -153,8 +153,8 @@
       background-color: $color-special-yellow-500;
 
       &::before {
-        background-image: url("../img/contacts/contacts-envelope-closed.svg");
-        background-size: 15px 12px;
+        background-image: url("#{$img-path}/contacts/contacts-envelope-closed.svg");
+        background-size: 16px 14px;
       }
 
       &:hover {

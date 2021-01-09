@@ -116,20 +116,20 @@
       <div class="page-main__title-wrapper">
         <div class="page-main__title-inner">
           <h1 class="page-main__title">Попутчики</h1>
+
+          <a class="page-main__go-home" href="index.html">На главную</a>
         </div>
       </div>
 
-      <a class="page-main__go-home" href="index.html">На главную</a>
-
-      <div class="page-main__catalog-wrapper underlay underlay--light-metallic">
+      <div class="page-main__catalog-wrapper underlay underlay--top underlay--light-metallic">
         <div class="page-main__countries-filter-wrapper">
           <div class="page-main__countries-filter-inner">
             <section class="countries-filter">
               <div class="countries-filter__inner">
                 <h2 class="countries-filter__title">Фильтрация по странам:</h2>
 
-                <button class="countries-filter__toggle" type="button" aria-label="Свернуть">
-                  <span class="countries-filter__toggle-text">Свернуть</span>
+                <button class="countries-filter__toggle" type="button" data-text-open="Показать все" data-text-close="Свернуть">
+                  <span class="countries-filter__toggle-text">Показать все</span>
                 </button>
 
                 <ul class="countries-filter__continents">
@@ -1009,7 +1009,7 @@
                   </div>
                 </div>
 
-                <div class="companions-filter__block">
+                <div class="companions-filter__block companions-filter__block--transport">
                   <p class="companions-filter__block-title">
                     <button class="companions-filter__block-button" type="button">
                       Транспорт<span class="companions-filter__colon">:</span>
@@ -1061,7 +1061,7 @@
                   </div>
                 </div>
 
-                <div class="companions-filter__block">
+                <div class="companions-filter__block companions-filter__block--level">
                   <p class="companions-filter__block-title">
                     <button class="companions-filter__block-button" type="button">
                       Левел<span class="companions-filter__colon">:</span>

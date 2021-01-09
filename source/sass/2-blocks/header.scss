@@ -134,6 +134,8 @@
 
       background-color: $color-basic-blue;
 
+      transition-property: none;
+
       &.header__inner--inner-page {
         background-color: $color-special-blue-500;
       }
