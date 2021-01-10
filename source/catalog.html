@@ -1141,7 +1141,16 @@
                   </p>
 
                   <a class="card__photo-link" href="404.html">
-                    <img class="card__photo" src="img/card/file-card-photo-tanya-firsova.png" width="70" height="70" alt="Фотография Тани Фирсовой.">
+                    <picture>
+                      <source srcset="img/card/file-card-photo-tanya-firsova-desktop.webp 1x, img/card/file-card-photo-tanya-firsova-desktop@2x.webp 2x" media="(min-width: 1440px)" type="image/webp">
+                      <source srcset="img/card/file-card-photo-tanya-firsova-desktop.png 1x, img/card/file-card-photo-tanya-firsova-desktop@2x.png 2x" media="(min-width: 1440px)">
+
+                      <source srcset="img/card/file-card-photo-tanya-firsova-tablet.webp 1x, img/card/file-card-photo-tanya-firsova-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                      <source srcset="img/card/file-card-photo-tanya-firsova-tablet.png 1x, img/card/file-card-photo-tanya-firsova-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                      <source srcset="img/card/file-card-photo-tanya-firsova.webp 1x, img/card/file-card-photo-tanya-firsova@2x.webp 2x" type="image/webp">
+                      <img class="card__photo" src="img/card/file-card-photo-tanya-firsova.png" srcset="img/card/file-card-photo-tanya-firsova@2x.png 2x" alt="Фотография Тани Фирсовой.">
+                    </picture>
                   </a>
 
                   <div class="card__countries-wrapper">
@@ -1152,21 +1161,39 @@
                     <ul class="card__countries">
                       <li class="card__country">
                         <div class="card__flag-wrapper tooltip" data-tooltip="Шри&#8209;Ланка">
-                          <img class="card__flag" src="img/flags/file-catalog-flag-sri-lanka.png" width="26" height="18" alt="Флаг Шри-Ланки.">
+                          <picture>
+                            <source srcset="img/flags/file-catalog-flag-sri-lanka-tablet.webp 1x, img/flags/file-catalog-flag-sri-lanka-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                            <source srcset="img/flags/file-catalog-flag-sri-lanka-tablet.png 1x, img/flags/file-catalog-flag-sri-lanka-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                            <source srcset="img/flags/file-catalog-flag-sri-lanka.webp 1x, img/flags/file-catalog-flag-sri-lanka@2x.webp 2x" type="image/webp">
+                            <img class="card__flag" src="img/flags/file-catalog-flag-sri-lanka.png" srcset="img/flags/file-catalog-flag-sri-lanka@2x.png 2x" alt="Флаг Шри-Ланки.">
+                          </picture>
                         </div>
                         <span class="card__country-name">Шри-Ланка</span>
                       </li>
 
                       <li class="card__country">
-                        <div class="card__flag-wrapper tooltip" data-tooltip="Тайланд">
-                          <img class="card__flag" src="img/flags/file-catalog-flag-thailand.png" width="26" height="18" alt="Флаг Таиланда.">
+                        <div class="card__flag-wrapper tooltip" data-tooltip="Таиланд">
+                          <picture>
+                            <source srcset="img/flags/file-catalog-flag-thailand-tablet.webp 1x, img/flags/file-catalog-flag-thailand-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                            <source srcset="img/flags/file-catalog-flag-thailand-tablet.png 1x, img/flags/file-catalog-flag-thailand-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                            <source srcset="img/flags/file-catalog-flag-thailand.webp 1x, img/flags/file-catalog-flag-thailand@2x.webp 2x" type="image/webp">
+                            <img class="card__flag" src="img/flags/file-catalog-flag-thailand.png" srcset="img/flags/file-catalog-flag-thailand@2x.png 2x" alt="Флаг Таиланда.">
+                          </picture>
                         </div>
-                        <span class="card__country-name">Тайланд</span>
+                        <span class="card__country-name">Таиланд</span>
                       </li>
 
                       <li class="card__country">
                         <div class="card__flag-wrapper tooltip" data-tooltip="Республика Сейшелы">
-                          <img class="card__flag" src="img/flags/file-catalog-flag-seychelles.png" width="26" height="18" alt="Флаг Республики Сейшелы.">
+                          <picture>
+                            <source srcset="img/flags/file-catalog-flag-seychelles-tablet.webp 1x, img/flags/file-catalog-flag-seychelles-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                            <source srcset="img/flags/file-catalog-flag-seychelles-tablet.png 1x, img/flags/file-catalog-flag-seychelles-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                            <source srcset="img/flags/file-catalog-flag-seychelles.webp 1x, img/flags/file-catalog-flag-seychelles@2x.webp 2x" type="image/webp">
+                            <img class="card__flag" src="img/flags/file-catalog-flag-seychelles.png" srcset="img/flags/file-catalog-flag-seychelles@2x.png 2x" alt="Флаг Республики Сейшелы.">
+                          </picture>
                         </div>
                         <span class="card__country-name">Сейшелы</span>
                       </li>
@@ -1236,14 +1263,14 @@
                     <span class="like__counter">1,5 М</span>
                   </p>
 
-                  <a class="card__call button" href="404.html">Позвать!</a>
+                  <a class="card__call button button--card" href="404.html">Позвать!</a>
                 </li>
 
                 <li class="companions-list__card card">
                   <a class="card__name-link" href="404.html">
                     <h3 class="card__name">Петя Демин</h3>
 
-                    <p class="card__status status status--card status--offline">
+                    <p class="card__status card__status--petya status status--card status--offline">
                       <span class="visually-hidden">Оффлайн</span>
                     </p>
                   </a>
@@ -1257,7 +1284,16 @@
                   </p>
 
                   <a class="card__photo-link" href="404.html">
-                    <img class="card__photo" src="img/card/file-card-photo-petya-demin.png" width="70" height="70" alt="Фотография Пети Демина.">
+                    <picture>
+                      <source srcset="img/card/file-card-photo-petya-demin-desktop.webp 1x, img/card/file-card-photo-petya-demin-desktop@2x.webp 2x" media="(min-width: 1440px)" type="image/webp">
+                      <source srcset="img/card/file-card-photo-petya-demin-desktop.png 1x, img/card/file-card-photo-petya-demin-desktop@2x.png 2x" media="(min-width: 1440px)">
+
+                      <source srcset="img/card/file-card-photo-petya-demin-tablet.webp 1x, img/card/file-card-photo-petya-demin-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                      <source srcset="img/card/file-card-photo-petya-demin-tablet.png 1x, img/card/file-card-photo-petya-demin-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                      <source srcset="img/card/file-card-photo-petya-demin.webp 1x, img/card/file-card-photo-petya-demin@2x.webp 2x" type="image/webp">
+                      <img class="card__photo" src="img/card/file-card-photo-petya-demin.png" srcset="img/card/file-card-photo-petya-demin@2x.png 2x" alt="Фотография Пети Демина.">
+                    </picture>
                   </a>
 
                   <div class="card__countries-wrapper">
@@ -1268,14 +1304,26 @@
                     <ul class="card__countries">
                       <li class="card__country">
                         <div class="card__flag-wrapper tooltip" data-tooltip="Бельгия">
-                          <img class="card__flag" src="img/flags/file-catalog-flag-belgium.png" width="26" height="18" alt="Флаг Бельгии.">
+                          <picture>
+                            <source srcset="img/flags/file-catalog-flag-belgium-tablet.webp 1x, img/flags/file-catalog-flag-belgium-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                            <source srcset="img/flags/file-catalog-flag-belgium-tablet.png 1x, img/flags/file-catalog-flag-belgium-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                            <source srcset="img/flags/file-catalog-flag-belgium.webp 1x, img/flags/file-catalog-flag-belgium@2x.webp 2x" type="image/webp">
+                            <img class="card__flag" src="img/flags/file-catalog-flag-belgium.png" srcset="img/flags/file-catalog-flag-belgium@2x.png 2x" alt="Флаг Бельгии.">
+                          </picture>
                         </div>
                         <span class="card__country-name">Бельгия</span>
                       </li>
 
                       <li class="card__country">
                         <div class="card__flag-wrapper tooltip" data-tooltip="Чехия">
-                          <img class="card__flag" src="img/flags/file-catalog-flag-czechia.png" width="26" height="18" alt="Флаг Чехии.">
+                          <picture>
+                            <source srcset="img/flags/file-catalog-flag-czechia-tablet.webp 1x, img/flags/file-catalog-flag-czechia-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                            <source srcset="img/flags/file-catalog-flag-czechia-tablet.png 1x, img/flags/file-catalog-flag-czechia-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                            <source srcset="img/flags/file-catalog-flag-czechia.webp 1x, img/flags/file-catalog-flag-czechia@2x.webp 2x" type="image/webp">
+                            <img class="card__flag" src="img/flags/file-catalog-flag-czechia.png" srcset="img/flags/file-catalog-flag-czechia@2x.png 2x" alt="Флаг Чехии.">
+                          </picture>
                         </div>
                         <span class="card__country-name">Чехия</span>
                       </li>
@@ -1345,14 +1393,14 @@
                     <span class="like__counter">1500</span>
                   </p>
 
-                  <a class="card__call button" href="404.html">Позвать!</a>
+                  <a class="card__call button button--card" href="404.html">Позвать!</a>
                 </li>
 
                 <li class="companions-list__card card">
                   <a class="card__name-link" href="404.html">
                     <h3 class="card__name">Марк Смолов</h3>
 
-                    <p class="card__status status status--card status--offline">
+                    <p class="card__status card__status--mark status status--card status--offline">
                       <span class="visually-hidden">Оффлайн</span>
                     </p>
                   </a>
@@ -1366,7 +1414,16 @@
                   </p>
 
                   <a class="card__photo-link" href="404.html">
-                    <img class="card__photo" src="img/card/file-card-photo-mark-smolov.png" width="70" height="70" alt="Фотография Марка Смолова.">
+                    <picture>
+                      <source srcset="img/card/file-card-photo-mark-smolov-desktop.webp 1x, img/card/file-card-photo-mark-smolov-desktop@2x.webp 2x" media="(min-width: 1440px)" type="image/webp">
+                      <source srcset="img/card/file-card-photo-mark-smolov-desktop.png 1x, img/card/file-card-photo-mark-smolov-desktop@2x.png 2x" media="(min-width: 1440px)">
+
+                      <source srcset="img/card/file-card-photo-mark-smolov-tablet.webp 1x, img/card/file-card-photo-mark-smolov-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                      <source srcset="img/card/file-card-photo-mark-smolov-tablet.png 1x, img/card/file-card-photo-mark-smolov-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                      <source srcset="img/card/file-card-photo-mark-smolov.webp 1x, img/card/file-card-photo-mark-smolov@2x.webp 2x" type="image/webp">
+                      <img class="card__photo" src="img/card/file-card-photo-mark-smolov.png" srcset="img/card/file-card-photo-mark-smolov@2x.png 2x" alt="Фотография Марка Смолова.">
+                    </picture>
                   </a>
 
                   <div class="card__countries-wrapper">
@@ -1377,21 +1434,39 @@
                     <ul class="card__countries">
                       <li class="card__country">
                         <div class="card__flag-wrapper tooltip" data-tooltip="США">
-                          <img class="card__flag" src="img/flags/file-catalog-flag-usa.png" width="26" height="18" alt="Флаг США.">
+                          <picture>
+                            <source srcset="img/flags/file-catalog-flag-usa-tablet.webp 1x, img/flags/file-catalog-flag-usa-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                            <source srcset="img/flags/file-catalog-flag-usa-tablet.png 1x, img/flags/file-catalog-flag-usa-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                            <source srcset="img/flags/file-catalog-flag-usa.webp 1x, img/flags/file-catalog-flag-usa@2x.webp 2x" type="image/webp">
+                            <img class="card__flag" src="img/flags/file-catalog-flag-usa.png" srcset="img/flags/file-catalog-flag-usa@2x.png 2x" alt="Флаг США.">
+                          </picture>
                         </div>
                         <span class="card__country-name">США</span>
                       </li>
 
                       <li class="card__country">
                         <div class="card__flag-wrapper tooltip" data-tooltip="Австралия">
-                          <img class="card__flag" src="img/flags/file-catalog-flag-australia.png" width="26" height="18" alt="Флаг Австралии.">
+                          <picture>
+                            <source srcset="img/flags/file-catalog-flag-australia-tablet.webp 1x, img/flags/file-catalog-flag-australia-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                            <source srcset="img/flags/file-catalog-flag-australia-tablet.png 1x, img/flags/file-catalog-flag-australia-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                            <source srcset="img/flags/file-catalog-flag-australia.webp 1x, img/flags/file-catalog-flag-australia@2x.webp 2x" type="image/webp">
+                            <img class="card__flag" src="img/flags/file-catalog-flag-australia.png" srcset="img/flags/file-catalog-flag-australia@2x.png 2x" alt="Флаг Австралии.">
+                          </picture>
                         </div>
                         <span class="card__country-name">Австралия</span>
                       </li>
 
                       <li class="card__country">
                         <div class="card__flag-wrapper tooltip" data-tooltip="Доминика">
-                          <img class="card__flag" src="img/flags/file-catalog-flag-dominica.png" width="26" height="18" alt="Флаг Доминики.">
+                          <picture>
+                            <source srcset="img/flags/file-catalog-flag-dominica-tablet.webp 1x, img/flags/file-catalog-flag-dominica-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                            <source srcset="img/flags/file-catalog-flag-dominica-tablet.png 1x, img/flags/file-catalog-flag-dominica-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                            <source srcset="img/flags/file-catalog-flag-dominica.webp 1x, img/flags/file-catalog-flag-dominica@2x.webp 2x" type="image/webp">
+                            <img class="card__flag" src="img/flags/file-catalog-flag-dominica.png" srcset="img/flags/file-catalog-flag-dominica@2x.png 2x" alt="Флаг Доминики.">
+                          </picture>
                         </div>
                         <span class="card__country-name">Доминика</span>
                       </li>
@@ -1461,14 +1536,14 @@
                     <span class="like__counter">170</span>
                   </p>
 
-                  <a class="card__call button" href="404.html">Позвать!</a>
+                  <a class="card__call button button--card" href="404.html">Позвать!</a>
                 </li>
 
                 <li class="companions-list__card card">
                   <a class="card__name-link" href="404.html">
                     <h3 class="card__name">Лариса Роговая</h3>
 
-                    <p class="card__status status status--card status--online">
+                    <p class="card__status card__status--larisa status status--card status--online">
                       <span class="visually-hidden">Онлайн</span>
                     </p>
                   </a>
@@ -1481,7 +1556,16 @@
                   </p>
 
                   <a class="card__photo-link" href="404.html">
-                    <img class="card__photo" src="img/card/file-card-photo-larisa-rogovaya.png" width="70" height="70" alt="Фотография Ларисы Роговой.">
+                    <picture>
+                      <source srcset="img/card/file-card-photo-larisa-rogovaya-desktop.webp 1x, img/card/file-card-photo-larisa-rogovaya-desktop@2x.webp 2x" media="(min-width: 1440px)" type="image/webp">
+                      <source srcset="img/card/file-card-photo-larisa-rogovaya-desktop.png 1x, img/card/file-card-photo-larisa-rogovaya-desktop@2x.png 2x" media="(min-width: 1440px)">
+
+                      <source srcset="img/card/file-card-photo-larisa-rogovaya-tablet.webp 1x, img/card/file-card-photo-larisa-rogovaya-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                      <source srcset="img/card/file-card-photo-larisa-rogovaya-tablet.png 1x, img/card/file-card-photo-larisa-rogovaya-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                      <source srcset="img/card/file-card-photo-larisa-rogovaya.webp 1x, img/card/file-card-photo-larisa-rogovaya@2x.webp 2x" type="image/webp">
+                      <img class="card__photo" src="img/card/file-card-photo-larisa-rogovaya.png" srcset="img/card/file-card-photo-larisa-rogovaya@2x.png 2x" alt="Фотография Ларисы Роговой.">
+                    </picture>
                   </a>
 
                   <div class="card__countries-wrapper">
@@ -1492,14 +1576,26 @@
                     <ul class="card__countries">
                       <li class="card__country">
                         <div class="card__flag-wrapper tooltip" data-tooltip="Великобритания">
-                          <img class="card__flag" src="img/flags/file-catalog-flag-united-kingdom.png" width="26" height="18" alt="Флаг Великобритании.">
+                          <picture>
+                            <source srcset="img/flags/file-catalog-flag-united-kingdom-tablet.webp 1x, img/flags/file-catalog-flag-united-kingdom-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                            <source srcset="img/flags/file-catalog-flag-united-kingdom-tablet.png 1x, img/flags/file-catalog-flag-united-kingdom-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                            <source srcset="img/flags/file-catalog-flag-united-kingdom.webp 1x, img/flags/file-catalog-flag-united-kingdom@2x.webp 2x" type="image/webp">
+                            <img class="card__flag" src="img/flags/file-catalog-flag-united-kingdom.png" srcset="img/flags/file-catalog-flag-united-kingdom@2x.png 2x" alt="Флаг Великобритании.">
+                          </picture>
                         </div>
                         <span class="card__country-name">Великобритания</span>
                       </li>
 
                       <li class="card__country">
                         <div class="card__flag-wrapper tooltip" data-tooltip="Германия">
-                          <img class="card__flag" src="img/flags/file-catalog-flag-germany.png" width="26" height="18" alt="Флаг Германии.">
+                          <picture>
+                            <source srcset="img/flags/file-catalog-flag-germany-tablet.webp 1x, img/flags/file-catalog-flag-germany-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
+                            <source srcset="img/flags/file-catalog-flag-germany-tablet.png 1x, img/flags/file-catalog-flag-germany-tablet@2x.png 2x" media="(min-width: 768px)">
+
+                            <source srcset="img/flags/file-catalog-flag-germany.webp 1x, img/flags/file-catalog-flag-germany@2x.webp 2x" type="image/webp">
+                            <img class="card__flag" src="img/flags/file-catalog-flag-germany.png" srcset="img/flags/file-catalog-flag-germany@2x.png 2x" alt="Флаг Германии.">
+                          </picture>
                         </div>
                         <span class="card__country-name">Германия</span>
                       </li>
@@ -1569,7 +1665,7 @@
                     <span class="like__counter">23</span>
                   </p>
 
-                  <a class="card__call button" href="404.html">Позвать!</a>
+                  <a class="card__call button button--card" href="404.html">Позвать!</a>
                 </li>
               </ul>
 
