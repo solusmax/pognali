@@ -4,6 +4,10 @@
   @media (min-width: $page-width-tablet) {
     --companions-list-show-more-cross-size: 26px;
   }
+
+  @media (min-width: $page-width-desktop) {
+    padding-right: 86px;
+  }
 }
 
 .companions-list__list {
@@ -18,6 +22,10 @@
   @media (min-width: $page-width-tablet) {
     row-gap: 40px;
   }
+
+  @media (min-width: $page-width-desktop) {
+    row-gap: 31px;
+  }
 }
 
 .companions-list__show-more-wrapper {
@@ -31,6 +39,10 @@
 
   @media (min-width: $page-width-tablet) {
     margin-top: 44px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    margin-top: 60px;
   }
 }
 
@@ -84,6 +96,11 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (min-width: $page-width-desktop) {
+    margin-left: -73px;
+    padding-left: calc(var(--companions-list-show-more-cross-size) + 23px);
+  }
 }
 
 .companions-list__pagination {
@@ -91,5 +108,9 @@
 
   @media (min-width: $page-width-tablet) {
     margin-top: 49px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    margin-top: 69px;
   }
 }

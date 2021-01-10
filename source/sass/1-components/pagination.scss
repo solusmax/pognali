@@ -93,6 +93,10 @@
     flex-shrink: 0;
     width: 123px;
   }
+
+  @media (min-width: $page-width-desktop) {
+    width: 137px;
+  }
 }
 
 .pagination__leaf-through {
@@ -168,6 +172,20 @@
     &--next {
       &::before {
         left: -9px;
+      }
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    &--previous {
+      &::before {
+        left: 12px;
+      }
+    }
+
+    &--next {
+      &::before {
+        left: -12px;
       }
     }
   }

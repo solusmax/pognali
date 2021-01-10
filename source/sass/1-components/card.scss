@@ -33,6 +33,13 @@
 
   @media (min-width: $page-width-desktop) {
     --card-photo-size: 285px;
+    --card-padding-left: 0;
+    --card-padding-right: 35px;
+
+    grid-template-rows: 46px minmax(49px, auto) minmax(87px, auto) minmax(63px, auto) minmax(20px, 1fr);
+    grid-template-columns: var(--card-photo-size) 36px 168px 185px 172px 1fr;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -75,6 +82,13 @@
     font-size: 30px;
     line-height: 30px;
   }
+
+  @media (min-width: $page-width-desktop) {
+    grid-row: 2 / 3;
+    grid-column: 3 / 5;
+    padding-left: 0;
+    padding-right: 40px;
+  }
 }
 
 .card__name {
@@ -89,6 +103,10 @@
 
   @media (min-width: $page-width-tablet) {
     margin-top: -4px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    margin-top: -2px;
   }
 }
 
@@ -120,6 +138,13 @@
     &--larisa {
       margin-left: 32px;
     }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    order: -1;
+    margin-left: 0;
+    margin-right: 18px;
+    margin-top: 11px;
   }
 }
 
@@ -158,6 +183,12 @@
     font-size: 20px;
     line-height: 23px;
   }
+
+  @media (min-width: $page-width-desktop) {
+    grid-row: 3 / 4;
+    grid-column: 3 / 5;
+    padding-left: 26px;
+  }
 }
 
 .card__photo-link {
@@ -177,6 +208,13 @@
     margin-left: 0;
     border-radius: 20px;
   }
+
+  @media (min-width: $page-width-desktop) {
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+  }
 }
 
 .card__photo {
@@ -184,22 +222,17 @@
   width: var(--card-photo-size);
   height: var(--card-photo-size);
 
-  transition-property: transform, opacity;
+  transition-property: transform;
   transition-duration: $transitions-duration;
+
+  @media (min-width: $page-width-desktop) {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .card:hover .card__photo {
   transform: scale(1.06);
-}
-
-.card__photo-link:hover .card__photo {
-  opacity: 0.9;
-}
-
-.card__photo-link:active .card__photo {
-  opacity: 0.85;
-
-  transition: none;
 }
 
 .card__countries-wrapper {
@@ -211,6 +244,12 @@
     grid-row: 4 / 5;
     grid-column: 1 / 6;
     margin-top: 15px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    grid-row: 2 / 4;
+    grid-column: 5 / 7;
+    margin-top: 0;
   }
 }
 
@@ -228,6 +267,10 @@
     height: 1px;
 
     background-color: $color-basic-grey;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    display: none;
   }
 }
 
@@ -268,6 +311,14 @@
     flex-wrap: wrap;
     margin-left: 2px;
   }
+
+  @media (min-width: $page-width-desktop) {
+    display: grid;
+    grid-auto-rows: auto;
+    row-gap: 13px;
+    margin-left: 0;
+    margin-top: 3px;
+  }
 }
 
 .card__country {
@@ -283,6 +334,12 @@
       margin-right: 0;
     }
   }
+
+  @media (min-width: $page-width-desktop) {
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+  }
 }
 
 .card__flag-wrapper {
@@ -292,6 +349,10 @@
 
   @media (min-width: $page-width-tablet) {
     margin-right: 10px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    margin-right: 18px;
   }
 }
 
@@ -339,6 +400,11 @@
     grid-row: 1 / 3;
     grid-column: 5 / 6;
     margin-top: 0;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    grid-row: 4 / 5;
+    grid-column: 5 / 6;
   }
 }
 
@@ -391,6 +457,11 @@
     margin-left: 0;
     margin-top: 0;
   }
+
+  @media (min-width: $page-width-desktop) {
+    margin-left: -5px;
+    margin-top: 15px;
+  }
 }
 
 .card__level-wrapper {
@@ -417,6 +488,11 @@
     grid-row: 3 / 4;
     grid-column: 5 / 6;
     margin-top: 0;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    grid-row: 4 / 5;
+    grid-column: 6 / 7;
   }
 }
 
@@ -466,6 +542,10 @@
   @media (min-width: $page-width-tablet) {
     margin-top: 0;
   }
+
+  @media (min-width: $page-width-desktop) {
+    margin-left: -7px;
+  }
 }
 
 .card__like {
@@ -481,6 +561,14 @@
     margin-left: 1px;
     margin-top: 8px;
   }
+
+  @media (min-width: $page-width-desktop) {
+    grid-row: 4 / 5;
+    grid-column: 4 / 5;
+    margin-left: 0;
+    margin-right: 20px;
+    margin-top: 5px;
+  }
 }
 
 .card__call {
@@ -495,5 +583,12 @@
     align-self: start;
     min-height: 50px;
     margin-top: 8px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    grid-row: 4 / 5;
+    grid-column: 3 / 4;
+    margin-left: 18px;
+    margin-top: 5px;
   }
 }

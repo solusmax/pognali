@@ -185,8 +185,9 @@
   @media (min-width: $page-width-desktop) {
     display: grid;
     grid-template-columns: 1fr 1035px 285px 1fr;
-    row-gap: 95px;
+    row-gap: 75px;
     width: 100%;
+    padding-bottom: 77px;
   }
 }
 
@@ -255,6 +256,10 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  @media (min-width: $page-width-desktop) {
+    max-width: none;
+  }
 }
 
 .page-main__companions-list-wrapper {
@@ -283,5 +288,9 @@
     max-width: $page-width-tablet - ($page-padding-tablet * 2);
     padding-left: 0;
     padding-right: 0;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    max-width: none;
   }
 }

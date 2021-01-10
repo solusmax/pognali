@@ -169,6 +169,12 @@
         background-color: $color-basic-white;
       }
     }
+
+    &--card {
+      &::before {
+        width: 34px;
+      }
+    }
   }
 }
 

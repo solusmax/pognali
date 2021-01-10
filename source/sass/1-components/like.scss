@@ -112,4 +112,8 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (min-width: $page-width-desktop) {
+    margin-left: 7px;
+  }
 }
