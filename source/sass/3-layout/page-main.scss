@@ -163,6 +163,10 @@
 
 .page-main__catalog-wrapper {
   padding-bottom: 46px;
+
+  @media (min-width: $page-width-tablet) {
+    padding-bottom: 62px;
+  }
 }
 
 .page-main__countries-filter-wrapper {
