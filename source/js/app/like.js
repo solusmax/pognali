@@ -8,7 +8,7 @@
 
 if (document.querySelector('.like')) {
   const likeButtons = document.querySelectorAll('.like__button');
-  const likeTexts = document.querySelectorAll('.like__button span');
+  const likeTexts = document.querySelectorAll('.like__button .visually-hidden');
   const likeCounters = document.querySelectorAll('.like__counter');
 
   for (let i = 0; i < likeButtons.length; i += 1) {
