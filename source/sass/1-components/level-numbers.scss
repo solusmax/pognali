@@ -26,12 +26,16 @@
     pointer-events: none;
   }
 
-  @media (min-width: $page-width-tablet) and (max-width: $page-width-tablet-last) {
+  @media (min-width: $page-width-tablet) {
     --level-numbers-separator-width: 21px;
     --level-numbers-separator-border-height: 7px;
 
     width: 149px;
     min-height: 46px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    width: 100%;
   }
 }
 

@@ -125,6 +125,18 @@
       }
     }
   }
+
+  @media (min-width: $page-width-desktop) {
+    &--companions-filter {
+      &:not(:last-child) {
+        margin-right: 1px;
+      }
+
+      &:only-child {
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 .transport__item {

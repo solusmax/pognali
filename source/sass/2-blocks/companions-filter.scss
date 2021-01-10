@@ -20,6 +20,13 @@
     padding-top: 35px;
     padding-bottom: 37px;
   }
+
+  @media (min-width: $page-width-desktop) {
+    padding-left: 48px;
+    padding-right: 45px;
+    padding-top: 44px;
+    padding-bottom: 48px;
+  }
 }
 
 .companions-filter__title {
@@ -59,6 +66,10 @@
 
       background-color: $color-special-yellow-600;
     }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    margin-top: 23px;
   }
 }
 
@@ -188,6 +199,15 @@
       color: $color-special-blue-400;
     }
   }
+
+  @media (min-width: $page-width-desktop) {
+    padding-right: 2px;
+    border-top: none;
+
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+  }
 }
 
 .no-js .companions-filter__block-button {
@@ -252,6 +272,11 @@
     width: 100%;
     margin-top: 0;
     margin-bottom: 0;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    row-gap: 16px;
+    margin-top: 13px;
   }
 }
 
@@ -342,7 +367,7 @@
     }
   }
 
-  @media (min-width: $page-width-tablet) and (max-width: $page-width-tablet-last) {
+  @media (min-width: $page-width-tablet) {
     --companions-filter-checkbox-size: 24px;
 
     align-items: center;
@@ -355,6 +380,10 @@
     &::after {
       background-size: 18px 18px;
     }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    padding-right: 0;
   }
 }
 
@@ -379,6 +408,11 @@
     margin-top: 0;
     margin-bottom: 0;
   }
+
+  @media (min-width: $page-width-desktop) {
+    margin-top: 7px;
+    margin-bottom: 22px;
+  }
 }
 
 .companions-filter__level-numbers {
@@ -388,6 +422,10 @@
     flex-shrink: 0;
     margin-left: 61px;
     margin-top: 0;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    margin-top: 9px;
   }
 }
 
@@ -401,6 +439,11 @@
     margin-left: 1px;
     margin-top: 13px;
     margin-bottom: 13px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    margin-top: 36px;
+    margin-bottom: 23px;
   }
 }
 
@@ -432,5 +475,12 @@
 
       background-color: $color-special-yellow-600;
     }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    width: 100%;
+    min-height: 49px;
+    margin-left: 0;
+    margin-top: 20px;
   }
 }
