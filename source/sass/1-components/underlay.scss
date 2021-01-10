@@ -35,7 +35,7 @@
     background-color: $color-special-grey-550;
   }
 
-  &--light-metallic::after {
+  &--countries-filter::after {
     background-color: $color-special-grey-325;
   }
 
@@ -62,12 +62,24 @@
   }
 
   @media (min-width: $page-width-desktop) {
+    &--countries-filter.underlay--countries-filter-open::after {
+      background-color: $color-basic-grey;
+    }
+
     &--promo::after {
       display: block;
     }
 
     &--not-found::after {
       background-color: $color-basic-blue;
+    }
+  }
+}
+
+.no-js .underlay {
+  @media (min-width: $page-width-desktop) {
+    &--countries-filter::after {
+      background-color: $color-basic-grey;
     }
   }
 }

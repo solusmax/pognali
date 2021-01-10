@@ -15,10 +15,6 @@
     box-shadow: 0 4px 9px 0 rgba($color-basic-black, 0.16);
   }
 
-  &:hover .companion__photo {
-    transform: scale(1.06);
-  }
-
   @media (min-width: $page-width-tablet) {
     grid-template-rows: 273px 12px minmax(12px, min-content) min-content;
     width: 285px;
@@ -127,6 +123,10 @@
     width: 285px;
     height: 285px;
   }
+}
+
+.companion:hover .companion__photo {
+  transform: scale(1.06);
 }
 
 .companion__level {

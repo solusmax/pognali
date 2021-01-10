@@ -4,12 +4,16 @@
     <meta charset="utf-8">
     <title>Погнали? • Страница не найдена</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preload" href="fonts/bloggersans.woff2" as="font" type="font/woff2">
-    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" type="font/woff2">
-    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <header class="page__header header">
       <div class="header__inner">
         <div class="header__wrapper">
@@ -129,7 +133,7 @@
 
     <footer class="page__footer footer footer--not-found underlay underlay--not-found">
       <div class="footer__inner">
-        <a class="footer__logo logo">
+        <a class="footer__logo logo" href="index.html">
           <picture>
             <source srcset="img/logo/file-logo-blue-desktop.webp 1x, img/logo/file-logo-blue-desktop@2x.webp 2x" media="(min-width: 1440px)" type="image/webp">
             <source srcset="img/logo/file-logo-blue-desktop.png 1x, img/logo/file-logo-blue-desktop@2x.png 2x" media="(min-width: 1440px)">

@@ -17,6 +17,7 @@ if (document.querySelector('.countries-filter')) {
   const countriesFilterLetters = countriesFilter.querySelector('.countries-filter__letters');
   const countriesFilterCountriesAll = countriesFilter.querySelector('.countries-filter__countries-all');
   const pageMainCountriesFilterInner = document.querySelector('.page-main__countries-filter-inner');
+  const underlayCountriesFilter = document.querySelector('.underlay--countries-filter')
 
   const letters = countriesFilter.querySelectorAll('.countries-filter__letter');
   const lettersFields = countriesFilter.querySelectorAll('.countries-filter__letter-field');
@@ -27,12 +28,7 @@ if (document.querySelector('.countries-filter')) {
   countriesFilterToggle.addEventListener('click', function(evt) {
     evt.preventDefault();
 
-    if (countriesFilterToggle.classList.contains('countries-filter__toggle--open')) {
-      countriesFilterToggleText.textContent = countriesFilterToggle.dataset.textOpen;
-    } else {
-      countriesFilterToggleText.textContent = countriesFilterToggle.dataset.textClose;
-    };
-
+    countriesFilter.classList.toggle('countries-filter--open');
     countriesFilterToggle.classList.toggle('countries-filter__toggle--open');
     countriesFilterInner.classList.toggle('countries-filter__inner--open');
     countriesFilterContinents.classList.toggle('countries-filter__continents--open');
@@ -40,11 +36,19 @@ if (document.querySelector('.countries-filter')) {
     countriesFilterCountriesAll.classList.toggle('countries-filter__countries-all--open');
     countriesFilterClose.classList.toggle('countries-filter__close--open');
     pageMainCountriesFilterInner.classList.toggle('page-main__countries-filter-inner--open');
+    underlayCountriesFilter.classList.toggle('underlay--countries-filter-open');
+
+    if (countriesFilterToggle.classList.contains('countries-filter__toggle--open')) {
+      countriesFilterToggleText.textContent = countriesFilterToggle.dataset.textClose;
+    } else {
+      countriesFilterToggleText.textContent = countriesFilterToggle.dataset.textOpen;
+    };
   });
 
   countriesFilterClose.addEventListener('click', function(evt) {
     evt.preventDefault();
 
+    countriesFilter.classList.remove('countries-filter--open');
     countriesFilterToggle.classList.remove('countries-filter__toggle--open');
     countriesFilterInner.classList.remove('countries-filter__inner--open');
     countriesFilterContinents.classList.remove('countries-filter__continents--open');
@@ -52,6 +56,9 @@ if (document.querySelector('.countries-filter')) {
     countriesFilterCountriesAll.classList.remove('countries-filter__countries-all--open');
     countriesFilterClose.classList.remove('countries-filter__close--open');
     pageMainCountriesFilterInner.classList.remove('page-main__countries-filter-inner--open');
+    underlayCountriesFilter.classList.remove('underlay--countries-filter-open');
+
+    countriesFilterToggleText.textContent = countriesFilterToggle.dataset.textOpen;
   });
 
   // Выбор буквы

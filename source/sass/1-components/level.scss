@@ -57,6 +57,15 @@
       --level-size: 94px;
       --level-bar-width: 3px;
     }
+
+    &--card {
+      --level-size: 63px;
+      --level-bar-width: 3px;
+
+      &::before {
+        display: block;
+      }
+    }
   }
 
   @media (min-width: $page-width-tablet) {
@@ -136,6 +145,20 @@
     display: none;
   }
 
+  @media (min-width: $page-width-tablet) {
+    &--card {
+      display: inline;
+
+      color: rgba($color-basic-black, 0.4);
+
+      &::before {
+        background-color: $color-basic-black;
+
+        opacity: 0.1;
+      }
+    }
+  }
+
   @media (min-width: $page-width-desktop) {
     &--profile {
       color: $color-basic-white;
@@ -144,6 +167,12 @@
         height: 2px;
 
         background-color: $color-basic-white;
+      }
+    }
+
+    &--card {
+      &::before {
+        width: 34px;
       }
     }
   }
