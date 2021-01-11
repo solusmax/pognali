@@ -231,7 +231,7 @@
 .contacts__text {
   @media (min-width: $page-width-desktop) {
     &--header {
-      display: none;
+      @include visually-hidden;
     }
   }
 }
