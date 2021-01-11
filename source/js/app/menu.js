@@ -24,6 +24,7 @@ menuToggle.addEventListener('click', function(evt) {
   evt.preventDefault();
 
   menuToggle.classList.toggle('menu-toggle--open');
+  header.classList.toggle('header--open');
   headerInner.classList.toggle('header__inner--open');
   headerSiteNav.classList.toggle('header__site-nav--open');
   userNav.classList.toggle('header__user-nav--open');

@@ -9,11 +9,19 @@
 
   overflow: auto;
 
+  @media (min-width: $page-width-tablet) {
+    max-height: 132px;
+
+    &--open {
+      max-height: 100%;
+    }
+  }
+
   @media (min-width: $page-width-desktop) {
     display: flex;
     justify-content: center;
     width: 100%;
-    max-height: 35vh;
+    max-height: 102px;
 
     background-color: $color-basic-blue;
 
@@ -22,6 +30,8 @@
     }
 
     &--scroll {
+      max-height: 90px;
+
       background-color: $color-basic-white;
     }
   }
