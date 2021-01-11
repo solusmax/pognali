@@ -87,6 +87,12 @@
     font-size: 28px;
     line-height: 28px;
   }
+
+  @media (min-width: $page-width-desktop) {
+    &--header {
+      border-radius: 50%;
+    }
+  }
 }
 
 .contacts__link-icon-wrapper {
@@ -225,7 +231,7 @@
 .contacts__text {
   @media (min-width: $page-width-desktop) {
     &--header {
-      display: none;
+      @include visually-hidden;
     }
   }
 }
