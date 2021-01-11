@@ -1,4 +1,4 @@
-// Дефолтный outline при фокусе в Chrome и Firefox
+// outline при фокусе
 
 @mixin outline($outline-offset: 0) {
   outline-style: groove;
