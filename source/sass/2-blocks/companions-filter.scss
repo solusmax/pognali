@@ -315,9 +315,9 @@
 
     background-color: $color-basic-white;
 
-    transform: translateY(-50%);
     transition-property: opacity;
     transition-duration: $transitions-duration;
+    transform: translateY(-50%);
   }
 
   &::after {
@@ -336,9 +336,9 @@
     background-position: center;
     background-size: 14px 14px;
 
-    transform: translateY(-50%);
     transition-property: opacity;
     transition-duration: $transitions-duration;
+    transform: translateY(-50%);
   }
 
   &:hover {

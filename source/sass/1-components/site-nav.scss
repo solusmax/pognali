@@ -82,7 +82,8 @@
   text-decoration: none;
   color: $color-special-blue-500;
 
-  transition: color $transitions-duration;
+  transition-property: color;
+  transition-duration: $transitions-duration;
 
   &.focus-visible {
     @include outline(-1px);

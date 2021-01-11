@@ -300,7 +300,8 @@
     border: 1px solid $color-special-grey-700;
     border-radius: 4px;
 
-    transition: $transitions-duration;
+    transition-property: border-color, background-color;
+    transition-duration: $transitions-duration;
     transform: translateY(-50%);
   }
 
@@ -320,7 +321,8 @@
     background-size: 13px 14px;
     background-position: 49% 50%;
 
-    transition: $transitions-duration;
+    transition-property: opacity;
+    transition-duration: $transitions-duration;
     transform: translateY(-50%);
   }
 
@@ -479,9 +481,9 @@
       border-bottom-color: transparent;
       border-left-style: none;
 
-      transform: translateY(-50%);
       transition-property: border-right-color;
       transition-duration: $transitions-duration;
+      transform: translateY(-50%);
     }
 
     &:hover {

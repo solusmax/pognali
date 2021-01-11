@@ -22,7 +22,8 @@
 
   background-color: $color-special-yellow-500;
 
-  transition: background-color $transitions-duration;
+  transition-property: background-color;
+  transition-duration: $transitions-duration;
 
   &::before {
     content: "";

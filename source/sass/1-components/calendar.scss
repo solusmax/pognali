@@ -42,7 +42,8 @@
 
     opacity: 0.3;
 
-    transition: opacity $transitions-duration;
+    transition-property: opacity;
+    transition-duration: $transitions-duration;
     transform: translateY(-50%);
   }
 

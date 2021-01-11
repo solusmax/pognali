@@ -81,8 +81,9 @@
 
     background-color: $color-special-grey-650;
 
+    transition-property: background-color;
+    transition-duration: $transitions-duration;
     transform: translate(-50%, -50%);
-    transition: $transitions-duration;
   }
 
   &--increase {
@@ -101,8 +102,9 @@
 
       background-color: $color-special-grey-650;
 
+      transition-property: background-color;
+      transition-duration: $transitions-duration;
       transform: translate(-50%, -50%);
-      transition: $transitions-duration;
     }
   }
 

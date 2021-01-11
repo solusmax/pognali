@@ -128,7 +128,8 @@
     border-top-color: transparent;
     border-bottom-color: transparent;
 
-    transition: $transitions-duration;
+    transition-property: opacity;
+    transition-duration: $transitions-duration;
   }
 
   &:hover::before {
