@@ -121,6 +121,10 @@
   }
 }
 
+.no-js .counter__button {
+  display: none;
+}
+
 .counter__wrapper:hover .counter__button {
   &::before {
     background-color: $color-special-grey-850;
@@ -228,6 +232,22 @@
     line-height: 20px;
 
     min-height: 70px;
+  }
+}
+
+.no-js .counter__field {
+  // stylelint-disable-next-line
+  -moz-appearance: auto;
+  appearance: auto;
+
+  padding-left: 0;
+  padding-right: 0;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    // stylelint-disable-next-line
+    -webkit-appearance: auto;
+    appearance: auto;
   }
 }
 
