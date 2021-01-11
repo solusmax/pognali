@@ -205,7 +205,6 @@
     pointer-events: none;
   }
 
-  &:focus,
   &.focus-visible,
   &:hover {
     color: $color-basic-white;
@@ -240,7 +239,6 @@
       border-color: $color-special-grey-450;
     }
 
-    &:focus,
     &.focus-visible,
     &:hover {
       color: rgba($color-special-grey-900, 0.3);
@@ -269,7 +267,6 @@
     font-size: 20px;
     line-height: 20px;
 
-    &:focus,
     &.focus-visible,
     &:hover {
       &::before {
@@ -302,7 +299,6 @@
     font-weight: 400;
     text-align: left;
 
-    &:focus,
     &.focus-visible,
     &:hover {
       &::before {
@@ -322,6 +318,62 @@
       padding-right: 13px;
       padding-top: 12px;
       padding-bottom: 8px;
+    }
+  }
+}
+
+.no-js .calendar__day {
+  &:focus {
+    color: $color-basic-white;
+
+    background-color: $color-special-blue-400;
+
+    outline: none;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: -1px;
+      right: -1px;
+      top: -1px;
+      bottom: -1px;
+      z-index: 1;
+
+      border: 2px solid $color-special-orange-700;
+
+      pointer-events: none;
+    }
+  }
+
+  &--disabled {
+    &:focus {
+      color: rgba($color-special-grey-900, 0.3);
+
+      background-color: $color-basic-white;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: $page-width-tablet) {
+    &:focus {
+      &::before {
+        border-width: 4px;
+      }
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    &:focus {
+      &::before {
+        left: -3px;
+        right: -3px;
+        top: -3px;
+        bottom: -3px;
+      }
     }
   }
 }
