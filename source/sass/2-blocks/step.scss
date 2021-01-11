@@ -38,6 +38,7 @@
   }
 
   @media (min-width: $page-width-desktop) {
+    grid-template-columns: 730px 1fr;
     padding-left: 160px;
     padding-right: 161px;
     padding-top: 98px;
@@ -58,6 +59,10 @@
 .no-js .step,
 .step--current {
   display: flex;
+
+  @media (min-width: $page-width-desktop) {
+    display: grid;
+  }
 }
 
 .step__title {
@@ -80,7 +85,8 @@
   }
 
   @media (min-width: $page-width-desktop) {
-    padding-right: 430px;
+    grid-column: 1 / 2;
+    padding-right: 145px;
 
     &--step-3 {
       padding-left: 0;
@@ -91,6 +97,68 @@
 .step__title-br {
   @media (min-width: $page-width-desktop) {
     display: none;
+  }
+}
+
+.step__markers {
+  display: none;
+
+  @media (min-width: $page-width-desktop) {
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    padding-left: 42px;
+    padding-top: 6px;
+
+    list-style: none;
+  }
+}
+
+.step__marker {
+  @media (min-width: $page-width-desktop) {
+    display: flex;
+    align-items: center;
+
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: rgba($color-basic-black, 0.6);
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &::before {
+      content: "";
+
+      flex-shrink: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+
+      background-color: rgba($color-special-blue-400, 0.3);
+    }
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+
+    &--current {
+      color: $color-basic-black;
+      letter-spacing: 0.11em;
+
+      &::before {
+        background-color: $color-special-blue-400;
+      }
+    }
+  }
+}
+
+.step__marker-text {
+  @media (min-width: $page-width-desktop) {
+    margin-left: 36px;
   }
 }
 
@@ -115,8 +183,9 @@
   }
 
   @media (min-width: $page-width-desktop) {
+    grid-column: 1 / 2;
     margin-top: 34px;
-    padding-right: 412px;
+    padding-right: 145px;
 
     &--step-2 {
       margin-top: 36px;
@@ -162,6 +231,7 @@
   }
 
   @media (min-width: $page-width-desktop) {
+    grid-column: 1 / 3;
     margin-top: 87px;
 
     &--step-2 {

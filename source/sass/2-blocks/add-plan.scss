@@ -25,8 +25,8 @@
 .add-plan__inner {
   position: relative;
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto 100px;
   width: 100%;
   max-width: $page-max-width-mobile;
   padding-left: $page-padding-mobile;
@@ -34,6 +34,7 @@
   padding-top: 29px;
 
   @media (min-width: $page-width-tablet) {
+    grid-template-columns: auto 200px;
     max-width: $page-width-tablet - ($page-padding-tablet * 2);
     padding-left: 35px;
     padding-right: 35px;
@@ -41,6 +42,8 @@
   }
 
   @media (min-width: $page-width-desktop) {
+    display: flex;
+    flex-direction: column;
     max-width: $page-width-desktop - ($page-padding-desktop * 2);
     padding-left: 0;
     padding-right: 0;
@@ -52,7 +55,6 @@
   margin: 0;
   margin-bottom: 30px;
   padding: 0;
-  padding-right: 80px;
 
   font-size: 24px;
   line-height: 24px;
@@ -61,7 +63,6 @@
 
   @media (min-width: $page-width-tablet) {
     margin-bottom: 59px;
-    padding-right: 120px;
 
     font-size: 36px;
     line-height: 36px;
@@ -78,31 +79,28 @@
 }
 
 .add-plan__markers {
-  position: absolute;
-  right: 43px;
-  top: 39px;
-
+  justify-self: end;
   display: flex;
-  justify-content: space-between;
-  width: 47px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: flex-start;
   margin: 0;
   padding: 0;
+  padding-left: 11px;
+  padding-right: 18px;
+  padding-top: 10px;
 
   list-style: none;
 
   @media (min-width: $page-width-tablet) {
-    right: 33px;
-    top: 66px;
-
-    width: 76px;
+    margin-right: -2px;
+    padding-left: 19px;
+    padding-right: 0;
+    padding-top: 16px;
   }
 
   @media (min-width: $page-width-desktop) {
-    right: 88px;
-    top: 249px;
-
-    flex-direction: column;
-    width: 300px;
+    display: none;
   }
 }
 
@@ -111,61 +109,41 @@
 }
 
 .add-plan__marker {
-  display: flex;
-  align-items: center;
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  margin-left: 16px;
+  margin-bottom: 16px;
+  border-radius: 50%;
 
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  color: rgba($color-basic-black, 0.6);
-  text-transform: uppercase;
-  text-decoration: none;
+  background-color: rgba($color-special-blue-400, 0.3);
 
-  &::before {
-    content: "";
-
-    flex-shrink: 0;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-
-    background-color: rgba($color-special-blue-400, 0.3);
+  &:nth-child(4n - 3) {
+    margin-left: 0;
   }
 
   &--current {
-    color: $color-basic-black;
-    letter-spacing: 0.11em;
-
-    &::before {
-      background-color: $color-special-blue-400;
-    }
+    background-color: $color-special-blue-400;
   }
 
   @media (min-width: $page-width-tablet) {
-    &::before {
-      width: 6px;
-      height: 6px;
+    width: 6px;
+    height: 6px;
+    margin-left: 29px;
+    margin-bottom: 29px;
+
+    &:nth-child(4n - 3) {
+      margin-left: 29px;
     }
-  }
 
-  @media (min-width: $page-width-desktop) {
-    &:not(:first-child) {
-      margin-top: 20px;
+    &:nth-child(6n - 5) {
+      margin-left: 0;
     }
-  }
-}
-
-.add-plan__marker-text {
-  display: none;
-
-  @media (min-width: $page-width-desktop) {
-    display: inline;
-    margin-left: 36px;
   }
 }
 
 .add-plan__step {
+  grid-column: 1 / 3;
   margin: 0;
 }
 
