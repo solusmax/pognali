@@ -33,8 +33,10 @@
   }
 
   @media (min-width: $page-width-desktop) {
+    max-width: $page-width-desktop;
     padding-left: $page-padding-desktop;
     padding-right: $page-padding-desktop;
+    padding-bottom: 44px;
   }
 }
 
