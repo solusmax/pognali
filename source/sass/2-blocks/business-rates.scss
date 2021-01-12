@@ -186,7 +186,8 @@
 
   cursor: pointer;
 
-  transition: background-color $transitions-duration;
+  transition-property: background-color;
+  transition-duration: $transitions-duration;
 
   &.focus-visible {
     @include outline(-4px);

@@ -81,8 +81,9 @@
 
     background-color: $color-special-grey-650;
 
+    transition-property: background-color;
+    transition-duration: $transitions-duration;
     transform: translate(-50%, -50%);
-    transition: $transitions-duration;
   }
 
   &--increase {
@@ -101,8 +102,9 @@
 
       background-color: $color-special-grey-650;
 
+      transition-property: background-color;
+      transition-duration: $transitions-duration;
       transform: translate(-50%, -50%);
-      transition: $transitions-duration;
     }
   }
 
@@ -117,6 +119,10 @@
       }
     }
   }
+}
+
+.no-js .counter__button {
+  display: none;
 }
 
 .counter__wrapper:hover .counter__button {
@@ -226,6 +232,22 @@
     line-height: 20px;
 
     min-height: 70px;
+  }
+}
+
+.no-js .counter__field {
+  // stylelint-disable-next-line
+  -moz-appearance: auto;
+  appearance: auto;
+
+  padding-left: 0;
+  padding-right: 0;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    // stylelint-disable-next-line
+    -webkit-appearance: auto;
+    appearance: auto;
   }
 }
 

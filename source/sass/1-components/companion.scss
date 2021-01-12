@@ -9,7 +9,8 @@
 
   background-color: $color-basic-white;
 
-  transition: box-shadow $transitions-duration;
+  transition-property: box-shadow;
+  transition-duration: $transitions-duration;
 
   &:hover {
     box-shadow: 0 4px 9px 0 rgba($color-basic-black, 0.16);
@@ -56,7 +57,8 @@
   text-decoration: none;
   text-align: center;
 
-  transition: opacity $transitions-duration;
+  transition-property: opacity;
+  transition-duration: $transitions-duration;
 
   &:hover,
   &:hover + .companion__status {
@@ -91,7 +93,8 @@
   margin-top: 9px;
   margin-right: 10px;
 
-  transition: opacity $transitions-duration;
+  transition-property: opacity;
+  transition-duration: $transitions-duration;
 
   @media (min-width: $page-width-tablet) {
     margin-right: 15px;
@@ -117,7 +120,8 @@
   width: 270px;
   height: 270px;
 
-  transition: transform $transitions-duration;
+  transition-property: transform;
+  transition-duration: $transitions-duration;
 
   @media (min-width: $page-width-tablet) {
     width: 285px;
@@ -176,6 +180,12 @@
   &:nth-child(n + 6) {
     margin-top: 16px;
   }
+}
+
+.companion__flag {
+  display: block;
+  width: 35px;
+  height: 24px;
 }
 
 .companion__hashtags {

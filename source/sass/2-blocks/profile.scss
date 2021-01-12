@@ -161,8 +161,6 @@
     grid-column: 1 / -1;
     border: 1px solid $color-special-grey-700;
     border-radius: 10px;
-
-    transition: $transitions-duration;
   }
 
   @media (min-width: $page-width-tablet) {
@@ -224,6 +222,11 @@
 .profile__hashtags {
   grid-column: 1 / -1;
   margin-top: 24px;
+
+  &::before {
+    transition-property: border-color;
+    transition-duration: $transitions-duration;
+  }
 
   &:hover::before {
     border-color: $color-special-grey-775;

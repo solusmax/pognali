@@ -116,7 +116,8 @@
   text-decoration-thickness: 1px;
   text-decoration-skip-ink: none;
 
-  transition: color $transitions-duration;
+  transition-property: color;
+  transition-duration: $transitions-duration;
 
   &:hover {
     color: $color-special-orange-500;
@@ -172,7 +173,8 @@
   &::placeholder {
     color: rgba($color-special-grey-900, 0.3);
 
-    transition: color $transitions-duration;
+    transition-property: color;
+    transition-duration: $transitions-duration;
   }
 
   &:hover {

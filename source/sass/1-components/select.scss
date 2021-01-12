@@ -60,7 +60,7 @@
 .select__letters {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: 41px;
+  grid-auto-rows: minmax(41px, auto);
   margin: 0;
   padding: 0;
 
@@ -68,7 +68,7 @@
 
   @media (min-width: $page-width-tablet) {
     flex-shrink: 0;
-    grid-auto-rows: 69px;
+    grid-auto-rows: minmax(69px, auto);
     width: var(--select-letters-width);
   }
 

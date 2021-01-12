@@ -279,6 +279,7 @@
   }
 
   @media (min-width: $page-width-tablet) {
+    justify-self: end;
     margin-top: 0;
 
     font-size: 20px;

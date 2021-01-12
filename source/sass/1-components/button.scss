@@ -193,7 +193,8 @@
       background-position: center;
       background-size: 14px 14px;
 
-      transition: $transitions-duration;
+      transition-property: opacity;
+      transition-duration: $transitions-duration;
     }
 
     &:hover {

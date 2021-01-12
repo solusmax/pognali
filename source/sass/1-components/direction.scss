@@ -24,7 +24,8 @@
   min-height: 188px;
   border-radius: 10px;
 
-  transition: box-shadow $transitions-duration;
+  transition-property: box-shadow;
+  transition-duration: $transitions-duration;
 
   @media (min-width: $page-width-tablet) {
     grid-template-rows: 17px 47px auto;
@@ -222,7 +223,8 @@
   width: 270px;
   height: 110px;
 
-  transition: transform $transitions-duration;
+  transition-property: transform;
+  transition-duration: $transitions-duration;
 
   @media (min-width: $page-width-tablet) {
     display: block;

@@ -62,7 +62,8 @@ $price-counter-margin: 22px;
   color: $color-special-orange-500;
   text-decoration: none;
 
-  transition: color $transitions-duration;
+  transition-property: color;
+  transition-duration: $transitions-duration;
 
   &:hover {
     color: rgba($color-special-orange-500, 0.7);
@@ -305,7 +306,8 @@ $price-counter-margin: 22px;
   text-decoration: none;
   text-align: center;
 
-  transition: color $transitions-duration;
+  transition-property: color;
+  transition-duration: $transitions-duration;
 
   &:hover {
     color: rgba($color-special-blue-300, 0.7);

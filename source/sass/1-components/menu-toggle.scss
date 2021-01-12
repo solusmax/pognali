@@ -8,7 +8,8 @@
   background: none;
   cursor: pointer;
 
-  transition: opacity $transitions-duration;
+  transition-property: opacity;
+  transition-duration: $transitions-duration;
 
   &:hover {
     opacity: 0.6;

@@ -2,7 +2,8 @@
   display: flex;
   align-items: center;
 
-  transition: opacity $transitions-duration;
+  transition-property: opacity;
+  transition-duration: $transitions-duration;
 
   &::before {
     content: "";
