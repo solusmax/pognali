@@ -101,20 +101,24 @@
     pointer-events: none;
   }
 
-  &:not(:first-child):not(:only-child) {
-    &::after {
-      content: "";
+  &::after {
+    content: "";
 
-      position: absolute;
-      right: calc(var(--route-flag-wrapper-size) - (8px / 2));
-      top: -16px;
+    position: absolute;
+    right: calc(var(--route-flag-wrapper-size) - (8px / 2));
+    bottom: -16px;
 
-      width: 8px;
-      height: 10px;
+    width: 8px;
+    height: 10px;
 
-      background-image: url("#{$img-path}/route/route-next-arrow.svg");
-      background-repeat: no-repeat;
-      background-size: 8px 11px;
+    background-image: url("#{$img-path}/route/route-next-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 8px 11px;
+  }
+
+  &--select {
+    &:last-child {
+      margin-bottom: var(--route-gap);
     }
   }
 
@@ -132,13 +136,13 @@
   }
 
   &--add {
-    &:not(:only-child) {
-      margin-top: var(--route-gap);
-    }
-
     &::before {
       border: 1px solid $color-special-grey-700;
       background-color: transparent;
+    }
+
+    &::after {
+      display: none;
     }
   }
 
