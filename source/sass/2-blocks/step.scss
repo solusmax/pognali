@@ -444,6 +444,20 @@
   display: block;
 }
 
+.step__checkbox-field:disabled + .step__checkbox-label {
+  color: $color-special-grey-700;
+
+  &::before {
+    border-color: $color-special-grey-300;
+
+    background-color: $color-basic-white;
+  }
+
+  &::after {
+    opacity: 0.1;
+  }
+}
+
 .no-js .step__checkbox-field:focus + .step__checkbox-label,
 .step__checkbox-field.focus-visible + .step__checkbox-label {
   @include outline(2px);

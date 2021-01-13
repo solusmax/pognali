@@ -393,6 +393,19 @@
   }
 }
 
+
+.companions-filter__field:disabled + .companions-filter__label {
+  color: rgba($color-basic-black, 0.2);
+
+  &::before {
+    opacity: 0.5;
+  }
+
+  &::after {
+    opacity: 0.1;
+  }
+}
+
 .no-js .companions-filter__field:focus + .companions-filter__label,
 .companions-filter__field.focus-visible + .companions-filter__label {
   @include outline(2px);
