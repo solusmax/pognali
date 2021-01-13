@@ -1,5 +1,5 @@
 .registration {
-  --registration-form-padding: 36px;
+  --registration-submit-width: 60px;
 
   display: flex;
   justify-content: center;
@@ -8,11 +8,15 @@
   background-color: $color-special-blue-500;
 
   @media (min-width: $page-width-tablet) {
+    --registration-form-padding: 36px;
+    --registration-submit-width: 80px;
+
     border-radius: 0 0 60px 60px;
   }
 
   @media (min-width: $page-width-desktop) {
     --registration-form-padding: 73px;
+    --registration-submit-width: 324px;
   }
 }
 
@@ -155,10 +159,10 @@
   width: 100%;
   min-height: 62px;
   padding-left: 25px;
-  padding-right: 85px;
+  padding-right: calc(var(--registration-submit-width) + 25px);
   padding-top: 10px;
   padding-bottom: 10px;
-  border: 2px solid $color-basic-white;
+  border: 3px solid $color-basic-white;
   border-radius: 10px;
 
   font-family: inherit;
@@ -208,20 +212,20 @@
   }
 
   @media (min-width: $page-width-tablet) {
-    max-width: calc(#{$page-width-tablet} - (2 * #{$page-padding-tablet}) - (2 * var(--registration-form-padding)));
+    max-width: calc(#{$page-width-tablet} - (2 * #{$page-padding-tablet}) - (2 * var(--registration-form-padding)) - var(--registration-submit-width));
     min-height: 80px;
     padding-left: 34px;
-    padding-right: 100px;
-    border-radius: 20px;
+    padding-right: 34px;
+    border-width: 4px;
+    border-radius: 20px 0 0 20px;
 
     font-size: 24px;
     line-height: 24px;
   }
 
   @media (min-width: $page-width-desktop) {
-    max-width: calc(#{$page-width-desktop} - (2 * #{$page-padding-desktop}) - (2 * var(--registration-form-padding)));
+    max-width: calc(#{$page-width-desktop} - (2 * #{$page-padding-desktop}) - (2 * var(--registration-form-padding)) - var(--registration-submit-width));
     min-height: 81px;
-    padding-right: 335px;
   }
 }
 
@@ -231,17 +235,28 @@
   top: 0;
   bottom: 0;
 
-  width: 60px;
+  width: calc(var(--registration-submit-width) + 3px);
+  border-left: 3px solid $color-basic-white;
+
+  transition-property: border-color;
+  transition-duration: $transitions-duration;
 
   @media (min-width: $page-width-tablet) {
-    right: var(--registration-form-padding);
+    position: relative;
 
-    width: 80px;
+    width: var(--registration-submit-width);
+    border: none;
   }
+}
 
-  @media (min-width: $page-width-desktop) {
-    width: 324px;
-  }
+.registration__field:hover ~ .registration__submit {
+  border-left-color: $color-basic-grey;
+}
+
+.registration__field:focus ~ .registration__submit {
+  border-left-color: $color-basic-white;
+
+  transition: none;
 }
 
 .registration__submit-text {

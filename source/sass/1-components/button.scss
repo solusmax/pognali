@@ -324,6 +324,10 @@
     &--registration {
       justify-content: space-between;
       padding-left: 36px;
+
+      &::after {
+        margin-left: 10px;
+      }
     }
 
     &--upload {
