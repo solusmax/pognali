@@ -29,7 +29,8 @@
     background-color: $color-basic-blue;
   }
 
-  @media (max-height: $page-max-height-mobile) and (max-width: $page-width-mobile-last), (max-height: $page-max-height-tablet) and (min-width: $page-width-tablet) {
+  @media (max-height: $page-max-height-mobile) and (max-width: $page-width-mobile-last),
+    (max-height: $page-max-height-tablet) and (min-width: $page-width-tablet) {
     @media (min-width: $page-width-desktop) {
       padding-top: 49px;
     }

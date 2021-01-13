@@ -52,7 +52,8 @@
       background-size: 288px 574px;
     }
 
-    @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+    @media (min-resolution: 2dppx),
+      (min-resolution: 192dpi) {
       &::before {
         background-image: url("#{$img-path}/directions/background-directions-tablet@2x.png");
       }
