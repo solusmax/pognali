@@ -105,6 +105,8 @@
   height: var(--profile-photo-size);
   border-radius: 50%;
 
+  object-fit: cover;
+
   @media (min-width: $page-width-tablet) {
     border-radius: 7px;
   }
