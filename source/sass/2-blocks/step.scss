@@ -447,6 +447,8 @@
 .step__checkbox-field:disabled + .step__checkbox-label {
   color: $color-special-grey-700;
 
+  cursor: default;
+
   &::before {
     border-color: $color-special-grey-300;
 
