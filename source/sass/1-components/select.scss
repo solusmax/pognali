@@ -67,6 +67,7 @@
   list-style: none;
 
   @media (min-width: $page-width-tablet) {
+    align-self: flex-start;
     flex-shrink: 0;
     grid-auto-rows: minmax(69px, auto);
     width: var(--select-letters-width);
