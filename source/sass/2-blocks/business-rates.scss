@@ -161,8 +161,29 @@
   }
 }
 
+.business-rates__option {
+  @media (min-width: $page-width-tablet) {
+    min-width: 250px;
+    padding-right: 15px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    min-width: 280px;
+  }
+}
+
 .business-rates__price {
   margin: 0;
+
+  @media (min-width: $page-width-tablet) {
+    min-width: 230px;
+
+    text-align: right;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    min-width: 270px;
+  }
 }
 
 .business-rates__close {
