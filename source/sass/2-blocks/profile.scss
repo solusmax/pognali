@@ -105,6 +105,8 @@
   height: var(--profile-photo-size);
   border-radius: 50%;
 
+  object-fit: cover;
+
   @media (min-width: $page-width-tablet) {
     border-radius: 7px;
   }
@@ -204,9 +206,11 @@
     line-height: 20px;
     font-weight: 500;
     letter-spacing: 0.1em;
+    color: $color-basic-blue;
 
     &--transport {
       letter-spacing: 0.08em;
+      color: $color-special-blue-400;
     }
   }
 

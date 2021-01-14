@@ -83,7 +83,7 @@
 
   @media (min-width: $page-width-tablet) {
     font-size: 24px;
-    line-height: 22px;
+    line-height: 24px;
   }
 }
 
@@ -117,11 +117,14 @@
 }
 
 .companion__photo {
+  display: block;
   width: 270px;
   height: 270px;
 
   transition-property: transform;
   transition-duration: $transitions-duration;
+
+  object-fit: cover;
 
   @media (min-width: $page-width-tablet) {
     width: 285px;
@@ -199,7 +202,7 @@
   text-align: center;
 
   @media (min-width: $page-width-tablet) {
-    margin-top: 24px;
+    margin-top: 22px;
 
     font-size: 20px;
     line-height: 23px;

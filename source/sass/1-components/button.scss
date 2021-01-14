@@ -117,9 +117,11 @@
   }
 
   &--registration {
+    transition-property: background-color, color, border-color;
+    border-left: 3px solid $color-basic-white;
+
     &::after {
       position: relative;
-
       left: 2px;
     }
   }
@@ -129,7 +131,6 @@
 
     &::after {
       position: relative;
-
       left: 4px;
     }
   }
@@ -144,6 +145,7 @@
     line-height: 20px;
     font-weight: 500;
     text-align: center;
+    color: $color-basic-blue;
 
     background-color: $color-special-grey-400;
 
@@ -213,6 +215,9 @@
   }
 
   &--companions-filter {
+    line-height: 17px;
+    color: $color-basic-blue;
+
     background-color: $color-basic-white;
 
     transition-property: background-color, color, box-shadow;
@@ -231,6 +236,12 @@
 
       box-shadow: none;
     }
+  }
+
+  &--card {
+    line-height: 17px;
+    color: $color-basic-blue;
+    text-align: center;
   }
 
   @media (min-width: $page-width-tablet) {
@@ -255,6 +266,7 @@
     }
 
     &--registration {
+      border: none;
       border-radius: 0 20px 20px 0;
     }
 
@@ -273,6 +285,7 @@
       font-size: 20px;
       line-height: 20px;
       letter-spacing: 0.09em;
+      color: $color-special-blue-400;
 
       border-radius: 10px;
     }
@@ -297,6 +310,7 @@
       border-radius: 20px;
 
       font-size: 20px;
+      line-height: 20px;
       letter-spacing: normal;
 
       &::before {
@@ -324,10 +338,15 @@
     &--registration {
       justify-content: space-between;
       padding-left: 36px;
+
+      &::after {
+        margin-left: 10px;
+      }
     }
 
     &--upload {
       letter-spacing: normal;
+      color: $color-basic-blue;
 
       border-radius: 0 0 10px 10px;
     }

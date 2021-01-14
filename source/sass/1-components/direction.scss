@@ -220,18 +220,18 @@
 }
 
 .direction__photo {
+  display: block;
   width: 270px;
   height: 110px;
+
+  object-fit: cover;
 
   transition-property: transform;
   transition-duration: $transitions-duration;
 
   @media (min-width: $page-width-tablet) {
-    display: block;
     width: 186px;
     height: 100%;
-
-    object-fit: cover;
   }
 }
 

@@ -126,7 +126,8 @@ $price-counter-margin: 22px;
     background-size: var(--price-picture-size) var(--price-picture-size);
   }
 
-  @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+  @media (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
     &::before {
       background-image: url("#{$img-path}/new-profile/new-profile-price@2x.png");
     }
@@ -183,7 +184,8 @@ $price-counter-margin: 22px;
       bottom: -47px;
     }
 
-    @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+    @media (min-resolution: 2dppx),
+      (min-resolution: 192dpi) {
       &::before {
         background-image: url("#{$img-path}/new-profile/new-profile-price-desktop@2x.png");
       }
@@ -298,6 +300,7 @@ $price-counter-margin: 22px;
 }
 
 .new-profile__show-business-rates-link {
+  align-self: center;
   margin-top: 30px;
 
   line-height: 16px;

@@ -37,7 +37,8 @@
     top: $menu-height-desktop;
   }
 
-  @media (max-height: $page-max-height-mobile) and (max-width: $page-width-mobile-last), (max-height: $page-max-height-tablet) and (min-width: $page-width-tablet) {
+  @media (max-height: $page-max-height-mobile) and (max-width: $page-width-mobile-last),
+    (max-height: $page-max-height-tablet) and (min-width: $page-width-tablet) {
     top: 0;
     z-index: 50000;
   }
@@ -160,8 +161,29 @@
   }
 }
 
+.business-rates__option {
+  @media (min-width: $page-width-tablet) {
+    min-width: 250px;
+    padding-right: 15px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    min-width: 280px;
+  }
+}
+
 .business-rates__price {
   margin: 0;
+
+  @media (min-width: $page-width-tablet) {
+    min-width: 230px;
+
+    text-align: right;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    min-width: 270px;
+  }
 }
 
 .business-rates__close {
@@ -211,6 +233,10 @@
     font-size: 24px;
     line-height: 24px;
     text-transform: none;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    line-height: 26px;
   }
 }
 

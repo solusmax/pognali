@@ -444,6 +444,22 @@
   display: block;
 }
 
+.step__checkbox-field:disabled + .step__checkbox-label {
+  color: $color-special-grey-700;
+
+  cursor: default;
+
+  &::before {
+    border-color: $color-special-grey-300;
+
+    background-color: $color-basic-white;
+  }
+
+  &::after {
+    opacity: 0.1;
+  }
+}
+
 .no-js .step__checkbox-field:focus + .step__checkbox-label,
 .step__checkbox-field.focus-visible + .step__checkbox-label {
   @include outline(2px);
@@ -526,11 +542,11 @@
 
     align-self: flex-start;
     max-width: 220px;
-    margin-top: 78px;
+    margin-top: 77px;
     padding-left: 37px;
 
     font-size: 24px;
-    line-height: 22px;
+    line-height: 24px;
     text-transform: none;
 
     &::before {
@@ -575,7 +591,7 @@
   }
 
   @media (min-width: $page-width-desktop) {
-    margin-top: 84px;
+    margin-top: 83px;
 
     &--step-3 {
       margin-top: 87px;
