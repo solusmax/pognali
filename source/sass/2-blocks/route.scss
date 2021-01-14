@@ -372,6 +372,8 @@
     &--select {
       &::after {
         background-size: 19px 22px;
+
+        transform: scaleY(0.9);
       }
     }
 
@@ -390,6 +392,8 @@
         background-image: url("#{$img-path}/route/route-select-cross-tablet.svg");
         background-size: 20px 20px;
         background-position: 50% 54%;
+
+        transform: scaleX(0.9);
       }
     }
 
