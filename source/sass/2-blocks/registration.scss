@@ -179,6 +179,8 @@
 
     transition-property: color;
     transition-duration: $transitions-duration;
+
+    opacity: 1;
   }
 
   &:hover {
