@@ -34,7 +34,7 @@
 
   @media (min-width: $page-width-tablet) {
     font-size: 20px;
-    line-height: 18px;
+    line-height: 20px;
     letter-spacing: 0.1em;
   }
 
@@ -273,6 +273,12 @@
   text-transform: uppercase;
   text-align: right;
 
+  &--duration {
+    padding-right: 3px;
+
+    letter-spacing: normal;
+  }
+
   @media (min-width: $page-width-tablet) {
     padding-right: 5px;
 
@@ -282,8 +288,6 @@
 
     &--duration {
       padding-right: 0;
-
-      letter-spacing: normal;
     }
   }
 

@@ -206,9 +206,11 @@
     line-height: 20px;
     font-weight: 500;
     letter-spacing: 0.1em;
+    color: $color-basic-blue;
 
     &--transport {
       letter-spacing: 0.08em;
+      color: $color-special-blue-400;
     }
   }
 

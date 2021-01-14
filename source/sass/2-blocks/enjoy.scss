@@ -147,7 +147,6 @@
 
   font-size: 18px;
   line-height: 18px;
-  font-weight: 700;
   color: $color-special-blue-400;
   text-overflow: clip;
   white-space: nowrap;
@@ -160,6 +159,7 @@
 
     font-size: 30px;
     line-height: 30px;
+    font-weight: 700;
   }
 
   @media (min-width: $page-width-desktop) {
@@ -248,15 +248,28 @@
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
-  color: rgba($color-special-grey-900, 0.3);
+  color: $color-special-grey-900;
 
   transition-property: border-color, color;
   transition-duration: $transitions-duration;
 
   resize: none;
 
+  &::placeholder {
+    color: rgba($color-special-grey-900, 0.3);
+
+    transition-property: color;
+    transition-duration: $transitions-duration;
+
+    opacity: 1;
+  }
+
   &:hover {
     border-color: $color-special-grey-850;
+  }
+
+  &:hover::placeholder {
+    color: rgba($color-special-grey-900, 0.5);
   }
 
   &:focus {
@@ -265,6 +278,12 @@
     color: $color-special-grey-900;
 
     outline: none;
+
+    transition: none;
+  }
+
+  &:focus::placeholder {
+    color: rgba($color-special-grey-900, 0.5);
 
     transition: none;
   }
@@ -297,8 +316,7 @@
     padding-top: 22px;
     padding-bottom: 22px;
 
-    font-size: 20px;
-    line-height: 23px;
+    line-height: 20px;
   }
 }
 
@@ -324,6 +342,8 @@
 
   transition-property: color, background-color;
   transition-duration: $transitions-duration;
+
+  pointer-events: none;
 
   &:hover {
     background-color: rgba($color-special-red-200, 0.7);
