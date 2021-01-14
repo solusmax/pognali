@@ -240,16 +240,11 @@
   bottom: 0;
 
   width: calc(var(--registration-submit-width) + 3px);
-  border-left: 3px solid $color-basic-white;
-
-  transition-property: border-color;
-  transition-duration: $transitions-duration;
 
   @media (min-width: $page-width-tablet) {
     position: relative;
 
     width: var(--registration-submit-width);
-    border: none;
   }
 }
 
@@ -259,8 +254,6 @@
 
 .registration__field:focus ~ .registration__submit {
   border-left-color: $color-basic-white;
-
-  transition: none;
 }
 
 .registration__submit-text {

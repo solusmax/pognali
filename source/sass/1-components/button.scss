@@ -117,6 +117,9 @@
   }
 
   &--registration {
+    transition-property: background-color, color, border-color;
+    border-left: 3px solid $color-basic-white;
+
     &::after {
       position: relative;
       left: 2px;
@@ -263,6 +266,7 @@
     }
 
     &--registration {
+      border: none;
       border-radius: 0 20px 20px 0;
     }
 
