@@ -22,7 +22,7 @@ const webp             = require('gulp-webp');
 
 let production = false;
 
-// Функция включения режима продакшена
+// Включение режима продакшена
 
 const productionOn = done => {
   production = true;
