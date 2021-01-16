@@ -1,4 +1,7 @@
 .logo {
+  --logo-width: 100px;
+  --logo-height: 19px;
+
   display: flex;
   align-items: center;
 
@@ -9,13 +12,13 @@
     content: "";
 
     display: none;
-    width: 96px;
-    height: 15px;
+    width: var(--logo-width);
+    height: var(--logo-height);
 
     background-image: url("#{$img-path}/logo/file-logo-blue.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 96px 15px;
+    background-size: var(--logo-width) var(--logo-height);
   }
 
   &:any-link:hover {
@@ -44,12 +47,11 @@
   }
 
   @media (min-width: $page-width-tablet) {
-    &::before {
-      width: 162px;
-      height: 42px;
+    --logo-width: 166px;
+    --logo-height: 42px;
 
+    &::before {
       background-image: url("#{$img-path}/logo/file-logo-blue-tablet.png");
-      background-size: 162px 42px;
     }
 
     @media (min-resolution: 2dppx),
@@ -61,12 +63,11 @@
   }
 
   @media (min-width: $page-width-desktop) {
-    &::before {
-      width: 196px;
-      height: 52px;
+    --logo-width: 200px;
+    --logo-height: 52px;
 
+    &::before {
       background-image: url("#{$img-path}/logo/file-logo-blue-desktop.png");
-      background-size: 196px 52px;
     }
 
     &--open::before {
@@ -107,8 +108,8 @@
 
 .logo__picture {
   display: block;
-  width: 96px;
-  height: 15px;
+  width: var(--logo-width);
+  height: var(--logo-height);
 
   &--open {
     display: none;
@@ -118,15 +119,7 @@
     display: none;
   }
 
-  @media (min-width: $page-width-tablet) {
-    width: 162px;
-    height: 42px;
-  }
-
   @media (min-width: $page-width-desktop) {
-    width: 196px;
-    height: 52px;
-
     &--open {
       display: block;
     }
