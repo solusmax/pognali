@@ -21,19 +21,6 @@
     padding-bottom: 54px;
 
     border-radius: 30px;
-
-    &--step-1 {
-      padding-bottom: 56px;
-    }
-
-    &--step-2 {
-      padding-left: 43px;
-      padding-right: $page-padding-tablet;
-    }
-
-    &--step-3 {
-      padding-bottom: 53px;
-    }
   }
 
   @media (min-width: $page-width-desktop) {
@@ -43,15 +30,6 @@
     padding-top: 98px;
     padding-bottom: 106px;
     border-radius: 60px;
-
-    &--step-2 {
-      padding-top: 95px;
-      padding-bottom: 104px;
-    }
-
-    &--step-3 {
-      padding-bottom: 103px;
-    }
   }
 }
 
@@ -77,19 +55,11 @@
   @media (min-width: $page-width-tablet) {
     font-size: 36px;
     line-height: 36px;
-
-    &--step-3 {
-      padding-left: 3px;
-    }
   }
 
   @media (min-width: $page-width-desktop) {
     grid-column: 1 / 2;
     padding-right: 145px;
-
-    &--step-3 {
-      padding-left: 0;
-    }
   }
 }
 
@@ -174,25 +144,12 @@
 
     font-size: 20px;
     line-height: 24px;
-
-    &--step-3 {
-      margin-top: 34px;
-      padding-left: 3px;
-    }
   }
 
   @media (min-width: $page-width-desktop) {
     grid-column: 1 / 2;
     margin-top: 34px;
     padding-right: 145px;
-
-    &--step-2 {
-      margin-top: 36px;
-    }
-
-    &--step-3 {
-      padding-left: 0;
-    }
   }
 }
 
@@ -225,7 +182,6 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
-      margin-top: 63px;
     }
   }
 
@@ -348,6 +304,7 @@
   display: inline-flex;
   align-items: center;
   min-height: var(--step-checkbox-size);
+  width: 100%;
   padding-left: calc(var(--step-checkbox-size) + 13px);
 
   font-size: 15px;
@@ -420,6 +377,7 @@
   @media (min-width: $page-width-tablet) {
     --step-checkbox-size: 36px;
 
+    width: auto;
     padding-left: calc(var(--step-checkbox-size) + 22px);
 
     font-size: 20px;
@@ -488,28 +446,14 @@
   min-height: 40px;
   margin-top: 22px;
 
-  &--step-2 {
-    margin-top: 25px;
-  }
-
   @media (min-width: $page-width-tablet) {
-    width: 284px;
+    width: 286px;
     min-height: 80px;
     margin-top: 47px;
-
-    &--step-2 {
-      width: 286px;
-      margin-top: 49px;
-    }
   }
 
   @media (min-width: $page-width-desktop) {
-    width: 286px;
     margin-top: 57px;
-
-    &--step-2 {
-      min-height: 81px;
-    }
   }
 }
 
@@ -584,18 +528,10 @@
         transition: none;
       }
     }
-
-    &--step-3 {
-      margin-top: 75px;
-    }
   }
 
   @media (min-width: $page-width-desktop) {
     margin-top: 83px;
-
-    &--step-3 {
-      margin-top: 87px;
-    }
   }
 }
 

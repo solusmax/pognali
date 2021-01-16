@@ -9,6 +9,10 @@
     <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="apple-touch-icon" href="favicon-apple.png">
+    <link rel="manifest" href="favicon.webmanifest">
   </head>
   <body class="page__body">
     <div style="display: none;">
@@ -39,7 +43,7 @@
         <nav class="header__site-nav site-nav">
           <ul class="site-nav__list">
             <li class="site-nav__item">
-              <a class="site-nav__link" href="404.html">
+              <a class="site-nav__link" href="about.html">
                 <span class="site-nav__text" data-hover="О сервисе">О сервисе</span>
               </a>
             </li>
@@ -59,7 +63,7 @@
         </nav>
 
         <div class="header__user-nav user-nav">
-          <a class="user-nav__link button button--user-nav" href="404.html">Авторизация</a>
+          <a class="user-nav__link button button--user-nav" href="registration.html">Авторизация</a>
         </div>
 
         <div class="header__contacts-wrapper">
@@ -143,7 +147,7 @@
             </ul>
 
             <div class="promo__user-nav user-nav">
-              <a class="user-nav__link user-nav__link--promo button button--promo" href="404.html">Авторизация</a>
+              <a class="user-nav__link user-nav__link--promo button button--promo" href="registration.html">Авторизация</a>
             </div>
           </div>
 
@@ -180,7 +184,7 @@
 
           <p class="about__tagline">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
 
-          <a class="about__details button button--rectangle button--about" href="404.html">Подробнее</a>
+          <a class="about__details button button--rectangle button--about" href="about.html">Подробнее</a>
         </div>
       </section>
 
@@ -194,7 +198,7 @@
 
           <ul class="directions__list">
             <li class="directions__direction direction">
-              <a class="direction__inner-link" href="/asia/thailand">
+              <a class="direction__inner-link" href="asia-thailand.html">
                 <div class="direction__inner">
                   <div class="direction__info-wrapper">
                     <h3 class="direction__title">Таиланд</h3>
@@ -205,22 +209,16 @@
                   </div>
 
                   <div class="direction__flag-wrapper tooltip" data-tooltip="Таиланд">
-                    <picture>
-                      <source srcset="img/flags/file-flag-thailand-tablet.webp 1x, img/flags/file-flag-thailand-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
-                      <source srcset="img/flags/file-flag-thailand-tablet.png 1x, img/flags/file-flag-thailand-tablet@2x.png 2x" media="(min-width: 768px)">
-
-                      <source srcset="img/flags/file-flag-thailand.webp 1x, img/flags/file-flag-thailand@2x.webp 2x" type="image/webp">
-                      <img class="direction__flag" src="img/flags/file-flag-thailand.png" srcset="img/flags/file-flag-thailand@2x.png 2x" alt="Флаг Таиланда.">
-                    </picture>
+                    <img class="direction__flag" src="img/flags/flag-thailand.svg" width="35" height="24" alt="Флаг Таиланда.">
                   </div>
 
                   <div class="direction__photo-wrapper">
                     <picture>
                       <source srcset="img/directions/file-direction-thailand-tablet.webp 1x, img/directions/file-direction-thailand-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
-                      <source srcset="img/directions/file-direction-thailand-tablet.png 1x, img/directions/file-direction-thailand-tablet@2x.png 2x" media="(min-width: 768px)">
+                      <source srcset="img/directions/file-direction-thailand-tablet.jpg 1x, img/directions/file-direction-thailand-tablet@2x.jpg 2x" media="(min-width: 768px)">
 
                       <source srcset="img/directions/file-direction-thailand.webp 1x, img/directions/file-direction-thailand@2x.webp 2x" type="image/webp">
-                      <img class="direction__photo" src="img/directions/file-direction-thailand.png" srcset="img/directions/file-direction-thailand@2x.png 2x" alt="Фотография голубой лагуны Таиланда.">
+                      <img class="direction__photo" src="img/directions/file-direction-thailand.jpg" srcset="img/directions/file-direction-thailand@2x.jpg 2x" alt="Фотография голубой лагуны Таиланда.">
                     </picture>
                   </div>
                 </div>
@@ -228,7 +226,7 @@
             </li>
 
             <li class="directions__direction direction">
-              <a class="direction__inner-link" href="/europe/france">
+              <a class="direction__inner-link" href="europe-france.html">
                 <div class="direction__inner">
                   <div class="direction__info-wrapper">
                     <h3 class="direction__title">Франция</h3>
@@ -239,22 +237,16 @@
                   </div>
 
                   <div class="direction__flag-wrapper tooltip" data-tooltip="Франция">
-                    <picture>
-                      <source srcset="img/flags/file-flag-france-tablet.webp 1x, img/flags/file-flag-france-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
-                      <source srcset="img/flags/file-flag-france-tablet.png 1x, img/flags/file-flag-france-tablet@2x.png 2x" media="(min-width: 768px)">
-
-                      <source srcset="img/flags/file-flag-france.webp 1x, img/flags/file-flag-france@2x.webp 2x" type="image/webp">
-                      <img class="direction__flag" src="img/flags/file-flag-france.png" srcset="img/flags/file-flag-france@2x.png 2x" alt="Флаг Франции.">
-                    </picture>
+                    <img class="direction__flag" src="img/flags/flag-france.svg" width="35" height="24" alt="Флаг Франции.">
                   </div>
 
                   <div class="direction__photo-wrapper">
                     <picture>
                       <source srcset="img/directions/file-direction-france-tablet.webp 1x, img/directions/file-direction-france-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
-                      <source srcset="img/directions/file-direction-france-tablet.png 1x, img/directions/file-direction-france-tablet@2x.png 2x" media="(min-width: 768px)">
+                      <source srcset="img/directions/file-direction-france-tablet.jpg 1x, img/directions/file-direction-france-tablet@2x.jpg 2x" media="(min-width: 768px)">
 
                       <source srcset="img/directions/file-direction-france.webp 1x, img/directions/file-direction-france@2x.webp 2x" type="image/webp">
-                      <img class="direction__photo" src="img/directions/file-direction-france.png" srcset="img/directions/file-direction-france@2x.png 2x" alt="Фотография парижского бульвара.">
+                      <img class="direction__photo" src="img/directions/file-direction-france.jpg" srcset="img/directions/file-direction-france@2x.jpg 2x" alt="Фотография парижского бульвара.">
                     </picture>
                   </div>
                 </div>
@@ -262,7 +254,7 @@
             </li>
 
             <li class="directions__direction direction">
-              <a class="direction__inner-link" href="/europe/czechia">
+              <a class="direction__inner-link" href="europe-czechia.html">
                 <div class="direction__inner">
                   <div class="direction__info-wrapper">
                     <h3 class="direction__title">Чехия</h3>
@@ -273,22 +265,16 @@
                   </div>
 
                   <div class="direction__flag-wrapper tooltip" data-tooltip="Чехия">
-                    <picture>
-                      <source srcset="img/flags/file-flag-czechia-tablet.webp 1x, img/flags/file-flag-czechia-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
-                      <source srcset="img/flags/file-flag-czechia-tablet.png 1x, img/flags/file-flag-czechia-tablet@2x.png 2x" media="(min-width: 768px)">
-
-                      <source srcset="img/flags/file-flag-czechia.webp 1x, img/flags/file-flag-czechia@2x.webp 2x" type="image/webp">
-                      <img class="direction__flag" src="img/flags/file-flag-czechia.png" srcset="img/flags/file-flag-czechia@2x.png 2x" alt="Флаг Чехии.">
-                    </picture>
+                    <img class="direction__flag" src="img/flags/flag-czechia.svg" width="35" height="24" alt="Флаг Чехии.">
                   </div>
 
                   <div class="direction__photo-wrapper">
                     <picture>
                       <source srcset="img/directions/file-direction-czechia-tablet.webp 1x, img/directions/file-direction-czechia-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
-                      <source srcset="img/directions/file-direction-czechia-tablet.png 1x, img/directions/file-direction-czechia-tablet@2x.png 2x" media="(min-width: 768px)">
+                      <source srcset="img/directions/file-direction-czechia-tablet.jpg 1x, img/directions/file-direction-czechia-tablet@2x.jpg 2x" media="(min-width: 768px)">
 
                       <source srcset="img/directions/file-direction-czechia.webp 1x, img/directions/file-direction-czechia@2x.webp 2x" type="image/webp">
-                      <img class="direction__photo" src="img/directions/file-direction-czechia.png" srcset="img/directions/file-direction-czechia@2x.png 2x" alt="Фотография с прогулки по реке Влатва в Праге.">
+                      <img class="direction__photo" src="img/directions/file-direction-czechia.jpg" srcset="img/directions/file-direction-czechia@2x.jpg 2x" alt="Фотография с прогулки по реке Влатва в Праге.">
                     </picture>
                   </div>
                 </div>
@@ -316,7 +302,7 @@
             <li class="companions__companion companion">
               <div class="companion__info-wrapper">
                 <div class="companion__name-wrapper">
-                  <a class="companion__name-link" href="404.html">
+                  <a class="companion__name-link" href="tanya-firsova.html">
                     <h3 class="companion__name">Таня Фирсова</h3>
                   </a>
 
@@ -392,24 +378,15 @@
               <div class="companion__countries-wrapper">
                 <ul class="companion__countries">
                   <li class="companion__country tooltip" data-tooltip="Шри&#8209;Ланка">
-                    <picture>
-                      <source srcset="img/flags/file-flag-sri-lanka.webp 1x, img/flags/file-flag-sri-lanka@2x.webp 2x" type="image/webp">
-                      <img class="companion__flag" src="img/flags/file-flag-sri-lanka.png" srcset="img/flags/file-flag-sri-lanka@2x.png 2x" alt="Флаг Шри-Ланки.">
-                    </picture>
+                    <img class="companion__flag" src="img/flags/flag-sri-lanka.svg" width="35" height="24" alt="Флаг Шри-Ланки.">
                   </li>
 
                   <li class="companion__country tooltip" data-tooltip="Таиланд">
-                    <picture>
-                      <source srcset="img/flags/file-flag-thailand.webp 1x, img/flags/file-flag-thailand@2x.webp 2x" type="image/webp">
-                      <img class="companion__flag" src="img/flags/file-flag-thailand.png" srcset="img/flags/file-flag-thailand@2x.png 2x" alt="Флаг Таиланда.">
-                    </picture>
+                    <img class="companion__flag" src="img/flags/flag-thailand.svg" width="35" height="24" alt="Флаг Таиланда.">
                   </li>
 
                   <li class="companion__country tooltip" data-tooltip="Республика Сейшелы">
-                    <picture>
-                      <source srcset="img/flags/file-flag-seychelles.webp 1x, img/flags/file-flag-seychelles@2x.webp 2x" type="image/webp">
-                      <img class="companion__flag" src="img/flags/file-flag-seychelles.png" srcset="img/flags/file-flag-seychelles@2x.png 2x" alt="Флаг Республики Сейшелы.">
-                    </picture>
+                    <img class="companion__flag" src="img/flags/flag-seychelles.svg" width="35" height="24" alt="Флаг Республики Сейшелы.">
                   </li>
                 </ul>
               </div>
@@ -418,7 +395,7 @@
             <li class="companions__companion companion">
               <div class="companion__info-wrapper">
                 <div class="companion__name-wrapper">
-                  <a class="companion__name-link" href="404.html">
+                  <a class="companion__name-link" href="petya-demin.html">
                     <h3 class="companion__name">Петя Демин</h3>
                   </a>
 
@@ -493,17 +470,11 @@
               <div class="companion__countries-wrapper">
                 <ul class="companion__countries">
                   <li class="companion__country tooltip" data-tooltip="Бельгия">
-                    <picture>
-                      <source srcset="img/flags/file-flag-belgium.webp 1x, img/flags/file-flag-belgium@2x.webp 2x" type="image/webp">
-                      <img class="companion__flag" src="img/flags/file-flag-belgium.png" srcset="img/flags/file-flag-belgium@2x.png 2x" alt="Флаг Бельгии.">
-                    </picture>
+                    <img class="companion__flag" src="img/flags/flag-belgium.svg" width="35" height="24" alt="Флаг Бельгии.">
                   </li>
 
                   <li class="companion__country tooltip" data-tooltip="Чехия">
-                    <picture>
-                      <source srcset="img/flags/file-flag-czechia.webp 1x, img/flags/file-flag-czechia@2x.webp 2x" type="image/webp">
-                      <img class="companion__flag" src="img/flags/file-flag-czechia.png" srcset="img/flags/file-flag-czechia@2x.png 2x" alt="Флаг Чехии.">
-                    </picture>
+                    <img class="companion__flag" src="img/flags/flag-czechia.svg" width="35" height="24" alt="Флаг Чехии.">
                   </li>
                 </ul>
               </div>
@@ -518,7 +489,7 @@
 
       <section class="new-profile underlay underlay--blue">
         <div class="new-profile__inner">
-          <a class="new-profile__title-link" href="404.html">
+          <a class="new-profile__title-link" href="registration.html">
             <h2 class="new-profile__title">Добавьте свой профиль</h2>
           </a>
 
@@ -539,7 +510,7 @@
             </li>
           </ol>
 
-          <a class="new-profile__show-business-rates-link" href="404.html">
+          <a class="new-profile__show-business-rates-link" href="business-rates.html">
             <p class="new-profile__show-business-rates">Показать тарифы для бизнеса</p>
           </a>
         </div>
@@ -551,7 +522,7 @@
 
           <p class="registration__tagline">Заинтересовались?</p>
 
-          <p class="registration__text">Зарегистрируйтесь, это&nbsp;быстро&nbsp;и&nbsp;бесплатно! Уже&nbsp;зарегистрированы? Тогда скорее <a class="registration__link" href="404.html">авторизуйтесь</a>.</p>
+          <p class="registration__text">Зарегистрируйтесь, это&nbsp;быстро&nbsp;и&nbsp;бесплатно! Уже&nbsp;зарегистрированы? Тогда скорее <a class="registration__link" href="registration.html">авторизуйтесь</a>.</p>
 
           <form class="registration__form" action="https://echo.htmlacademy.ru" method="POST">
             <label class="visually-hidden" for="registration-email">E-mail:</label>

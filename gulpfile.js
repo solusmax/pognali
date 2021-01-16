@@ -3,6 +3,7 @@ const autoprefixer     = require('autoprefixer');
 const concat           = require('gulp-concat');
 const cssnano          = require('cssnano');
 const del              = require('del');
+const ghPages          = require('gh-pages');
 const gulpIf           = require('gulp-if');
 const htmlmin          = require('gulp-htmlmin');
 const imagemin         = require('gulp-imagemin');
@@ -43,6 +44,12 @@ const reload = done => {
   sync.reload();
   done();
 };
+
+// Публикация на GitHub Pages
+
+const githubPages = done => {
+  ghPages.publish('./build/', done);
+}
 
 // HTML
 
@@ -152,6 +159,13 @@ const buildFonts = () => {
     .pipe(dest('./build/fonts'));
 };
 
+// Фавиконка
+
+const buildFavicon = () => {
+  return src('./source/favicon/**/*')
+    .pipe(dest('./build'));
+};
+
 // Сервер
 
 const startServer = () => {
@@ -175,13 +189,16 @@ const startServer = () => {
   watch('./source/img/**/*.{jpg,jpeg,png}', series(buildImg, buildWebp, reload));
   watch(['./source/img/**/*.svg', '!./source/img/**/icon-*.svg'], series(buildImg, reload));
   watch('./source/fonts/**/*.{woff2,woff}', series(buildFonts, reload));
+  watch('./source/favicon/**/*', series(buildFavicon, reload));
 };
 
 // Задачи
 
-const build = series(cleanBuild, parallel(series(buildSvgSprite, buildHtml), buildCss, buildJs, buildImg, buildWebp, buildFonts));
+const build = series(cleanBuild, parallel(series(buildSvgSprite, buildHtml), buildCss, buildJs, buildImg, buildWebp, buildFonts, buildFavicon));
 const buildProd = series(productionOn, build);
 const dev = series(build, startServer);
+const deploy = series(buildProd, githubPages);
 
 exports.default = dev;
 exports.build = buildProd;
+exports.deploy = deploy;

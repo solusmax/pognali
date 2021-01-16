@@ -9,6 +9,10 @@
     <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="apple-touch-icon" href="favicon-apple.png">
+    <link rel="manifest" href="favicon.webmanifest">
   </head>
   <body class="page__body">
     <div style="display: none;">
@@ -39,7 +43,7 @@
         <nav class="header__site-nav site-nav">
           <ul class="site-nav__list">
             <li class="site-nav__item">
-              <a class="site-nav__link" href="404.html">
+              <a class="site-nav__link" href="about.html">
                 <span class="site-nav__text" data-hover="О сервисе">О сервисе</span>
               </a>
             </li>
@@ -59,7 +63,7 @@
         </nav>
 
         <div class="header__user-nav user-nav">
-          <a class="user-nav__link button button--user-nav" href="404.html">Авторизация</a>
+          <a class="user-nav__link button button--user-nav" href="registration.html">Авторизация</a>
         </div>
 
         <div class="header__contacts-wrapper">
@@ -136,10 +140,10 @@
             <div class="profile__photo-wrapper">
               <picture>
                 <source srcset="img/profile/file-profile-userpic-petya-demin-desktop.webp 1x, img/profile/file-profile-userpic-petya-demin-desktop@2x.webp 2x" media="(min-width: 1440px)" type="image/webp">
-                <source srcset="img/profile/file-profile-userpic-petya-demin-desktop.png 1x, img/profile/file-profile-userpic-petya-demin-desktop@2x.png 2x" media="(min-width: 1440px)">
+                <source srcset="img/profile/file-profile-userpic-petya-demin-desktop.jpg 1x, img/profile/file-profile-userpic-petya-demin-desktop@2x.jpg 2x" media="(min-width: 1440px)">
 
                 <source srcset="img/profile/file-profile-userpic-petya-demin-tablet.webp 1x, img/profile/file-profile-userpic-petya-demin-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
-                <source srcset="img/profile/file-profile-userpic-petya-demin-tablet.png 1x, img/profile/file-profile-userpic-petya-demin-tablet@2x.png 2x" media="(min-width: 768px)">
+                <source srcset="img/profile/file-profile-userpic-petya-demin-tablet.jpg 1x, img/profile/file-profile-userpic-petya-demin-tablet@2x.jpg 2x" media="(min-width: 768px)">
 
                 <source srcset="img/profile/file-profile-userpic-petya-demin.webp 1x, img/profile/file-profile-userpic-petya-demin@2x.webp 2x" type="image/webp">
                 <img class="profile__photo" src="img/profile/file-profile-userpic-petya-demin.jpg" srcset="img/profile/file-profile-userpic-petya-demin@2x.jpg 2x" alt="Фотография Пети Демина.">
@@ -220,7 +224,7 @@
                 <div class="plans__details">
                   <p class="plans__companions-counter">3 попутчика</p>
                   <p class="plans__period">26 мар — 29 мар</p>
-                  <a class="plans__change" href="404.html">Изменить</a>
+                  <a class="plans__change" href="change-plan.html">Изменить</a>
                 </div>
               </li>
 
@@ -229,7 +233,7 @@
                 <div class="plans__details">
                   <p class="plans__companions-counter">1 попутчик</p>
                   <p class="plans__period">1 июл — 15 июл</p>
-                  <a class="plans__change" href="404.html">Изменить</a>
+                  <a class="plans__change" href="change-plan.html">Изменить</a>
                 </div>
               </li>
             </ol>
@@ -442,13 +446,7 @@
                       </button>
                       <div class="route__flag-wrapper">
                         <div class="route__flag-tooltip tooltip" data-tooltip="Босния и Герцеговина">
-                          <picture>
-                            <source srcset="img/flags/file-flag-bosnia-and-herzegovina-tablet.webp 1x, img/flags/file-flag-bosnia-and-herzegovina-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
-                            <source srcset="img/flags/file-flag-bosnia-and-herzegovina-tablet.png 1x, img/flags/file-flag-bosnia-and-herzegovina-tablet@2x.png 2x" media="(min-width: 768px)">
-
-                            <source srcset="img/flags/file-flag-bosnia-and-herzegovina.webp 1x, img/flags/file-flag-bosnia-and-herzegovina@2x.webp 2x" type="image/webp">
-                            <img class="route__flag" src="img/flags/file-flag-bosnia-and-herzegovina.png" srcset="img/flags/file-flag-bosnia-and-herzegovina@2x.png 2x" alt="Флаг Боснии и Герцеговины.">
-                          </picture>
+                          <img class="route__flag" src="img/flags/flag-bosnia-and-herzegovina.svg" width="35" height="24" alt="Флаг Боснии и Герцеговины.">
                         </div>
                       </div>
                       <button class="route__remove" id="route-1-remove" type="button">
@@ -465,13 +463,7 @@
                       </button>
                       <div class="route__flag-wrapper">
                         <div class="route__flag-tooltip tooltip" data-tooltip="Чехия">
-                          <picture>
-                            <source srcset="img/flags/file-flag-czechia-tablet.webp 1x, img/flags/file-flag-czechia-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
-                            <source srcset="img/flags/file-flag-czechia-tablet.png 1x, img/flags/file-flag-czechia-tablet@2x.png 2x" media="(min-width: 768px)">
-
-                            <source srcset="img/flags/file-flag-czechia.webp 1x, img/flags/file-flag-czechia@2x.webp 2x" type="image/webp">
-                            <img class="route__flag" src="img/flags/file-flag-czechia.png" srcset="img/flags/file-flag-czechia@2x.png 2x" alt="Флаг Чехии.">
-                          </picture>
+                          <img class="route__flag" src="img/flags/flag-czechia.svg" width="35" height="24" alt="Флаг Чехии.">
                         </div>
                       </div>
                       <button class="route__remove" id="route-2-remove" type="button">
@@ -1199,13 +1191,7 @@
                       <label class="enjoy__label" for="enjoy-1">Босния и Герцеговина</label>
                       <div class="enjoy__flag-wrapper">
                         <div class="enjoy__flag-tooltip tooltip" data-tooltip="Босния и Герцеговина">
-                          <picture>
-                            <source srcset="img/flags/file-flag-bosnia-and-herzegovina-tablet.webp 1x, img/flags/file-flag-bosnia-and-herzegovina-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
-                            <source srcset="img/flags/file-flag-bosnia-and-herzegovina-tablet.png 1x, img/flags/file-flag-bosnia-and-herzegovina-tablet@2x.png 2x" media="(min-width: 768px)">
-
-                            <source srcset="img/flags/file-flag-bosnia-and-herzegovina.webp 1x, img/flags/file-flag-bosnia-and-herzegovina@2x.webp 2x" type="image/webp">
-                            <img class="enjoy__flag" src="img/flags/file-flag-bosnia-and-herzegovina.png" srcset="img/flags/file-flag-bosnia-and-herzegovina@2x.png 2x" alt="Флаг Боснии и Герцеговины.">
-                          </picture>
+                          <img class="enjoy__flag" src="img/flags/flag-bosnia-and-herzegovina.svg" width="35" height="24" alt="Флаг Боснии и Герцеговины.">
                         </div>
                       </div>
                     </div>
@@ -1220,13 +1206,7 @@
                       <label class="enjoy__label" for="enjoy-2">Чехия</label>
                       <div class="enjoy__flag-wrapper">
                         <div class="enjoy__flag-tooltip tooltip" data-tooltip="Чехия">
-                          <picture>
-                            <source srcset="img/flags/file-flag-czechia-tablet.webp 1x, img/flags/file-flag-czechia-tablet@2x.webp 2x" media="(min-width: 768px)" type="image/webp">
-                            <source srcset="img/flags/file-flag-czechia-tablet.png 1x, img/flags/file-flag-czechia-tablet@2x.png 2x" media="(min-width: 768px)">
-
-                            <source srcset="img/flags/file-flag-czechia.webp 1x, img/flags/file-flag-czechia@2x.webp 2x" type="image/webp">
-                            <img class="enjoy__flag" src="img/flags/file-flag-czechia.png" srcset="img/flags/file-flag-czechia@2x.png 2x" alt="Флаг Чехии.">
-                          </picture>
+                          <img class="enjoy__flag" src="img/flags/flag-czechia.svg" width="35" height="24" alt="Флаг Чехии.">
                         </div>
                       </div>
                     </div>

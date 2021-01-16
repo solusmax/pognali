@@ -238,7 +238,7 @@
     margin-top: -7px;
 
     &--open {
-      display: none;
+      padding-right: 64px;
     }
   }
 }
@@ -578,14 +578,6 @@
   @media (min-width: $page-width-desktop) {
     display: flex;
     padding-right: 30px;
-
-    &:nth-child(n + 16):not(:nth-child(n + 21)) {
-      margin-top: 41px;
-    }
-
-    &:nth-child(n + 21):not(:nth-child(n + 26)) {
-      margin-top: -3px;
-    }
   }
 }
 
@@ -619,12 +611,6 @@
 
   @media (min-width: $page-width-desktop) {
     margin-top: 31px;
-  }
-}
-
-.countries-filter__countries-wrapper:nth-child(n + 21) .countries-filter__countries {
-  @media (min-width: $page-width-desktop) {
-    margin-top: 38px;
   }
 }
 

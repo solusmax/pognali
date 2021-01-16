@@ -130,13 +130,19 @@
 
     transition-property: opacity;
     transition-duration: $transitions-duration;
+
+    opacity: 0.3;
   }
 
-  &:hover::before {
+  &:any-link::before {
+    opacity: 1;
+  }
+
+  &:any-link:hover::before {
     opacity: 0.6;
   }
 
-  &:active::before {
+  &:any-link:active::before {
     opacity: 0.3;
 
     transition: none;
