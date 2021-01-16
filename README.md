@@ -1,6 +1,6 @@
 # Личный проект «Погнали»
 
-* Студент: [Максим Солус](https://up.htmlacademy.ru/adaptive/21/user/1483111).
+* Студент: [Максим Солус](https://htmlacademy.ru/profile/solusmax).
 * Наставник: [Натали Белоева](https://htmlacademy.ru/profile/id1123699).
 
 ---
