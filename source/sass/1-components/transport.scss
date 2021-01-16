@@ -56,16 +56,6 @@
   &--profile {
     width: 32px;
     height: 32px;
-
-    &:hover {
-      box-shadow: 0 2px 6px 0 rgba($color-basic-blue, 0.17);
-    }
-
-    &:active {
-      box-shadow: none;
-
-      background-color: $color-special-grey-325;
-    }
   }
 
   &--companions-filter {
@@ -78,16 +68,6 @@
 
     &:only-child {
       margin-right: 0;
-    }
-
-    &:hover {
-      box-shadow: 0 2px 6px 0 rgba($color-basic-blue, 0.17);
-    }
-
-    &:active {
-      box-shadow: none;
-
-      background-color: $color-special-yellow-600;
     }
   }
 
@@ -216,6 +196,35 @@
   &[for] {
     cursor: pointer;
   }
+}
+
+.transport__item-wrapper--profile:hover .transport__item--profile,
+.transport__item-wrapper--companions-filter:hover .transport__item--companions-filter {
+  box-shadow: 0 2px 6px 0 rgba($color-basic-blue, 0.17);
+}
+
+.transport__item-wrapper--profile:active .transport__item--profile {
+  box-shadow: none;
+
+  background-color: $color-special-grey-325;
+}
+
+.transport__item-wrapper--companions-filter:active .transport__item--companions-filter {
+  box-shadow: none;
+
+  background-color: $color-special-yellow-600;
+}
+
+.transport__field:disabled + .transport__item {
+  background-color: $color-special-grey-325;
+
+  box-shadow: none;
+
+  cursor: default;
+}
+
+.transport__field:disabled + .transport__item--companions-filter {
+  background-color: rgba($color-special-yellow-600, 0.9);
 }
 
 .no-js .transport__field:focus + .transport__item,
@@ -445,6 +454,16 @@
   opacity: 0.3;
 }
 
+.transport__field:disabled + .transport__item--profile .transport__icon {
+  color: $color-special-grey-700;
+  opacity: 1;
+}
+
+.transport__field:disabled:checked + .transport__item--profile .transport__icon {
+  color: $color-special-blue-400;
+  opacity: 0.7;
+}
+
 // ---
 
 // --companions-filter ↓↓↓
@@ -473,6 +492,16 @@
   color: $color-special-blue-400;
 
   opacity: 0.3;
+}
+
+.transport__field:disabled + .transport__item--companions-filter .transport__icon {
+  color: $color-special-grey-800;
+  opacity: 0.3;
+}
+
+.transport__field:disabled:checked + .transport__item--companions-filter .transport__icon {
+  color: $color-special-blue-400;
+  opacity: 0.75;
 }
 
 // ---
