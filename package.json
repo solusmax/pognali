@@ -9,6 +9,7 @@
     "cssnano": "^4.1.10",
     "del": "^6.0.0",
     "focus-visible": "^5.2.0",
+    "gh-pages": "^3.1.0",
     "gulp": "4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^5.0.1",

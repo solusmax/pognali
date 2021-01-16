@@ -3,6 +3,7 @@ const autoprefixer     = require('autoprefixer');
 const concat           = require('gulp-concat');
 const cssnano          = require('cssnano');
 const del              = require('del');
+const ghPages          = require('gh-pages');
 const gulpIf           = require('gulp-if');
 const htmlmin          = require('gulp-htmlmin');
 const imagemin         = require('gulp-imagemin');
@@ -43,6 +44,12 @@ const reload = done => {
   sync.reload();
   done();
 };
+
+// Публикация на GitHub Pages
+
+const githubPages = done => {
+  ghPages.publish('./build/', done);
+}
 
 // HTML
 
@@ -190,6 +197,8 @@ const startServer = () => {
 const build = series(cleanBuild, parallel(series(buildSvgSprite, buildHtml), buildCss, buildJs, buildImg, buildWebp, buildFonts, buildFavicon));
 const buildProd = series(productionOn, build);
 const dev = series(build, startServer);
+const deploy = series(buildProd, githubPages);
 
 exports.default = dev;
 exports.build = buildProd;
+exports.deploy = deploy;
