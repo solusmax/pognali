@@ -18,7 +18,7 @@
   }
 
   @media (min-width: $page-width-tablet) {
-    max-height: 132px;
+    max-height: $menu-height-tablet;
 
     &--open {
       max-height: 100%;
@@ -29,7 +29,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    max-height: 102px;
+    max-height: $menu-height-desktop + 12px;
 
     background-color: $color-basic-blue;
 
@@ -81,7 +81,7 @@
   min-height: $menu-height-mobile;
   padding-left: $page-padding-mobile;
   padding-right: $page-padding-mobile;
-  padding-top: 19px;
+  padding-top: 28px;
 
   background-color: $color-basic-blue;
 
