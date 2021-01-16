@@ -290,6 +290,7 @@
   position: relative;
 
   display: flex;
+  width: 100%;
   padding-left: 27px;
 
   font-size: 15px;
@@ -371,6 +372,7 @@
     --companions-filter-checkbox-size: 24px;
 
     align-items: center;
+    width: auto;
     min-height: var(--companions-filter-checkbox-size);
     padding-left: 36px;
     padding-right: 5px;
