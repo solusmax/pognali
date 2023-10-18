@@ -38,13 +38,15 @@ if (document.querySelector('.level')) {
       if (levelNumber >= 90 && levelNumber <= 99) {
         levelBar.setAttribute(
           'stroke-dashoffset',
-          levelBarLength * ((90 + (levelNumber - 90) / 1.5) / 100) -
-            levelBarLength,
+          Math.abs(
+            levelBarLength * ((90 + (levelNumber - 90) / 1.5) / 100) -
+              levelBarLength,
+          ),
         );
       } else {
         levelBar.setAttribute(
           'stroke-dashoffset',
-          levelBarLength * (levelNumber / 100) - levelBarLength,
+          Math.abs(levelBarLength * (levelNumber / 100) - levelBarLength),
         );
       }
     };
