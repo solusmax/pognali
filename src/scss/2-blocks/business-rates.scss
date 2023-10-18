@@ -1,0 +1,245 @@
+@keyframes modal-bounce {
+  0% {
+    transform: translateY(-100vh);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.business-rates {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: $menu-height-mobile;
+  bottom: 0;
+  z-index: 15000;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding-left: $page-padding-mobile;
+  padding-right: $page-padding-mobile;
+
+  &--shown {
+    display: flex;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    top: $menu-height-tablet;
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    top: $menu-height-desktop;
+  }
+
+  @media (max-height: $page-max-height-mobile) and (max-width: $page-width-mobile-last),
+    (max-height: $page-max-height-tablet) and (min-width: $page-width-tablet) {
+    top: 0;
+    z-index: 50000;
+  }
+}
+
+.business-rates__background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -$menu-height-mobile;
+  bottom: 0;
+
+  background-color: rgba($color-basic-black, 0.3);
+
+  @media (min-width: $page-width-tablet) {
+    top: -$menu-height-tablet;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    top: -$menu-height-desktop;
+  }
+}
+
+.business-rates__window {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  min-width: $page-width-mobile - ($page-padding-mobile * 2);
+  max-width: $page-max-width-mobile;
+  max-height: calc(100%);
+  border-radius: 20px;
+
+  overflow: auto;
+
+  background-color: $color-basic-white;
+
+  box-shadow: 0 2px 8px 0 rgba($color-special-blue-400, 0.14);
+
+  animation-name: modal-bounce;
+  animation-duration: 0.3s;
+
+  @media (min-width: $page-width-tablet) {
+    width: $page-width-tablet - ($page-padding-tablet * 2);
+    max-width: none;
+
+    box-shadow: 0 4px 22px 0 rgba($color-special-blue-400, 0.18);
+  }
+
+  @media (min-width: $page-width-desktop) {
+    width: 750px;
+    border-radius: 30px;
+  }
+}
+
+.business-rates__inner {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 32px;
+
+  @media (min-width: $page-width-tablet) {
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-top: 50px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    padding-left: 59px;
+    padding-right: 59px;
+  }
+}
+
+.business-rates__title {
+  margin: 0;
+  padding: 0;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $color-special-orange-500;
+  text-align: center;
+
+  @media (min-width: $page-width-tablet) {
+    font-size: 45px;
+    line-height: 45px;
+  }
+}
+
+.business-rates__price-list {
+  margin: 0;
+  margin-top: 29px;
+  padding: 0;
+
+  font-weight: 300;
+  color: $color-special-grey-900;
+
+  @media (min-width: $page-width-tablet) {
+    margin-top: 50px;
+
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+.business-rates__item {
+  padding-top: 10px;
+  padding-bottom: 11px;
+  border-top: 1px solid rgba($color-basic-black, 0.05);
+
+  &:last-child {
+    border-bottom: 1px solid rgba($color-basic-black, 0.05);
+  }
+
+  @media (min-width: $page-width-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+}
+
+.business-rates__option {
+  @media (min-width: $page-width-tablet) {
+    min-width: 250px;
+    padding-right: 15px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    min-width: 280px;
+  }
+}
+
+.business-rates__price {
+  margin: 0;
+
+  @media (min-width: $page-width-tablet) {
+    min-width: 230px;
+
+    text-align: right;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    min-width: 270px;
+  }
+}
+
+.business-rates__close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 59px;
+  margin-top: 34px;
+  padding: 10px;
+  border: none;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-special-blue-400;
+  border-radius: 0 0 20px 20px;
+
+  background-color: $color-special-grey-100;
+
+  cursor: pointer;
+
+  transition-property: background-color;
+  transition-duration: $transitions-duration;
+
+  &.focus-visible {
+    @include focus(-4px);
+  }
+
+  &:hover {
+    background-color: $color-basic-grey;
+  }
+
+  &:active {
+    color: rgba($color-special-blue-400, 0.3);
+
+    background-color: $color-basic-grey;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    min-height: 108px;
+    margin-top: 52px;
+    padding: 25px;
+
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    line-height: 26px;
+  }
+}
+
+.no-js .business-rates__close:focus {
+  @include focus(-4px);
+}

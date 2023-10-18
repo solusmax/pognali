@@ -1,0 +1,530 @@
+.transport {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 198px;
+  padding: 0;
+
+  list-style: none;
+
+  &--profile {
+    justify-content: center;
+    width: auto;
+  }
+
+  &--companions-filter {
+    justify-content: flex-start;
+    width: auto;
+  }
+
+  &--card {
+    justify-content: flex-start;
+    width: auto;
+    padding-right: 15px;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    &--card {
+      flex-direction: column;
+      align-items: center;
+      padding-right: 0;
+      padding-bottom: 5px;
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    &--card {
+      flex-direction: row;
+      align-items: normal;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.transport__item-wrapper {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 25px;
+  border-radius: 50%;
+
+  background-color: $color-basic-white;
+
+  &--profile {
+    width: 32px;
+    height: 32px;
+  }
+
+  &--companions-filter {
+    width: 32px;
+    height: 32px;
+
+    &:not(:last-child) {
+      margin-right: 1px;
+    }
+
+    &:only-child {
+      margin-right: 0;
+    }
+  }
+
+  &--card {
+    width: 32px;
+    height: 32px;
+
+    background-color: $color-basic-grey;
+
+    &:not(:last-child) {
+      margin-right: 1px;
+    }
+
+    &:only-child {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: $page-width-tablet) {
+    &--profile {
+      width: 43px;
+      height: 43px;
+    }
+
+    &--companions-filter {
+      width: 43px;
+      height: 43px;
+
+      &:not(:last-child) {
+        margin-right: 2px;
+      }
+
+      &:only-child {
+        margin-right: 0;
+      }
+    }
+
+    &--card {
+      width: 31px;
+      height: 31px;
+
+      background-color: transparent;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    &--companions-filter {
+      &:not(:last-child) {
+        margin-right: 1px;
+      }
+
+      &:only-child {
+        margin-right: 0;
+      }
+    }
+
+    &--card {
+      &:not(:last-child) {
+        margin-right: 2px;
+      }
+
+      &:only-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.transport__item {
+  position: relative;
+  z-index: 5;
+
+  width: 24px;
+  height: 25px;
+  margin-right: 9px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:nth-child(6n) {
+    margin-right: 0;
+  }
+
+  &:nth-child(n + 7) {
+    margin-top: 9px;
+  }
+
+  &--profile {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    margin-right: 0;
+
+    &:nth-child(n + 7) {
+      margin-top: 0;
+    }
+  }
+
+  &--companions-filter {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    margin-right: 0;
+
+    &:nth-child(n + 7) {
+      margin-top: 0;
+    }
+  }
+
+  &--card {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    margin-right: 0;
+
+    &:nth-child(n + 7) {
+      margin-top: 0;
+    }
+  }
+
+  &[for] {
+    cursor: pointer;
+  }
+}
+
+.transport__item-wrapper--profile:hover .transport__item--profile,
+.transport__item-wrapper--companions-filter:hover
+  .transport__item--companions-filter {
+  box-shadow: 0 2px 6px 0 rgba($color-basic-blue, 0.17);
+}
+
+.transport__item-wrapper--profile:active .transport__item--profile {
+  box-shadow: none;
+
+  background-color: $color-special-grey-325;
+}
+
+.transport__item-wrapper--companions-filter:active
+  .transport__item--companions-filter {
+  box-shadow: none;
+
+  background-color: $color-special-yellow-600;
+}
+
+.transport__field:disabled + .transport__item {
+  background-color: $color-special-grey-325;
+
+  box-shadow: none;
+
+  cursor: default;
+}
+
+.transport__field:disabled + .transport__item--companions-filter {
+  background-color: rgba($color-special-yellow-600, 0.9);
+}
+
+.no-js .transport__field:focus + .transport__item,
+.transport__field.focus-visible + .transport__item {
+  @include focus();
+}
+
+.transport__icon {
+  --transport-icon-width: 21px;
+  --transport-icon-height: 21px;
+
+  position: absolute;
+  left: calc(50% - (var(--transport-icon-width) / 2));
+  top: calc(50% - (var(--transport-icon-height) / 2));
+
+  width: var(--transport-icon-width);
+  height: var(--transport-icon-height);
+
+  color: $color-special-blue-800;
+
+  opacity: 0.15;
+
+  &--car {
+    --transport-icon-width: 17px;
+    --transport-icon-height: 19px;
+  }
+
+  &--bmx {
+    --transport-icon-width: 21px;
+    --transport-icon-height: 18px;
+  }
+
+  &--walk {
+    --transport-icon-width: 18px;
+    --transport-icon-height: 19px;
+  }
+
+  &--profile {
+    color: $color-special-grey-425;
+
+    opacity: 1;
+  }
+
+  &--profile.transport__icon--plane {
+    --transport-icon-width: 17px;
+    --transport-icon-height: 16px;
+  }
+
+  &--profile.transport__icon--car {
+    --transport-icon-width: 17px;
+    --transport-icon-height: 16px;
+  }
+
+  &--profile.transport__icon--bmx {
+    --transport-icon-width: 15px;
+    --transport-icon-height: 12px;
+  }
+
+  &--profile.transport__icon--walk {
+    --transport-icon-width: 14px;
+    --transport-icon-height: 14px;
+  }
+
+  &--companions-filter {
+    color: $color-special-grey-425;
+
+    opacity: 1;
+  }
+
+  &--companions-filter.transport__icon--plane {
+    --transport-icon-width: 17px;
+    --transport-icon-height: 16px;
+  }
+
+  &--companions-filter.transport__icon--car {
+    --transport-icon-width: 17px;
+    --transport-icon-height: 16px;
+  }
+
+  &--companions-filter.transport__icon--bmx {
+    --transport-icon-width: 15px;
+    --transport-icon-height: 12px;
+  }
+
+  &--companions-filter.transport__icon--walk {
+    --transport-icon-width: 14px;
+    --transport-icon-height: 14px;
+  }
+
+  &--card {
+    color: $color-special-blue-400;
+  }
+
+  &--card.transport__icon--plane {
+    --transport-icon-width: 16px;
+    --transport-icon-height: 14px;
+  }
+
+  &--card.transport__icon--car {
+    --transport-icon-width: 14px;
+    --transport-icon-height: 16px;
+  }
+
+  &--card.transport__icon--bmx {
+    --transport-icon-width: 14px;
+    --transport-icon-height: 11px;
+  }
+
+  &--card.transport__icon--walk {
+    --transport-icon-width: 13px;
+    --transport-icon-height: 13px;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    &--companions.transport__icon--plane {
+      --transport-icon-width: 23px;
+      --transport-icon-height: 23px;
+    }
+
+    &--companions.transport__icon--car {
+      --transport-icon-width: 18px;
+      --transport-icon-height: 20px;
+    }
+
+    &--companions.transport__icon--bmx {
+      --transport-icon-width: 23px;
+      --transport-icon-height: 20px;
+    }
+
+    &--companions.transport__icon--walk {
+      --transport-icon-width: 18px;
+      --transport-icon-height: 20px;
+    }
+
+    &--profile.transport__icon--plane {
+      --transport-icon-width: 23px;
+      --transport-icon-height: 22px;
+    }
+
+    &--profile.transport__icon--car {
+      --transport-icon-width: 23px;
+      --transport-icon-height: 22px;
+    }
+
+    &--profile.transport__icon--bmx {
+      --transport-icon-width: 21px;
+      --transport-icon-height: 17px;
+    }
+
+    &--profile.transport__icon--walk {
+      --transport-icon-width: 20px;
+      --transport-icon-height: 20px;
+    }
+
+    &--companions-filter.transport__icon--plane {
+      --transport-icon-width: 23px;
+      --transport-icon-height: 22px;
+    }
+
+    &--companions-filter.transport__icon--car {
+      --transport-icon-width: 23px;
+      --transport-icon-height: 22px;
+    }
+
+    &--companions-filter.transport__icon--bmx {
+      --transport-icon-width: 21px;
+      --transport-icon-height: 17px;
+    }
+
+    &--companions-filter.transport__icon--walk {
+      --transport-icon-width: 21px;
+      --transport-icon-height: 20px;
+    }
+
+    &--card.transport__icon--plane {
+      --transport-icon-width: 23px;
+      --transport-icon-height: 22px;
+    }
+
+    &--card.transport__icon--car {
+      --transport-icon-width: 23px;
+      --transport-icon-height: 21px;
+    }
+
+    &--card.transport__icon--bmx {
+      --transport-icon-width: 23px;
+      --transport-icon-height: 19px;
+    }
+
+    &--card.transport__icon--walk {
+      --transport-icon-width: 21px;
+      --transport-icon-height: 20px;
+    }
+  }
+}
+
+.transport__item--checked .transport__icon,
+.transport__field:checked + .transport__item .transport__icon {
+  opacity: 1;
+}
+
+// --profile ↓↓↓
+
+.transport__item--profile:hover .transport__icon {
+  color: $color-special-grey-725;
+}
+
+.transport__item--profile:active .transport__icon {
+  color: $color-special-blue-400;
+
+  opacity: 0.1;
+}
+
+.transport__field:checked + .transport__item--profile .transport__icon {
+  color: $color-special-blue-400;
+}
+
+.transport__field:checked + .transport__item--profile:hover .transport__icon {
+  color: $color-special-blue-400;
+
+  opacity: 0.7;
+}
+
+.transport__field:checked + .transport__item--profile:active .transport__icon {
+  color: $color-special-blue-400;
+
+  opacity: 0.3;
+}
+
+.transport__field:disabled + .transport__item--profile .transport__icon {
+  color: $color-special-grey-700;
+  opacity: 1;
+}
+
+.transport__field:disabled:checked
+  + .transport__item--profile
+  .transport__icon {
+  color: $color-special-blue-400;
+  opacity: 0.7;
+}
+
+// ---
+
+// --companions-filter ↓↓↓
+
+.transport__item--companions-filter:hover .transport__icon {
+  color: $color-special-grey-725;
+}
+
+.transport__item--companions-filter:active .transport__icon {
+  color: $color-special-blue-400;
+
+  opacity: 0.1;
+}
+
+.transport__field:checked
+  + .transport__item--companions-filter
+  .transport__icon {
+  color: $color-special-blue-400;
+}
+
+.transport__field:checked
+  + .transport__item--companions-filter:hover
+  .transport__icon {
+  color: $color-special-blue-400;
+
+  opacity: 0.7;
+}
+
+.transport__field:checked
+  + .transport__item--companions-filter:active
+  .transport__icon {
+  color: $color-special-blue-400;
+
+  opacity: 0.3;
+}
+
+.transport__field:disabled
+  + .transport__item--companions-filter
+  .transport__icon {
+  color: $color-special-grey-800;
+  opacity: 0.3;
+}
+
+.transport__field:disabled:checked
+  + .transport__item--companions-filter
+  .transport__icon {
+  color: $color-special-blue-400;
+  opacity: 0.75;
+}
+
+// ---
+
+.transport__tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}

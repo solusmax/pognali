@@ -1,0 +1,145 @@
+.logo {
+  --logo-width: 100px;
+  --logo-height: 19px;
+
+  display: flex;
+  align-items: center;
+
+  transition-property: opacity;
+  transition-duration: $transitions-duration;
+
+  &::before {
+    content: "";
+
+    display: none;
+    width: var(--logo-width);
+    height: var(--logo-height);
+
+    background-image: url("#{$img-path}/logo/file-logo-blue.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: var(--logo-width) var(--logo-height);
+  }
+
+  &:any-link:hover {
+    opacity: 0.6;
+  }
+
+  &:any-link:active {
+    opacity: 0.3;
+
+    transition: none;
+  }
+
+  &--open::before {
+    display: block;
+  }
+
+  &--scroll::before {
+    display: block;
+  }
+
+  @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+    &::before {
+      background-image: url("#{$img-path}/logo/file-logo-blue@2x.png");
+    }
+  }
+
+  @media (min-width: $page-width-tablet) {
+    --logo-width: 166px;
+    --logo-height: 42px;
+
+    &::before {
+      background-image: url("#{$img-path}/logo/file-logo-blue-tablet.png");
+    }
+
+    @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+      &::before {
+        background-image: url("#{$img-path}/logo/file-logo-blue-tablet@2x.png");
+      }
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    --logo-width: 200px;
+    --logo-height: 52px;
+
+    &::before {
+      background-image: url("#{$img-path}/logo/file-logo-blue-desktop.png");
+    }
+
+    &--open::before {
+      display: none;
+    }
+
+    &--scroll::before {
+      display: block;
+    }
+
+    @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+      &::before {
+        background-image: url("#{$img-path}/logo/file-logo-blue-desktop@2x.png");
+      }
+    }
+  }
+
+  @media (max-height: $page-max-height-mobile) and (max-width: $page-width-mobile-last),
+    (max-height: $page-max-height-tablet) and (min-width: $page-width-tablet) {
+    &::before {
+      display: block;
+
+      @media (min-width: $page-width-desktop) {
+        display: none;
+      }
+    }
+  }
+}
+
+.no-js .logo::before {
+  display: block;
+
+  @media (min-width: $page-width-desktop) {
+    display: none;
+  }
+}
+
+.logo__picture {
+  display: block;
+  width: var(--logo-width);
+  height: var(--logo-height);
+
+  &--open {
+    display: none;
+  }
+
+  &--scroll {
+    display: none;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    &--open {
+      display: block;
+    }
+
+    &--scroll {
+      display: none;
+    }
+  }
+
+  @media (max-height: $page-max-height-mobile) and (max-width: $page-width-mobile-last),
+    (max-height: $page-max-height-tablet) and (min-width: $page-width-tablet) {
+    display: none;
+
+    @media (min-width: $page-width-desktop) {
+      display: block;
+    }
+  }
+}
+
+.no-js .logo__picture {
+  display: none;
+
+  @media (min-width: $page-width-desktop) {
+    display: block;
+  }
+}

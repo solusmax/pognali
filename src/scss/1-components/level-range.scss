@@ -1,0 +1,86 @@
+.level-range {
+  --level-range-toggle-size: 10px;
+  --level-range-scale-width: 2px;
+
+  position: relative;
+
+  @media (min-width: $page-width-tablet) {
+    --level-range-toggle-size: 13px;
+    --level-range-scale-width: 3px;
+  }
+}
+
+.level-range__scale {
+  position: relative;
+
+  width: 100%;
+  height: var(--level-range-scale-width);
+  border-radius: 2px;
+
+  background-color: rgba($color-special-blue-400, 0.2);
+
+  @media (min-width: $page-width-tablet) and (max-width: $page-width-tablet-last) {
+    width: 281px;
+  }
+}
+
+.level-range__bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  height: 100%;
+  width: 100%;
+
+  background-color: $color-special-blue-400;
+}
+
+.level-range__toggles {
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  height: var(--level-range-toggle-size);
+  margin-right: var(--level-range-toggle-size);
+}
+
+.level-range__toggle {
+  position: absolute;
+  top: calc(
+    -1 * ((var(--level-range-toggle-size) + var(--level-range-scale-width)) / 2)
+  );
+
+  width: var(--level-range-toggle-size);
+  height: var(--level-range-toggle-size);
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+
+  background: none;
+  background-color: $color-special-blue-400;
+
+  cursor: grab;
+
+  transition-property: transform;
+  transition-duration: $transitions-duration;
+
+  &:hover {
+    transform: scale(1.46);
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px 0 rgba($color-basic-black, 0.24);
+
+    transform: scale(1.46);
+
+    cursor: grabbing;
+  }
+
+  &--min {
+    left: 0;
+  }
+
+  &--max {
+    left: 100%;
+  }
+}

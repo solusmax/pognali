@@ -2,4 +2,5 @@
 .vscode/
 build/
 node_modules/
-gulpfile.js
+/*.js
+/*.mjs

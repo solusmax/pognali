@@ -1,8 +1,20 @@
 {
-  "extends": "stylelint-config-htmlacademy",
-
+  "syntax": "scss",
+  "extends": ["stylelint-config-recommended-scss"],
+  "plugins": ["stylelint-scss"],
   "rules": {
+    "at-rule-no-unknown": null,
+    "scss/at-import-partial-extension": null,
+    "scss/at-rule-no-unknown": null,
+    "scss/comment-no-empty": null,
+    "scss/operator-no-newline-after": null,
+    "color-named": "never",
+    "font-weight-notation": "numeric",
     "declaration-no-important": true,
-    "indentation": [2, {"ignore": ["inside-parens"]}]
+    "length-zero-no-unit": true,
+    "no-descending-specificity": null,
+    "no-extra-semicolons": null,
+    "selector-max-id": 0,
+    "shorthand-property-no-redundant-values": true
   }
 }

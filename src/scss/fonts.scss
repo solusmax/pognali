@@ -1,0 +1,56 @@
+// Light
+
+@font-face {
+  font-family: "Blogger Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src:
+    local("Blogger Sans Light"),
+    local("Blogger-Sans-Light"),
+    url("#{$fonts-path}/bloggersans-light.woff2") format("woff2"),
+    url("#{$fonts-path}/bloggersans-light.woff") format("woff");
+}
+
+// Regular
+
+@font-face {
+  font-family: "Blogger Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local("Blogger Sans"),
+    local("Blogger Sans Regular"),
+    local("Blogger-Sans-Regular"),
+    url("#{$fonts-path}/bloggersans.woff2") format("woff2"),
+    url("#{$fonts-path}/bloggersans.woff") format("woff");
+}
+
+// Medium
+
+@font-face {
+  font-family: "Blogger Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    local("Blogger Sans Medium"),
+    local("Blogger-Sans-Medium"),
+    url("#{$fonts-path}/bloggersans-medium.woff2") format("woff2"),
+    url("#{$fonts-path}/bloggersans-medium.woff") format("woff");
+}
+
+// Bold
+
+@font-face {
+  font-family: "Blogger Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local("Blogger Sans Bold"),
+    local("Blogger-Sans-Bold"),
+    url("#{$fonts-path}/bloggersans-bold.woff2") format("woff2"),
+    url("#{$fonts-path}/bloggersans-bold.woff") format("woff");
+}

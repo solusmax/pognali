@@ -1,0 +1,104 @@
+.level-numbers {
+  --level-numbers-separator-width: 16px;
+  --level-numbers-separator-border-height: 5px;
+
+  position: relative;
+
+  display: flex;
+  width: 100%;
+  min-height: 35px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: calc(50% - (var(--level-numbers-separator-width) / 2));
+    top: calc(50% - var(--level-numbers-separator-border-height));
+    z-index: 10;
+
+    width: var(--level-numbers-separator-width);
+    height: calc(var(--level-numbers-separator-border-height) * 2 + 1px);
+    border-top: var(--level-numbers-separator-border-height) solid
+      $color-basic-white;
+    border-bottom: var(--level-numbers-separator-border-height) solid
+      $color-basic-white;
+
+    background-color: $color-special-grey-700;
+
+    pointer-events: none;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    --level-numbers-separator-width: 21px;
+    --level-numbers-separator-border-height: 7px;
+
+    width: 149px;
+    min-height: 46px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    width: 100%;
+  }
+}
+
+.level-numbers__field {
+  // stylelint-disable-next-line
+  -moz-appearance: textfield;
+  appearance: textfield;
+
+  position: relative;
+
+  flex-shrink: 0;
+  width: 50%;
+  padding-left: calc(var(--level-numbers-separator-width) / 2 + 5px);
+  padding-right: calc(var(--level-numbers-separator-width) / 2 + 5px);
+  border: 1px solid $color-special-grey-700;
+
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: $color-special-blue-400;
+  text-align: center;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    // stylelint-disable-next-line
+    -webkit-appearance: none;
+    appearance: none;
+
+    margin: 0;
+  }
+
+  &:hover {
+    z-index: 1;
+
+    border-color: $color-special-grey-850;
+  }
+
+  &:focus {
+    z-index: 2;
+
+    border-color: $color-basic-blue;
+
+    outline: none;
+
+    transition: none;
+  }
+
+  &--min {
+    margin-right: -1px;
+    border-radius: 4px 0 0 4px;
+  }
+
+  &--max {
+    border-radius: 0 4px 4px 0;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+  }
+}
